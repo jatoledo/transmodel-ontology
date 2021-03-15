@@ -997,6 +997,26 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#cctv -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#cctv">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there is  CCTV(closed-circuit television) coverage.</rdfs:comment>
+        <rdfs:label xml:lang="en">cctv</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#changeAvailable -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#changeAvailable">
+        <rdfs:comment xml:lang="en">Whether payment entry machine can give change.</rdfs:comment>
+        <rdfs:label xml:lang="en">change available</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#charge -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#charge">
@@ -1085,6 +1105,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#freeEntry -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#freeEntry">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether entry is free.</rdfs:comment>
+        <rdfs:label xml:lang="en">free entry</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#freeToUse -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#freeToUse">
@@ -1093,6 +1124,38 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:comment xml:lang="en">TODO: Check whether this property should be only applicable to Trolley Stand Equipment or to something more general</rdfs:comment>
         <rdfs:comment xml:lang="en">This property determines whether a Trolley Stand Equipment is free to use or not</rdfs:comment>
         <rdfs:label xml:lang="en">free to use</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#gender -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#gender">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Gender  limitation on use of facility.</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: This property is defined like GenderLimitationEnum</rdfs:comment>
+        <rdfs:label xml:lang="en">gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#heightOfSosPanel -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#heightOfSosPanel">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Height of SoS panel above ground.</rdfs:comment>
+        <rdfs:label xml:lang="en">height of sos panel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#keyScheme -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#keyScheme">
+        <rdfs:comment xml:lang="en">Whether facility is accessible through a key scheme.</rdfs:comment>
+        <rdfs:label xml:lang="en">key scheme</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1138,6 +1201,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#mobilePhoneCoverage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#mobilePhoneCoverage">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there is  Mobile phone coverage.</rdfs:comment>
+        <rdfs:label xml:lang="en">mobile phone coverage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#numberOfLockers -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#numberOfLockers">
@@ -1160,6 +1234,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#numberOfToilets -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#numberOfToilets">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of toilets.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of toilets</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#outOfService -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#outOfService">
@@ -1167,6 +1252,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">This property allows specifying whether the equipment is out of service or not</rdfs:comment>
         <rdfs:label xml:lang="en">out of service</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#panicButton -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#panicButton">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there is a panic button.</rdfs:comment>
+        <rdfs:label xml:lang="en">panic button</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1179,6 +1275,15 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:comment xml:lang="en">TODO: Check whether this property should be applicable to a more general class</rdfs:comment>
         <rdfs:comment xml:lang="en">This property specifies the payment method for a Trolley Stand Equipment</rdfs:comment>
         <rdfs:label xml:lang="en">payment method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#sharpsDisposal -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#sharpsDisposal">
+        <rdfs:comment xml:lang="en">Whether there is sharps disposal.</rdfs:comment>
+        <rdfs:label xml:lang="en">sharps disposal</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1198,6 +1303,27 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#smokingAllowed">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#sosPanel -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#sosPanel">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there is  a SoS Panel.</rdfs:comment>
+        <rdfs:label xml:lang="en">SOS Panel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#staffing -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#staffing">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether facility is staffed.</rdfs:comment>
+        <rdfs:label xml:lang="en">staffing</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2263,7 +2389,42 @@ Accessible by Passenger but without direct access to Vehicles</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PassengerSafetyEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
-        <rdfs:label xml:lang="en">PassengerSafetyEquipment</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#cctv"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#heightOfSosPanel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#mobilePhoneCoverage"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#panicButton"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#sosPanel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Passenger Safety Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -2417,7 +2578,7 @@ A Quay may contain other sub Quays</rdfs:comment>
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#RubishDisposalEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
         <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Rubish Disposal</rdfs:comment>
-        <rdfs:label xml:lang="en">RubishDisposal</rdfs:label>
+        <rdfs:label xml:lang="en">Rubish Disposal</rdfs:label>
     </owl:Class>
     
 
@@ -2426,8 +2587,64 @@ A Quay may contain other sub Quays</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SanitaryEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#changeAvailable"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#charge"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#freeEntry"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#gender"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#keyScheme"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#numberOfToilets"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#sharpsDisposal"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#staffing"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Sanitary Equipment</rdfs:comment>
-        <rdfs:label xml:lang="en">TypeOfSanitaryEquipment</rdfs:label>
+        <rdfs:label xml:lang="en">Sanitary Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -2719,7 +2936,7 @@ It can also include information about the accommodation on board, which can be r
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TicketValidatorEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
         <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Ticket Validator Equipment</rdfs:comment>
-        <rdfs:label xml:lang="en">TicketValidatorEquipment</rdfs:label>
+        <rdfs:label xml:lang="en">Ticket Validator Equipment</rdfs:label>
     </owl:Class>
     
 
@@ -2729,7 +2946,7 @@ It can also include information about the accommodation on board, which can be r
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#TicketingEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
         <rdfs:comment xml:lang="en">Specialisation of Passenter Equipment for Ticketing Equipment</rdfs:comment>
-        <rdfs:label xml:lang="en">TicketingEquipment</rdfs:label>
+        <rdfs:label xml:lang="en">Ticketing Equipment</rdfs:label>
     </owl:Class>
     
 
