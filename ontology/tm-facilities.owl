@@ -530,6 +530,17 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#genderLimitationType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#genderLimitationType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:comment xml:lang="en">A classification for GENDER LIMITATIONSs (mainly for SANITARY EQUIPMENT, e.g. male only, female only, both).</rdfs:comment>
+        <rdfs:label xml:lang="en">gender limitation type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#isUsedBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#isUsedBy">
@@ -615,6 +626,17 @@ TODO: Check whether the domain should be generalised (applicable not only to fac
         <rdfs:comment xml:lang="es">This property is used to refer to the provider of a facility set
 In the TransModel UML model and in the Netex implementation this is expressed as ProvidedByRef</rdfs:comment>
         <rdfs:label xml:lang="es">provided by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#sanitaryFacilityType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#sanitaryFacilityType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SanitaryEquipment"/>
+        <rdfs:comment xml:lang="en">A classification for SANITARY EQUIPMENT (e.g. toilet, wheelchair access toilet, shower, baby change, wheelchair baby change)</rdfs:comment>
+        <rdfs:label xml:lang="en">sanitary facility type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1275,6 +1297,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:comment xml:lang="en">TODO: Check whether this property should be applicable to a more general class</rdfs:comment>
         <rdfs:comment xml:lang="en">This property specifies the payment method for a Trolley Stand Equipment</rdfs:comment>
         <rdfs:label xml:lang="en">payment method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#recycling -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#recycling">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#RubishDisposalEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there are rubbish separation and recycling facilities.</rdfs:comment>
+        <rdfs:label xml:lang="en">recycling</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2577,6 +2610,13 @@ A Quay may contain other sub Quays</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#RubishDisposalEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PassengerEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#recycling"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of Passenger Equipment for Rubish Disposal</rdfs:comment>
         <rdfs:label xml:lang="en">Rubish Disposal</rdfs:label>
     </owl:Class>
