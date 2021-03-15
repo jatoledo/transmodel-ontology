@@ -1080,13 +1080,23 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <!-- https://w3id.org/transmodel/facilities#lockerHeight -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#lockerHeight"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#lockerHeight">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#LuggageLockerEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">This property specifies the height of a Luggage Locker Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">Height of Lockers.</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/transmodel/facilities#lockerWidth -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#lockerWidth"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#lockerWidth">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#LuggageLockerEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">This property specifies the width of a Luggage Locker Equipment</rdfs:comment>
+        <rdfs:label xml:lang="en">Width of Lockers.</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1994,7 +2004,7 @@ A named Service relating to the use of the Site or transport Services at a parti
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of Luggage Locker Equipment for Stop Place Equipment</rdfs:comment>
-        <rdfs:comment>TODO: Check what the property luggage (0..1) means for this class, and update accordingly</rdfs:comment>
+        <rdfs:comment>TODO: Check what the property luggage (0..1) means for this class, and update accordingly--&gt;  luggage is a type of luggare locker(enum)</rdfs:comment>
         <rdfs:label xml:lang="en">Luggage Locker Equipment</rdfs:label>
     </owl:Class>
     
@@ -2723,9 +2733,9 @@ It can also include information about the accommodation on board, which can be r
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Specialisation of StopPlaceEquipment for trolley stands</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specialisation of Stop Place Equipment for trolley stands</rdfs:comment>
         <rdfs:comment>TODO: Check whether payment method may take several values instead of maximum 1 as specified in the Transmodel UML model</rdfs:comment>
-        <rdfs:label xml:lang="en">TrolleyStandEquipment</rdfs:label>
+        <rdfs:label xml:lang="en">Trolley Stand Equipment</rdfs:label>
     </owl:Class>
     
 
