@@ -1054,8 +1054,8 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#freeToUse">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#TrolleyStandEquipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">TODO: Check whether this property should be only applicable to Trolley Stand Equipment or to something more general</rdfs:comment>
         <rdfs:comment xml:lang="en">This property determines whether a Trolley Stand Equipment is free to use or not</rdfs:comment>
-        <rdfs:label xml:lang="en">TODO: Check whether this property should be only applicable to Trolley Stand Equipment or to something more general</rdfs:label>
         <rdfs:label xml:lang="en">free to use</rdfs:label>
     </owl:DatatypeProperty>
     
