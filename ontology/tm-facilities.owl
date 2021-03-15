@@ -619,6 +619,28 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#seatingType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#seatingType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#SeatingEquipment"/>
+        <rdfs:comment xml:lang="en">A classification for SEATING EQUIPMENT.</rdfs:comment>
+        <rdfs:label xml:lang="en">seating type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#shelterType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#shelterType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#ShelterEquipment"/>
+        <rdfs:comment xml:lang="en">A classification for SHELTERs</rdfs:comment>
+        <rdfs:label xml:lang="en">shelter type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#showerFacility -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#showerFacility">
@@ -871,6 +893,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#waitingRoomType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#waitingRoomType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#WaitingRoomEquipment"/>
+        <rdfs:comment xml:lang="en">A classification for WAITING ROOM EQUIPMENT.</rdfs:comment>
+        <rdfs:label xml:lang="en">waiting room type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#wheelchairAccess -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#wheelchairAccess">
@@ -958,6 +991,8 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#airConditioned">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether Shelter  has air conditioining.</rdfs:comment>
+        <rdfs:label xml:lang="en">air conditioned</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -989,7 +1024,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#distanceFromNearestKerb">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#ShelterEquipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment xml:lang="en">This property specifies the distance from a Shelter to the nearest kerb</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property specifies the distance of Shelter from nearest kerb.</rdfs:comment>
         <rdfs:label xml:lang="en">distance from nearest kerb</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1011,7 +1046,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#enclosed">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#ShelterEquipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:comment xml:lang="en">This property specifies whether a Shelter is enclosed or not</rdfs:comment>
+        <rdfs:comment xml:lang="en">This property specifies whether Shelter is enclosed  or not for protection from weather etc.</rdfs:comment>
         <rdfs:label xml:lang="en">enclosed</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1022,6 +1057,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#facilities">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#WaitingRoomEquipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Sanitary Facilities in WAITING room.</rdfs:comment>
         <rdfs:comment xml:lang="en">This property allows specifying whether a Waiting Room Equipment has any facilities</rdfs:comment>
         <rdfs:label xml:lang="en">facilities</rdfs:label>
     </owl:DatatypeProperty>
@@ -1063,7 +1099,9 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <!-- https://w3id.org/transmodel/facilities#length -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#length"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#length">
+        <rdfs:label xml:lang="en">Length of area.</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1174,13 +1212,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <!-- https://w3id.org/transmodel/facilities#wheelChairLength -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#wheelChairLength"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#wheelChairLength">
+        <rdfs:comment xml:lang="en">Length of Wheelchair WAITING area.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/transmodel/facilities#wheelChairWidth -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#wheelChairWidth"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#wheelChairWidth">
+        <rdfs:comment xml:lang="en">Width of Wheelchair WAITING area.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -1196,7 +1238,9 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <!-- https://w3id.org/transmodel/facilities#width -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#width"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#width">
+        <rdfs:label xml:lang="en">Width of area</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -1206,6 +1250,7 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#WaitingRoomEquipment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">This property allows specifying whether a Waiting Room Equipment is only for women</rdfs:comment>
+        <rdfs:comment xml:lang="en">Whether Waiting room  is women only.</rdfs:comment>
         <rdfs:label xml:lang="en">women only</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2402,7 +2447,7 @@ A Quay may contain other sub Quays</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#SeatingEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#WaitingEquipment"/>
-        <rdfs:comment>A Seating Equipment is a type of Waiting Equpiment where people can sit down.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Seating Equipment is a type of Waiting Equipiment where people can sit down.</rdfs:comment>
         <rdfs:label xml:lang="en">Seating Equipment</rdfs:label>
     </owl:Class>
     
@@ -3623,6 +3668,7 @@ A vehicle stopping place may be served by one or more quays.</rdfs:comment>
 
     <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#stepFree">
         <rdfs:label xml:lang="en">stepFree</rdfs:label>
+        <rdfs:comment xml:lang="en">Whether waiting area is step free.</rdfs:comment>
     </rdf:Description>
     
 
