@@ -1019,6 +1019,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#NumberOfGates -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#NumberOfGates">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of gates in barrier or entrance.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of gates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#accessDimensions -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#accessDimensions">
@@ -1057,6 +1068,26 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Whether Shelter  has air conditioining.</rdfs:comment>
         <rdfs:label xml:lang="en">air conditioned</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#automaticDoor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#automaticDoor">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether doors are automatic.</rdfs:comment>
+        <rdfs:label xml:lang="en">automatic door</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#barrier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#barrier">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -1114,6 +1145,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#door -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#door">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there is a door in the entrance. If false opening does not have door.</rdfs:comment>
+        <rdfs:label xml:lang="en">door</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#duration -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#duration">
@@ -1132,6 +1174,28 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">This property specifies whether Shelter is enclosed  or not for protection from weather etc.</rdfs:comment>
         <rdfs:label xml:lang="en">enclosed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#entranceRequiresPassport -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#entranceRequiresPassport">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether passage requires passport.</rdfs:comment>
+        <rdfs:label xml:lang="en">entrance requires passport</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#entranceRequiresTicket -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#entranceRequiresTicket">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether passage requires ticket.</rdfs:comment>
+        <rdfs:label xml:lang="en">entrance requires ticket</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1204,6 +1268,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#glassDoor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#glassDoor">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether door is made of glass.</rdfs:comment>
+        <rdfs:label xml:lang="en">glass door</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#heightOfLowCounter -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#heightOfLowCounter">
@@ -1244,6 +1319,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Whether there are induction loops. Induction loops provide hearing assistance to hearing-aid users</rdfs:comment>
         <rdfs:label xml:lang="en">induction loops</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#keptOpen -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#keptOpen">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether the door is kept open.</rdfs:comment>
+        <rdfs:label xml:lang="en">keptOpen</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1449,6 +1535,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">Relative weighting to be given to this item Equipment.</rdfs:comment>
         <rdfs:label xml:lang="en">relative weighting</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#revolvingDoor -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#revolvingDoor">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#EntranceEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether door is revolving. Only applies if door is spec.</rdfs:comment>
+        <rdfs:label xml:lang="en">revolving door</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2082,6 +2179,62 @@ A small number of well-defined categories are used that are chosen to allow the 
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EntranceEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#NumberOfGates"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#automaticDoor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#barrier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#door"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#entranceRequiresPassport"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#glassDoor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#keptOpen"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#revolvingDoor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment for Entrances (door, barrier, gate or other recognizable point of access)</rdfs:comment>
         <rdfs:label xml:lang="en">EntranceEquipment</rdfs:label>
     </owl:Class>
@@ -3638,9 +3791,7 @@ A vehicle stopping place may be served by one or more quays.</rdfs:comment>
 
     <!-- https://w3id.org/transmodel/facilities#barrier -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#barrier">
-        <rdfs:label xml:lang="en">barrierEntrance</rdfs:label>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/facilities#barrier"/>
     
 
 
@@ -4206,6 +4357,10 @@ A vehicle stopping place may be served by one or more quays.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#barrier">
+        <rdfs:label xml:lang="en">barrierEntrance</rdfs:label>
+        <rdfs:comment xml:lang="en">Whether there is a physical barrier across the doorway.</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#stepFree">
         <rdfs:label xml:lang="en">stepFree</rdfs:label>
         <rdfs:comment xml:lang="en">Whether waiting area is step free.</rdfs:comment>
