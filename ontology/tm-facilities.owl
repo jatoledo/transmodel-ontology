@@ -419,6 +419,17 @@ In Netex, this is expressed with the element TypeOfFacilityRef, which is used to
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#directionOfUseType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#directionOfUseType">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#equipmentType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
+        <rdfs:comment xml:lang="en">Direction in which Equipment can be used. (e.g. up, down, level, one way, both way, etc.).</rdfs:comment>
+        <rdfs:label xml:lang="en">direction of use</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#displayAssignment -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#displayAssignment">
@@ -1018,6 +1029,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#acousticDeviceSensors -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#acousticDeviceSensors">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether Crossing has Acoustic Device sensors.</rdfs:comment>
+        <rdfs:label xml:lang="en">acoustic device sensors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#activatedEquipment -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#activatedEquipment">
@@ -1375,6 +1397,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#passengerPerMinute -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#passengerPerMinute">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of passengers per minute that can use Equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">number of passenger per minute</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#paymentMethod -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#paymentMethod">
@@ -1387,6 +1420,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#pedestrianLights -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#pedestrianLights">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether there are lights for pedestrians to cross.</rdfs:comment>
+        <rdfs:label xml:lang="en">pedestrian lights</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#recycling -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#recycling">
@@ -1394,6 +1438,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Whether there are rubbish separation and recycling facilities.</rdfs:comment>
         <rdfs:label xml:lang="en">recycling</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#relativeWeighting -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#relativeWeighting">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Relative weighting to be given to this item Equipment.</rdfs:comment>
+        <rdfs:label xml:lang="en">relative weighting</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1534,6 +1589,17 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#zebraCrossing -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#zebraCrossing">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#CrossingEquipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">Whether CROSSING is marked as Zebra.</rdfs:comment>
+        <rdfs:label xml:lang="en">zebra crossing</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1572,6 +1638,20 @@ In the TransModel UML model and in the Netex implementation this is expressed as
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#AccessEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#PlaceEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#passengerPerMinute"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#relativeWeighting"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of Place Equipment dedicated to access (e.g. lifts, entrances, stairs, ramps, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">Access Equipment</rdfs:label>
     </owl:Class>
@@ -1883,6 +1963,27 @@ A small number of well-defined categories are used that are chosen to allow the 
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#CrossingEquipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#AccessEquipment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#acousticDeviceSensors"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#pedestrianLights"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#zebraCrossing"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Specialisation of PlaceAccessEquipment for CrossingEquipment
 
 - Zebra</rdfs:comment>
