@@ -737,6 +737,14 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#suitability -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#suitability">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#facilityType"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#ticketType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#ticketType">
@@ -928,6 +936,14 @@ In the TransModel UML model and in the Netex implementation this is expressed as
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#OBJECTPROPERTIESTOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#WaitingRoomEquipment"/>
         <rdfs:label xml:lang="en">typeOfWaitingRoomEquipment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#userNeed -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#userNeed">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/facilities#facilityType"/>
     </owl:ObjectProperty>
     
 
@@ -2647,6 +2663,14 @@ A small number of well-defined categories are used that are chosen to allow the 
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#EncumbranceNeed -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#EncumbranceNeed">
+        <rdfs:comment xml:lang="en">A specific User Need, i.e. a requirement of a passenger travelling with luggage, animal or any other object requiring special arrangements to access public transport.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#Entrance -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#Entrance">
@@ -3195,12 +3219,28 @@ Provides facilities as LuggageTrolley, FreeToUse, etc.</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#MedicalNeed -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#MedicalNeed">
+        <rdfs:comment xml:lang="en">A specific user need, i.e. a requirement of a passenger as regards medical constraint (e.g. allergy)  to access public transport .</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#MeetingPointService -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#MeetingPointService">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/facilities#CustomerService"/>
         <rdfs:comment xml:lang="en">Specialisation of CustomerService for meeting points (provides characteristics like description, labels...)</rdfs:comment>
         <rdfs:label xml:lang="en">MeetingPointService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#MobilityNeed -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#MobilityNeed">
+        <rdfs:comment xml:lang="en">A specific user need, i.e. a constraint of a passenger as regards his mobility, e.g. wheelchair, assisted wheelchair, etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -3521,6 +3561,14 @@ Accessible by Passenger but without direct access to Vehicles</rdfs:comment>
         <rdfs:comment xml:lang="en">A PostOfficeService is the specialisation of CommunicationService for post mail services</rdfs:comment>
         <rdfs:comment xml:lang="en">TODO: Check if this has to be maintained, as it is not present in the Equipment Overview Physical Model of Transmodel (figure 247)</rdfs:comment>
         <rdfs:label xml:lang="en">PostOfficeService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PsychosensoryNeed -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PsychosensoryNeed">
+        <rdfs:comment xml:lang="en">A specific user need, i.e. a constraint of a passenger as regards his psycho-sensory impairments, such as visual impairment, auditory impairment, averse to confined spaces, etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -3985,6 +4033,22 @@ It can also include information about the accommodation on board, which can be r
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#facilityType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#suitable"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -4173,6 +4237,22 @@ A travelator is a conveyor-type device that helps transport people across longer
     <!-- https://w3id.org/transmodel/facilities#UserNeed -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#UserNeed">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#facilityType"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                                <owl:hasValue rdf:resource="https://w3id.org/transmodel/kos/facilities/FacilityType"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
