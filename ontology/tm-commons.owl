@@ -329,6 +329,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#referenceFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#referenceFor">
+        <rdfs:comment xml:lang="en">This property references for location</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#TOREVIEW -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#TOREVIEW"/>
@@ -698,6 +706,13 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     <!-- https://w3id.org/transmodel/commons#LocatingSystem -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#LocatingSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#referenceFor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
