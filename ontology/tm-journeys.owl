@@ -211,6 +211,21 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#representationFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#representationFor"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#representedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#representedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor">
@@ -392,7 +407,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#defaultDeadRunRunTime">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#DeadRun"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
     </owl:ObjectProperty>
     
 
@@ -496,6 +510,14 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#directionType_old">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#endOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#endOf">
+        <rdfs:comment xml:lang="en">A point of end</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -638,7 +660,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#journeyPatternRunTime">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
-        <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
     </owl:ObjectProperty>
     
 
@@ -878,6 +899,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#startOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startOf">
+        <rdfs:comment xml:lang="en">A point of start</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#startOfBlock -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#startOfBlock">
@@ -936,7 +965,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#timingLink">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingLink"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
     </owl:ObjectProperty>
     
@@ -1119,6 +1147,12 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
@@ -1128,6 +1162,12 @@
     <!-- https://w3id.org/transmodel/commons#borderCrossing -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#borderCrossing"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#viewedAs -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#viewedAs"/>
     
 
 
@@ -1521,15 +1561,111 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#ComplexFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#ComplexFeature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#representationFor"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An aggregate of Simple Features and/or other Complex features</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Point -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point"/>
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#presentedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/transmodel/commons#Presentation -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Presentation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#SimpleFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#SimpleFeature">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An abstract representation of elementary objects related to the spatial representation of the network. POINTs (0-dimensional objects), LINKs (1-dimensional objects) and ZONEs (2-dimensional objects) may be viewed as Simple Features.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A two-dimensional PLACE within the service area of a public transport operator (administrative zone, TARIFF ZONE, ACCESS ZONE, etc.).</rdfs:comment>
+        <rdfs:comment xml:lang="es">La Zona es un Lugar (Place) de dos dimensiones que ese encuentra en el área que sirve un operador de transporte público. Puede ser una zona administrativa, una zona tarifaria, una zona de acceso o algo más concreto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Zone</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -2079,6 +2215,28 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#Link -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Link">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An oriented spatial object of dimension 1 with view to the overall description of a network,  describing a connection between two POINTs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#LinkInLinkSequence -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#LinkInLinkSequence">
@@ -2392,6 +2550,29 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#RouteLink -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#RouteLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#RoutePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#RoutePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An oriented link between two ROUTE POINTs allowing the definition of a unique path through the network.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#RoutePoint -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#RoutePoint">
@@ -2678,7 +2859,21 @@
     <!-- https://w3id.org/transmodel/journeys#TimingLink -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TimingLink">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4946,6 +5141,9 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#VehicleType">
         <rdfs:comment xml:lang="en">A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...).</rdfs:comment>
     </rdf:Description>
@@ -5071,7 +5269,6 @@
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#InfrastructurePoint">
         <rdfs:comment xml:lang="en">A super-type including all Points of the physical network (e.g. Railway Junction).</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Journey">
         <rdfs:comment xml:lang="en">Common properties of Vehicle Journey and Special Service, e.g. their link to accounting characteristics</rdfs:comment>
@@ -5203,8 +5400,7 @@
         <rdfs:comment xml:lang="en">The planned movement of a Public Transport Vehicle on a Day Type from the start point to the end point of a Journey Pattern on a specified Route.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#TimingLink">
-        <rdfs:comment xml:lang="en">A TimingLink is an ordered pair of TimingPoint for which run times
-may be recorded.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A TimingLink is an ordered pair of Timing Point for which run times may be recorded.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern">
         <rdfs:comment xml:lang="en">A TimingLinkInJourneyPattern is the position of a TimingLink in a
