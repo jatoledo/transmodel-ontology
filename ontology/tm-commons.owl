@@ -3,7 +3,7 @@
      xml:base="https://w3id.org/transmodel/commons"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     	 xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -14,6 +14,7 @@
      xmlns:tmkos="https://w3id.org/transmodel/kos/"
      xmlns:tmaorg="https://w3id.org/transmodel/organisations#"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/"
      xmlns:tmcommons="https://w3id.org/transmodel/commons#"
      xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
@@ -319,9 +320,24 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#locatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#locatedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#Location"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#TOREVIEW -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#TOREVIEW"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#aViewOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#aViewOf"/>
     
 
 
@@ -333,6 +349,52 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
+        <rdfs:label xml:lang="en">coordinates</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
@@ -633,12 +695,97 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/commons#LocatingSystem -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#LocatingSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The system used as reference for location and graphical representation of the network and other spatial objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Location -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Location">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The position of a Point with a reference to a given Locating System  (e. g. coordinates).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Place -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Place">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
         <rdfs:comment xml:lang="en">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</rdfs:comment>
         <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Point -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#aViewOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#locatedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Location"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Make it in that ontology a subclass of the W3C Geo Point</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
 
@@ -680,6 +827,12 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 - ...</rdfs:comment>
         <rdfs:label xml:lang="en">Zone</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PointInLinkSequence -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
     
 
 
@@ -747,6 +900,9 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/common#timingLinkInJourneyPattern">
         <rdfs:label xml:lang="en">timingLinkInJourneyPattern</rdfs:label>
     </rdf:Description>
