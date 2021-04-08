@@ -163,6 +163,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#inLinkSequence -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#inLinkSequence"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#madeUpOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#madeUpOf"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#viewedAs -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#viewedAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -187,6 +216,18 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#distanceFromStart -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#distanceFromStart"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#order -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#order"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -204,6 +245,18 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Point -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point"/>
+    
+
+
     <!-- https://w3id.org/transmodel/core#LinkSequence -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/core#LinkSequence">
@@ -216,6 +269,61 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Distance of route sequence.  Units are as specified for Frame. Default is SI Metres</rdfs:comment>
         <rdfs:label xml:lang="en">Link Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#LinkSequence -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#LinkSequence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#madeUpOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An ordered sequence either of POINTs or of LINKs, defining a path through the network</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Add all the attributes that are relevant to this class</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: Analyse whether this class should be better defined in the Commons module</rdfs:comment>
+        <rdfs:label xml:lang="en">Link Sequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#PointInLinkSequence -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInLinkSequence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#inLinkSequence"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#LinkSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#distanceFromStart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#order"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A point in a Link Sequence indicating its order in that particular Link Sequence</rdfs:comment>
+        <rdfs:comment xml:lang="en">TODO: TransModel defines that a Point in Link Sequence is connected to a Layer, but this is not considered relevant yet</rdfs:comment>
+        <rdfs:label xml:lang="en">Point In Link Sequence</rdfs:label>
     </owl:Class>
     
 
