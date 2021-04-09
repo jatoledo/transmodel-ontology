@@ -2097,6 +2097,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#ValidityCondition -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#ValidityCondition">
+        <rdfs:comment xml:lang="en">Condition used in order to characterise a given version of a version frame. a validity condition consists of a parameter (e.g. date, triggering event, etc.) and its type of application  (e.g. for,  from,  until, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Vehicle -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Vehicle">
@@ -3052,6 +3060,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#OperationalContext -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#OperationalContext">
+        <rdfs:comment xml:lang="en">Characterization of a set of operational objects, such as timing or links determined either by a department or by an organisational unit.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#OrganisationDayType -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#OrganisationDayType">
@@ -3747,6 +3763,14 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TrainInCompoundTrain">
         <rdfs:comment xml:lang="en">The specification of the order of TRAINs in a COMPOUND TRAIN.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TrainNumber -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TrainNumber">
+        <rdfs:comment xml:lang="en">Specification of codes assigned to particular vehicle journeys when operated by trains or compound trains according to a functional purpose (passenger information, operation follow-up, etc)</rdfs:comment>
     </owl:Class>
     
 
@@ -6300,9 +6324,7 @@
         <rdfs:comment xml:lang="en">A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#ServiceJourney">
-        <rdfs:comment xml:lang="en">TODO: Add object properties to relate the Service Journey to other classes such as Service Journey Interchange, PT Ride Leg, Check constraint and flexible Service properties, and Vehicle Type</rdfs:comment>
         <rdfs:comment xml:lang="en">A Service Journey is a passenger-carrying Vehicle Journey for one specified Day Type. The pattern of working is in principle defined by a Service Journey Pattern.</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Add properties for Dynamic, Print and ServiceAlteration (as per the TransModel model)</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">
         <rdfs:comment xml:lang="en">The Journey Pattern for (a Passenger carrying) Service Journeys</rdfs:comment>
