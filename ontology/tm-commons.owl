@@ -355,9 +355,19 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -623,6 +633,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#ClassInRepository -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#ClassInRepository">
+        <rdfs:comment xml:lang="en">any entity name belonging to the repository.  e.g. day type, property of day, time band, vehicle type,  etc, are relevant instances of class in repository in the context of version management.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Entity -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Entity">
@@ -790,6 +808,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#ValidityCondition -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#ValidityCondition">
+        <rdfs:comment xml:lang="en">Condition used in order to characterise a given version of a version frame. a validity condition consists of a parameter (e.g. date, triggering event, etc.) and its type of application  (e.g. for,  from,  until, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Version -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Version">
@@ -801,6 +827,18 @@
     <!-- https://w3id.org/transmodel/commons#VersionFrame -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#VersionFrame">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A set of versions referring to a same data source and belonging to the same type of frame. a frame may be restricted by validity conditions.</rdfs:comment>
     </owl:Class>
     
@@ -1317,6 +1355,12 @@ may be recorded.</rdfs:label>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/common#ActivationLink">
         <rdfs:comment xml:lang="en">A Link where a control process is activated when a vehicle passes it</rdfs:comment>
     </rdf:Description>
