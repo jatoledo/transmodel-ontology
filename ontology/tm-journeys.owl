@@ -1341,6 +1341,16 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#atCentre -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#atCentre">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">whether stop point can be considered as being at the centre of a topographic place.  default is false.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#changeOfDestinationDisplay -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#changeOfDestinationDisplay">
@@ -1607,6 +1617,26 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#positionOfTrainElement -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#positionOfTrainElement">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TrainStopAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">The association of a TRAIN COMPONENT at a SCHEDULED STOP POINT with a specific STOP PLACE and also possibly a QUAY and BOARDING POSITION.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#publicCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#publicCode">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#StopArea"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">public code for a stop area.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#requestStop -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#requestStop">
@@ -1732,6 +1762,15 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#vehicleMode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleMode">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#ServiceLink"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -3287,6 +3326,13 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#atCentre"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3337,10 +3383,32 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#ServiceLink -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#vehicleMode"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A LINK between an ordered pair of SCHEDULED STOP POINTs.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#StopArea -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopArea">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#publicCode"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3654,6 +3722,22 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TrainInCompoundTrain">
         <rdfs:comment xml:lang="en">The specification of the order of TRAINs in a COMPOUND TRAIN.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#TrainStopAssignment -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#TrainStopAssignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#StopAssignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#positionOfTrainElement"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The association of a TRAIN COMPONENT at a SCHEDULED STOP POINT with a specific STOP PLACE and also possibly a QUAY and BOARDING POSITION.</rdfs:comment>
     </owl:Class>
     
 
@@ -6202,12 +6286,10 @@
         <rdfs:comment xml:lang="en">A group of Scheduled Stop Points close to each other</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#StopAssignment">
-        <rdfs:comment xml:lang="en">TODO: Add more subclasses of this class, such as TrainStopAssignment, FlexibleStopAssignment, VehicleTypeStopAssignment or NavigationPathAssignment</rdfs:comment>
         <rdfs:comment xml:lang="en">The allocation of a Scheduled Stop Point (i.e. a Scheduled Stop Point of a Service Pattern or Journey Pattner) to a specific Stop Place, for either a Service Journey or Vehicle Service.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#StopPointInJourneyPattern">
         <rdfs:comment xml:lang="en">A Point in Journey Pattern that is a Scheduled Stop Point</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: determine whether we need to add a property isFlexible in order to describe whether the stop has some flexilbility in the type of drop-off/pick-up, etc.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#TemplateServiceJourney">
         <rdfs:comment xml:lang="en">A passenger-carrying Template Vehicle Journey. It may represent multiple journeys.</rdfs:comment>
