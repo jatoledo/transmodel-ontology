@@ -1738,6 +1738,18 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#InfrastructureLink">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#InfrastructurePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#InfrastructurePoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A super-type including all LINKs of the physical network (e.g. RAILWAY ELEMENT).</rdfs:comment>
     </owl:Class>
     
