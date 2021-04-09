@@ -1319,6 +1319,16 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#BorderCrossingPoint -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#BorderCrossingPoint">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#StopPlace"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">whether stop place is a border crossing.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"/>
@@ -3431,6 +3441,21 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#StopPlace -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#StopPlace">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#BorderCrossingPoint"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A place comprising one or more locations where vehicles may stop and where passengers may board or leave vehicles or prepare their trip. A stop place will usually have one or more wellknown names.</rdfs:comment>
     </owl:Class>
     
 
