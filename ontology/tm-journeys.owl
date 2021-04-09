@@ -29,13 +29,14 @@
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:abstract xml:lang="en"></dc:abstract>
         <dc:creator>Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator xml:lang="en">Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator xml:lang="en">Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:date>2019-11-22</dc:date>
+        <dc:date>2021-04-09</dc:date>
         <dc:description xml:lang="en">Module of the Transmodel Ontology focused on journeys. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
         <dc:identifier>https://w3id.org/transmodel/journeys</dc:identifier>
         <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
         <dc:title xml:lang="en">Transmodel Ontology - Journeys</dc:title>
-        <dcterms:bibliographicCitation xml:lang="en">Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid),Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid). Transmodel Ontology - Journeys. Revision: https://w3id.org/transmodel/journeys/0.2</dcterms:bibliographicCitation>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/journeys#"/>
         <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on facilities. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Transmodel Ontology - Journeys</rdfs:label>
@@ -113,6 +114,14 @@
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
     
 
 
@@ -1208,7 +1217,6 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">id</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1217,17 +1225,13 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/url">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A URL associated</rdfs:comment>
-        <rdfs:label xml:lang="en">url</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
     
 
 
@@ -3992,10 +3996,34 @@
     
 
 
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:label xml:lang="en">id</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://schema.org/url -->
+
+    <owl:NamedIndividual rdf:about="http://schema.org/url">
+        <rdfs:label xml:lang="en">url</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
     <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
         <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6187,11 +6215,8 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-        <rdfs:label xml:lang="en">description</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdf:Description rdf:about="http://schema.org/url">
+        <rdfs:comment xml:lang="en">A URL associated</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/commons#ComplexFeature">
         <rdfs:comment xml:lang="en">An aggregate of Simple Features and/or other Complex features</rdfs:comment>
