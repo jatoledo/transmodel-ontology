@@ -220,6 +220,16 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#clasifiedAs -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#clasifiedAs">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#VehicleModel"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#in -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#in">
@@ -257,12 +267,39 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#defining -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#defining">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#PurposeOfEquipmentProfile"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#VehicleEquipmentProfile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#equippedWith -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#equippedWith">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#Vehicle"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#ActualVehilceEquipment"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#JourneyPattern"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#DestinationDisplay"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#suitable -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/facilities#suitable">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#ActualVehilceEquipment"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
     </owl:ObjectProperty>
     
 
@@ -979,7 +1016,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#stopsAt">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
     </owl:ObjectProperty>
     
@@ -1033,7 +1069,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourney">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
     </owl:ObjectProperty>
     
@@ -1043,7 +1078,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneyPart">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#JourneyPart"/>
     </owl:ObjectProperty>
     
@@ -1075,7 +1109,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehicleJourneys">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#VehicleJourney"/>
     </owl:ObjectProperty>
     
@@ -1104,7 +1137,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#vehiclePassingTime">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#PROPS-TO-REVIEW"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#Vehicle"/>
     </owl:ObjectProperty>
     
 
@@ -1198,6 +1230,16 @@
     <!-- https://w3id.org/transmodel/commons#viewedAs -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#viewedAs"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#units -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#units">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#VehicleEquipmentProfile"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Units (number of instances of equipment), for  VEHICLE EQUIPMENT PROFILE.</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -1785,6 +1827,34 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#Vehicle -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Vehicle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#equippedWith"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#ActualVehilceEquipment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A public transport vehicle used for carrying passengers.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#VehicleModel -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#VehicleModel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#clasifiedAs"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A classification of public transport vehicles of the same VEHICLE TYPE, e.g. according to equipment specifications or model generation.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Zone -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone">
@@ -1818,6 +1888,20 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#ActualVehilceEquipment -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#ActualVehilceEquipment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#suitable"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityAssessment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Actual Vehicle Equipment</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#BoardingPosition -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#BoardingPosition"/>
@@ -1828,6 +1912,26 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#JourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/facilities#PurposeOfEquipmentProfile -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#PurposeOfEquipmentProfile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#defining"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/facilities#VehicleEquipmentProfile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A functional purpose which requires a certain set of equipment of different types put together in a VEHICLE EQUIPMENT PROFILE.</rdfs:comment>
     </owl:Class>
     
 
@@ -1857,9 +1961,36 @@
     
 
 
+    <!-- https://w3id.org/transmodel/facilities#VehicleEquipmentProfile -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleEquipmentProfile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/facilities#units"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each instantiation of this entity gives the number of items of one TYPE OF EQUIPMENT a VEHICLE MODEL should contain for a given PURPOSE OF EQUIPMENT PROFILE. The set of instantiations for one VEHICLE MODEL and one purpose gives one complete &apos;profile&apos;.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#VehicleType -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/facilities#VehicleType">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#clasifiedAs"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#clasifiedAs"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#VehicleModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#hasLiftOrRamp"/>
@@ -3187,14 +3318,6 @@
     <!-- https://w3id.org/transmodel/journeys#Trip -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Trip">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#Vehicle -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Vehicle">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"/>
     </owl:Class>
     
@@ -5481,6 +5604,9 @@
         <rdfs:comment xml:lang="es">La Zona es un Lugar (Place) de dos dimensiones que ese encuentra en el área que sirve un operador de transporte público. Puede ser una zona administrativa, una zona tarifaria, una zona de acceso o algo más concreto.</rdfs:comment>
         <rdfs:comment xml:lang="en">A two-dimensional PLACE within the service area of a public transport operator (administrative zone, TARIFF ZONE, ACCESS ZONE, etc.).</rdfs:comment>
     </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#AccessibilityAssessment">
+        <rdfs:comment xml:lang="en">Accessibility Assessment</rdfs:comment>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/facilities#VehicleType">
         <rdfs:comment xml:lang="en">A classification of public transport vehicles according to the vehicle scheduling requirements in mode and capacity (e.g. standard bus, double-deck, ...).</rdfs:comment>
     </rdf:Description>
@@ -5501,8 +5627,8 @@
         <rdfs:comment xml:lang="en">A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#ActivationPoint">
-        <rdfs:comment xml:lang="en">A Point where a control process is activated when a vehicle passes it. Equipment may be needed for the activation.</rdfs:comment>
         <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Point where a control process is activated when a vehicle passes it. Equipment may be needed for the activation.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Address">
         <rdfs:comment xml:lang="en">The descriptive data associated with a Place that can be used to describe the unique geographical context of a Place for the purposes of identifying. May be refined as either a Road Address, a Postal Address or both.</rdfs:comment>
@@ -5780,9 +5906,6 @@ It&apos;s the same as Timing Point In Journey Pattern</rdfs:comment>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Trip">
         <rdfs:comment xml:lang="en">According to the definition of GTFS for Trip the VehicleJourney&apos;s Transmodel definition would fit better</rdfs:comment>
         <rdfs:comment xml:lang="en">In Transmodel is the physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Vehicle">
-        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passengers</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#VehicleJourney">
         <rdfs:comment xml:lang="en">A Vehicle Journey is the journey made by the Vehicle.

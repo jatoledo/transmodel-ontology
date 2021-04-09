@@ -203,7 +203,6 @@
     <!-- https://w3id.org/transmodel/core#distance -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/core#distance">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/core#LinkSequence"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:label xml:lang="en">distance</rdfs:label>
     </owl:DatatypeProperty>
@@ -239,6 +238,60 @@
     
 
 
+    <!-- http://w3id.org/transmodel/journeys#Point -->
+
+    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#Point">
+        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+        <rdfs:label xml:lang="es">Punto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/transmodel/journeys#PointInLinkSequence -->
+
+    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#PointInLinkSequence"/>
+    
+
+
+    <!-- http://w3id.org/transmodel/journeys#RoutePoint -->
+
+    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#RoutePoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Point used to define the shape of a Route through the network.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un punto que se usa para definir la forma de una ruta por la red de transporte.</rdfs:comment>
+        <rdfs:label xml:lang="es">Punto de Ruta</rdfs:label>
+        <rdfs:label xml:lang="en">Route Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/transmodel/journeys#ScheduledStopPoint -->
+
+    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#ScheduledStopPoint">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:comment xml:lang="en">A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo.</rdfs:comment>
+        <rdfs:label xml:lang="es">Parada Planificada</rdfs:label>
+        <rdfs:label xml:lang="en">Scheduled Stop Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern -->
+
+    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#PointInLinkSequence"/>
+        <rdfs:comment xml:lang="en">A Point in a JourneyPattern which is a TimingPoint</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un punto en un patrón de viaje que es un punto de control</rdfs:comment>
+        <rdfs:label xml:lang="es">Punto de control en el patrón de viaje</rdfs:label>
+        <rdfs:label xml:lang="en">Timing Point In Journey Pattern</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -254,22 +307,6 @@
     <!-- https://w3id.org/transmodel/commons#Point -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#LinkSequence -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/core#LinkSequence">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/core#distance"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Distance of route sequence.  Units are as specified for Frame. Default is SI Metres</rdfs:comment>
-        <rdfs:label xml:lang="en">Link Sequence</rdfs:label>
-    </owl:Class>
     
 
 

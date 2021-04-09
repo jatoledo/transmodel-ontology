@@ -2025,7 +2025,6 @@ In the TransModel UML model and in the Netex implementation this is expressed as
     <!-- https://w3id.org/transmodel/facilities#wheelchairAccess -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#wheelchairAccess">
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#AccessibilityLimitation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -2383,7 +2382,6 @@ A small number of well-defined categories are used that are chosen to allow the 
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fixed equipment installed on a Vehicle</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: check whether the range of the property locatedIn should go into the concept Vehicle from a different module of the ontology</rdfs:comment>
         <rdfs:label xml:lang="en">Actual Vehicle Equipment</rdfs:label>
     </owl:Class>
     
