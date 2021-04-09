@@ -151,7 +151,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#canAlight">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
-        <rdfs:label xml:lang="en">canAlight</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -161,7 +160,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#canBoard">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
-        <rdfs:label xml:lang="en">canBoard</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -170,7 +168,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#destinationStop">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">destinationStop</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -179,7 +176,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#followsJourneyPattern">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">followsJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -189,7 +185,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#hasAServiceJourneyPattern">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Service"/>
-        <rdfs:label xml:lang="en">serviceJourneyPattern</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -199,7 +194,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#journeyPatternPoint">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Point"/>
-        <rdfs:label xml:lang="en">journeyPatternPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -210,7 +204,6 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Passenger"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#Service"/>
-        <rdfs:label xml:lang="en">serviceJourney</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -219,7 +212,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#originStop">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">originStop</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -228,7 +220,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#route">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">route</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -237,7 +228,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#scheduledStopPoint">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">scheduledStopPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -247,7 +237,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#stopsAt">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Vehicle"/>
-        <rdfs:label xml:lang="en">stopsAt</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -258,7 +247,6 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#TimingLink"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/common#TimingPoint"/>
-        <rdfs:label xml:lang="en">timingLinkPoint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -277,7 +265,6 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourney">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#Vehicle"/>
-        <rdfs:label xml:lang="en">vehicleJourney</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -286,7 +273,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourneyDayType">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">vehicleJourneyDayType</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -295,7 +281,14 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/common#vehicleJourneyRoute">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:label xml:lang="en">vehicleJourneyRoute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#aClasificationFor -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#aClasificationFor">
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#GroupOfEntities"/>
     </owl:ObjectProperty>
     
 
@@ -304,8 +297,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#at">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">at</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -314,8 +305,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/commons#in">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/transmodel/journeys#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)</rdfs:comment>
-        <rdfs:label xml:lang="en">in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -362,9 +351,7 @@
 
     <!-- http://purl.org/dc/terms/identifier -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
-        <rdfs:label xml:lang="en">identifier</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 
@@ -376,33 +363,25 @@
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-        <rdfs:label xml:lang="en">altitude</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
     
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
-        <rdfs:label xml:lang="en">latitude</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
     
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
-        <rdfs:label xml:lang="en">coordinates</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"/>
     
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-        <rdfs:label xml:lang="en">longitude</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
     
 
 
@@ -411,7 +390,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#arrivalTime">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#TimingPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label xml:lang="en">arrivalTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -420,7 +398,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#headway">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label xml:lang="en">headway</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -429,7 +406,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#layover">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label xml:lang="en">layover</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -438,8 +414,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#pointSequence">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <rdfs:comment xml:lang="en">Sequences of ScheduledStopPoint</rdfs:comment>
-        <rdfs:label xml:lang="en">stopSequence</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -448,7 +422,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#runtime">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <rdfs:label xml:lang="en">runtime</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -458,7 +431,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#startTime">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#HeadingInterval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">startTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -470,7 +442,6 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#TimingPoint"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#VehicleJourneyLayover"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:label xml:lang="en">time</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -480,8 +451,6 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#timeLink">
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/common#TimingPoint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <rdfs:comment xml:lang="en">Sequences of TimePoints</rdfs:comment>
-        <rdfs:label xml:lang="en">timeLink</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -505,7 +474,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/common#waitTime">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">waitTime</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -514,8 +482,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#borderCrossing">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <rdfs:label xml:lang="en">This property determines whether the Point is on a border crossing</rdfs:label>
-        <rdfs:label xml:lang="en">border crossing</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -524,8 +490,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#colour">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The colour used to represent something with a Presentation (e.g., a Line)</rdfs:comment>
-        <rdfs:label xml:lang="en">colour</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -534,8 +498,6 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#textColour">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">The colour used to represent the text associated to something with a Presentation (e.g., a Line)</rdfs:comment>
-        <rdfs:label xml:lang="en">text colour</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -561,8 +523,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#ActivationLink">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A Link where a control process is activated when a vehicle passes it</rdfs:comment>
-        <rdfs:label xml:lang="en">ActivationLink</rdfs:label>
     </owl:Class>
     
 
@@ -571,8 +531,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#ActivationPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/common#Point"/>
-        <rdfs:comment>A Point where a control process is activated when a vehicle passes it. Equipment may be needed for activation</rdfs:comment>
-        <rdfs:label xml:lang="en">ActivationPoint</rdfs:label>
     </owl:Class>
     
 
@@ -581,8 +539,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#HeadingInterval">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup</rdfs:comment>
-        <rdfs:label xml:lang="en">HeadwayInterval</rdfs:label>
     </owl:Class>
     
 
@@ -591,8 +547,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#JourneyPatternLayover">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover</rdfs:comment>
-        <rdfs:label xml:lang="en">JourneyPatternLayover</rdfs:label>
     </owl:Class>
     
 
@@ -601,9 +555,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Passenger">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A Passenger is someone who makes a Trip</rdfs:comment>
-        <rdfs:comment xml:lang="en">When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney</rdfs:comment>
-        <rdfs:label xml:lang="en">Passenger</rdfs:label>
     </owl:Class>
     
 
@@ -612,8 +563,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Point">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
-        <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
 
@@ -622,10 +571,6 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Service">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one
-specified DayType. The pattern of working is in principle defined
-by a ServiceJourneyPattern.</rdfs:comment>
-        <rdfs:label xml:lang="en">ServiceJourney</rdfs:label>
     </owl:Class>
     
 
@@ -634,9 +579,6 @@ by a ServiceJourneyPattern.</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#TimingLink">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:label xml:lang="en">A TimingLink is an ordered pair of TimingPoint for which run times
-may be recorded.</rdfs:label>
-        <rdfs:label xml:lang="en">TimingLink</rdfs:label>
     </owl:Class>
     
 
@@ -645,11 +587,6 @@ may be recorded.</rdfs:label>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#TimingLinkInJourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A TimingLinkInJourneyPattern is the position of a TimingLink in a
-JourneyPattern. This entity is needed if a TimingLink is repeated
-in the same JourneyPattern, and separate information is to be stored
-about each iteration of the TimingLink</rdfs:comment>
-        <rdfs:label xml:lang="en">TimingLinkInJourneyPattern</rdfs:label>
     </owl:Class>
     
 
@@ -658,9 +595,6 @@ about each iteration of the TimingLink</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#TimingPoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/common#Point"/>
-        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be
-recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
-        <rdfs:label xml:lang="en">TimingPoint</rdfs:label>
     </owl:Class>
     
 
@@ -669,8 +603,6 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Trip">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
-        <rdfs:label xml:lang="en">Trip</rdfs:label>
     </owl:Class>
     
 
@@ -679,8 +611,6 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#Vehicle">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passengers</rdfs:comment>
-        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
     </owl:Class>
     
 
@@ -689,16 +619,37 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/common#VehicleJourneyLayover">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#TOREVIEW"/>
-        <rdfs:label xml:lang="en">VehicleJourneyLayover</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Entity -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Entity">
+        <rdfs:comment xml:lang="en">Any data instance to be managed in an operational version management system. when several data sources coexist (multimodality and/or interoperability), an entity has to be related to a given data source in which it is defined.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#EntityInVersion -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#EntityInVersion">
+        <rdfs:comment xml:lang="en">The entity associated to a given version.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities">
-        <rdfs:comment xml:lang="en">A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name.</rdfs:comment>
-        <rdfs:label xml:lang="en">Group of Entities</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Layer -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Layer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+        <rdfs:comment xml:lang="en">A user-defined group of entities, specified for a particular functional purpose, associating data referring to a particular locating system.</rdfs:comment>
     </owl:Class>
     
 
@@ -776,8 +727,6 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Place">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
-        <rdfs:comment xml:lang="en">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</rdfs:comment>
-        <rdfs:label xml:lang="en">Place</rdfs:label>
     </owl:Class>
     
 
@@ -798,9 +747,6 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
                 <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Make it in that ontology a subclass of the W3C Geo Point</rdfs:comment>
-        <rdfs:label xml:lang="en">Point</rdfs:label>
     </owl:Class>
     
 
@@ -820,8 +766,20 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">This class is used to represent a Line, or any other object, in a map</rdfs:comment>
-        <rdfs:label xml:lang="en">Presentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#PurposeOfGrouping -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#PurposeOfGrouping">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#aClasificationFor"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#GroupOfEntities"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">functional purpose for which groups of elements are defined. the purpose of grouping may be restricted to one or more types of the given object.</rdfs:comment>
     </owl:Class>
     
 
@@ -832,16 +790,25 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/transmodel/commons#Version -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Version">
+        <rdfs:comment xml:lang="en">A group of operational data instances which share the same validity conditions. a version belongs to a unique version frame and is characterised by a unique type of version.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#VersionFrame -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#VersionFrame">
+        <rdfs:comment xml:lang="en">A set of versions referring to a same data source and belonging to the same type of frame. a frame may be restricted by validity conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Zone -->
 
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone">
-        <rdfs:comment xml:lang="en">A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
-- AdministrativeZone
-- TariffZone
-- AccessZone
-- ...</rdfs:comment>
-        <rdfs:label xml:lang="en">Zone</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Zone"/>
     
 
 
@@ -859,6 +826,441 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:label xml:lang="en">latitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat_long">
+        <rdfs:label xml:lang="en">coordinates</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:NamedIndividual rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#ActivationLink -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#ActivationLink">
+        <rdfs:label xml:lang="en">ActivationLink</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#ActivationPoint -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#ActivationPoint">
+        <rdfs:label xml:lang="en">ActivationPoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#HeadingInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#HeadingInterval">
+        <rdfs:label xml:lang="en">HeadwayInterval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#JourneyPatternLayover -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#JourneyPatternLayover">
+        <rdfs:label xml:lang="en">JourneyPatternLayover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#Passenger -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#Passenger">
+        <rdfs:label xml:lang="en">Passenger</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#Point -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#Point">
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#Service -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#Service">
+        <rdfs:label xml:lang="en">ServiceJourney</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#TimingLink -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#TimingLink">
+        <rdfs:label xml:lang="en">A TimingLink is an ordered pair of TimingPoint for which run times
+may be recorded.</rdfs:label>
+        <rdfs:label xml:lang="en">TimingLink</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#TimingLinkInJourneyPattern -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#TimingLinkInJourneyPattern">
+        <rdfs:label xml:lang="en">TimingLinkInJourneyPattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#TimingPoint -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#TimingPoint">
+        <rdfs:label xml:lang="en">TimingPoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#Trip -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#Trip">
+        <rdfs:label xml:lang="en">Trip</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#Vehicle -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#Vehicle">
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#VehicleJourneyLayover -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#VehicleJourneyLayover">
+        <rdfs:label xml:lang="en">VehicleJourneyLayover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#arrivalTime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#arrivalTime">
+        <rdfs:label xml:lang="en">arrivalTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#canAlight -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#canAlight">
+        <rdfs:label xml:lang="en">canAlight</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#canBoard -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#canBoard">
+        <rdfs:label xml:lang="en">canBoard</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#destinationStop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#destinationStop">
+        <rdfs:label xml:lang="en">destinationStop</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#followsJourneyPattern -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#followsJourneyPattern">
+        <rdfs:label xml:lang="en">followsJourneyPattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#hasAServiceJourneyPattern -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#hasAServiceJourneyPattern">
+        <rdfs:label xml:lang="en">serviceJourneyPattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#headway -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#headway">
+        <rdfs:label xml:lang="en">headway</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#journeyPatternPoint -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#journeyPatternPoint">
+        <rdfs:label xml:lang="en">journeyPatternPoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#layover -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#layover">
+        <rdfs:label xml:lang="en">layover</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#makesAServiceJourney -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#makesAServiceJourney">
+        <rdfs:label xml:lang="en">serviceJourney</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#originStop -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#originStop">
+        <rdfs:label xml:lang="en">originStop</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#pointSequence -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#pointSequence">
+        <rdfs:label xml:lang="en">stopSequence</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#route -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#route">
+        <rdfs:label xml:lang="en">route</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#runtime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#runtime">
+        <rdfs:label xml:lang="en">runtime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#scheduledStopPoint -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#scheduledStopPoint">
+        <rdfs:label xml:lang="en">scheduledStopPoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#startTime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#startTime">
+        <rdfs:label xml:lang="en">startTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#stopsAt -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#stopsAt">
+        <rdfs:label xml:lang="en">stopsAt</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#time -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#time">
+        <rdfs:label xml:lang="en">time</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#timeLink -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#timeLink">
+        <rdfs:label xml:lang="en">timeLink</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#timingLink -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#timingLink">
+        <rdfs:label xml:lang="en">timingLinkPoint</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#timingLinkInJourneyPattern -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#timingLinkInJourneyPattern">
+        <rdfs:label xml:lang="en">timingLinkInJourneyPattern</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#vehicleJourney -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#vehicleJourney">
+        <rdfs:label xml:lang="en">vehicleJourney</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#vehicleJourneyDayType -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#vehicleJourneyDayType">
+        <rdfs:label xml:lang="en">vehicleJourneyDayType</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#vehicleJourneyRoute -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#vehicleJourneyRoute">
+        <rdfs:label xml:lang="en">vehicleJourneyRoute</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/common#waitTime -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/common#waitTime">
+        <rdfs:label xml:lang="en">waitTime</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#GroupOfEntities -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities">
+        <rdfs:label xml:lang="en">Group of Entities</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Place -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#Place">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Point -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#Point">
+        <rdfs:label xml:lang="en">Point</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Presentation -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#Presentation">
+        <rdfs:label xml:lang="en">Presentation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Zone -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#Zone">
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#at -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#at">
+        <rdfs:label xml:lang="en">at</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#borderCrossing -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#borderCrossing">
+        <rdfs:label xml:lang="en">This property determines whether the Point is on a border crossing</rdfs:label>
+        <rdfs:label xml:lang="en">border crossing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#colour -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#colour">
+        <rdfs:label xml:lang="en">colour</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#in -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#in">
+        <rdfs:label xml:lang="en">in</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#textColour -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/commons#textColour">
+        <rdfs:label xml:lang="en">text colour</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -915,11 +1317,83 @@ recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-        <rdfs:label xml:lang="en">name</rdfs:label>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#ActivationLink">
+        <rdfs:comment xml:lang="en">A Link where a control process is activated when a vehicle passes it</rdfs:comment>
     </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/transmodel/common#timingLinkInJourneyPattern">
-        <rdfs:label xml:lang="en">timingLinkInJourneyPattern</rdfs:label>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#ActivationPoint">
+        <rdfs:comment>A Point where a control process is activated when a vehicle passes it. Equipment may be needed for activation</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#HeadingInterval">
+        <rdfs:comment xml:lang="en">A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#JourneyPatternLayover">
+        <rdfs:comment xml:lang="en">A JourneyPatternLayover is the time allowance at the end of each journey on a specified JourneyPattern to allow for delays and for other purposes. This layover supersedes any global layover and may be superseded by a specific VehicleJourneyLayover</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#Passenger">
+        <rdfs:comment xml:lang="en">When a Passenger makes a Journey it is a Trip; when a Vehicle does it is a VehicleJourney</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Passenger is someone who makes a Trip</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#Point">
+        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#Service">
+        <rdfs:comment xml:lang="en">A ServiceJourney is a Passenger carrying VehicleJourney for one
+specified DayType. The pattern of working is in principle defined
+by a ServiceJourneyPattern.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#TimingLinkInJourneyPattern">
+        <rdfs:comment xml:lang="en">A TimingLinkInJourneyPattern is the position of a TimingLink in a
+JourneyPattern. This entity is needed if a TimingLink is repeated
+in the same JourneyPattern, and separate information is to be stored
+about each iteration of the TimingLink</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#TimingPoint">
+        <rdfs:comment xml:lang="en">A TimingPoint is a Point against which the timing information necessary to build schedules may be
+recorded. It&apos;s the same as TimingPointInJourneyPattern</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#Trip">
+        <rdfs:comment xml:lang="en">The physical spatial possibility for a passenger to travel from a Place (located Point) origin of the Trip to another place (located Point) destination of the Trip.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#Vehicle">
+        <rdfs:comment xml:lang="en">A PublicTransportVehicle used for carrying Passengers</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#pointSequence">
+        <rdfs:comment xml:lang="en">Sequences of ScheduledStopPoint</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/common#timeLink">
+        <rdfs:comment xml:lang="en">Sequences of TimePoints</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#GroupOfEntities">
+        <rdfs:comment xml:lang="en">A set of Entities grouped together according to a Purpose of Grouping, e.g. grouping of stops known to the public by a common name.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#Place">
+        <rdfs:comment xml:lang="en">A geographic place of any type which may be specified as the origin or destination of a trip. A Place may be represented as a Point (dimension 0), a road section (dimension 1) or a Zone (dimension 2).</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#Point">
+        <rdfs:comment xml:lang="en">TODO: Make it in that ontology a subclass of the W3C Geo Point</rdfs:comment>
+        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#Presentation">
+        <rdfs:comment xml:lang="en">This class is used to represent a Line, or any other object, in a map</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#Zone">
+        <rdfs:comment xml:lang="en">A two dimensional Place within the Service Area of an Operator or Serviced Operator. It can be:
+- AdministrativeZone
+- TariffZone
+- AccessZone
+- ...</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#at">
+        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing related to it. It is used in multiple situations and modules of this ontology</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#colour">
+        <rdfs:comment xml:lang="en">The colour used to represent something with a Presentation (e.g., a Line)</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#in">
+        <rdfs:comment xml:lang="en">This property sets the relationship between something and other thing contained in the first. It is used in multiple situations and modules of this ontology (e.g., Quay in Stop Place)</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/transmodel/commons#textColour">
+        <rdfs:comment xml:lang="en">The colour used to represent the text associated to something with a Presentation (e.g., a Line)</rdfs:comment>
     </rdf:Description>
 </rdf:RDF>
 
