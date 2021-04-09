@@ -1734,6 +1734,15 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#InfrastructureLink -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#InfrastructureLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Link"/>
+        <rdfs:comment xml:lang="en">A super-type including all LINKs of the physical network (e.g. RAILWAY ELEMENT).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Mode -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Mode">
@@ -1774,6 +1783,7 @@
                 <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Zone"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A 0-dimensional node of the network used for the spatial description of the network. POINTs may be located by a LOCATION in a given LOCATING SYSTEM.</rdfs:comment>
     </owl:Class>
     
 
@@ -1781,6 +1791,24 @@
     <!-- https://w3id.org/transmodel/commons#Presentation -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Presentation"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#RailwayElement -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#RailwayElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#InfrastructureLink"/>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE LINK used to describe a railway network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#RoadElement -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#RoadElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#InfrastructureLink"/>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE LINK used to describe a road network.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1851,6 +1879,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A classification of public transport vehicles of the same VEHICLE TYPE, e.g. according to equipment specifications or model generation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#WireElement -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#WireElement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#InfrastructureLink"/>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE LINK used to describe a wire network.</rdfs:comment>
     </owl:Class>
     
 
@@ -5627,7 +5664,6 @@
         <rdfs:comment xml:lang="en">A Zone for which the duration to cover any Access link to a particular ScheduledStopPoint is the same</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#ActivationPoint">
-        <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
         <rdfs:comment xml:lang="en">A Point where a control process is activated when a vehicle passes it. Equipment may be needed for the activation.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Address">
@@ -5814,7 +5850,7 @@
         <rdfs:comment xml:lang="en">A property which a day may possess, such as school holiday, weekday, summer, winter, etc.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#RailwayJunction">
-        <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE POINT used to describe a railway network.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#ReliefPoint">
         <rdfs:comment xml:lang="en">A Timing Point where a relief is possible, i.e. a driver may take on or hand over a vehicle. The vehicle may sometimes be left unattended.</rdfs:comment>
@@ -5828,7 +5864,7 @@
         <rdfs:comment xml:lang="en">Specialisation of Address refining it by using the characteristics such as road number and mname use for conventional inidentification of along a road</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#RoadJunction">
-        <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE POINT used to describe a road network.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#Route">
         <rdfs:comment xml:lang="en">A Route is and ordered list of located Points defining one single path through the road (or rail) network.</rdfs:comment>
@@ -5925,7 +5961,7 @@ Within VehicleJourney there are several types:
         <rdfs:comment xml:lang="en">A characterisation of the public transport operation according to the means of transport (bus, tram, metro, train, ferry, ship).</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#WireJunction">
-        <rdfs:comment xml:lang="en">TODO: Complete with all relevant properties</rdfs:comment>
+        <rdfs:comment xml:lang="en">A type of INFRASTRUCTURE POINT used to describe a wire network.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#aViewOf">
         <rdfs:comment xml:lang="en">This property allows relating a Point with the Points in Link Sequence where it appears</rdfs:comment>
