@@ -1424,6 +1424,15 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#dynamic -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#dynamic">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">when this journey should be visible to public in dynamic channels.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#firstDayOffset -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#firstDayOffset">
@@ -1527,6 +1536,15 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#journeyDuration -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#journeyDuration">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">duration of vehicle journey.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -1703,6 +1721,14 @@
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/facilities#VehicleType"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Whether  VEHICLE TYPE is self-propelled.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#specialClient -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#specialClient">
+        <rdfs:comment xml:lang="en">client for special service.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -2824,6 +2850,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#Interchange -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Interchange">
+        <rdfs:comment xml:lang="en">The scheduled possibility for transfer of passengers at the same or different scheduled stop points.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#Journey -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#Journey"/>
@@ -3401,10 +3435,64 @@
     
 
 
+    <!-- https://w3id.org/transmodel/journeys#ServiceJourneyInterchange -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyInterchange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Interchange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">the scheduled possibility for transfer of passengers between two service journeys at the same or different scheduled stop points.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/journeys#ServiceJourneyPattern -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyPattern">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#ServiceJourneyPatternInterchange -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#ServiceJourneyPatternInterchange">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Interchange"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#JourneyPattern"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#ScheduledStopPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A recognised/organised possibility for passengers to change public transport vehicles using two scheduled stop points (which may be identical) on two particular service journey patterns, including the maximum wait duration allowed and the standard to be aimed at. these may supersede the times given for the default interchange. schedulers may use this entity for synchronisation of journeys.</rdfs:comment>
     </owl:Class>
     
 
@@ -3421,6 +3509,36 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A LINK between an ordered pair of SCHEDULED STOP POINTs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/journeys#SpecialService -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#SpecialService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/journeys#Journey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#dynamic"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#journeyDuration"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#specialClient"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A work of a vehicle that is not planned in a classical way, i.e. that is generally not based on vehicle journeys using journey patterns. it involves specific characteristics (such as specific access rights) and/or may be operated under specific circumstances.</rdfs:comment>
     </owl:Class>
     
 
@@ -6459,6 +6577,7 @@ Within VehicleJourney there are several types:
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#departureTime">
         <rdfs:comment xml:lang="en">Departure Time (e.g., for a Service Journey in a Timing Point)</rdfs:comment>
+        <rdfs:comment xml:lang="en">departure time of vehicle journey.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/journeys#describedBy">
         <rdfs:comment xml:lang="en">This property asign a DayType to the specific Property of Day</rdfs:comment>
