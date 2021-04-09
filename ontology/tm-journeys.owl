@@ -14,6 +14,7 @@
      xmlns:tmfac="https://w3id.org/transmodel/facilities#"
      xmlns:tmkos="https://w3id.org/transmodel/kos/"
      xmlns:tmorg="https://w3id.org/transmodel/organisations#"
+     xmlns:schema="https://schema.org/"
      xmlns:tmfare="https://w3id.org/transmodel/fares#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/"
@@ -317,6 +318,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
         <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+        <rdfs:range rdf:resource="https://w3id.org/transmodel/commons#PointOnRoute"/>
         <rdfs:range rdf:resource="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
     </owl:ObjectProperty>
     
@@ -1206,25 +1208,80 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">id</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/url -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/url">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A URL associated</rdfs:comment>
+        <rdfs:label xml:lang="en">url</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://w3id.org/transmodel/commons#borderCrossing -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#borderCrossing"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#driverDisplayText -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#driverDisplayText">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#DestinationDisplay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text to display  to DRIVER.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#frontText -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#frontText">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#DestinationDisplay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Front of vehicle  text associated of DESTINATION DISPLAY.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#sideText -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#sideText">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#DestinationDisplay"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Text to display on  side of vehicle associated with DESTINATION DISPLAY.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#turnaroundDistance -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/commons#turnaroundDistance">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/commons#TurnStation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A place (often a terminus)where a vehicle can reverse its direction (from a ROUTE to another of opposite DIRECTION).</rdfs:comment>
+    </owl:DatatypeProperty>
     
 
 
@@ -1732,6 +1789,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#AllowedLineDirection -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#AllowedLineDirection">
+        <rdfs:comment xml:lang="en">An allowed DIRECTION that can be used on a given ROUTE. This can be used to validate the selection of allowed values.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#ComplexFeature -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#ComplexFeature">
@@ -1749,6 +1814,58 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#DestinationDisplay -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#DestinationDisplay">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#driverDisplayText"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#frontText"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#sideText"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An advertised destination of a specific JOURNEY PATTERN, usually displayed on a headsign or at other on-board locations.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Direction -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Direction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A classification for the general orientation of ROUTEs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#GroupOfLines -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#GroupOfLines">
+        <rdfs:comment xml:lang="en">A grouping of lines which will be commonly referenced for a specific purpose.</rdfs:comment>
     </owl:Class>
     
 
@@ -1804,6 +1921,21 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#Network -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Network">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#GroupOfLines"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A named grouping of LINEs under which a transport network is known.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Point -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point">
@@ -1815,6 +1947,21 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A 0-dimensional node of the network used for the spatial description of the network. POINTs may be located by a LOCATION in a given LOCATING SYSTEM.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#PointOnRoute -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#PointOnRoute">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A POINT used to define the shape of a ROUTE through the network.</rdfs:comment>
     </owl:Class>
     
 
@@ -1886,6 +2033,21 @@
     
 
 
+    <!-- https://w3id.org/transmodel/commons#TurnStation -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#TurnStation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#turnaroundDistance"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A place (often a terminus)where a vehicle can reverse its direction (from a ROUTE to another of opposite DIRECTION).</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/commons#Vehicle -->
 
     <owl:Class rdf:about="https://w3id.org/transmodel/commons#Vehicle">
@@ -1910,6 +2072,20 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A classification of public transport vehicles of the same VEHICLE TYPE, e.g. according to equipment specifications or model generation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/commons#Via -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Via">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A secondary heading relevant for a certain part of the JOURNEY PATTERN advertising an onward intermediate destination to supplement the advertised (final) destination of DESTINATION DISPLAY.</rdfs:comment>
     </owl:Class>
     
 
@@ -2689,6 +2865,25 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#Presentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://schema.org/url"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3058,6 +3253,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/journeys#RoutePoint">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/commons#Point"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#aViewOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#PointOnRoute"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/commons#borderCrossing"/>
@@ -5735,6 +5936,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/commons#ComplexFeature">
         <rdfs:comment xml:lang="en">An aggregate of Simple Features and/or other Complex features</rdfs:comment>
     </rdf:Description>
