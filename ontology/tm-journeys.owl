@@ -6,6 +6,7 @@
      xmlns:geo="https://www.w3.org/2003/01/geo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:tmc="https://w3id.org/transmodel/core#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -1233,6 +1234,24 @@
     
 
 
+    <!-- https://w3id.org/transmodel/core#capacity -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/core#capacity">
+        <rdfs:comment xml:lang="en">Number of vehicles allowed at a given time at VEHICLE TYPE AT POINT.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#overtakingWidth -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/core#overtakingWidth">
+        <rdfs:domain rdf:resource="https://w3id.org/transmodel/core#OvertakingPossibility"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Width at overtaking point</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/facilities#units -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/facilities#units">
@@ -1927,6 +1946,80 @@
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#ImpossibleManoeuvre -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/core#ImpossibleManoeuvre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/core#NetworkRestrictions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#endOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#InfrastructureLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#startOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/commons#InfrastructureLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/identifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A specification of impossible move for a certain type of vehicle. It specifies from which INFRASTRUCTURE LINK to which other (adjacent) INFRASTRUCTURE LINK a certain VEHICLE TYPE cannot proceed, due to physical restrictions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#MeetingRestriction -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/core#MeetingRestriction">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/core#NetworkRestrictions"/>
+        <rdfs:comment xml:lang="en">A pair of INFRASTRUCTURE LINKs where vehicles of specified VEHICLE TYPEs are not allowed to meet.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#NetworkRestrictions -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/core#NetworkRestrictions"/>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#OvertakingPossibility -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/core#OvertakingPossibility">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/core#NetworkRestrictions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/core#overtakingWidth"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">NETWORK RESTRICTION specifying a POINT or a LINK where vehicles of specified VEHICLE TYPEs are or are  not allowed to overtake each other.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/core#VehicleTypeAtPoint -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/core#VehicleTypeAtPoint">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/core#NetworkRestrictions"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/core#capacity"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The number of vehicles of a specified VEHICLE TYPE which may wait at a specified POINT at any one time. If the capacity is 0, then that type of vehicle may not stop there.</rdfs:comment>
     </owl:Class>
     
 
