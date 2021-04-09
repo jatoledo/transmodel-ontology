@@ -1,956 +1,1772 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/transmodel/facilities#"
-     xml:base="https://w3id.org/transmodel/facilities"
-     xmlns:cc="http://creativecommons.org/ns#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:core="https://w3id.org/transmodel/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:tmfac="https://w3id.org/transmodel/facilities#"
-     xmlns:tmkos="https://w3id.org/transmodel/kos/"
-     xmlns:tmorg="https://w3id.org/transmodel/organisations#"
-     xmlns:tmfare="https://w3id.org/transmodel/fares#"
-     xmlns:tmkosorg="https://w3id.org/transmodel/kos/organisations/"
-     xmlns:tmcommons="https://w3id.org/transmodel/commons#"
-     xmlns:tmjourney="https://w3id.org/transmodel/journeys#"
-     xmlns:tmkosfare="https://w3id.org/transmodel/kos/fares/"
-     xmlns:tmkoscommons="https://w3id.org/transmodel/kos/commons/"
-     xmlns:tmkosjourney="https://w3id.org/transmodel/kos/journeys/"
-     xmlns:tmkosfacility="https://w3id.org/transmodel/kos/facilities/">
-    <owl:Ontology rdf:about="https://w3id.org/transmodel/core#">
-        <owl:versionIRI rdf:resource="https://w3id.org/transmodel/core/0.1"/>
-        <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:creator>Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:creator>Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
-        <dc:date>2021-02-17</dc:date>
-        <dc:description xml:lang="en">This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</dc:description>
-        <dc:identifier>https://w3id.org/transmodel/core</dc:identifier>
-        <dc:rights>Creative Commons Attribution 4.0 International (CC BY 4.0)</dc:rights>
-        <dc:title xml:lang="en">Transmodel Ontology - Core</dc:title>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/transmodel/core#"/>
-        <rdfs:comment xml:lang="en">Module of the Transmodel Ontology focused on core. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</rdfs:comment>
-        <rdfs:label xml:lang="en">Transmodel Ontology - Core</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://github.com/oeg-upm/transmodel-ontology</rdfs:seeAlso>
-        <owl:versionInfo xml:lang="en">Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx</owl:versionInfo>
-    </owl:Ontology>
-    
+@prefix : <https://w3id.org/transmodel/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@base <https://w3id.org/transmodel/core#> .
 
+<https://w3id.org/transmodel/core#> rdf:type owl:Ontology ;
+                                     owl:versionIRI <https://w3id.org/transmodel/core/0.1> ;
+                                     <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"@en ,
+                                                                               "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)"@en ,
+                                                                               "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"@en ;
+                                     <http://purl.org/dc/elements/1.1/description> "This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                     <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
+                                     <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Core"@en ;
+                                     <http://purl.org/dc/terms/hasVersion> "1.0.0" ;
+                                     <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0" ;
+                                     <http://purl.org/dc/terms/publisher> "Ontology Engineering Group - Universidad Politécnica de Madrid"@en ,
+                                                                          "Ontology Engineering Group - Universidad Politécnica de Madrid"@es ;
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/core#> ;
+                                     rdfs:comment "Module of the Transmodel Ontology focused on core. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                     owl:versionInfo "Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+#################################################################
+#    Annotation properties
+#################################################################
 
-    
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
 
 
-    <!-- http://creativecommons.org/ns#license -->
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
 
-    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
-    
 
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
-    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
 
 
-    <!-- http://purl.org/dc/elements/1.1/date -->
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
 
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
 
-    <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
 
 
-    <!-- http://purl.org/dc/elements/1.1/identifier -->
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
-    
 
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
-    <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
-    
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   rdfs:domain <http://purl.org/dc/terms/creator> .
 
 
-    <!-- http://purl.org/dc/elements/1.1/title -->
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
 
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#issued-003> ;
+                                  rdfs:comment "Date of formal issuance (e.g., publication) of the resource."@en ;
+                                  rdfs:isDefinedBy "http://purl.org/dc/terms/"@en ;
+                                  rdfs:label "Date Issued"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
 
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
-    <!-- https://w3id.org/transmodel/core#author -->
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/core#author"/>
-    
 
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
-    <!-- https://w3id.org/transmodel/core#creator -->
 
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/core#creator"/>
-    
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
-    <!-- https://w3id.org/transmodel/core#description -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/core#description">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:domain rdf:resource="https://w3id.org/transmodel/core#MeetingPointService"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#mbox -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/core#mbox"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#name -->
-
-    <owl:AnnotationProperty rdf:about="https://w3id.org/transmodel/core#name">
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#duration -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#string -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string">
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#duration"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#inLinkSequence -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#inLinkSequence"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#madeUpOf -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#madeUpOf"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#viewedAs -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/journeys#viewedAs"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/transmodel/core#distance -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/core#distance">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label xml:lang="en">distance</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#name -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/core#name"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#distanceFromStart -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#distanceFromStart"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#order -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/transmodel/journeys#order"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://w3id.org/transmodel/journeys#Point -->
-
-    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#Point">
-        <rdfs:comment xml:lang="en">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</rdfs:comment>
-        <rdfs:comment xml:lang="es">Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación.</rdfs:comment>
-        <rdfs:label xml:lang="en">Point</rdfs:label>
-        <rdfs:label xml:lang="es">Punto</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/transmodel/journeys#PointInLinkSequence -->
-
-    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#PointInLinkSequence"/>
-    
-
-
-    <!-- http://w3id.org/transmodel/journeys#RoutePoint -->
-
-    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#RoutePoint">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Point used to define the shape of a Route through the network.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Un punto que se usa para definir la forma de una ruta por la red de transporte.</rdfs:comment>
-        <rdfs:label xml:lang="es">Punto de Ruta</rdfs:label>
-        <rdfs:label xml:lang="en">Route Point</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/transmodel/journeys#ScheduledStopPoint -->
-
-    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#ScheduledStopPoint">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:comment xml:lang="en">A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.</rdfs:comment>
-        <rdfs:comment xml:lang="es">Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo.</rdfs:comment>
-        <rdfs:label xml:lang="es">Parada Planificada</rdfs:label>
-        <rdfs:label xml:lang="en">Scheduled Stop Point</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern -->
-
-    <owl:Class rdf:about="http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#Point"/>
-        <rdfs:subClassOf rdf:resource="http://w3id.org/transmodel/journeys#PointInLinkSequence"/>
-        <rdfs:comment xml:lang="en">A Point in a JourneyPattern which is a TimingPoint</rdfs:comment>
-        <rdfs:comment xml:lang="es">Un punto en un patrón de viaje que es un punto de control</rdfs:comment>
-        <rdfs:label xml:lang="es">Punto de control en el patrón de viaje</rdfs:label>
-        <rdfs:label xml:lang="en">Timing Point In Journey Pattern</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
-
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
-
-    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/commons#Point -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/commons#Point"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#LinkSequence -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#LinkSequence">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#madeUpOf"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/transmodel/journeys#PointInLinkSequence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An ordered sequence either of POINTs or of LINKs, defining a path through the network</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Add all the attributes that are relevant to this class</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: Analyse whether this class should be better defined in the Commons module</rdfs:comment>
-        <rdfs:label xml:lang="en">Link Sequence</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/transmodel/journeys#PointInLinkSequence -->
-
-    <owl:Class rdf:about="https://w3id.org/transmodel/journeys#PointInLinkSequence">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#inLinkSequence"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/transmodel/journeys#LinkSequence"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#viewedAs"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://w3id.org/transmodel/commons#Point"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#distanceFromStart"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/transmodel/journeys#order"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A point in a Link Sequence indicating its order in that particular Link Sequence</rdfs:comment>
-        <rdfs:comment xml:lang="en">TODO: TransModel defines that a Point in Link Sequence is connected to a Layer, but this is not considered relevant yet</rdfs:comment>
-        <rdfs:label xml:lang="en">Point In Link Sequence</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://w3id.org/transmodel/core#accessible -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#accessible"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#audioNavigator -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#audioNavigator"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#babychange -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#babychange">
-        <rdfs:label xml:lang="en">babyChange</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#baggageCheckin -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#baggageCheckin"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#barrier -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#barrier">
-        <rdfs:comment xml:lang="en">Whether there is a physical barrier across the doorway.</rdfs:comment>
-        <rdfs:label xml:lang="en">barrierEntrance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#beverageVendingMachine -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#beverageVendingMachine"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#bookingHall -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#bookingHall">
-        <rdfs:label xml:lang="en">bookingHall</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#boundedOpenSpace -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#boundedOpenSpace"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#buffet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#buffet"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#bunk -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#bunk"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#cateringTrolleyService -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#cateringTrolleyService"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#compoundTrain -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#compoundTrain">
-        <rdfs:comment xml:lang="en">A VehicleType composed of a sequence of more than one vehicles of the type Train</rdfs:comment>
-        <rdfs:label xml:lang="en">compoundTrain</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#concourse -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#concourse">
-        <rdfs:label xml:lang="en">concourse</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#confinedSpace -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#confinedSpace"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#corridor -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#corridor"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#couchette -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#couchette"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#crowding -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#crowding"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#cycleStorageEquipmentBars -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#cycleStorageEquipmentBars"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#cycleStorageEquipmentRacks -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#cycleStorageEquipmentRacks"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#cycleStorageEquipmentRailings -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#cycleStorageEquipmentRailings"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#directionName -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#directionName">
-        <rdfs:label xml:lang="en">directionName</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#doubleDeck -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#doubleDeck">
-        <rdfs:label xml:lang="en">doubleDeck</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#emergencyServiceFirstAid -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#emergencyServiceFirstAid"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#emergencyServicePolice -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#emergencyServicePolice"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#emergencyServiceSOSPoint -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#emergencyServiceSOSPoint"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#emergencyServiceServiceCCTV -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#emergencyServiceServiceCCTV"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#entranceEquipmentBarrier -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#entranceEquipmentBarrier"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#entranceEquipmentDoor -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#entranceEquipmentDoor">
-        <rdfs:label xml:lang="en">entranceEquipmentDoor</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor">
-        <rdfs:label xml:lang="en">entranceEquipmentRevolvingDoor</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#equipmentActivated -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#equipmentActivated">
-        <rdfs:label xml:lang="en">equipmentActivated</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#equipmentAtStopPoint -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#equipmentAtStopPoint">
-        <rdfs:label xml:lang="en">equipmentAtStopPoint</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#equipmentOnBoard -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#equipmentOnBoard"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#equipmentdesactvated -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#equipmentdesactvated">
-        <rdfs:label xml:lang="en">equipmentDesactivated</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#firstClass -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#firstClass"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#foodVendingMachine -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#foodVendingMachine"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#full -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#full"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#hall -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#hall"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#handrailOneSide -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#handrailOneSide"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#handrailTwoSides -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#handrailTwoSides"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#immigrationHall -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#immigrationHall">
-        <rdfs:label xml:lang="en">immigrationHall</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#incomingCustoms -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#incomingCustoms"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#informationDesk -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#informationDesk">
-        <rdfs:comment xml:lang="en">A public transport information piece of Equipment indoors</rdfs:comment>
-        <rdfs:label xml:lang="en">InformationDesk</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#informationStand -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#informationStand">
-        <rdfs:comment xml:lang="en">A public transport information piece of Equipment outdoors</rdfs:comment>
-        <rdfs:label xml:lang="en">informationStand</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#lift -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#lift"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#lineName -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#lineName">
-        <rdfs:label xml:lang="en">lineName</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#lowFloor -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#lowFloor">
-        <rdfs:label xml:lang="en">lowFloor</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#narrowEntrance -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#narrowEntrance">
-        <rdfs:label xml:lang="en">narrowEntrance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#noBeveragesAvailable -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#noBeveragesAvailable">
-        <rdfs:label xml:lang="en"></rdfs:label>
-        <rdfs:label>beverages</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#noFoodAvailable -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#noFoodAvailable">
-        <rdfs:label xml:lang="en">food</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#noWaiting -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#noWaiting"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#nonAccessible -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#nonAccessible"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#outgoingCustoms -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#outgoingCustoms"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#placeAccessStairScalator -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#placeAccessStairScalator">
-        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator</rdfs:comment>
-        <rdfs:label xml:lang="en">placeAccessStairScalator</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#placeAccessStairStair -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#placeAccessStairStair">
-        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair</rdfs:comment>
-        <rdfs:label xml:lang="en">placeAccessStairStair</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#placeAccessStairStaircase -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#placeAccessStairStaircase">
-        <rdfs:comment xml:lang="en">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase</rdfs:comment>
-        <rdfs:label xml:lang="en">placeAccessStairStaircase</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#queue -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#queue"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#queueManagement -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#queueManagement"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#riverFlow -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#riverFlow">
-        <rdfs:label xml:lang="en">riverFlow</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#roadClosure -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#roadClosure">
-        <rdfs:label xml:lang="en">roadClosure</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#room -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#room"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#secondClass -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#secondClass"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#securityArea -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#securityArea">
-        <rdfs:label xml:lang="en">securityArea</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#shower -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#shower"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#snacks -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#snacks"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#standardBus -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#standardBus">
-        <rdfs:label xml:lang="en">standardBus</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#stepFree -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#stepFree">
-        <rdfs:comment xml:lang="en">Whether waiting area is step free.</rdfs:comment>
-        <rdfs:label xml:lang="en">stepFree</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#taxRefunds -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#taxRefunds"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#telematicInformationCenter -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#telematicInformationCenter">
-        <rdfs:comment xml:lang="en">A public transport information piece of Equipment online</rdfs:comment>
-        <rdfs:label xml:lang="en">telematicInformationService</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#ticketCollection -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#ticketCollection"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#ticketPurchase -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#ticketPurchase"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#toilet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#toilet"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#visualNavigator -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#visualNavigator"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#walkingStick -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#walkingStick"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#weatherConditions -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#weatherConditions">
-        <rdfs:label xml:lang="en">weatherConditions</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#wheelchair -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#wheelchair"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#wheelchairAccessToilet -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#wheelchairAccessToilet"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/core#wheelchairBabyChange -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/core#wheelchairBabyChange"/>
-    
-
-
-    <!-- https://w3id.org/transmodel/kos/facilities/EquipmentType -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/EquipmentType">
-        <rdfs:comment>Concept scheme where all the codelists for the types of equipment that are included in the Transmodel ontology are included</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/kos/facilities/FacilityType -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/facilities/FacilityType">
-        <rdfs:comment xml:lang="en">Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/transmodel/kos/journeys/mobility-limitation -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
-        <rdfs:comment xml:lang="en">List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation</rdfs:comment>
-    </owl:NamedIndividual>
-    <rdf:Description>
-        <core:mbox xml:lang="en">adolfo.anton.bravo@upm.es</core:mbox>
-        <core:name xml:lang="en">Adolfo Anton-Bravo</core:name>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="https://w3id.org/transmodel/core#name">
-        <rdfs:label xml:lang="en">name</rdfs:label>
-        <rdfs:comment xml:lang="en">Name of link sequence.</rdfs:comment>
-    </rdf:Description>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
+###  http://www.w3.org/2000/01/rdf-schema#domain
+rdfs:domain rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/address
+<http://schema.org/address> rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain <https://w3id.org/transmodel/core##Parada> ;
+                            rdfs:range :PostalAddress ;
+                            rdfs:comment "La dirección de una Parada."@es ,
+                                         "The address of a Stop Point"@en ;
+                            rdfs:label "Dirección"@es ,
+                                       "Has Address"@en .
+
+
+###  http://schema.org/contactPoint
+<http://schema.org/contactPoint> rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                 rdfs:domain <http://w3id.org/transmodel/organisations#Organisation> ;
+                                 rdfs:range <http://schema.org/ContactPoint> ;
+                                 rdfs:comment "A contact point for a person or organization."@en ,
+                                              "Un Punto de Información de Contacto para una persona u organización."@es ;
+                                 rdfs:label "Contact Point"@en ,
+                                            "Punto de Información"@es .
+
+
+###  http://w3id.org/transmodel/journeys#aFunctionalCentroidFor
+<http://w3id.org/transmodel/journeys#aFunctionalCentroidFor> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                                             rdfs:domain <http://w3id.org/transmodel/journeys#Point> ;
+                                                             rdfs:range <http://w3id.org/transmodel/journeys#Zone> ;
+                                                             rdfs:comment "Esta propiedad permite la conexión de un Punto con una Zona."@es ,
+                                                                          "This property allows connecting a Point with a Zone."@en ;
+                                                             rdfs:label "Un centroide funcional para"@es ,
+                                                                        "aFunctionalCentroidFor"@en .
+
+
+###  http://w3id.org/transmodel/journeys#composedOf
+<http://w3id.org/transmodel/journeys#composedOf> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://w3id.org/transmodel/journeys#VehicleJourney> ;
+                                                 rdfs:range <http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> ;
+                                                 rdfs:comment "This property relates a Vehicle Journey with the Headway Journey Group which sets the first and last departure time."@en ,
+                                                              "Un Viaje de Vehículo compuesto de indicaciones de viaje en cabecera de línea donde se indican las salidas del primero y último viaje."@es ;
+                                                 rdfs:label "Se compone de"@es ,
+                                                            "composed of"@en .
+
+
+###  http://w3id.org/transmodel/journeys#definedBy
+<http://w3id.org/transmodel/journeys#definedBy> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://w3id.org/transmodel/journeys#ServiceCalendar> ;
+                                                rdfs:range <http://w3id.org/transmodel/journeys#DayTypeAssignment> ;
+                                                rdfs:comment "Establece la relación entre un Calendario de Servicio y la Asignación de Día Tipo."@es ,
+                                                             "This property sets the relationship between Service Calendar and Day Type Assignment"@en ;
+                                                rdfs:label "defined By"@en ,
+                                                           "definición por"@es .
+
+
+###  http://w3id.org/transmodel/journeys#determinedBy
+<http://w3id.org/transmodel/journeys#determinedBy> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> ;
+                                                   rdfs:range <http://w3id.org/transmodel/journeys#HeadwayInterval> ;
+                                                   rdfs:comment "A Headway Journey Group determined by a Headway Interval"@en ,
+                                                                "Un grupo de viajes de cabecera de línea con un intervalo desde cabecera de línea"@es ;
+                                                   rdfs:label "determinado por"@es ,
+                                                              "determined By"@en .
+
+
+###  http://w3id.org/transmodel/journeys#directionType
+<http://w3id.org/transmodel/journeys#directionType> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                    rdfs:domain <http://w3id.org/transmodel/journeys#Route> ;
+                                                    rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                        owl:hasValue <http://w3id.org/transmodel/kos/journeys/direction-type>
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                                    rdfs:comment "Esta propiedad permite describir el tipo de dirección para una Ruta."@es ,
+                                                                 "This property allows describing the type of direction for a Route"@en ;
+                                                    rdfs:label "Direction Type"@en ,
+                                                               "Tipo de Dirección"@es .
+
+
+###  http://w3id.org/transmodel/journeys#includedIn
+<http://w3id.org/transmodel/journeys#includedIn> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://w3id.org/transmodel/journeys#ScheduledStopPoint> ;
+                                                 rdfs:range <http://w3id.org/transmodel/journeys#StopArea> ;
+                                                 rdfs:comment "A Scheduled Stop Point can be next to other Stop Points so they can be included in a Stop Area."@en ,
+                                                              "Una Parada Programada (Scheduled Stop Point) puede estar próxima a otras por lo que pueden todas ellas formas parte de una zona de Paradas."@es ;
+                                                 rdfs:label "Included In"@en ,
+                                                            "Incluida en"@es .
+
+
+###  http://w3id.org/transmodel/journeys#madeUpOf
+<http://w3id.org/transmodel/journeys#madeUpOf> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:comment "Relación entre entidades hechas de otras entidades."@es ,
+                                                            "Relationship between entities made up of other entities"@en ;
+                                               rdfs:label "compuesto por"@es ,
+                                                          "made Up Of"@en .
+
+
+###  http://w3id.org/transmodel/journeys#madeUsing
+<http://w3id.org/transmodel/journeys#madeUsing> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                rdfs:domain <http://w3id.org/transmodel/journeys#LinkSequence> ;
+                                                rdfs:range <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                rdfs:comment "Esta propiedad conecta algunas clases con otras que hacen posible su funcionamiento."@es ,
+                                                             "This property connects some classes to other classes that makes its behaviour possible"@en ;
+                                                rdfs:label "made Using"@en ,
+                                                           "se hace con"@es .
+
+
+###  http://w3id.org/transmodel/journeys#on
+<http://w3id.org/transmodel/journeys#on> rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                         rdfs:domain <http://w3id.org/transmodel/journeys#JourneyPattern> ;
+                                         rdfs:range <http://w3id.org/transmodel/journeys#Route> ;
+                                         rdfs:comment "Esta propiedad conecta el patrón de viaje con la ruta en la que trabaja."@es ,
+                                                      "This property connects the JourneyPattern with the Route where it works"@en ;
+                                         rdfs:label "en"@es ,
+                                                    "on"@en .
+
+
+###  http://w3id.org/transmodel/journeys#prescribing
+<http://w3id.org/transmodel/journeys#prescribing> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                  rdfs:domain <http://w3id.org/transmodel/journeys#JourneyPattern> ;
+                                                  rdfs:range <http://w3id.org/transmodel/journeys#DestinationDisplay> ;
+                                                  rdfs:comment "A Journey Pattern is prescribing a Destination Display"@en ,
+                                                               "Un patrón de viaje que anuncia su destino de alguna forma"@en ;
+                                                  rdfs:label "Prescribe"@es ,
+                                                             "Prescribing"@en .
+
+
+###  http://w3id.org/transmodel/journeys#presentedBy
+<http://w3id.org/transmodel/journeys#presentedBy> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://w3id.org/transmodel/journeys#Line> ;
+                                                  rdfs:range <http://w3id.org/transmodel/commons#Presentation> ;
+                                                  rdfs:comment "Esta propiedad se utiliza para conectar una línea con su correspondiente forma de presentarse en Presentation, donde por ejemplo se indica eel color de línea o el color del texto."@es ,
+                                                               "This property is used to connect a Line with its corresponding Presentation"@en ;
+                                                  rdfs:label "Anunciada por"@es ,
+                                                             "presented by"@en .
+
+
+###  http://w3id.org/transmodel/journeys#specifying
+<http://w3id.org/transmodel/journeys#specifying> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <http://w3id.org/transmodel/journeys#DayTypeAssignment> ;
+                                                 rdfs:range <http://w3id.org/transmodel/journeys#DayType> ;
+                                                 rdfs:comment "La asignación de características operativas expresadas en Día Tipo a un Día Operativo particular dentro de un Calendario de Servicio."@en ,
+                                                              "The assignment of operational characteristics, expressed by DayType, to a particular OperatingDay within a ServiceCalendar"@en ;
+                                                 rdfs:label "especifica"@es ,
+                                                            "specifying"@en .
+
+
+###  http://w3id.org/transmodel/journeys#stopUse
+<http://w3id.org/transmodel/journeys#stopUse> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                              rdfs:domain <http://w3id.org/transmodel/journeys#StopPointInJourneyPattern> ;
+                                              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                  owl:hasValue <http://w3id.org/transmodel/kos/journeys/stop-use-type>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                              rdfs:comment "Permite la descripción del tipo de uso de una parada: acceso, intercambio, de paso, etc."@es ,
+                                                           "This property allows describing the type of use of a stop (e.g., access, interchange only, pass through)"@en ;
+                                              rdfs:label "función de la parada"@es ,
+                                                         "stop Use"@en .
+
+
+###  http://w3id.org/transmodel/journeys#timedFrom
+<http://w3id.org/transmodel/journeys#timedFrom> rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                rdfs:domain <http://w3id.org/transmodel/journeys#VehicleJourney> ;
+                                                rdfs:range <http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> ;
+                                                rdfs:comment "Indica el punto del Viaje del Vehículo donde se toman los tiempos."@es ,
+                                                             "The relationship between a sort of Journey and a sort of Timing Point"@en ,
+                                                             "ToDo: Valorar si se trata de una medición SOSA para próxima versión"@es ;
+                                                rdfs:label "timedFrom"@en ,
+                                                           "toma de tiempo"@es .
+
+
+###  http://w3id.org/transmodel/journeys#viewedAs
+<http://w3id.org/transmodel/journeys#viewedAs> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                               rdfs:range <http://w3id.org/transmodel/journeys#Point> ;
+                                               rdfs:comment "Esta propiedad relaciona un Punto en una secuencia con un Punto ya que es una forma de verlo."@es ,
+                                                            "This property allows connecting a Point in Link Sequence with the corresponding Point"@en ;
+                                               rdfs:label "Se ve como"@es ,
+                                                          "viewed As"@en .
+
+
+###  http://w3id.org/transmodel/journeys#workedOn
+<http://w3id.org/transmodel/journeys#workedOn> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <http://w3id.org/transmodel/journeys#VehicleJourney> ;
+                                               rdfs:range <http://w3id.org/transmodel/journeys#DayType> ;
+                                               rdfs:comment "Relación entre el Viaje de un Vehículo y el Día Tipo."@es ,
+                                                            "This property sets the relationship between Vehicle Journey and Day Type."@en ;
+                                               rdfs:label "Opera en"@es ,
+                                                          "worked On"@en .
+
+
+###  http://w3id.org/transmodel/organisations#characterisedBy
+<http://w3id.org/transmodel/organisations#characterisedBy> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://schema.org/contactPoint> ,
+                                                                              owl:topObjectProperty ;
+                                                           rdfs:domain <http://w3id.org/transmodel/organisations#Organisation> ;
+                                                           rdfs:range <http://w3id.org/transmodel/organisations#ContactDetails> ;
+                                                           rdfs:comment "This property relates an Organisation with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en ,
+                                                                        "Una organización tiene información de contacto. Es una subpropiedad de schema:contacPoint que aporta información de contacto para una persona u organización a través de la clase schema:ContactPoint."@es ;
+                                                           rdfs:label "caracterizada por"@es ,
+                                                                      "characterised by"@en .
+
+
+###  http://w3id.org/transmodel/organisations#operating
+<http://w3id.org/transmodel/organisations#operating> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                     rdfs:domain <http://w3id.org/transmodel/organisations#Operator> ;
+                                                     rdfs:range <http://w3id.org/transmodel/journeys#Line> ;
+                                                     rdfs:comment "Esta propiedad señala qué Líneas están operadas por qué Operador."@es ,
+                                                                  "This property points out what Lines are operated by what Operator"@en ;
+                                                     rdfs:label "operando"@es ,
+                                                                "operating"@en .
+
+
+###  http://w3id.org/transmodel/organisations#servingPTFor
+<http://w3id.org/transmodel/organisations#servingPTFor> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://w3id.org/transmodel/organisations#Operator> ;
+                                                        rdfs:range <http://w3id.org/transmodel/organisations#Authority> ;
+                                                        rdfs:comment "Esta propiedad indica para qué Autoridad está trabajando la entidad operadora."@es ,
+                                                                     "This property points out for with Authority is working for the Operator"@en ;
+                                                        rdfs:label "Serving Public Transport For"@en ,
+                                                                   "Sirve el Transporte Público para"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "En taxonomía"@es ,
+                                                          "It is in Scheme"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Relaciona un recurso, como por ejemplo un concepto, con un esquema de conceptos o taxonomía en el que se incluye."@es ,
+                                                                                                "Relates a resource (for example a concept) to a concept scheme in which it is included."@en .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf owl:topObjectProperty ;
+                                                 rdfs:domain <https://w3id.org/transmodel/core##RealTimePassingTime> ;
+                                                 rdfs:range <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                 rdfs:comment "La observación esautob:RealTimePassingTime aparece en tmjourney:PointInLinkSequence."@es ,
+                                                              "The Observation esautob:RealTimePassingTime has a feature of Interest which is tmjourney:PointInLinkSequece"@en ;
+                                                 rdfs:label "Aparece en"@es ,
+                                                            "has Feature Of Interest"@en .
+
+
+###  http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :ObservacionTrafico ;
+                                         rdfs:range :DispositivoMedicionTrafico ;
+                                         rdfs:comment "Relación entre una Observación y un Sensor que realiza la Observación."@en ,
+                                                      "Relation between an Observation and the Sensor which made the Observation."@es ;
+                                         rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                         rdfs:label "made by sensor"@en ,
+                                                    "realizada por sensor"@es .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain :ObservacionTrafico ;
+                                             rdfs:range :PropiedadMedicionTrafico ;
+                                             rdfs:comment "Relación que enlaza la propiedad que se observa."@es ,
+                                                          "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                             rdfs:label "observed property"@en ,
+                                                        "propiedad observada"@es .
+
+
+###  http://www.w3.org/ns/sosa/observes
+<http://www.w3.org/ns/sosa/observes> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain :DispositivoMedicionTrafico ;
+                                     rdfs:range :PropiedadMedicionTrafico ;
+                                     rdfs:comment "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."@es ,
+                                                  "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
+                                     rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                     rdfs:label "Observa"@es ,
+                                                "observes"@en .
+
+
+###  https://w3id.org/transmodel/core##afectadaPorIncidencia
+<https://w3id.org/transmodel/core##afectadaPorIncidencia> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                          rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                          rdfs:comment "Relación de una línea que está afectada por una incidencia."@es ,
+                                                                       "Relationship of a line affected by an incidence."@en ;
+                                                          rdfs:domain "" ;
+                                                          rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
+                                                          rdfs:label "line affected by an incidence"@en ,
+                                                                     "línea afectada por incidencia"@es .
+
+
+###  https://w3id.org/transmodel/core##cabeceraLinea
+<https://w3id.org/transmodel/core##cabeceraLinea> rdf:type owl:ObjectProperty ;
+                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                  rdfs:domain <https://w3id.org/transmodel/core##Linea> ;
+                                                  rdfs:range <https://w3id.org/transmodel/core##Parada> ;
+                                                  rdfs:comment "Indica cuál es la parada de cabecera de la línea."@es ,
+                                                               "Points out which stop point is the heading of the line."@en ;
+                                                  rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
+                                                  rdfs:label "Cabecera de Línea"@es ,
+                                                             "Line Head Stop Point"@en .
+
+
+###  https://w3id.org/transmodel/core##finalLinea
+<https://w3id.org/transmodel/core##finalLinea> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                               rdfs:domain <https://w3id.org/transmodel/core##Linea> ;
+                                               rdfs:range <https://w3id.org/transmodel/core##Parada> ;
+                                               rdfs:comment "Indica cuál es la parada de final de la línea."@es ,
+                                                            "Points out which stop point is the end of the line."@en ;
+                                               rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
+                                               rdfs:label "Final de Línea"@es ,
+                                                          "Line End Stop Point"@en .
+
+
+###  https://w3id.org/transmodel/core##generadoPorIncidencia
+<https://w3id.org/transmodel/core##generadoPorIncidencia> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                          rdfs:range <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                          rdfs:comment "Relación de un patrón de viaje de una ruta que se ha creado por una incidencia."@es ,
+                                                                       "Relationship of a JourneyPattern of a Route which has been created by an Incidence."@en ;
+                                                          rdfs:domain "" ;
+                                                          rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
+                                                          rdfs:label "JourneyPattern generated by an Incidenceline affected by an incidence"@en ,
+                                                                     "patrón de ruta generado por Incidencia"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain [ rdf:type owl:Class ;
+                                                     owl:unionOf ( <http://w3id.org/transmodel/commons#Zone>
+                                                                   <http://w3id.org/transmodel/journeys#DayType>
+                                                                   <http://w3id.org/transmodel/journeys#DayTypeAssignment>
+                                                                   <http://w3id.org/transmodel/journeys#Route>
+                                                                   <http://w3id.org/transmodel/journeys#ServiceCalendar>
+                                                                   <https://w3id.org/transmodel/core##Parada>
+                                                                 )
+                                                   ] ;
+                                       rdfs:range xsd:string ;
+                                       rdfs:comment "A description of the resource within a given context."@en ,
+                                                    "Una descripción del recurso dentro de un contexto dado."@es ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Descripción"@es ,
+                                                  "Description"@en .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( <http://w3id.org/transmodel/commons#Zone>
+                                                                  <http://w3id.org/transmodel/journeys#DayType>
+                                                                  <http://w3id.org/transmodel/journeys#DayTypeAssignment>
+                                                                  <http://w3id.org/transmodel/journeys#HeadwayInterval>
+                                                                  <http://w3id.org/transmodel/journeys#LinkSequence>
+                                                                  <http://w3id.org/transmodel/journeys#PointInLinkSequence>
+                                                                  <http://w3id.org/transmodel/journeys#StopArea>
+                                                                  <http://w3id.org/transmodel/journeys#VehicleJourney>
+                                                                  <https://w3id.org/transmodel/core##Parada>
+                                                                )
+                                                  ] ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:comment "An unambiguous reference to the resource within a given context."@en ,
+                                                   "Referencia inequívoca al recurso dentro de un contexto dado."@es ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Identificador"@es ,
+                                                 "Identifier"@en .
+
+
+###  http://schema.org/alternateName
+<http://schema.org/alternateName> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://schema.org/ContactPoint> ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Alternate name, alias or popular name of some Thing."@en ,
+                                               "Nombre alternativo, popular o por el que se conoce a algo."@es ;
+                                  rdfs:isDefinedBy <http://schema.org/> ;
+                                  rdfs:label "Alternate Name"@es ,
+                                             "Nombre alternativo"@en .
+
+
+###  http://schema.org/datePosted
+<http://schema.org/datePosted> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                               rdfs:range xsd:dateTime ;
+                               rdfs:comment "La fecha y hora de publicación de una incidencia (en formato fecha ISO 8601)"@es ,
+                                            "The end date and time of the incidence (in ISO 8601 date format)."@en ;
+                               rdfs:isDefinedBy <http://schema.org/> ;
+                               rdfs:label "fecha de publicación de incidencia"@es ,
+                                          "posted incidence date"@en .
+
+
+###  http://schema.org/email
+<http://schema.org/email> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain <http://schema.org/ContactPoint> ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Correo electrónico de información."@es ,
+                                       "E-mail from Contact Point"@en ;
+                          rdfs:isDefinedBy <http://schema.org/> ;
+                          rdfs:label "Correo electrónico"@es ,
+                                     "E-mail"@en .
+
+
+###  http://schema.org/endDate
+<http://schema.org/endDate> rdf:type owl:DatatypeProperty ;
+                            rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                            rdfs:range xsd:dateTime ;
+                            rdfs:comment """La fecha y hora de finalización de
+	    una incidencia (en formato fecha ISO 8601)"""@es ,
+                                         "The end date and time of an incidence (in ISO 8601 date format)."@en ;
+                            rdfs:isDefinedBy <http://schema.org/> ;
+                            rdfs:label "end date"@en ,
+                                       "fecha de fin"@es .
+
+
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:DatatypeProperty ;
+                          rdfs:label "image"@en .
+
+
+###  http://schema.org/legalName
+<http://schema.org/legalName> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/ContactPoint> ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Legal Name"@en ,
+                                           "Nombre legal"@es ;
+                              rdfs:isDefinedBy <http://schema.org/> ;
+                              rdfs:label "Legal Name"@es ,
+                                         "Nombre legal"@en .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( <http://w3id.org/transmodel/commons#Zone>
+                                                     <http://w3id.org/transmodel/journeys#DayType>
+                                                     <http://w3id.org/transmodel/journeys#Line>
+                                                     <http://w3id.org/transmodel/journeys#LinkSequence>
+                                                     <http://w3id.org/transmodel/journeys#ServiceCalendar>
+                                                     <http://w3id.org/transmodel/journeys#StopArea>
+                                                     <https://w3id.org/transmodel/core##Parada>
+                                                   )
+                                     ] ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Name"@en ,
+                                      "Nombre"@es ;
+                         rdfs:isDefinedBy <http://schema.org/> ;
+                         rdfs:label "Name"@es ,
+                                    "Nombre"@en .
+
+
+###  http://schema.org/startDate
+<http://schema.org/startDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                              rdfs:range xsd:dateTime ;
+                              rdfs:comment "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."@es ,
+                                           "The start date and time of an incidence (in ISO 8601 date format)."@en ;
+                              rdfs:isDefinedBy <http://schema.org/> ;
+                              rdfs:label "(expected) start date"@en ,
+                                         "fecha de inicio (prevista)"@es .
+
+
+###  http://schema.org/telephone
+<http://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/ContactPoint> ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Telephone to contact and get some information from the entity "@en ,
+                                           "Teléfono de información y contacto con la entidad"@es ;
+                              rdfs:isDefinedBy <http://schema.org/> ;
+                              rdfs:label "Telephone"@en ,
+                                         "Teléfono"@es .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:DatatypeProperty ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( <http://schema.org/ContactPoint>
+                                                    <http://w3id.org/transmodel/journeys#Line>
+                                                    <http://w3id.org/transmodel/journeys#Route>
+                                                    <https://w3id.org/transmodel/core##Parada>
+                                                  )
+                                    ] ;
+                        rdfs:range xsd:anyURI ;
+                        rdfs:comment "Dirección URL pública donde puedes obtener información de la entidad"@en ,
+                                     "Public URL where you can get some information from the entity"@es ;
+                        rdfs:isDefinedBy <http://schema.org/> ;
+                        rdfs:label "URL"@en ,
+                                   "URL"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#esRecurrente
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#esRecurrente> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                       rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada> ;
+                                                                       rdfs:range xsd:boolean ;
+                                                                       rdfs:comment "Esta propiedad permite describir si la incidencia es recurrente o no."@es ,
+                                                                                    """This property allows describing whether there is a recurrence in the
+	    incidence or not"""@en ;
+                                                                       rdfs:label "Incidencia recurrente"@es ,
+                                                                                  "Recurrent incidence"@en .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada> ;
+                                                                           rdfs:range xsd:dateTime ;
+                                                                           rdfs:comment """La fecha y hora prevista de
+	    finalización de una incidencia planificada (en formato fecha ISO 8601)"""@es ,
+                                                                                        """The end date and time of a planned
+	    incidence (in ISO 8601 date format)."""@en ;
+                                                                           rdfs:isDefinedBy <http://schema.org/> ;
+                                                                           rdfs:label "(expected) end date"@en ,
+                                                                                      "fecha de fin (prevista)"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                                      rdfs:range xsd:integer ;
+                                                                      rdfs:comment "Number of lanes of traffic"@en ,
+                                                                                   "Número de carriles de circulación"@es ;
+                                                                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                      rdfs:label "Carriles de circulación"@es ,
+                                                                                 "Traffic lanes"@en .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                                      rdfs:range xsd:integer ;
+                                                                      rdfs:comment "Number of directions of traffic"@en ,
+                                                                                   "Número de sentidos de circulación"@es ;
+                                                                      rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                      rdfs:label "Sentidos de circulación"@es ,
+                                                                                 "Street directions"@en .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:comment "Esta propiedad permite describir la recurrencia."@es ,
+                                                                                   "This property allows describing the recurrence"@en ;
+                                                                      rdfs:label "Recurrence"@en ,
+                                                                                 "Recurrencia"@es .
+
+
+###  http://w3id.org/transmodel/commons#colour
+<http://w3id.org/transmodel/commons#colour> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://w3id.org/transmodel/commons#Presentation> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "Esta propiedad permite describir el color de algo que va en Presentación de información, como por ejemplo el color identificativo de una lína."@es ,
+                                                         "The colour used to represent something with a Presentation (e.g., a Line)"@en ;
+                                            rdfs:label "color"@es ,
+                                                       "colour"@en .
+
+
+###  http://w3id.org/transmodel/commons#shortName
+<http://w3id.org/transmodel/commons#shortName> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://w3id.org/transmodel/journeys#Line>
+                                                                         )
+                                                           ] ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "Nombre corto para algo que lo necesite"@es ,
+                                                            "Short name for an entity"@en ;
+                                               rdfs:label "Nombre corto"@es ,
+                                                          "Short Name"@en .
+
+
+###  http://w3id.org/transmodel/commons#textColour
+<http://w3id.org/transmodel/commons#textColour> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://w3id.org/transmodel/commons#Presentation> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "El color que se usa para representar el texto asociado con una Presentación, por ejemplo de una línea."@es ,
+                                                             "The colour used to represent the text associated to something with a Presentation (e.g., a Line)"@en ;
+                                                rdfs:label "color de texto"@es ,
+                                                           "text colour"@en .
+
+
+###  http://w3id.org/transmodel/journeys#date
+<http://w3id.org/transmodel/journeys#date> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://w3id.org/transmodel/journeys#DayTypeAssignment> ;
+                                           rdfs:range xsd:dateTime ;
+                                           rdfs:comment "Date of a Day Type Assignment."@en ,
+                                                        "Fecha de una Asignación de Día Tipo."@es ;
+                                           rdfs:label "Date"@en ,
+                                                      "Fecha"@es .
+
+
+###  http://w3id.org/transmodel/journeys#departureTime
+<http://w3id.org/transmodel/journeys#departureTime> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdfs:domain <http://w3id.org/transmodel/journeys#VehicleJourney> ;
+                                                    rdfs:range xsd:dateTime ;
+                                                    rdfs:comment "Departure time scheduled for a Vehicle Journey."@en ,
+                                                                 "Hora de salida programada del viaje de un vehículo."@es ;
+                                                    rdfs:label "Departure Time"@en ,
+                                                               "Hora de salida"@es .
+
+
+###  http://w3id.org/transmodel/journeys#distance
+<http://w3id.org/transmodel/journeys#distance> rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain <http://w3id.org/transmodel/journeys#LinkSequence> ;
+                                               rdfs:range xsd:double ;
+                                               rdfs:comment "Distancia total para una Línea o una Ruta o similares."@es ,
+                                                            "Total distance for a Line or a Route like."@en ;
+                                               rdfs:label "Distance"@en ,
+                                                          "Distancia"@es .
+
+
+###  http://w3id.org/transmodel/journeys#distanceFromStart
+<http://w3id.org/transmodel/journeys#distanceFromStart> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:domain <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                        rdfs:range xsd:double ;
+                                                        rdfs:comment "For a Point in a Link Sequence (or alike), this property represents the distance from the start of the corresponding Journey Pattern or alike."@en ,
+                                                                     "Para un Punto en una Secuencia de enlaces (o similares), esta propiedad representa la distancia desde el comienzo del correspondiente Patrón de Viaje o similares."@es ;
+                                                        rdfs:label "Distance from start"@en ,
+                                                                   "Distancia desde el inicio"@es .
+
+
+###  http://w3id.org/transmodel/journeys#earliestTime
+<http://w3id.org/transmodel/journeys#earliestTime> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                   rdfs:domain <http://w3id.org/transmodel/journeys#DayType> ;
+                                                   rdfs:range xsd:dateTime ;
+                                                   rdfs:comment "Earliest time for the beginning of a service a certain Day Type."@en ,
+                                                                "Hora más temprana para el inicio de un servicio un cierto día tipo."@es ;
+                                                   rdfs:label "Earliest Time"@en ,
+                                                              "Hora más temprana"@es .
+
+
+###  http://w3id.org/transmodel/journeys#firstDepartureTime
+<http://w3id.org/transmodel/journeys#firstDepartureTime> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> ;
+                                                         rdfs:range xsd:dateTime ;
+                                                         rdfs:comment "La hora de inicio de un Viaje de un Vehículo."@es ,
+                                                                      "The time of beginning of a Vehicle Journey."@en ;
+                                                         rdfs:label "First departure time"@en ,
+                                                                    "Primera hora de salida"@es .
+
+
+###  http://w3id.org/transmodel/journeys#forAlighting
+<http://w3id.org/transmodel/journeys#forAlighting> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                   rdfs:domain <http://w3id.org/transmodel/journeys#ScheduledStopPoint> ;
+                                                   rdfs:range xsd:boolean ;
+                                                   rdfs:comment "Esta propiedad indica si la parada se puede usar para bajarse o no."@es ,
+                                                                "This property allows describing whether the stop may be used for alighting."@en ;
+                                                   rdfs:label "Para bajarse"@es ,
+                                                              "for Alighting"@en .
+
+
+###  http://w3id.org/transmodel/journeys#forBoarding
+<http://w3id.org/transmodel/journeys#forBoarding> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                  rdfs:domain <http://w3id.org/transmodel/journeys#ScheduledStopPoint> ;
+                                                  rdfs:range xsd:boolean ;
+                                                  rdfs:comment "Esta propiedad indica si se puede montar en la parada."@es ,
+                                                               "This property allows describing whether the stop may be used for boarding"@en ;
+                                                  rdfs:label "for Boarding"@en ,
+                                                             "para subirse"@es .
+
+
+###  http://w3id.org/transmodel/journeys#from
+<http://w3id.org/transmodel/journeys#from> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           rdfs:domain <http://w3id.org/transmodel/journeys#ServiceCalendar> ;
+                                           rdfs:range xsd:date ;
+                                           rdfs:comment "Esta propiedad permite describir el inicio de un calendario de servicio."@es ,
+                                                        "This property allows describing the beginning of a Service Calendar"@en ;
+                                           rdfs:label "desde"@es ,
+                                                      "from"@en .
+
+
+###  http://w3id.org/transmodel/journeys#frontText
+<http://w3id.org/transmodel/journeys#frontText> rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain <http://w3id.org/transmodel/journeys#DestinationDisplay> ;
+                                                rdfs:range xsd:string ;
+                                                rdfs:comment "Displayed Text usually in the front of a Vehicle of the Public Transport Service."@en ,
+                                                             "Texto que se muestra normalmente en la parte frontal de un vehículo del servicio público de transporte."@es ;
+                                                rdfs:label "Front Text"@en ,
+                                                           "Letrero de Cabecera"@es .
+
+
+###  http://w3id.org/transmodel/journeys#isAvailable
+<http://w3id.org/transmodel/journeys#isAvailable> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                  rdfs:domain <http://w3id.org/transmodel/journeys#DayTypeAssignment> ;
+                                                  rdfs:range xsd:boolean ;
+                                                  rdfs:comment "Property to state whether the Day Type Assignment is available or not."@en ,
+                                                               "Propiedad que determina si una Asignación de Día Tipo está disponible o no.."@es ;
+                                                  rdfs:label "Disponibilidad"@es ,
+                                                             "Is Available"@en .
+
+
+###  http://w3id.org/transmodel/journeys#journeyDuration
+<http://w3id.org/transmodel/journeys#journeyDuration> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                      rdfs:domain <http://w3id.org/transmodel/journeys#VehicleJourney> ;
+                                                      rdfs:range xsd:dateTime ;
+                                                      rdfs:comment "Duración programada del viaje de un vehículo."@es ,
+                                                                   "Journey duration scheduled for a Vehicle Journey."@en ;
+                                                      rdfs:label "Duración del viaje"@es ,
+                                                                 "Journey Duration"@en .
+
+
+###  http://w3id.org/transmodel/journeys#lastDayOffset
+<http://w3id.org/transmodel/journeys#lastDayOffset> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> ;
+                                                    rdfs:range xsd:dateTime ;
+                                                    rdfs:comment "La hora de ajuste del fin de un Viaje de un Vehículo."@es ,
+                                                                 "The offset time of ending of a Vehicle Journey."@en ;
+                                                    rdfs:label "Ajuste de hora de la última salida"@es ,
+                                                               "Last day offset"@en .
+
+
+###  http://w3id.org/transmodel/journeys#lastDepartureTime
+<http://w3id.org/transmodel/journeys#lastDepartureTime> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> ;
+                                                        rdfs:range xsd:dateTime ;
+                                                        rdfs:comment "La hora de fin de un Viaje de un Vehículo."@es ,
+                                                                     "The time of ending of a Vehicle Journey."@en ;
+                                                        rdfs:label "last departure time"@en ,
+                                                                   "última hora de salida"@es .
+
+
+###  http://w3id.org/transmodel/journeys#maximumHeadwayInterval
+<http://w3id.org/transmodel/journeys#maximumHeadwayInterval> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayInterval> ;
+                                                             rdfs:range xsd:dateTime ;
+                                                             rdfs:comment "Máximo intervalo/frecuencia fijada desde cabecera."@es ,
+                                                                          "The maximum interval from Headway."@en ;
+                                                             rdfs:label "Frecuencia máxima"@es ,
+                                                                        "Maximum Headway Interval"@en .
+
+
+###  http://w3id.org/transmodel/journeys#minimumHeadwayInterval
+<http://w3id.org/transmodel/journeys#minimumHeadwayInterval> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayInterval> ;
+                                                             rdfs:range xsd:dateTime ;
+                                                             rdfs:comment "Mínimo intervalo/frecuencia fijada desde cabecera."@es ,
+                                                                          "The minimum interval from Headway."@en ;
+                                                             rdfs:label "Frecuencia mínima"@es ,
+                                                                        "Minimum Headway Interval"@en .
+
+
+###  http://w3id.org/transmodel/journeys#order
+<http://w3id.org/transmodel/journeys#order> rdf:type owl:DatatypeProperty ;
+                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                            rdfs:domain <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                            rdfs:range xsd:nonNegativeInteger ;
+                                            rdfs:comment "Orden de un Punto en una Secuencia de Enlaces (Link Sequence) y por tanto de un Punto en una Ruta o en cualquier otra estructura similar."@es ,
+                                                         "Order of a Point in Link Sequence, or in a Point on Route within sequence, or in any other type of situation where the order or points are relevant"@en ;
+                                            rdfs:label "Orden"@es ,
+                                                       "Order"@en .
+
+
+###  http://w3id.org/transmodel/journeys#scheduledHeadwayInterval
+<http://w3id.org/transmodel/journeys#scheduledHeadwayInterval> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:domain <http://w3id.org/transmodel/journeys#HeadwayInterval> ;
+                                                               rdfs:range xsd:dateTime ;
+                                                               rdfs:comment "Intervalo/frecuencia programada desde cabecera."@es ,
+                                                                            "The scheduled interval from Headway."@en ;
+                                                               rdfs:label "Frecuencia programada"@es ,
+                                                                          "Scheduled Headway Interval"@en .
+
+
+###  http://w3id.org/transmodel/journeys#to
+<http://w3id.org/transmodel/journeys#to> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdfs:domain <http://w3id.org/transmodel/journeys#ServiceCalendar> ;
+                                         rdfs:range xsd:date ;
+                                         rdfs:comment "Esta propiedad permite describir el fin de un calendario de servicio."@es ,
+                                                      "This property allows describing the end of a Service Calendar"@en ;
+                                         rdfs:label "hasta"@es ,
+                                                    "to"@en .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                              rdfs:range xsd:float ;
+                                              rdfs:comment "Latitud en WGS84"@es ,
+                                                           "Latitude in WGS84"@en ;
+                                              rdfs:label "latitude" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                               rdfs:range xsd:float ;
+                                               rdfs:comment "Longitud en WGS84"@es ,
+                                                            "Longitude in WGS84"@en ;
+                                               rdfs:label "longitude" .
+
+
+###  http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> rdf:type owl:DatatypeProperty ;
+                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:domain <https://w3id.org/transmodel/core##RealTimePassingTime> ;
+                                       rdfs:range xsd:dateTime ;
+                                       rdfs:comment "Esta propiedad establece la fecha/hora de la observación."@es ,
+                                                    "This property sets the dateTime of the observation"@en ;
+                                       rdfs:label "Hora Observación"@es ,
+                                                  "Phenomenon Time"@en .
+
+
+###  https://datos.ign.es/def/geo_core#xETRS89
+<https://datos.ign.es/def/geo_core#xETRS89> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                            rdfs:range xsd:float ;
+                                            <http://purl.org/dc/elements/1.1/source> "Catálogo de Objetos Geográficos BTN100."@es ;
+                                            rdfs:comment "Coordenada X en metros (ETRS89)"@es ,
+                                                         "X-Coordinate in meters (ETRS89)"@en ;
+                                            rdfs:label "xETRS89" .
+
+
+###  https://datos.ign.es/def/geo_core#yETRS89
+<https://datos.ign.es/def/geo_core#yETRS89> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://www.opengis.net/ont/sf#Point> ;
+                                            rdfs:range xsd:float ;
+                                            <http://purl.org/dc/elements/1.1/source> "Catálogo de Objetos Geográficos BTN100."@es ;
+                                            rdfs:comment "Coordenada Y en metros (ETRS89)"@es ,
+                                                         "Y-Coordinate in meters (ETRS89)"@en ;
+                                            rdfs:label "yETRS89" .
+
+
+###  https://w3id.org/transmodel/core#Province
+:Province rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PostalAddress ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Post code"@en .
+
+
+###  https://w3id.org/transmodel/core#addressLine1
+:addressLine1 rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PostalAddress ;
+              rdfs:range xsd:string .
+
+
+###  https://w3id.org/transmodel/core#bearingDegrees
+:bearingDegrees rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RoadAddress ;
+                rdfs:range xsd:float ;
+                rdfs:comment "bearing in degrees at point of address."@en .
+
+
+###  https://w3id.org/transmodel/core#buildingName
+:buildingName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PostalAddress ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Building name of POSTAL ADDRESS."@en .
+
+
+###  https://w3id.org/transmodel/core#centre
+:centre rdf:type owl:DatatypeProperty ;
+        rdfs:domain :TopographicPlace ;
+        rdfs:range xsd:string ;
+        rdfs:comment "whether topographic place lies at centre of settlement."@en .
+
+
+###  https://w3id.org/transmodel/core#evenNumberRange
+:evenNumberRange rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :RoadAddress ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Even number range of ADDRESS on road."@en .
+
+
+###  https://w3id.org/transmodel/core#houseNumber
+:houseNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PostalAddress ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/transmodel/core#oddNumberRange
+:oddNumberRange rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RoadAddress ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Odd number range of ADDRESS."@en .
+
+
+###  https://w3id.org/transmodel/core#postCode
+:postCode rdf:type owl:DatatypeProperty ;
+          rdfs:domain :PostalAddress ;
+          rdfs:range xsd:string .
+
+
+###  https://w3id.org/transmodel/core#postCodeExtension
+:postCodeExtension rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :PostalAddress ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Post code extension"@en .
+
+
+###  https://w3id.org/transmodel/core#qualifier
+:qualifier rdf:type owl:DatatypeProperty ;
+           rdfs:domain :TopographicPlace ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Name used to distinguish the topographic place from other similar named topographic places.  This should not be included in the Name but may be added by applications in context"@en .
+
+
+###  https://w3id.org/transmodel/core#roadNumber
+:roadNumber rdf:type owl:DatatypeProperty ;
+            rdfs:domain :RoadAddress ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/transmodel/core#street
+:street rdf:type owl:DatatypeProperty ;
+        rdfs:comment "Street name of postal address."@en .
+
+
+###  https://w3id.org/transmodel/core#town
+:town rdf:type owl:DatatypeProperty ;
+      rdfs:domain :PostalAddress ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Town of postal address."@en .
+
+
+###  https://w3id.org/transmodel/core##expectedArrivalTime
+<https://w3id.org/transmodel/core##expectedArrivalTime> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdfs:domain <https://w3id.org/transmodel/core##RealTimePassingTime> ;
+                                                        rdfs:range xsd:duration ;
+                                                        rdfs:comment "Expecected arrival time of a Bus at a Stop Place, esautob:RealTimePassingTime."@en ,
+                                                                     "Tiempo de llegada prevista para un autobús en una parada, duración de esautob:RealTimePassingTime"@es ;
+                                                        rdfs:label "Expected Arrival Time"@en ,
+                                                                   "Tiempo de llegada previsto"@es .
+
+
+###  https://w3id.org/transmodel/core##panelElectronico
+<https://w3id.org/transmodel/core##panelElectronico> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <https://w3id.org/transmodel/core##Parada> ;
+                                                     rdfs:range xsd:boolean ;
+                                                     rdfs:comment "La Parada dispone de un Panel Electrónico Informativo que permite dar información actualizada de tiempos de llegada y otros."@es ,
+                                                                  "The Stop Place has an Electronic Information Panel to display information up to date of the waiting time and othe kind of information if necessary."@en ;
+                                                     rdfs:label "Electronic Information Panel"@en ,
+                                                                "Panel Electrónico Informativo"@es .
+
+
+###  https://w3id.org/transmodel/core##wifi
+<https://w3id.org/transmodel/core##wifi> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdfs:domain <https://w3id.org/transmodel/core##Parada> ;
+                                         rdfs:range xsd:boolean ;
+                                         rdfs:comment "La parada dispone de conexión Wifi pública."@es ,
+                                                      "The Stop Place has a public WiFi network."@en ;
+                                         rdfs:label "WiFi"@en ,
+                                                    "Wifi"@es .
+
+
+###  https://w3id.org/transmodel/core##zona
+<https://w3id.org/transmodel/core##zona> rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdfs:range xsd:string ;
+                                         rdfs:comment "The Stop Place is part of a Zone."@en ,
+                                                      "Zona a la que pertenece la Parada."@es ;
+                                         rdfs:domain "" ;
+                                         rdfs:label "Zona"@es ,
+                                                    "Zone"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/ContactPoint
+<http://schema.org/ContactPoint> rdf:type owl:Class ;
+                                 rdfs:comment "A contact point—for example, Contact section in a website of a Public Transport Organisation Network."@en ,
+                                              "Un Punto de Información, por ejemplo, la sección de Contacto en la web de la entidad que participa de alguna manera en el Transporte Público de Autobuses."@es ;
+                                 rdfs:label "Contact Point"@en ,
+                                            "Punto de Información de Contacto"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                                     owl:disjointWith :Parada ,
+                                                                                      <https://w3id.org/transmodel/core##Parada> ;
+                                                                     rdfs:comment "Incidence in the traffic system of a city"@en ,
+                                                                                  "Incidencia que ocurre en el sistema de tráfico de una ciudad"@es ;
+                                                                     rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                     rdfs:label "Incidence"@en ,
+                                                                                "Incidencia"@es .
+
+
+###  http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada
+<http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia> ;
+                                                                                rdfs:comment "Incidencia planificada, puede ser recurrente o no"@es ,
+                                                                                             "Planned traffic incidence"@en ;
+                                                                                rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                                                rdfs:label "Incidencia planificada"@es ,
+                                                                                           "Planned incidence"@en .
+
+
+###  http://w3id.org/transmodel/commons#Place
+<http://w3id.org/transmodel/commons#Place> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://w3id.org/transmodel/commons#Zone> ;
+                                           rdfs:comment "A geographic Place of any type which may be specified as the origin or destination of a Trip. A Place may be represented as a Point (dimension 0), a Road section (dimension 1) or a Zone (dimension 2)"@en ,
+                                                        "Un lugar geográfico de cualquier tipo que puede usarse como el origen o el destino de un Viaje. Debe representarse por un Punto (dimensión 0 en topología), una ruta (una dimensión en topología) o una zona (dos dimensiones en topología)."@es ;
+                                           rdfs:label "Lugar"@es ,
+                                                      "Place"@en .
+
+
+###  http://w3id.org/transmodel/commons#Presentation
+<http://w3id.org/transmodel/commons#Presentation> rdf:type owl:Class ;
+                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://w3id.org/transmodel/commons#colour> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://w3id.org/transmodel/commons#textColour> ;
+                                                                    owl:allValuesFrom xsd:string
+                                                                  ] ;
+                                                  rdfs:comment "Se utiliza para representar una Línea o cualquier otro objeto en un mapa."@es ,
+                                                               "This class is used to represent a Line, or any other object, in a map"@en ;
+                                                  rdfs:label "Presentación"@es ,
+                                                             "Presentation"@en .
+
+
+###  http://w3id.org/transmodel/commons#Zone
+<http://w3id.org/transmodel/commons#Zone> rdf:type owl:Class ;
+                                          rdfs:comment "A two-dimensional PLACE within the service area of a public transport operator (administrative zone, TARIFF ZONE, ACCESS ZONE, etc.)."@en ,
+                                                       "La Zona es un Lugar (Place) de dos dimensiones que ese encuentra en el área que sirve un operador de transporte público. Puede ser una zona administrativa, una zona tarifaria, una zona de acceso o algo más concreto."@es ;
+                                          rdfs:label "Zona"@es ,
+                                                     "Zone"@en .
+
+
+###  http://w3id.org/transmodel/journeys#DayType
+<http://w3id.org/transmodel/journeys#DayType> rdf:type owl:Class ;
+                                              rdfs:comment "A DayType is a type of day characterised by one or more properties which affect public transport operation"@en ,
+                                                           "Un día tipo es un tipo de día caracterizado por una o más propiedades que afectan al transporte público"@es ;
+                                              rdfs:label "DayType"@en ,
+                                                         "Día Tipo"@es .
+
+
+###  http://w3id.org/transmodel/journeys#DayTypeAssignment
+<http://w3id.org/transmodel/journeys#DayTypeAssignment> rdf:type owl:Class ;
+                                                        rdfs:comment "La asignación de características operativas, expresadas por Día Tipo, a un Día Operativo de un Calendario de Servicio."@es ,
+                                                                     "The assignment of operational characteristics, expressed by DAY TYPEs, to particular OPERATING DAYs within a SERVICE CALENDAR."@en ;
+                                                        rdfs:label "Asignación de Día Tipo"@es ,
+                                                                   "DayTypeAssignment"@en .
+
+
+###  http://w3id.org/transmodel/journeys#DestinationDisplay
+<http://w3id.org/transmodel/journeys#DestinationDisplay> rdf:type owl:Class ;
+                                                         rdfs:comment "An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations"@en ,
+                                                                      "Un destino anunciado como un Patrón de Viaje específico normalmente mostrado en el frente del vehículo o en otros emplazamientos."@es ;
+                                                         rdfs:label "Anuncio del Destino"@es ,
+                                                                    "Destination Display"@en .
+
+
+###  http://w3id.org/transmodel/journeys#HeadwayInterval
+<http://w3id.org/transmodel/journeys#HeadwayInterval> rdf:type owl:Class ;
+                                                      rdfs:comment "A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup"@en ,
+                                                                   "Un intervalo o duración determinada para una cabecera de línea que caracteriza el grupo de viajes desde cabecera de línea"@es ;
+                                                      rdfs:label "Headway Interval"@en ,
+                                                                 "Intervalo o frecuencia"@es .
+
+
+###  http://w3id.org/transmodel/journeys#HeadwayJourneyGroup
+<http://w3id.org/transmodel/journeys#HeadwayJourneyGroup> rdf:type owl:Class ;
+                                                          rdfs:comment "A group of VEHICLE JOURNEYs following the same JOURNEY PATTERN having the same HEADWAY INTERVAL between a specified start and end time (for example, every 10 min). This is especially useful for passenger information."@en ,
+                                                                       "Un grupo de viajes de vehículos que siguen el mismo intervalo fijado en cabecera entre el principio y el final (por ejemplo, cada 10 minutos). Esto es muy útil para los pasajeros."@es ;
+                                                          rdfs:label "Grupo de viajes con un horario"@es ,
+                                                                     "Headway Journey Group"@en .
+
+
+###  http://w3id.org/transmodel/journeys#JourneyPattern
+<http://w3id.org/transmodel/journeys#JourneyPattern> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://w3id.org/transmodel/journeys#LinkSequence> ;
+                                                     owl:disjointWith <https://w3id.org/transmodel/core##Linea> ;
+                                                     rdfs:comment "An ordered list of Scheduled Stop Points and Timing Point on a single Route, describing the pattern of working for public transport vehicles. A Journey Pattern may pass through the same Point more than once. The first point of a JourneyPattern is the origin. The last point is the destination."@en ,
+                                                                  "Una lista ordenada de paradas planificadas y puntos de control en una ruta que describe el patrón de funcionamiento de los vehículos de transporte públicos. Un patrón de viaje puede pasar por el mismo punto más de una vez. El primer punto del patrón es el origen y el último punto el destino."@en ;
+                                                     rdfs:label "JourneyPattern"@en ,
+                                                                "Patrón de viaje"@es .
+
+
+###  http://w3id.org/transmodel/journeys#Line
+<http://w3id.org/transmodel/journeys#Line> rdf:type owl:Class ;
+                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://w3id.org/transmodel/journeys#presentedBy> ;
+                                                             owl:allValuesFrom <http://w3id.org/transmodel/commons#Presentation>
+                                                           ] ;
+                                           rdfs:comment "A Line is a group of Routes which is generally known to the public by a similar name or number."@en ,
+                                                        "Una Línea es un grupo de Rutas que normalente se conocen por un nombre o número."@es ;
+                                           rdfs:label "Line"@en ,
+                                                      "Línea"@es .
+
+
+###  http://w3id.org/transmodel/journeys#LinkSequence
+<http://w3id.org/transmodel/journeys#LinkSequence> rdf:type owl:Class ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://w3id.org/transmodel/journeys#madeUpOf> ;
+                                                                     owl:allValuesFrom <http://w3id.org/transmodel/journeys#PointInLinkSequence>
+                                                                   ] ;
+                                                   rdfs:comment "An ordered sequence either of POINTs or of LINKs, defining a path through the network"@en ,
+                                                                "Una secuencia ordenada de puntos o enlaces que definen una ruta a través de la red."@es ;
+                                                   rdfs:label "Link Sequence"@en ,
+                                                              "Secuencia de enlaces"@es .
+
+
+###  http://w3id.org/transmodel/journeys#Point
+<http://w3id.org/transmodel/journeys#Point> rdf:type owl:Class ;
+                                            rdfs:comment "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en ,
+                                                         "Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación."@es ;
+                                            rdfs:label "Point"@en ,
+                                                       "Punto"@es .
+
+
+###  http://w3id.org/transmodel/journeys#PointInJourneyPattern
+<http://w3id.org/transmodel/journeys#PointInJourneyPattern> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://w3id.org/transmodel/journeys#PointInLinkSequence> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://w3id.org/transmodel/journeys#prescribing> ;
+                                                                              owl:allValuesFrom <http://w3id.org/transmodel/journeys#DestinationDisplay>
+                                                                            ] ;
+                                                            rdfs:comment "A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern"@en ,
+                                                                         "Una Parada Programada o un Punto de Control en un patrón de viaje con su orden en ese patrón."@es ;
+                                                            rdfs:label "Point In Journey Pattern"@en ,
+                                                                       "Punto en un Patrón de Viaje"@es .
+
+
+###  http://w3id.org/transmodel/journeys#PointInLinkSequence
+<http://w3id.org/transmodel/journeys#PointInLinkSequence> rdf:type owl:Class ;
+                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://w3id.org/transmodel/journeys#viewedAs> ;
+                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onClass <http://w3id.org/transmodel/journeys#Point>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://w3id.org/transmodel/journeys#distanceFromStart> ;
+                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onDataRange xsd:float
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://w3id.org/transmodel/journeys#order> ;
+                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                            owl:onDataRange xsd:nonNegativeInteger
+                                                                          ] ;
+                                                          rdfs:comment "A POINT in a LINK SEQUENCE indicating its order in that particular LINK SEQUENCE."@en ,
+                                                                       "Un punto en una secuencia indica su orden en esa secuencia de enlaces"@es ;
+                                                          rdfs:label "Point in Link Sequence"@en ,
+                                                                     "Punto en secuencia de enlaces"@es .
+
+
+###  http://w3id.org/transmodel/journeys#PointOnRoute
+<http://w3id.org/transmodel/journeys#PointOnRoute> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                   rdfs:comment "A Route Point used to define a Route with its order on that Route."@en ,
+                                                                "Un Punto de Ruta se usa para definir una Ruta con su orden en esa Ruta."@es ;
+                                                   rdfs:label "Point on Route"@en ,
+                                                              "Punto en la ruta"@es .
+
+
+###  http://w3id.org/transmodel/journeys#Route
+<http://w3id.org/transmodel/journeys#Route> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://w3id.org/transmodel/journeys#LinkSequence> ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://w3id.org/transmodel/journeys#directionType> ;
+                                                              owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                       [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                         owl:hasValue <http://w3id.org/transmodel/kos/journeys/direction-type>
+                                                                                                       ]
+                                                                                                     ) ;
+                                                                                  rdf:type owl:Class
+                                                                                ]
+                                                            ] ;
+                                            rdfs:comment "A Route is and ordered list of located Points defining one single path through the road (or rail) network."@en ,
+                                                         "Una ruta es una lista ordenada de Puntos que definen una sola ruta a través de una red de calles"@es ;
+                                            rdfs:label "Route"@en ,
+                                                       "Ruta"@es .
+
+
+###  http://w3id.org/transmodel/journeys#RoutePoint
+<http://w3id.org/transmodel/journeys#RoutePoint> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ;
+                                                 rdfs:comment "A Point used to define the shape of a Route through the network."@en ,
+                                                              "Un punto que se usa para definir la forma de una ruta por la red de transporte."@es ;
+                                                 rdfs:label "Punto de Ruta"@es ,
+                                                            "Route Point"@en .
+
+
+###  http://w3id.org/transmodel/journeys#ScheduledStopPoint
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ;
+                                                         rdfs:comment "A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle."@en ,
+                                                                      "Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo."@es ;
+                                                         rdfs:label "Parada Planificada"@es ,
+                                                                    "Scheduled Stop Point"@en .
+
+
+###  http://w3id.org/transmodel/journeys#ServiceCalendar
+<http://w3id.org/transmodel/journeys#ServiceCalendar> rdf:type owl:Class ;
+                                                      rdfs:comment "A collection of DAY TYPE ASSIGNMENTs."@en ,
+                                                                   "Un conjunto de tareas de un día tipo."@es ;
+                                                      rdfs:label "Calendario de servicio"@es ,
+                                                                 "ServiceCalendar"@en .
+
+
+###  http://w3id.org/transmodel/journeys#StopArea
+<http://w3id.org/transmodel/journeys#StopArea> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://w3id.org/transmodel/commons#Place> ;
+                                               rdfs:comment "A group of Scheduled Stop Points close to each other"@en ,
+                                                            "Un grupo de Paradas que están próximas entre sí."@es ;
+                                               rdfs:label "Paradas"@es ,
+                                                          "Stop Area"@en .
+
+
+###  http://w3id.org/transmodel/journeys#StopPointInJourneyPattern
+<http://w3id.org/transmodel/journeys#StopPointInJourneyPattern> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://w3id.org/transmodel/journeys#PointInJourneyPattern> ;
+                                                                rdfs:comment "A Point in Journey Pattern that is a Scheduled Stop Point"@en ,
+                                                                             "Un Punto en el Patrón de Viaje que se ve como una Parada Planificada"@es ;
+                                                                rdfs:label "Parada en Patrón de Viaje"@es ,
+                                                                           "Stop Point In Journey Pattern"@en .
+
+
+###  http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ,
+                                                                                  <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                                  rdfs:comment "A Point in a JourneyPattern which is a TimingPoint"@en ,
+                                                                               "Un punto en un patrón de viaje que es un punto de control"@es ;
+                                                                  rdfs:label "Punto de control en el patrón de viaje"@es ,
+                                                                             "Timing Point In Journey Pattern"@en .
+
+
+###  http://w3id.org/transmodel/journeys#VehicleJourney
+<http://w3id.org/transmodel/journeys#VehicleJourney> rdf:type owl:Class ;
+                                                     rdfs:comment "El movimiento planificado de un vehículo de transporte público en un día tipo DayType desde un punto inicial al punto final de un patrón de viaje JourneyPattern en una ruta especificada."@es ,
+                                                                  "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route."@en ;
+                                                     rdfs:label "VehicleJourney"@en ,
+                                                                "Viaje de un vehículo"@es .
+
+
+###  http://w3id.org/transmodel/journeys#Zone
+<http://w3id.org/transmodel/journeys#Zone> rdf:type owl:Class .
+
+
+###  http://w3id.org/transmodel/organisations#Authority
+<http://w3id.org/transmodel/organisations#Authority> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://w3id.org/transmodel/organisations#Organisation> ;
+                                                     owl:disjointWith <http://w3id.org/transmodel/organisations#Operator> ,
+                                                                      <http://w3id.org/transmodel/organisations#Organisation> ;
+                                                     rdfs:comment "Autoridad del Transporte Público, organización bajo la cual está la responsabilidad de organizar el servicio de transporte de una cierta área (por ejemplo, zona administrativa)."@es ,
+                                                                  "Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed"@en ;
+                                                     rdfs:label "Authority"@en ,
+                                                                "Autoridad"@es .
+
+
+###  http://w3id.org/transmodel/organisations#ContactDetails
+<http://w3id.org/transmodel/organisations#ContactDetails> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://schema.org/ContactPoint> ;
+                                                          rdfs:comment "Contact Details for an Organisation. A subclass of schema:ContactPoint. As such, it can be the domain of properties like schema:url, schema:telephone, schema:email, etc."@en ,
+                                                                       "Información de contacto de una organización. Una subclase de schema:ContactPoint. Como tal, puede ser el dominio de propiedades como schema:url, schema:telephone, schema:email, etc."@es ;
+                                                          rdfs:label "Contact Details"@en ,
+                                                                     "Información de Contacto"@en .
+
+
+###  http://w3id.org/transmodel/organisations#Operator
+<http://w3id.org/transmodel/organisations#Operator> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://w3id.org/transmodel/organisations#Organisation> ;
+                                                    rdfs:comment "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency"@en ,
+                                                                 "Una empresa que ofrece servicio de transporte público. En GTFS se representa como una TransitAgency."@es ;
+                                                    rdfs:label "Operador"@es ,
+                                                               "Operator"@en .
+
+
+###  http://w3id.org/transmodel/organisations#Organisation
+<http://w3id.org/transmodel/organisations#Organisation> rdf:type owl:Class ;
+                                                        owl:equivalentClass <http://www.w3.org/ns/org#Organization> ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
+                                                        rdfs:comment "A legally incorporated body associated with any aspect of the transport system"@en ,
+                                                                     "Una figura legal asociada con cualquier aspecto del sistema de transporte."@es ;
+                                                        rdfs:label "Organisation"@en ,
+                                                                   "Organización"@es .
+
+
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                               rdfs:comment "Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales."@es ,
+                                                            "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types."@en ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql> ;
+                                               rdfs:label "Característica geográfica"@es ,
+                                                          "Feature"@en .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> ;
+                                                rdfs:comment "Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos."@es ,
+                                                             "This class represents the top-level geometry type. This class is equivalent to GFI_Geometry defined in ISO 19156, and it is superclass of all geometry types."@en ;
+                                                rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql> ;
+                                                rdfs:label "Geometry"@en ,
+                                                           "Geometría"@es .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     rdfs:comment "Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales."@es ,
+                                                                  "This class represents the top-level spatial object type. This class is equivalent to GFI_SpatialObject defined in ISO 19156, and it is superclass of all spatial object types."@en ;
+                                                     rdfs:isDefinedBy <http://www.opengis.net/spec/geosparql> ;
+                                                     rdfs:label "Objeto Espacial"@es ,
+                                                                "Spatial Object"@en .
+
+
+###  http://www.opengis.net/ont/sf#Point
+<http://www.opengis.net/ont/sf#Point> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                      rdfs:comment "Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos."@es ,
+                                                   "This class represents the top-level point type. This 	class is equivalent to GFI_Point defined in ISO 19156, and it is superclass of all point types."@en ;
+                                      rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql#> ;
+                                      rdfs:label "Geographic Point"@en ,
+                                                 "Punto geográfico"@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              <http://purl.org/dc/terms/issued> "2004-02-xx" ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                              rdfs:label "Concept"@en ,
+                                                         "Concepto"@es ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An abstract idea or notion; a unit of thought."@en ,
+                                                                                               "Una idea o noción abstracta; una unidad de pensamiento."@es .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    <http://purl.org/dc/terms/issued> "2004-02-xx" ;
+                                                    rdfs:comment "A concept scheme may be defined to include concepts from different sources."@en ,
+                                                                 "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."@en ,
+                                                                 "Un esquema de conceptos definido para incluir conceptos de distintas fuentes."@es ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                    rdfs:label "Concept Scheme"@en ,
+                                                               "Esquema de conceptos"@es ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
+                                        rdfs:comment "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_."@es ,
+                                                     "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"@en ;
+                                        rdfs:label "Organización"@es ,
+                                                   "Organization"@en .
+
+
+###  http://www.w3.org/ns/sosa/FeatureOfInterest
+<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class ;
+                                              rdfs:comment "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                              rdfs:label "Feature Of Interest"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
+
+
+###  http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class ;
+                                               rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                               rdfs:label "Observable Property"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class ;
+                                        rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"@en ;
+                                        rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                        rdfs:label "Observation"@en ;
+                                        <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+                                        <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
+
+
+###  http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class ;
+                                   rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+                                   rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> ;
+                                   rdfs:label "Sensor"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#example> "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+
+###  https://w3id.org/transmodel/core#Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://schema.org/name> ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         rdfs:comment "The descriptive data associated with a PLACE that can be used to describe the unique geographical context of a PLACE for the purposes of identifying it. May be refined as either a ROAD ADDRESS, a POSTAL ADDRESS or both."@en .
+
+
+###  https://w3id.org/transmodel/core#AddressablePlace
+:AddressablePlace rdf:type owl:Class ;
+                  rdfs:subClassOf :Place ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty <http://schema.org/image> ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  rdfs:comment "A type of PLACE  to which passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an ADDRESS."@en .
+
+
+###  https://w3id.org/transmodel/core#Country
+:Country rdf:type owl:Class ;
+         rdfs:comment "A jurisdictional geographic boundary. A country normally has a two character IANA identifier."@en .
+
+
+###  https://w3id.org/transmodel/core#DispositivoMedicionTrafico
+:DispositivoMedicionTrafico rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/core#ObservacionTrafico
+:ObservacionTrafico rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/core#Parada
+:Parada rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/core#Place
+:Place rdf:type owl:Class ;
+       rdfs:comment "A geographic place of any type which may be specified as the origin or destination of a trip. A PLACE may be represented as a POINT (dimension 0) , a road section (dimension 1) or a ZONE (dimension 2)."@en .
+
+
+###  https://w3id.org/transmodel/core#PostalAddress
+:PostalAddress rdf:type owl:Class ;
+               rdfs:subClassOf :Address ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :Province ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :addressLine1 ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :houseNumber ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :postCode ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :postCodeExtension ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :street ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :town ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ;
+               rdfs:comment "A postal address according to the esdir vocabulary."@en ,
+                            "A specification of address refining it by using the attributes used for conventional identification for mail. Comprises variously a building Identifier, Street name, Post code and other descriptors."@en ,
+                            "Una dirección postal según el vocabulario esdir."@es ;
+               rdfs:label "Dirección postal"@es ,
+                          "Postal Address"@en .
+
+
+###  https://w3id.org/transmodel/core#PropiedadMedicionTrafico
+:PropiedadMedicionTrafico rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/core#RoadAddress
+:RoadAddress rdf:type owl:Class ;
+             rdfs:subClassOf :Address ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :bearingDegrees ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:float
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :evenNumberRange ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :oddNumberRange ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :roadNumber ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             rdfs:comment "Specialization of ADDRESS refining it by using the characteristics such as road number, and name used for conventional identification of along  a road."@en .
+
+
+###  https://w3id.org/transmodel/core#TopographicPlace
+:TopographicPlace rdf:type owl:Class ;
+                  rdfs:subClassOf :Place ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :centre ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :qualifier ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:string
+                                  ] ;
+                  rdfs:comment "A type of Place providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County,City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westminster, St James s)."@en .
+
+
+###  https://w3id.org/transmodel/core##Linea
+<https://w3id.org/transmodel/core##Linea> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://w3id.org/transmodel/journeys#Line> ;
+                                          rdfs:comment "Line of the public transport service of urban buses"@en ,
+                                                       "Línea del servicio público de transporte de autobuses urbanos"@es ;
+                                          rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/autobus> ;
+                                          rdfs:label "Bus Line"@en ,
+                                                     "Línea de autobús"@es .
+
+
+###  https://w3id.org/transmodel/core##Parada
+<https://w3id.org/transmodel/core##Parada> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://w3id.org/transmodel/commons#Place> ,
+                                                           <http://www.opengis.net/ont/geosparql#Feature> ;
+                                           rdfs:comment "A Stop of the public transport service of urban buses"@en ,
+                                                        "Una parada del servicio público de transporte de autobuses urbanos."@es ;
+                                           rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                           rdfs:label "Parada"@es ,
+                                                      "Stop Place"@en .
+
+
+###  https://w3id.org/transmodel/core##RealTimePassingTime
+<https://w3id.org/transmodel/core##RealTimePassingTime> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://www.w3.org/ns/sosa/Observation> ;
+                                                        rdfs:comment "Tiempo de espera actualizado"@es ,
+                                                                     "Waiting time up to date"@en ;
+                                                        rdfs:isDefinedBy <http://vocab.ciudadesabiertas.es/def/transporte/trafico> ;
+                                                        rdfs:label "Tiempo de Espera"@es ,
+                                                                   "Waiting Time"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia
+<http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia> rdf:type owl:NamedIndividual ,
+                                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                                  rdfs:label "tipo de incidencia"@es ,
+                                                                                             "type of incidence"@en .
+
+
+###  http://w3id.org/transmodel/kos/journeys/day-type
+<http://w3id.org/transmodel/kos/journeys/day-type> rdf:type owl:NamedIndividual ,
+                                                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                   rdfs:comment "Concept scheme where all the codelists for the types of datatype properties that are included in the Transmodel ontology"@en ,
+                                                                "TODO: determine whether there may be split into serveral kos or not"@en ;
+                                                   rdfs:label "day type"@en .
+
+
+###  http://w3id.org/transmodel/kos/journeys/direction-type
+<http://w3id.org/transmodel/kos/journeys/direction-type> rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/transmodel/kos/journeys/stop-use-type
+<http://w3id.org/transmodel/kos/journeys/stop-use-type> rdf:type owl:NamedIndividual .
+
+
+###  http://w3id.org/transmodel/kos/journeys/direction-type/
+<http://w3id.org/transmodel/kos/journeys/direction-type/> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                          rdfs:comment "Tipo de dirección que toma un Viaje de un Vehículo: de entrada, de salida, en el sentido de las agujas del reloj, en el sentido contrario a las agujas del reloj."@es ,
+                                                                       "Type of direction of a Vehicle Journey: inbound, outbound, clockwise or anticlockwise."@en ;
+                                                          rdfs:label "tipo de dirección"@es ,
+                                                                     "type of direction"@en .
+
+
+###  http://w3id.org/transmodel/kos/journeys/stop-use-type/
+<http://w3id.org/transmodel/kos/journeys/stop-use-type/> rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                         rdfs:comment "Tipo de parada en el viaje de un vehículo."@es ,
+                                                                      "Type of stop in a vehicle journey."@en ;
+                                                         rdfs:label "tipo de parada"@es ,
+                                                                    "type of stop"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/created> rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Creado"@es ;
+                                   rdfs:comment "Date of creation of the resource."@en ;
+                                   rdfs:label "Created"@en ;
+                                   rdfs:comment "Fecha de creación del recurso."@es .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
