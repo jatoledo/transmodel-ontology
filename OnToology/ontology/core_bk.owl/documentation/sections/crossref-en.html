@@ -1,0 +1,596 @@
+<h2 id="crossreference" class="list">Cross reference for Transmodel Ontology - Core classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Transmodel Ontology - Core.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/transmodel/journeys#LinkSequence"
+            title="https://w3id.org/transmodel/journeys#LinkSequence">Link Sequence</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/journeys#PointInLinkSequence"
+            title="https://w3id.org/transmodel/journeys#PointInLinkSequence">Point In Link Sequence</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/transmodel/journeys#RoutePoint" title="http://w3id.org/transmodel/journeys#RoutePoint">Route Point</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/transmodel/journeys#ScheduledStopPoint"
+            title="http://w3id.org/transmodel/journeys#ScheduledStopPoint">Scheduled Stop Point</a>
+      </li>
+      <li>
+         <a href="#http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+            title="http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">Timing Point In Journey Pattern</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/transmodel/journeys#LinkSequence">
+      <h3>Link Sequence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#LinkSequence</p>
+      <div class="comment">
+         <span class="markdown">An ordered sequence either of POINTs or of LINKs, defining a path through the network</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/transmodel/journeys#Point">
+      <h3>Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/transmodel/journeys#Point</p>
+      <div class="comment">
+         <span class="markdown">A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/journeys#RoutePoint" title="http://w3id.org/transmodel/journeys#RoutePoint">Route Point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://w3id.org/transmodel/journeys#ScheduledStopPoint"
+               title="http://w3id.org/transmodel/journeys#ScheduledStopPoint">Scheduled Stop Point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+               title="http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">Timing Point In Journey Pattern</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/journeys#PointInLinkSequence">
+      <h3>Point In Link Sequence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#PointInLinkSequence</p>
+      <div class="comment">
+         <span class="markdown">A point in a Link Sequence indicating its order in that particular Link Sequence</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/transmodel/journeys#RoutePoint">
+      <h3>Route Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/transmodel/journeys#RoutePoint</p>
+      <div class="comment">
+         <span class="markdown">A Point used to define the shape of a Route through the network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/transmodel/journeys#ScheduledStopPoint">
+      <h3>Scheduled Stop Point<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/transmodel/journeys#ScheduledStopPoint</p>
+      <div class="comment">
+         <span class="markdown">A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern">
+      <h3>Timing Point In Journey Pattern<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern</p>
+      <div class="comment">
+         <span class="markdown">A Point in a JourneyPattern which is a TimingPoint</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://w3id.org/transmodel/journeys#Point" title="http://w3id.org/transmodel/journeys#Point">Point</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://w3id.org/transmodel/journeys#PointInLinkSequence"
+               target="_blank"
+               title="http://w3id.org/transmodel/journeys#PointInLinkSequence">point in link sequence</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#distance" title="https://w3id.org/transmodel/core#distance">distance</a>
+      </li>
+   </ul>
+   <div class="entity" id="distance">
+      <h3>distance<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#distance</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#noBeveragesAvailable"
+            title="https://w3id.org/transmodel/core#noBeveragesAvailable"/>
+      </li>
+      <li>
+         <a href="#babychange" title="https://w3id.org/transmodel/core#babychange">babyChange</a>
+      </li>
+      <li>
+         <a href="#barrier" title="https://w3id.org/transmodel/core#barrier">barrierEntrance</a>
+      </li>
+      <li>
+         <a href="#bookingHall" title="https://w3id.org/transmodel/core#bookingHall">bookingHall</a>
+      </li>
+      <li>
+         <a href="#compoundTrain" title="https://w3id.org/transmodel/core#compoundTrain">compoundTrain</a>
+      </li>
+      <li>
+         <a href="#concourse" title="https://w3id.org/transmodel/core#concourse">concourse</a>
+      </li>
+      <li>
+         <a href="#directionName" title="https://w3id.org/transmodel/core#directionName">directionName</a>
+      </li>
+      <li>
+         <a href="#doubleDeck" title="https://w3id.org/transmodel/core#doubleDeck">doubleDeck</a>
+      </li>
+      <li>
+         <a href="#entranceEquipmentDoor"
+            title="https://w3id.org/transmodel/core#entranceEquipmentDoor">entranceEquipmentDoor</a>
+      </li>
+      <li>
+         <a href="#entranceEquipmentRevolvingDoor"
+            title="https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor">entranceEquipmentRevolvingDoor</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/facilities/EquipmentType"
+            title="https://w3id.org/transmodel/kos/facilities/EquipmentType">
+            <span>equipment type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#equipmentActivated"
+            title="https://w3id.org/transmodel/core#equipmentActivated">equipmentActivated</a>
+      </li>
+      <li>
+         <a href="#equipmentAtStopPoint"
+            title="https://w3id.org/transmodel/core#equipmentAtStopPoint">equipmentAtStopPoint</a>
+      </li>
+      <li>
+         <a href="#equipmentdesactvated"
+            title="https://w3id.org/transmodel/core#equipmentdesactvated">equipmentDesactivated</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/facilities/FacilityType"
+            title="https://w3id.org/transmodel/kos/facilities/FacilityType">
+            <span>facility type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#noFoodAvailable" title="https://w3id.org/transmodel/core#noFoodAvailable">food</a>
+      </li>
+      <li>
+         <a href="#immigrationHall" title="https://w3id.org/transmodel/core#immigrationHall">immigrationHall</a>
+      </li>
+      <li>
+         <a href="#informationDesk" title="https://w3id.org/transmodel/core#informationDesk">InformationDesk</a>
+      </li>
+      <li>
+         <a href="#informationStand"
+            title="https://w3id.org/transmodel/core#informationStand">informationStand</a>
+      </li>
+      <li>
+         <a href="#lineName" title="https://w3id.org/transmodel/core#lineName">lineName</a>
+      </li>
+      <li>
+         <a href="#lowFloor" title="https://w3id.org/transmodel/core#lowFloor">lowFloor</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/journeys/mobility-limitation"
+            title="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
+            <span>mobility limitation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#narrowEntrance" title="https://w3id.org/transmodel/core#narrowEntrance">narrowEntrance</a>
+      </li>
+      <li>
+         <a href="#placeAccessStairScalator"
+            title="https://w3id.org/transmodel/core#placeAccessStairScalator">placeAccessStairScalator</a>
+      </li>
+      <li>
+         <a href="#placeAccessStairStair"
+            title="https://w3id.org/transmodel/core#placeAccessStairStair">placeAccessStairStair</a>
+      </li>
+      <li>
+         <a href="#placeAccessStairStaircase"
+            title="https://w3id.org/transmodel/core#placeAccessStairStaircase">placeAccessStairStaircase</a>
+      </li>
+      <li>
+         <a href="#riverFlow" title="https://w3id.org/transmodel/core#riverFlow">riverFlow</a>
+      </li>
+      <li>
+         <a href="#roadClosure" title="https://w3id.org/transmodel/core#roadClosure">roadClosure</a>
+      </li>
+      <li>
+         <a href="#securityArea" title="https://w3id.org/transmodel/core#securityArea">securityArea</a>
+      </li>
+      <li>
+         <a href="#standardBus" title="https://w3id.org/transmodel/core#standardBus">standardBus</a>
+      </li>
+      <li>
+         <a href="#stepFree" title="https://w3id.org/transmodel/core#stepFree">stepFree</a>
+      </li>
+      <li>
+         <a href="#telematicInformationCenter"
+            title="https://w3id.org/transmodel/core#telematicInformationCenter">telematicInformationService</a>
+      </li>
+      <li>
+         <a href="#weatherConditions"
+            title="https://w3id.org/transmodel/core#weatherConditions">weatherConditions</a>
+      </li>
+   </ul>
+   <div class="entity" id="noBeveragesAvailable">
+      <h3>
+         <sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#noBeveragesAvailable</p>
+   </div>
+   <div class="entity" id="babychange">
+      <h3>babyChange<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#babychange</p>
+   </div>
+   <div class="entity" id="barrier">
+      <h3>barrierEntrance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#barrier</p>
+      <div class="comment">
+         <span class="markdown">Whether there is a physical barrier across the doorway.</span>
+      </div>
+   </div>
+   <div class="entity" id="bookingHall">
+      <h3>bookingHall<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#bookingHall</p>
+   </div>
+   <div class="entity" id="compoundTrain">
+      <h3>compoundTrain<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#compoundTrain</p>
+      <div class="comment">
+         <span class="markdown">A VehicleType composed of a sequence of more than one vehicles of the type Train</span>
+      </div>
+   </div>
+   <div class="entity" id="concourse">
+      <h3>concourse<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#concourse</p>
+   </div>
+   <div class="entity" id="directionName">
+      <h3>directionName<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#directionName</p>
+   </div>
+   <div class="entity" id="doubleDeck">
+      <h3>doubleDeck<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#doubleDeck</p>
+   </div>
+   <div class="entity" id="entranceEquipmentDoor">
+      <h3>entranceEquipmentDoor<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#entranceEquipmentDoor</p>
+   </div>
+   <div class="entity" id="entranceEquipmentRevolvingDoor">
+      <h3>entranceEquipmentRevolvingDoor<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor</p>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/facilities/EquipmentType">
+      <h3>equipment type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/facilities/EquipmentType</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of equipment that are included in the Transmodel ontology are included</span>
+      </div>
+   </div>
+   <div class="entity" id="equipmentActivated">
+      <h3>equipmentActivated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#equipmentActivated</p>
+   </div>
+   <div class="entity" id="equipmentAtStopPoint">
+      <h3>equipmentAtStopPoint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#equipmentAtStopPoint</p>
+   </div>
+   <div class="entity" id="equipmentdesactvated">
+      <h3>equipmentDesactivated<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#equipmentdesactvated</p>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/facilities/FacilityType">
+      <h3>facility type<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/facilities/FacilityType</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology</span>
+      </div>
+   </div>
+   <div class="entity" id="noFoodAvailable">
+      <h3>food<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#noFoodAvailable</p>
+   </div>
+   <div class="entity" id="immigrationHall">
+      <h3>immigrationHall<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#immigrationHall</p>
+   </div>
+   <div class="entity" id="informationDesk">
+      <h3>InformationDesk<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#informationDesk</p>
+      <div class="comment">
+         <span class="markdown">A public transport information piece of Equipment indoors</span>
+      </div>
+   </div>
+   <div class="entity" id="informationStand">
+      <h3>informationStand<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#informationStand</p>
+      <div class="comment">
+         <span class="markdown">A public transport information piece of Equipment outdoors</span>
+      </div>
+   </div>
+   <div class="entity" id="lineName">
+      <h3>lineName<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#lineName</p>
+   </div>
+   <div class="entity" id="lowFloor">
+      <h3>lowFloor<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#lowFloor</p>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/journeys/mobility-limitation">
+      <h3>mobility limitation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/journeys/mobility-limitation</p>
+      <div class="comment">
+         <span class="markdown">List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation</span>
+      </div>
+   </div>
+   <div class="entity" id="narrowEntrance">
+      <h3>narrowEntrance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#narrowEntrance</p>
+   </div>
+   <div class="entity" id="placeAccessStairScalator">
+      <h3>placeAccessStairScalator<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#placeAccessStairScalator</p>
+      <div class="comment">
+         <span class="markdown">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator</span>
+      </div>
+   </div>
+   <div class="entity" id="placeAccessStairStair">
+      <h3>placeAccessStairStair<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#placeAccessStairStair</p>
+      <div class="comment">
+         <span class="markdown">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair</span>
+      </div>
+   </div>
+   <div class="entity" id="placeAccessStairStaircase">
+      <h3>placeAccessStairStaircase<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#placeAccessStairStaircase</p>
+      <div class="comment">
+         <span class="markdown">Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase</span>
+      </div>
+   </div>
+   <div class="entity" id="riverFlow">
+      <h3>riverFlow<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#riverFlow</p>
+   </div>
+   <div class="entity" id="roadClosure">
+      <h3>roadClosure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#roadClosure</p>
+   </div>
+   <div class="entity" id="securityArea">
+      <h3>securityArea<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#securityArea</p>
+   </div>
+   <div class="entity" id="standardBus">
+      <h3>standardBus<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#standardBus</p>
+   </div>
+   <div class="entity" id="stepFree">
+      <h3>stepFree<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#stepFree</p>
+      <div class="comment">
+         <span class="markdown">Whether waiting area is step free.</span>
+      </div>
+   </div>
+   <div class="entity" id="telematicInformationCenter">
+      <h3>telematicInformationService<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#telematicInformationCenter</p>
+      <div class="comment">
+         <span class="markdown">A public transport information piece of Equipment online</span>
+      </div>
+   </div>
+   <div class="entity" id="weatherConditions">
+      <h3>weatherConditions<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/core#weatherConditions</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

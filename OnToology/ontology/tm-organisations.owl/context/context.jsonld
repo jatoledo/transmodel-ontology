@@ -134,6 +134,9 @@
     "description" : {
       "@id" : "https://w3id.org/transmodel/organisations#description"
     },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
     "TravelAgent" : {
       "@id" : "https://w3id.org/transmodel/organisations#TravelAgent"
     },

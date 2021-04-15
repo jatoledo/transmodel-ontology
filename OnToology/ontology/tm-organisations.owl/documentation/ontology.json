@@ -94,6 +94,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://schema.org/ContactPoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -140,6 +143,9 @@
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",
     "@value" : "Transmodel Ontology - Organisations"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/transmodel/organisations#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -227,6 +233,8 @@
     "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/transmodel/organisations#Operator"
+  }, {
     "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {
@@ -297,9 +305,6 @@
     "@value" : "Operator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/transmodel/organisations#Organisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/transmodel/organisations#Organisation"
   } ]
 }, {

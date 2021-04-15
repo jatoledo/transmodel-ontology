@@ -1,0 +1,520 @@
+<https://w3id.org/transmodel/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/transmodel/core#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/transmodel/core/0.1> .
+<https://w3id.org/transmodel/core#> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/creator> "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/creator> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/date> "2021-02-17" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/description> "This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/core" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" .
+<https://w3id.org/transmodel/core#> <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Core"@en .
+<https://w3id.org/transmodel/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/core#> .
+<https://w3id.org/transmodel/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "Module of the Transmodel Ontology focused on core. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/core#> <http://www.w3.org/2000/01/rdf-schema#label> "Transmodel Ontology - Core"@en .
+<https://w3id.org/transmodel/core#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/oeg-upm/transmodel-ontology"@en .
+<https://w3id.org/transmodel/core#> <http://www.w3.org/2002/07/owl#versionInfo> "Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/core#author
+<https://w3id.org/transmodel/core#author> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/core#creator
+<https://w3id.org/transmodel/core#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/core#description
+<https://w3id.org/transmodel/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/core#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/transmodel/core#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/transmodel/core#MeetingPointService> .
+# 
+# https://w3id.org/transmodel/core#mbox
+<https://w3id.org/transmodel/core#mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/transmodel/core#name
+<https://w3id.org/transmodel/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/transmodel/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#string
+<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2001/XMLSchema#duration> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/journeys#inLinkSequence
+<https://w3id.org/transmodel/journeys#inLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/transmodel/journeys#madeUpOf
+<https://w3id.org/transmodel/journeys#madeUpOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/transmodel/journeys#viewedAs
+<https://w3id.org/transmodel/journeys#viewedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/core#distance
+<https://w3id.org/transmodel/core#distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/transmodel/core#distance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/transmodel/core#distance> <http://www.w3.org/2000/01/rdf-schema#label> "distance"@en .
+# 
+# https://w3id.org/transmodel/core#name
+<https://w3id.org/transmodel/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/transmodel/journeys#distanceFromStart
+<https://w3id.org/transmodel/journeys#distanceFromStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/transmodel/journeys#order
+<https://w3id.org/transmodel/journeys#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/transmodel/journeys#Point
+<http://w3id.org/transmodel/journeys#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en .
+<http://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación."@es .
+<http://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en .
+<http://w3id.org/transmodel/journeys#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Punto"@es .
+# 
+# http://w3id.org/transmodel/journeys#PointInLinkSequence
+<http://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/transmodel/journeys#RoutePoint
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/transmodel/journeys#Point> .
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point used to define the shape of a Route through the network."@en .
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Un punto que se usa para definir la forma de una ruta por la red de transporte."@es .
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Punto de Ruta"@es .
+<http://w3id.org/transmodel/journeys#RoutePoint> <http://www.w3.org/2000/01/rdf-schema#label> "Route Point"@en .
+# 
+# http://w3id.org/transmodel/journeys#ScheduledStopPoint
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/transmodel/journeys#Point> .
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle."@en .
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo."@es .
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Parada Planificada"@es .
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Scheduled Stop Point"@en .
+# 
+# http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/transmodel/journeys#Point> .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/transmodel/journeys#PointInLinkSequence> .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "A Point in a JourneyPattern which is a TimingPoint"@en .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Un punto en un patrón de viaje que es un punto de control"@es .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Punto de control en el patrón de viaje"@es .
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> <http://www.w3.org/2000/01/rdf-schema#label> "Timing Point In Journey Pattern"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/commons#Point
+<https://w3id.org/transmodel/commons#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/transmodel/journeys#LinkSequence
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#madeUpOf> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/journeys#PointInLinkSequence> .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered sequence either of POINTs or of LINKs, defining a path through the network"@en .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Add all the attributes that are relevant to this class"@en .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: Analyse whether this class should be better defined in the Commons module"@en .
+<https://w3id.org/transmodel/journeys#LinkSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Link Sequence"@en .
+# 
+# https://w3id.org/transmodel/journeys#PointInLinkSequence
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#inLinkSequence> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/journeys#LinkSequence> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#viewedAs> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/commons#Point> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#distanceFromStart> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/journeys#order> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "A point in a Link Sequence indicating its order in that particular Link Sequence"@en .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "TODO: TransModel defines that a Point in Link Sequence is connected to a Layer, but this is not considered relevant yet"@en .
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Point In Link Sequence"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/core#accessible
+<https://w3id.org/transmodel/core#accessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#audioNavigator
+<https://w3id.org/transmodel/core#audioNavigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#babychange
+<https://w3id.org/transmodel/core#babychange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#babychange> <http://www.w3.org/2000/01/rdf-schema#label> "babyChange"@en .
+# 
+# https://w3id.org/transmodel/core#baggageCheckin
+<https://w3id.org/transmodel/core#baggageCheckin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#barrier
+<https://w3id.org/transmodel/core#barrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#barrier> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether there is a physical barrier across the doorway."@en .
+<https://w3id.org/transmodel/core#barrier> <http://www.w3.org/2000/01/rdf-schema#label> "barrierEntrance"@en .
+# 
+# https://w3id.org/transmodel/core#beverageVendingMachine
+<https://w3id.org/transmodel/core#beverageVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#bookingHall
+<https://w3id.org/transmodel/core#bookingHall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#bookingHall> <http://www.w3.org/2000/01/rdf-schema#label> "bookingHall"@en .
+# 
+# https://w3id.org/transmodel/core#boundedOpenSpace
+<https://w3id.org/transmodel/core#boundedOpenSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#buffet
+<https://w3id.org/transmodel/core#buffet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#bunk
+<https://w3id.org/transmodel/core#bunk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#cateringTrolleyService
+<https://w3id.org/transmodel/core#cateringTrolleyService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#compoundTrain
+<https://w3id.org/transmodel/core#compoundTrain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#compoundTrain> <http://www.w3.org/2000/01/rdf-schema#comment> "A VehicleType composed of a sequence of more than one vehicles of the type Train"@en .
+<https://w3id.org/transmodel/core#compoundTrain> <http://www.w3.org/2000/01/rdf-schema#label> "compoundTrain"@en .
+# 
+# https://w3id.org/transmodel/core#concourse
+<https://w3id.org/transmodel/core#concourse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#concourse> <http://www.w3.org/2000/01/rdf-schema#label> "concourse"@en .
+# 
+# https://w3id.org/transmodel/core#confinedSpace
+<https://w3id.org/transmodel/core#confinedSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#corridor
+<https://w3id.org/transmodel/core#corridor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#couchette
+<https://w3id.org/transmodel/core#couchette> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#crowding
+<https://w3id.org/transmodel/core#crowding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#cycleStorageEquipmentBars
+<https://w3id.org/transmodel/core#cycleStorageEquipmentBars> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#cycleStorageEquipmentRacks
+<https://w3id.org/transmodel/core#cycleStorageEquipmentRacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#cycleStorageEquipmentRailings
+<https://w3id.org/transmodel/core#cycleStorageEquipmentRailings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#directionName
+<https://w3id.org/transmodel/core#directionName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#directionName> <http://www.w3.org/2000/01/rdf-schema#label> "directionName"@en .
+# 
+# https://w3id.org/transmodel/core#doubleDeck
+<https://w3id.org/transmodel/core#doubleDeck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#doubleDeck> <http://www.w3.org/2000/01/rdf-schema#label> "doubleDeck"@en .
+# 
+# https://w3id.org/transmodel/core#emergencyServiceFirstAid
+<https://w3id.org/transmodel/core#emergencyServiceFirstAid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#emergencyServicePolice
+<https://w3id.org/transmodel/core#emergencyServicePolice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#emergencyServiceSOSPoint
+<https://w3id.org/transmodel/core#emergencyServiceSOSPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#emergencyServiceServiceCCTV
+<https://w3id.org/transmodel/core#emergencyServiceServiceCCTV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#entranceEquipmentBarrier
+<https://w3id.org/transmodel/core#entranceEquipmentBarrier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#entranceEquipmentDoor
+<https://w3id.org/transmodel/core#entranceEquipmentDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#entranceEquipmentDoor> <http://www.w3.org/2000/01/rdf-schema#label> "entranceEquipmentDoor"@en .
+# 
+# https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor
+<https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor> <http://www.w3.org/2000/01/rdf-schema#label> "entranceEquipmentRevolvingDoor"@en .
+# 
+# https://w3id.org/transmodel/core#equipmentActivated
+<https://w3id.org/transmodel/core#equipmentActivated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#equipmentActivated> <http://www.w3.org/2000/01/rdf-schema#label> "equipmentActivated"@en .
+# 
+# https://w3id.org/transmodel/core#equipmentAtStopPoint
+<https://w3id.org/transmodel/core#equipmentAtStopPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#equipmentAtStopPoint> <http://www.w3.org/2000/01/rdf-schema#label> "equipmentAtStopPoint"@en .
+# 
+# https://w3id.org/transmodel/core#equipmentOnBoard
+<https://w3id.org/transmodel/core#equipmentOnBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#equipmentdesactvated
+<https://w3id.org/transmodel/core#equipmentdesactvated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#equipmentdesactvated> <http://www.w3.org/2000/01/rdf-schema#label> "equipmentDesactivated"@en .
+# 
+# https://w3id.org/transmodel/core#firstClass
+<https://w3id.org/transmodel/core#firstClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#foodVendingMachine
+<https://w3id.org/transmodel/core#foodVendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#full
+<https://w3id.org/transmodel/core#full> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#hall
+<https://w3id.org/transmodel/core#hall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#handrailOneSide
+<https://w3id.org/transmodel/core#handrailOneSide> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#handrailTwoSides
+<https://w3id.org/transmodel/core#handrailTwoSides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#immigrationHall
+<https://w3id.org/transmodel/core#immigrationHall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#immigrationHall> <http://www.w3.org/2000/01/rdf-schema#label> "immigrationHall"@en .
+# 
+# https://w3id.org/transmodel/core#incomingCustoms
+<https://w3id.org/transmodel/core#incomingCustoms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#informationDesk
+<https://w3id.org/transmodel/core#informationDesk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#informationDesk> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment indoors"@en .
+<https://w3id.org/transmodel/core#informationDesk> <http://www.w3.org/2000/01/rdf-schema#label> "InformationDesk"@en .
+# 
+# https://w3id.org/transmodel/core#informationStand
+<https://w3id.org/transmodel/core#informationStand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#informationStand> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment outdoors"@en .
+<https://w3id.org/transmodel/core#informationStand> <http://www.w3.org/2000/01/rdf-schema#label> "informationStand"@en .
+# 
+# https://w3id.org/transmodel/core#lift
+<https://w3id.org/transmodel/core#lift> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#lineName
+<https://w3id.org/transmodel/core#lineName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#lineName> <http://www.w3.org/2000/01/rdf-schema#label> "lineName"@en .
+# 
+# https://w3id.org/transmodel/core#lowFloor
+<https://w3id.org/transmodel/core#lowFloor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#lowFloor> <http://www.w3.org/2000/01/rdf-schema#label> "lowFloor"@en .
+# 
+# https://w3id.org/transmodel/core#narrowEntrance
+<https://w3id.org/transmodel/core#narrowEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#narrowEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "narrowEntrance"@en .
+# 
+# https://w3id.org/transmodel/core#noBeveragesAvailable
+<https://w3id.org/transmodel/core#noBeveragesAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#noBeveragesAvailable> <http://www.w3.org/2000/01/rdf-schema#label> ""@en .
+<https://w3id.org/transmodel/core#noBeveragesAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "beverages" .
+# 
+# https://w3id.org/transmodel/core#noFoodAvailable
+<https://w3id.org/transmodel/core#noFoodAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#noFoodAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "food"@en .
+# 
+# https://w3id.org/transmodel/core#noWaiting
+<https://w3id.org/transmodel/core#noWaiting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#nonAccessible
+<https://w3id.org/transmodel/core#nonAccessible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#outgoingCustoms
+<https://w3id.org/transmodel/core#outgoingCustoms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#placeAccessStairScalator
+<https://w3id.org/transmodel/core#placeAccessStairScalator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#placeAccessStairScalator> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator"@en .
+<https://w3id.org/transmodel/core#placeAccessStairScalator> <http://www.w3.org/2000/01/rdf-schema#label> "placeAccessStairScalator"@en .
+# 
+# https://w3id.org/transmodel/core#placeAccessStairStair
+<https://w3id.org/transmodel/core#placeAccessStairStair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#placeAccessStairStair> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair"@en .
+<https://w3id.org/transmodel/core#placeAccessStairStair> <http://www.w3.org/2000/01/rdf-schema#label> "placeAccessStairStair"@en .
+# 
+# https://w3id.org/transmodel/core#placeAccessStairStaircase
+<https://w3id.org/transmodel/core#placeAccessStairStaircase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#placeAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase"@en .
+<https://w3id.org/transmodel/core#placeAccessStairStaircase> <http://www.w3.org/2000/01/rdf-schema#label> "placeAccessStairStaircase"@en .
+# 
+# https://w3id.org/transmodel/core#queue
+<https://w3id.org/transmodel/core#queue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#queueManagement
+<https://w3id.org/transmodel/core#queueManagement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#riverFlow
+<https://w3id.org/transmodel/core#riverFlow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#riverFlow> <http://www.w3.org/2000/01/rdf-schema#label> "riverFlow"@en .
+# 
+# https://w3id.org/transmodel/core#roadClosure
+<https://w3id.org/transmodel/core#roadClosure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#roadClosure> <http://www.w3.org/2000/01/rdf-schema#label> "roadClosure"@en .
+# 
+# https://w3id.org/transmodel/core#room
+<https://w3id.org/transmodel/core#room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#secondClass
+<https://w3id.org/transmodel/core#secondClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#securityArea
+<https://w3id.org/transmodel/core#securityArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#securityArea> <http://www.w3.org/2000/01/rdf-schema#label> "securityArea"@en .
+# 
+# https://w3id.org/transmodel/core#shower
+<https://w3id.org/transmodel/core#shower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#snacks
+<https://w3id.org/transmodel/core#snacks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#standardBus
+<https://w3id.org/transmodel/core#standardBus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#standardBus> <http://www.w3.org/2000/01/rdf-schema#label> "standardBus"@en .
+# 
+# https://w3id.org/transmodel/core#stepFree
+<https://w3id.org/transmodel/core#stepFree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#stepFree> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether waiting area is step free."@en .
+<https://w3id.org/transmodel/core#stepFree> <http://www.w3.org/2000/01/rdf-schema#label> "stepFree"@en .
+# 
+# https://w3id.org/transmodel/core#taxRefunds
+<https://w3id.org/transmodel/core#taxRefunds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#telematicInformationCenter
+<https://w3id.org/transmodel/core#telematicInformationCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#telematicInformationCenter> <http://www.w3.org/2000/01/rdf-schema#comment> "A public transport information piece of Equipment online"@en .
+<https://w3id.org/transmodel/core#telematicInformationCenter> <http://www.w3.org/2000/01/rdf-schema#label> "telematicInformationService"@en .
+# 
+# https://w3id.org/transmodel/core#ticketCollection
+<https://w3id.org/transmodel/core#ticketCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#ticketPurchase
+<https://w3id.org/transmodel/core#ticketPurchase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#toilet
+<https://w3id.org/transmodel/core#toilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#visualNavigator
+<https://w3id.org/transmodel/core#visualNavigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#walkingStick
+<https://w3id.org/transmodel/core#walkingStick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#weatherConditions
+<https://w3id.org/transmodel/core#weatherConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/core#weatherConditions> <http://www.w3.org/2000/01/rdf-schema#label> "weatherConditions"@en .
+# 
+# https://w3id.org/transmodel/core#wheelchair
+<https://w3id.org/transmodel/core#wheelchair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#wheelchairAccessToilet
+<https://w3id.org/transmodel/core#wheelchairAccessToilet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/core#wheelchairBabyChange
+<https://w3id.org/transmodel/core#wheelchairBabyChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# https://w3id.org/transmodel/kos/facilities/EquipmentType
+<https://w3id.org/transmodel/kos/facilities/EquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/facilities/EquipmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of equipment that are included in the Transmodel ontology are included" .
+# 
+# https://w3id.org/transmodel/kos/facilities/FacilityType
+<https://w3id.org/transmodel/kos/facilities/FacilityType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/facilities/FacilityType> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology"@en .
+# 
+# https://w3id.org/transmodel/kos/journeys/mobility-limitation
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> <http://www.w3.org/2000/01/rdf-schema#comment> "List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation"@en .
+# 
+_:genid6 <https://w3id.org/transmodel/core#mbox> "adolfo.anton.bravo@upm.es"@en .
+_:genid6 <https://w3id.org/transmodel/core#name> "Adolfo Anton-Bravo"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://w3id.org/transmodel/core#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of link sequence."@en .
+<https://w3id.org/transmodel/core#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

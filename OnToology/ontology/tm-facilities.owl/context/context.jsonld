@@ -16,6 +16,18 @@
     "StopPlaceEntrance" : {
       "@id" : "https://w3id.org/transmodel/facilities#StopPlaceEntrance"
     },
+    "lockerWidth" : {
+      "@id" : "https://w3id.org/transmodel/facilities#lockerWidth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "mirrorOnOppositeSide" : {
+      "@id" : "https://w3id.org/transmodel/facilities#mirrorOnOppositeSide",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "suitableForCycles" : {
+      "@id" : "https://w3id.org/transmodel/facilities#suitableForCycles",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "PlaceEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PlaceEquipment"
     },
@@ -33,11 +45,17 @@
     "Garage" : {
       "@id" : "https://w3id.org/transmodel/facilities#Garage"
     },
+    "MedicalNeed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#MedicalNeed"
+    },
     "SiteFacilitySet" : {
       "@id" : "https://w3id.org/transmodel/facilities#SiteFacilitySet"
     },
     "EmergencyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#EmergencyService"
+    },
+    "tactileActuators" : {
+      "@id" : "https://w3id.org/transmodel/facilities#tactileActuators"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -47,6 +65,9 @@
     },
     "RubishDisposalEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#RubishDisposalEquipment"
+    },
+    "changeAvailable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#changeAvailable"
     },
     "comprisesEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#comprisesEquipment",
@@ -58,8 +79,23 @@
     "Entrance" : {
       "@id" : "https://w3id.org/transmodel/facilities#Entrance"
     },
+    "raisedButtons" : {
+      "@id" : "https://w3id.org/transmodel/facilities#raisedButtons",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "SanitaryEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#SanitaryEquipment"
+    },
+    "width" : {
+      "@id" : "https://w3id.org/transmodel/facilities#width"
+    },
+    "waitingRoomType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#waitingRoomType",
+      "@type" : "@id"
+    },
+    "userNeed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#userNeed",
+      "@type" : "@id"
     },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
@@ -80,6 +116,18 @@
     "EquipmentPosition" : {
       "@id" : "https://w3id.org/transmodel/facilities#EquipmentPosition"
     },
+    "NumberOfGates" : {
+      "@id" : "https://w3id.org/transmodel/facilities#NumberOfGates",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "signageToLift" : {
+      "@id" : "https://w3id.org/transmodel/facilities#signageToLift",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "heightOfLowCounter" : {
+      "@id" : "https://w3id.org/transmodel/facilities#heightOfLowCounter",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "JourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/facilities#JourneyPattern"
     },
@@ -99,6 +147,9 @@
       "@id" : "https://w3id.org/transmodel/facilities#equipmentType",
       "@type" : "@id"
     },
+    "MobilityNeed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#MobilityNeed"
+    },
     "comprises" : {
       "@id" : "https://w3id.org/transmodel/facilities#comprises",
       "@type" : "@id"
@@ -108,6 +159,10 @@
     },
     "ConstraintDelay" : {
       "@id" : "https://w3id.org/transmodel/facilities#ConstraintDelay"
+    },
+    "alwaysLit" : {
+      "@id" : "https://w3id.org/transmodel/facilities#alwaysLit",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "typeOfSanitaryEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfSanitaryEquipment",
@@ -131,6 +186,14 @@
     "HiringService" : {
       "@id" : "https://w3id.org/transmodel/facilities#HiringService"
     },
+    "airConditioned" : {
+      "@id" : "https://w3id.org/transmodel/facilities#airConditioned",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "needRanking" : {
+      "@id" : "https://w3id.org/transmodel/facilities#needRanking",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "toiletFacility" : {
       "@id" : "https://w3id.org/transmodel/facilities#toiletFacility",
       "@type" : "@id"
@@ -153,6 +216,10 @@
       "@id" : "https://w3id.org/transmodel/facilities#activatedEquipment",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "numberOfToilets" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfToilets",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "SiteComponent" : {
       "@id" : "https://w3id.org/transmodel/facilities#SiteComponent"
     },
@@ -169,6 +236,10 @@
     },
     "CrossingEquipmentLights" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentLights"
+    },
+    "revolvingDoor" : {
+      "@id" : "https://w3id.org/transmodel/facilities#revolvingDoor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "accessibilityAssessment" : {
       "@id" : "https://w3id.org/transmodel/facilities#accessibilityAssessment",
@@ -190,11 +261,28 @@
     "DATAPROPERTIESTOREVIEW" : {
       "@id" : "https://w3id.org/transmodel/facilities#DATAPROPERTIESTOREVIEW"
     },
-    "VehicleEquipment" : {
-      "@id" : "https://w3id.org/transmodel/facilities#VehicleEquipment"
+    "entranceRequiresPassport" : {
+      "@id" : "https://w3id.org/transmodel/facilities#entranceRequiresPassport",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "assignedTo" : {
+      "@id" : "https://w3id.org/transmodel/facilities#assignedTo",
+      "@type" : "@id"
+    },
+    "numberOfServers" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfServers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "mobilePhoneCoverage" : {
+      "@id" : "https://w3id.org/transmodel/facilities#mobilePhoneCoverage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "distanceFromNearestKerb" : {
+      "@id" : "https://w3id.org/transmodel/facilities#distanceFromNearestKerb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "author" : {
       "@id" : "https://w3id.org/transmodel/facilities#author"
@@ -213,14 +301,26 @@
     "BookingOffice" : {
       "@id" : "https://w3id.org/transmodel/facilities#BookingOffice"
     },
+    "excluded" : {
+      "@id" : "https://w3id.org/transmodel/facilities#excluded",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "mbox" : {
       "@id" : "https://w3id.org/transmodel/facilities#mbox"
     },
     "LeftLuggageService" : {
       "@id" : "https://w3id.org/transmodel/facilities#LeftLuggageService"
     },
+    "attendant" : {
+      "@id" : "https://w3id.org/transmodel/facilities#attendant",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Concept" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "audibleSignsAvailable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#audibleSignsAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "facilityLocation" : {
       "@id" : "https://w3id.org/transmodel/facilities#facilityLocation"
@@ -228,8 +328,19 @@
     "LostPropertieService" : {
       "@id" : "https://w3id.org/transmodel/facilities#LostPropertieService"
     },
+    "suitability" : {
+      "@id" : "https://w3id.org/transmodel/facilities#suitability",
+      "@type" : "@id"
+    },
     "StopPlaceSpace" : {
       "@id" : "https://w3id.org/transmodel/facilities#StopPlaceSpace"
+    },
+    "directionOfUseType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#directionOfUseType",
+      "@type" : "@id"
+    },
+    "PassengerAccessibilityNeed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#PassengerAccessibilityNeed"
     },
     "CycleOperatingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#CycleOperatingEquipment"
@@ -238,12 +349,24 @@
       "@id" : "https://w3id.org/transmodel/facilities#facilitySet",
       "@type" : "@id"
     },
+    "pedestrianLights" : {
+      "@id" : "https://w3id.org/transmodel/facilities#pedestrianLights",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "CrossingEquipmentZebra" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentZebra"
     },
     "typeOfCheckConstraint" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfCheckConstraint",
       "@type" : "@id"
+    },
+    "freeEntry" : {
+      "@id" : "https://w3id.org/transmodel/facilities#freeEntry",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "staffing" : {
+      "@id" : "https://w3id.org/transmodel/facilities#staffing",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "typeOfEmergencyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfEmergencyService",
@@ -255,6 +378,18 @@
     "PassengerInformationPrintedMaterial" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationPrintedMaterial"
     },
+    "gender" : {
+      "@id" : "https://w3id.org/transmodel/facilities#gender",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "accousticCrossingAid" : {
+      "@id" : "https://w3id.org/transmodel/facilities#accousticCrossingAid",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "lockerHeight" : {
+      "@id" : "https://w3id.org/transmodel/facilities#lockerHeight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "typeOfAccessFeature" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfAccessFeature",
       "@type" : "@id"
@@ -262,18 +397,51 @@
     "WheelchairVehicleEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#WheelchairVehicleEquipment"
     },
+    "charge" : {
+      "@id" : "https://w3id.org/transmodel/facilities#charge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "sharpsDisposal" : {
+      "@id" : "https://w3id.org/transmodel/facilities#sharpsDisposal"
+    },
+    "wheelChairLength" : {
+      "@id" : "https://w3id.org/transmodel/facilities#wheelChairLength"
+    },
+    "ticketOffice" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketOffice",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "fixed" : {
       "@id" : "https://w3id.org/transmodel/facilities#fixed",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "keyScheme" : {
+      "@id" : "https://w3id.org/transmodel/facilities#keyScheme"
+    },
     "Suitability" : {
       "@id" : "https://w3id.org/transmodel/facilities#Suitability"
+    },
+    "sanitaryFacilityType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#sanitaryFacilityType",
+      "@type" : "@id"
+    },
+    "entranceRequiresTicket" : {
+      "@id" : "https://w3id.org/transmodel/facilities#entranceRequiresTicket",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "CustomerService" : {
       "@id" : "https://w3id.org/transmodel/facilities#CustomerService"
     },
+    "dropKerbOutside" : {
+      "@id" : "https://w3id.org/transmodel/facilities#dropKerbOutside",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "AssistanceForDissabledUsers" : {
       "@id" : "https://w3id.org/transmodel/facilities#AssistanceForDissabledUsers"
+    },
+    "carer" : {
+      "@id" : "https://w3id.org/transmodel/facilities#carer",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "AssistanceService" : {
       "@id" : "https://w3id.org/transmodel/facilities#AssistanceService"
@@ -282,12 +450,24 @@
       "@id" : "https://w3id.org/transmodel/facilities#concernedBy",
       "@type" : "@id"
     },
+    "luggageLockerType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#luggageLockerType",
+      "@type" : "@id"
+    },
     "OtherSign" : {
       "@id" : "https://w3id.org/transmodel/facilities#OtherSign"
+    },
+    "ticketingType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketingType",
+      "@type" : "@id"
     },
     "typeOfWaitingRoom" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfWaitingRoom",
       "@type" : "@id"
+    },
+    "cctv" : {
+      "@id" : "https://w3id.org/transmodel/facilities#cctv",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "accessDimensions" : {
       "@id" : "https://w3id.org/transmodel/facilities#accessDimensions",
@@ -296,6 +476,10 @@
     "PassengerEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerEquipment"
     },
+    "acousticAnnouncements" : {
+      "@id" : "https://w3id.org/transmodel/facilities#acousticAnnouncements",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "position" : {
       "@id" : "https://w3id.org/transmodel/facilities#position",
       "@type" : "@id"
@@ -303,8 +487,16 @@
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator"
     },
+    "lowCounterAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#lowCounterAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "name" : {
       "@id" : "https://w3id.org/transmodel/facilities#name"
+    },
+    "door" : {
+      "@id" : "https://w3id.org/transmodel/facilities#door",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "outOfService" : {
       "@id" : "https://w3id.org/transmodel/facilities#outOfService",
@@ -316,6 +508,10 @@
     "Constraint" : {
       "@id" : "https://w3id.org/transmodel/facilities#Constraint"
     },
+    "wheelchairPassable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#wheelchairPassable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "topObjectProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
       "@type" : "@id"
@@ -324,9 +520,17 @@
       "@id" : "https://w3id.org/transmodel/facilities#facilityRequirement",
       "@type" : "@id"
     },
+    "ticketCounterService" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketCounterService",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "accomodation" : {
       "@id" : "https://w3id.org/transmodel/facilities#accomodation",
       "@type" : "@id"
+    },
+    "heightOfMachineInterface" : {
+      "@id" : "https://w3id.org/transmodel/facilities#heightOfMachineInterface",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "comprisesFacility" : {
       "@id" : "https://w3id.org/transmodel/facilities#comprisesFacility",
@@ -351,6 +555,10 @@
     },
     "WheelchairBabyChange" : {
       "@id" : "https://w3id.org/transmodel/facilities#WheelchairBabyChange"
+    },
+    "passengerPerMinute" : {
+      "@id" : "https://w3id.org/transmodel/facilities#passengerPerMinute",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "Passenger" : {
       "@id" : "https://w3id.org/transmodel/facilities#Passenger"
@@ -377,12 +585,20 @@
     "Immigration" : {
       "@id" : "https://w3id.org/transmodel/facilities#Immigration"
     },
+    "inductionLoops" : {
+      "@id" : "https://w3id.org/transmodel/facilities#inductionLoops",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "SignEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#SignEquipment"
     },
+    "droppedKerb" : {
+      "@id" : "https://w3id.org/transmodel/facilities#droppedKerb",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "wheelchairAccess" : {
       "@id" : "https://w3id.org/transmodel/facilities#wheelchairAccess",
-      "@type" : "@id"
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "StairEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#StairEquipment"
@@ -401,7 +617,8 @@
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentTactileGuideStrip"
     },
     "identifier" : {
-      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+      "@id" : "http://purl.org/dc/terms/identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "RetailService" : {
       "@id" : "https://w3id.org/transmodel/facilities#RetailService"
@@ -415,6 +632,14 @@
     "TicketControl" : {
       "@id" : "https://w3id.org/transmodel/facilities#TicketControl"
     },
+    "liftFreeAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#liftFreeAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "ticketType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketType",
+      "@type" : "@id"
+    },
     "StairCaseEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#StairCaseEquipment"
     },
@@ -424,6 +649,10 @@
     },
     "AccessAreaDimensions" : {
       "@id" : "https://w3id.org/transmodel/facilities#AccessAreaDimensions"
+    },
+    "barrier" : {
+      "@id" : "https://w3id.org/transmodel/facilities#barrier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "containing" : {
       "@id" : "https://w3id.org/transmodel/facilities#containing",
@@ -443,8 +672,31 @@
       "@id" : "https://w3id.org/transmodel/facilities#accessibilityLimitation",
       "@type" : "@id"
     },
+    "acousticDeviceSensors" : {
+      "@id" : "https://w3id.org/transmodel/facilities#acousticDeviceSensors",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "ValidityTrigger" : {
       "@id" : "https://w3id.org/transmodel/facilities#ValidityTrigger"
+    },
+    "wheelchairUnaided" : {
+      "@id" : "https://w3id.org/transmodel/facilities#wheelchairUnaided",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "glassDoor" : {
+      "@id" : "https://w3id.org/transmodel/facilities#glassDoor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "suitable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#suitable"
+    },
+    "lockerDepth" : {
+      "@id" : "https://w3id.org/transmodel/facilities#lockerDepth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "numberOfTills" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfTills",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "HeadingSign" : {
       "@id" : "https://w3id.org/transmodel/facilities#HeadingSign"
@@ -455,14 +707,44 @@
     "Porterage" : {
       "@id" : "https://w3id.org/transmodel/facilities#Porterage"
     },
+    "dogsMustBeCarried" : {
+      "@id" : "https://w3id.org/transmodel/facilities#dogsMustBeCarried",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "facilities" : {
+      "@id" : "https://w3id.org/transmodel/facilities#facilities",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
     "Point" : {
       "@id" : "https://w3id.org/transmodel/journeys#Point"
+    },
+    "alarmButton" : {
+      "@id" : "https://w3id.org/transmodel/facilities#alarmButton",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "recycling" : {
+      "@id" : "https://w3id.org/transmodel/facilities#recycling",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "PostOfficeService" : {
       "@id" : "https://w3id.org/transmodel/facilities#PostOfficeService"
     },
+    "length" : {
+      "@id" : "https://w3id.org/transmodel/facilities#length"
+    },
     "OnboardStay" : {
       "@id" : "https://w3id.org/transmodel/facilities#OnboardStay"
+    },
+    "relativeWeighting" : {
+      "@id" : "https://w3id.org/transmodel/facilities#relativeWeighting",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "stepFree" : {
+      "@id" : "https://w3id.org/transmodel/facilities#stepFree",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "MoneyService" : {
       "@id" : "https://w3id.org/transmodel/facilities#MoneyService"
@@ -474,6 +756,9 @@
       "@id" : "https://w3id.org/transmodel/facilities#userNeedSuitability",
       "@type" : "@id"
     },
+    "ActualVehicleEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ActualVehicleEquipment"
+    },
     "determining" : {
       "@id" : "https://w3id.org/transmodel/facilities#determining",
       "@type" : "@id"
@@ -483,6 +768,10 @@
     },
     "TrolleyStandEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#TrolleyStandEquipment"
+    },
+    "shelterType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#shelterType",
+      "@type" : "@id"
     },
     "PassengerSafetyEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerSafetyEquipment"
@@ -507,15 +796,33 @@
     "ActivationLink" : {
       "@id" : "https://w3id.org/transmodel/facilities#ActivationLink"
     },
+    "brailleButtons" : {
+      "@id" : "https://w3id.org/transmodel/facilities#brailleButtons",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "keptOpen" : {
+      "@id" : "https://w3id.org/transmodel/facilities#keptOpen",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "WaitingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#WaitingEquipment"
     },
     "ConstraintThroughput" : {
       "@id" : "https://w3id.org/transmodel/facilities#ConstraintThroughput"
     },
+    "ClassOfUse" : {
+      "@id" : "https://w3id.org/transmodel/fares#ClassOfUse"
+    },
     "typeOfAccessibilityTools" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfAccessibilityTools",
       "@type" : "@id"
+    },
+    "heightOfSosPanel" : {
+      "@id" : "https://w3id.org/transmodel/facilities#heightOfSosPanel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "wheelChairWidth" : {
+      "@id" : "https://w3id.org/transmodel/facilities#wheelChairWidth"
     },
     "ValidityCondition" : {
       "@id" : "https://w3id.org/transmodel/facilities#ValidityCondition"
@@ -539,12 +846,20 @@
     "Site" : {
       "@id" : "https://w3id.org/transmodel/facilities#Site"
     },
+    "womenOnly" : {
+      "@id" : "https://w3id.org/transmodel/facilities#womenOnly",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "activationAssignment" : {
       "@id" : "https://w3id.org/transmodel/facilities#activationAssignment",
       "@type" : "@id"
     },
     "PassengerInformationTerminal" : {
       "@id" : "https://w3id.org/transmodel/facilities#PassengerInformationTerminal"
+    },
+    "automatic" : {
+      "@id" : "https://w3id.org/transmodel/facilities#automatic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "AccessibilityLimitation" : {
       "@id" : "https://w3id.org/transmodel/facilities#AccessibilityLimitation"
@@ -562,14 +877,34 @@
     "TicketingService" : {
       "@id" : "https://w3id.org/transmodel/facilities#TicketingService"
     },
+    "ticketedQueue" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketedQueue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "SiteElement" : {
       "@id" : "https://w3id.org/transmodel/facilities#SiteElement"
+    },
+    "railedQueue" : {
+      "@id" : "https://w3id.org/transmodel/facilities#railedQueue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "InformationBooklet" : {
       "@id" : "https://w3id.org/transmodel/facilities#InformationBooklet"
     },
+    "numberOfSeats" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfSeats",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "LocalService" : {
       "@id" : "https://w3id.org/transmodel/facilities#LocalService"
+    },
+    "automaticDoor" : {
+      "@id" : "https://w3id.org/transmodel/facilities#automaticDoor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "paymentMethod" : {
+      "@id" : "https://w3id.org/transmodel/facilities#paymentMethod",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Shower" : {
       "@id" : "https://w3id.org/transmodel/facilities#Shower"
@@ -580,6 +915,10 @@
     "RoughSurface" : {
       "@id" : "https://w3id.org/transmodel/facilities#RoughSurface"
     },
+    "MobilityImpairedAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#MobilityImpairedAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "typeOfPassengerInformationDesk" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfPassengerInformationDesk",
       "@type" : "@id"
@@ -587,9 +926,17 @@
     "RampEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#RampEquipment"
     },
+    "visualSignsAvailable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#visualSignsAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "typeOfCateringService" : {
       "@id" : "https://w3id.org/transmodel/facilities#typeOfCateringService",
       "@type" : "@id"
+    },
+    "entranceRequiresStaffing" : {
+      "@id" : "https://w3id.org/transmodel/facilities#entranceRequiresStaffing",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "EquipmentPlace" : {
       "@id" : "https://w3id.org/transmodel/facilities#EquipmentPlace"
@@ -601,11 +948,23 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "sosPanel" : {
+      "@id" : "https://w3id.org/transmodel/facilities#sosPanel",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Service" : {
       "@id" : "https://w3id.org/transmodel/journeys#Service"
     },
     "BabyChange" : {
       "@id" : "https://w3id.org/transmodel/facilities#BabyChange"
+    },
+    "escalatorFreeAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#escalatorFreeAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "numberOfMachines" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfMachines",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "CrossingEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipment"
@@ -620,6 +979,14 @@
     "VehicleMode" : {
       "@id" : "https://w3id.org/transmodel/facilities#VehicleMode"
     },
+    "tactileGuideStrips" : {
+      "@id" : "https://w3id.org/transmodel/facilities#tactileGuideStrips",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "smokingAllowed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#smokingAllowed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "Quay" : {
       "@id" : "https://w3id.org/transmodel/facilities#Quay"
     },
@@ -628,6 +995,10 @@
     },
     "CrossingEquipmentPedestrian" : {
       "@id" : "https://w3id.org/transmodel/facilities#CrossingEquipmentPedestrian"
+    },
+    "zebraCrossing" : {
+      "@id" : "https://w3id.org/transmodel/facilities#zebraCrossing",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "boardingPermission" : {
       "@id" : "https://w3id.org/transmodel/facilities#boardingPermission",
@@ -648,6 +1019,10 @@
       "@id" : "https://w3id.org/transmodel/facilities#stopPlaceEntrance",
       "@type" : "@id"
     },
+    "energySaving" : {
+      "@id" : "https://w3id.org/transmodel/facilities#energySaving",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "subplaceOf" : {
       "@id" : "https://w3id.org/transmodel/facilities#subplaceOf",
       "@type" : "@id"
@@ -659,6 +1034,18 @@
     "presentAt" : {
       "@id" : "https://w3id.org/transmodel/facilities#presentAt",
       "@type" : "@id"
+    },
+    "numberOfLockers" : {
+      "@id" : "https://w3id.org/transmodel/facilities#numberOfLockers",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "visualGuidanceBands" : {
+      "@id" : "https://w3id.org/transmodel/facilities#visualGuidanceBands",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "panicButton" : {
+      "@id" : "https://w3id.org/transmodel/facilities#panicButton",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "WheelchairAccessToilet" : {
       "@id" : "https://w3id.org/transmodel/facilities#WheelchairAccessToilet"
@@ -686,8 +1073,16 @@
     "CheckIn" : {
       "@id" : "https://w3id.org/transmodel/facilities#CheckIn"
     },
+    "genderLimitationType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#genderLimitationType",
+      "@type" : "@id"
+    },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "stepFreeAccess" : {
+      "@id" : "https://w3id.org/transmodel/facilities#stepFreeAccess",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Ramp" : {
       "@id" : "https://w3id.org/transmodel/facilities#Ramp"
@@ -696,8 +1091,20 @@
       "@id" : "https://w3id.org/transmodel/facilities#stopPlaceComponent",
       "@type" : "@id"
     },
+    "limitedBy" : {
+      "@id" : "https://w3id.org/transmodel/facilities#limitedBy",
+      "@type" : "@id"
+    },
     "ActivationPoint" : {
       "@id" : "https://w3id.org/transmodel/facilities#ActivationPoint"
+    },
+    "seatingType" : {
+      "@id" : "https://w3id.org/transmodel/facilities#seatingType",
+      "@type" : "@id"
+    },
+    "ticketMachines" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ticketMachines",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "TicketValidatorEquipment" : {
       "@id" : "https://w3id.org/transmodel/facilities#TicketValidatorEquipment"
@@ -715,6 +1122,13 @@
     "displayAssignment" : {
       "@id" : "https://w3id.org/transmodel/facilities#displayAssignment",
       "@type" : "@id"
+    },
+    "enclosed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#enclosed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "PsychosensoryNeed" : {
+      "@id" : "https://w3id.org/transmodel/facilities#PsychosensoryNeed"
     }
   }
 }

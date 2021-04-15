@@ -1,0 +1,96 @@
+{
+  "@context" : {
+    "ScheduledStopPoint" : {
+      "@id" : "http://w3id.org/transmodel/journeys#ScheduledStopPoint"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "RoutePoint" : {
+      "@id" : "http://w3id.org/transmodel/journeys#RoutePoint"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "distanceFromStart" : {
+      "@id" : "https://w3id.org/transmodel/journeys#distanceFromStart"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "inLinkSequence" : {
+      "@id" : "https://w3id.org/transmodel/journeys#inLinkSequence",
+      "@type" : "@id"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/transmodel/core#author"
+    },
+    "mbox" : {
+      "@id" : "https://w3id.org/transmodel/core#mbox"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/transmodel/core#name",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+    },
+    "TimingPointInJourneyPattern" : {
+      "@id" : "http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+    },
+    "madeUpOf" : {
+      "@id" : "https://w3id.org/transmodel/journeys#madeUpOf",
+      "@type" : "@id"
+    },
+    "distance" : {
+      "@id" : "https://w3id.org/transmodel/core#distance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Point" : {
+      "@id" : "http://w3id.org/transmodel/journeys#Point"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "order" : {
+      "@id" : "https://w3id.org/transmodel/journeys#order"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "viewedAs" : {
+      "@id" : "https://w3id.org/transmodel/journeys#viewedAs",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "PointInLinkSequence" : {
+      "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
+    },
+    "LinkSequence" : {
+      "@id" : "https://w3id.org/transmodel/journeys#LinkSequence"
+    },
+    "description" : {
+      "@id" : "https://w3id.org/transmodel/core#description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}

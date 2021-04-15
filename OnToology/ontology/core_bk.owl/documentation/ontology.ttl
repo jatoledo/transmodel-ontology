@@ -1,0 +1,608 @@
+@prefix : <https://w3id.org/transmodel/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/transmodel/core#> .
+
+<https://w3id.org/transmodel/core#> rdf:type owl:Ontology ;
+                                     owl:versionIRI <https://w3id.org/transmodel/core/0.1> ;
+                                     <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                     <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" ,
+                                                                               "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)" ,
+                                                                               "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                     <http://purl.org/dc/elements/1.1/date> "2021-02-17" ;
+                                     <http://purl.org/dc/elements/1.1/description> "This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                     <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/core" ;
+                                     <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
+                                     <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Core"@en ;
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/core#> ;
+                                     rdfs:comment "Module of the Transmodel Ontology focused on core. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                     rdfs:label "Transmodel Ontology - Core"@en ;
+                                     rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                     owl:versionInfo "Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/core#author
+:author rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/core#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/core#description
+:description rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal ;
+             rdfs:domain :MeetingPointService .
+
+
+###  https://w3id.org/transmodel/core#mbox
+:mbox rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/core#name
+:name rdf:type owl:AnnotationProperty ;
+      rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string owl:equivalentClass xsd:duration .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/transmodel/journeys#inLinkSequence
+<https://w3id.org/transmodel/journeys#inLinkSequence> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/journeys#madeUpOf
+<https://w3id.org/transmodel/journeys#madeUpOf> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/journeys#viewedAs
+<https://w3id.org/transmodel/journeys#viewedAs> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/transmodel/core#distance
+:distance rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:float ;
+          rdfs:label "distance"@en .
+
+
+###  https://w3id.org/transmodel/core#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/transmodel/journeys#distanceFromStart
+<https://w3id.org/transmodel/journeys#distanceFromStart> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/transmodel/journeys#order
+<https://w3id.org/transmodel/journeys#order> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://w3id.org/transmodel/journeys#Point
+<http://w3id.org/transmodel/journeys#Point> rdf:type owl:Class ;
+                                            rdfs:comment "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location"@en ,
+                                                         "Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación."@es ;
+                                            rdfs:label "Point"@en ,
+                                                       "Punto"@es .
+
+
+###  http://w3id.org/transmodel/journeys#PointInLinkSequence
+<http://w3id.org/transmodel/journeys#PointInLinkSequence> rdf:type owl:Class .
+
+
+###  http://w3id.org/transmodel/journeys#RoutePoint
+<http://w3id.org/transmodel/journeys#RoutePoint> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ;
+                                                 rdfs:comment "A Point used to define the shape of a Route through the network."@en ,
+                                                              "Un punto que se usa para definir la forma de una ruta por la red de transporte."@es ;
+                                                 rdfs:label "Punto de Ruta"@es ,
+                                                            "Route Point"@en .
+
+
+###  http://w3id.org/transmodel/journeys#ScheduledStopPoint
+<http://w3id.org/transmodel/journeys#ScheduledStopPoint> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ;
+                                                         rdfs:comment "A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle."@en ,
+                                                                      "Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo."@es ;
+                                                         rdfs:label "Parada Planificada"@es ,
+                                                                    "Scheduled Stop Point"@en .
+
+
+###  http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern
+<http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://w3id.org/transmodel/journeys#Point> ,
+                                                                                  <http://w3id.org/transmodel/journeys#PointInLinkSequence> ;
+                                                                  rdfs:comment "A Point in a JourneyPattern which is a TimingPoint"@en ,
+                                                                               "Un punto en un patrón de viaje que es un punto de control"@es ;
+                                                                  rdfs:label "Punto de control en el patrón de viaje"@es ,
+                                                                             "Timing Point In Journey Pattern"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/commons#Point
+<https://w3id.org/transmodel/commons#Point> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/journeys#LinkSequence
+<https://w3id.org/transmodel/journeys#LinkSequence> rdf:type owl:Class ;
+                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <https://w3id.org/transmodel/journeys#madeUpOf> ;
+                                                                      owl:allValuesFrom <https://w3id.org/transmodel/journeys#PointInLinkSequence>
+                                                                    ] ;
+                                                    rdfs:comment "An ordered sequence either of POINTs or of LINKs, defining a path through the network"@en ,
+                                                                 "TODO: Add all the attributes that are relevant to this class"@en ,
+                                                                 "TODO: Analyse whether this class should be better defined in the Commons module"@en ;
+                                                    rdfs:label "Link Sequence"@en .
+
+
+###  https://w3id.org/transmodel/journeys#PointInLinkSequence
+<https://w3id.org/transmodel/journeys#PointInLinkSequence> rdf:type owl:Class ;
+                                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/transmodel/journeys#inLinkSequence> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onClass <https://w3id.org/transmodel/journeys#LinkSequence>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/transmodel/journeys#viewedAs> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onClass <https://w3id.org/transmodel/commons#Point>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/transmodel/journeys#distanceFromStart> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:float
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://w3id.org/transmodel/journeys#order> ;
+                                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                             owl:onDataRange xsd:nonNegativeInteger
+                                                                           ] ;
+                                                           rdfs:comment "A point in a Link Sequence indicating its order in that particular Link Sequence"@en ,
+                                                                        "TODO: TransModel defines that a Point in Link Sequence is connected to a Layer, but this is not considered relevant yet"@en ;
+                                                           rdfs:label "Point In Link Sequence"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/transmodel/core#accessible
+:accessible rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#audioNavigator
+:audioNavigator rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#babychange
+:babychange rdf:type owl:NamedIndividual ;
+            rdfs:label "babyChange"@en .
+
+
+###  https://w3id.org/transmodel/core#baggageCheckin
+:baggageCheckin rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#barrier
+:barrier rdf:type owl:NamedIndividual ;
+         rdfs:comment "Whether there is a physical barrier across the doorway."@en ;
+         rdfs:label "barrierEntrance"@en .
+
+
+###  https://w3id.org/transmodel/core#beverageVendingMachine
+:beverageVendingMachine rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#bookingHall
+:bookingHall rdf:type owl:NamedIndividual ;
+             rdfs:label "bookingHall"@en .
+
+
+###  https://w3id.org/transmodel/core#boundedOpenSpace
+:boundedOpenSpace rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#buffet
+:buffet rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#bunk
+:bunk rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#cateringTrolleyService
+:cateringTrolleyService rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#compoundTrain
+:compoundTrain rdf:type owl:NamedIndividual ;
+               rdfs:comment "A VehicleType composed of a sequence of more than one vehicles of the type Train"@en ;
+               rdfs:label "compoundTrain"@en .
+
+
+###  https://w3id.org/transmodel/core#concourse
+:concourse rdf:type owl:NamedIndividual ;
+           rdfs:label "concourse"@en .
+
+
+###  https://w3id.org/transmodel/core#confinedSpace
+:confinedSpace rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#corridor
+:corridor rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#couchette
+:couchette rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#crowding
+:crowding rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#cycleStorageEquipmentBars
+:cycleStorageEquipmentBars rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#cycleStorageEquipmentRacks
+:cycleStorageEquipmentRacks rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#cycleStorageEquipmentRailings
+:cycleStorageEquipmentRailings rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#directionName
+:directionName rdf:type owl:NamedIndividual ;
+               rdfs:label "directionName"@en .
+
+
+###  https://w3id.org/transmodel/core#doubleDeck
+:doubleDeck rdf:type owl:NamedIndividual ;
+            rdfs:label "doubleDeck"@en .
+
+
+###  https://w3id.org/transmodel/core#emergencyServiceFirstAid
+:emergencyServiceFirstAid rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#emergencyServicePolice
+:emergencyServicePolice rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#emergencyServiceSOSPoint
+:emergencyServiceSOSPoint rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#emergencyServiceServiceCCTV
+:emergencyServiceServiceCCTV rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#entranceEquipmentBarrier
+:entranceEquipmentBarrier rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#entranceEquipmentDoor
+:entranceEquipmentDoor rdf:type owl:NamedIndividual ;
+                       rdfs:label "entranceEquipmentDoor"@en .
+
+
+###  https://w3id.org/transmodel/core#entranceEquipmentRevolvingDoor
+:entranceEquipmentRevolvingDoor rdf:type owl:NamedIndividual ;
+                                rdfs:label "entranceEquipmentRevolvingDoor"@en .
+
+
+###  https://w3id.org/transmodel/core#equipmentActivated
+:equipmentActivated rdf:type owl:NamedIndividual ;
+                    rdfs:label "equipmentActivated"@en .
+
+
+###  https://w3id.org/transmodel/core#equipmentAtStopPoint
+:equipmentAtStopPoint rdf:type owl:NamedIndividual ;
+                      rdfs:label "equipmentAtStopPoint"@en .
+
+
+###  https://w3id.org/transmodel/core#equipmentOnBoard
+:equipmentOnBoard rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#equipmentdesactvated
+:equipmentdesactvated rdf:type owl:NamedIndividual ;
+                      rdfs:label "equipmentDesactivated"@en .
+
+
+###  https://w3id.org/transmodel/core#firstClass
+:firstClass rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#foodVendingMachine
+:foodVendingMachine rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#full
+:full rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#hall
+:hall rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#handrailOneSide
+:handrailOneSide rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#handrailTwoSides
+:handrailTwoSides rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#immigrationHall
+:immigrationHall rdf:type owl:NamedIndividual ;
+                 rdfs:label "immigrationHall"@en .
+
+
+###  https://w3id.org/transmodel/core#incomingCustoms
+:incomingCustoms rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#informationDesk
+:informationDesk rdf:type owl:NamedIndividual ;
+                 rdfs:comment "A public transport information piece of Equipment indoors"@en ;
+                 rdfs:label "InformationDesk"@en .
+
+
+###  https://w3id.org/transmodel/core#informationStand
+:informationStand rdf:type owl:NamedIndividual ;
+                  rdfs:comment "A public transport information piece of Equipment outdoors"@en ;
+                  rdfs:label "informationStand"@en .
+
+
+###  https://w3id.org/transmodel/core#lift
+:lift rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#lineName
+:lineName rdf:type owl:NamedIndividual ;
+          rdfs:label "lineName"@en .
+
+
+###  https://w3id.org/transmodel/core#lowFloor
+:lowFloor rdf:type owl:NamedIndividual ;
+          rdfs:label "lowFloor"@en .
+
+
+###  https://w3id.org/transmodel/core#narrowEntrance
+:narrowEntrance rdf:type owl:NamedIndividual ;
+                rdfs:label "narrowEntrance"@en .
+
+
+###  https://w3id.org/transmodel/core#noBeveragesAvailable
+:noBeveragesAvailable rdf:type owl:NamedIndividual ;
+                      rdfs:label ""@en ,
+                                 "beverages" .
+
+
+###  https://w3id.org/transmodel/core#noFoodAvailable
+:noFoodAvailable rdf:type owl:NamedIndividual ;
+                 rdfs:label "food"@en .
+
+
+###  https://w3id.org/transmodel/core#noWaiting
+:noWaiting rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#nonAccessible
+:nonAccessible rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#outgoingCustoms
+:outgoingCustoms rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#placeAccessStairScalator
+:placeAccessStairScalator rdf:type owl:NamedIndividual ;
+                          rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairEscalator"@en ;
+                          rdfs:label "placeAccessStairScalator"@en .
+
+
+###  https://w3id.org/transmodel/core#placeAccessStairStair
+:placeAccessStairStair rdf:type owl:NamedIndividual ;
+                       rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStair"@en ;
+                       rdfs:label "placeAccessStairStair"@en .
+
+
+###  https://w3id.org/transmodel/core#placeAccessStairStaircase
+:placeAccessStairStaircase rdf:type owl:NamedIndividual ;
+                           rdfs:comment "Specialisation of PlaceAccessStair Equipment dedicated to PlaceAccessStairStaircase"@en ;
+                           rdfs:label "placeAccessStairStaircase"@en .
+
+
+###  https://w3id.org/transmodel/core#queue
+:queue rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#queueManagement
+:queueManagement rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#riverFlow
+:riverFlow rdf:type owl:NamedIndividual ;
+           rdfs:label "riverFlow"@en .
+
+
+###  https://w3id.org/transmodel/core#roadClosure
+:roadClosure rdf:type owl:NamedIndividual ;
+             rdfs:label "roadClosure"@en .
+
+
+###  https://w3id.org/transmodel/core#room
+:room rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#secondClass
+:secondClass rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#securityArea
+:securityArea rdf:type owl:NamedIndividual ;
+              rdfs:label "securityArea"@en .
+
+
+###  https://w3id.org/transmodel/core#shower
+:shower rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#snacks
+:snacks rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#standardBus
+:standardBus rdf:type owl:NamedIndividual ;
+             rdfs:label "standardBus"@en .
+
+
+###  https://w3id.org/transmodel/core#stepFree
+:stepFree rdf:type owl:NamedIndividual ;
+          rdfs:comment "Whether waiting area is step free."@en ;
+          rdfs:label "stepFree"@en .
+
+
+###  https://w3id.org/transmodel/core#taxRefunds
+:taxRefunds rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#telematicInformationCenter
+:telematicInformationCenter rdf:type owl:NamedIndividual ;
+                            rdfs:comment "A public transport information piece of Equipment online"@en ;
+                            rdfs:label "telematicInformationService"@en .
+
+
+###  https://w3id.org/transmodel/core#ticketCollection
+:ticketCollection rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#ticketPurchase
+:ticketPurchase rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#toilet
+:toilet rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#visualNavigator
+:visualNavigator rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#walkingStick
+:walkingStick rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#weatherConditions
+:weatherConditions rdf:type owl:NamedIndividual ;
+                   rdfs:label "weatherConditions"@en .
+
+
+###  https://w3id.org/transmodel/core#wheelchair
+:wheelchair rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#wheelchairAccessToilet
+:wheelchairAccessToilet rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/core#wheelchairBabyChange
+:wheelchairBabyChange rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/kos/facilities/EquipmentType
+<https://w3id.org/transmodel/kos/facilities/EquipmentType> rdf:type owl:NamedIndividual ;
+                                                           rdfs:comment "Concept scheme where all the codelists for the types of equipment that are included in the Transmodel ontology are included" .
+
+
+###  https://w3id.org/transmodel/kos/facilities/FacilityType
+<https://w3id.org/transmodel/kos/facilities/FacilityType> rdf:type owl:NamedIndividual ;
+                                                          rdfs:comment "Concept scheme where all the codelists for the types of facilities that are included in the Transmodel ontology"@en .
+
+
+###  https://w3id.org/transmodel/kos/journeys/mobility-limitation
+<https://w3id.org/transmodel/kos/journeys/mobility-limitation> rdf:type owl:NamedIndividual ;
+                                                               rdfs:comment "List of concepts regarding Mobility Limitation defined in kos/journeys/mobility-limitation"@en .
+
+
+_:genid6 :mbox "adolfo.anton.bravo@upm.es"@en ;
+         :name "Adolfo Anton-Bravo"@en .
+
+#################################################################
+#    Annotations
+#################################################################
+
+:name rdfs:comment "Name of link sequence."@en ;
+       rdfs:label "name"@en .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

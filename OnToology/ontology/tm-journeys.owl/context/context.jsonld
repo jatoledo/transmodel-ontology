@@ -6,8 +6,15 @@
     "TimetabledVehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimetabledVehicleJourney"
     },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
     "Address" : {
       "@id" : "https://w3id.org/transmodel/journeys#Address"
+    },
+    "endOf" : {
+      "@id" : "https://w3id.org/transmodel/journeys#endOf",
+      "@type" : "@id"
     },
     "trip" : {
       "@id" : "https://w3id.org/transmodel/organisations#trip",
@@ -26,8 +33,16 @@
       "@id" : "https://w3id.org/transmodel/journeys#arrivalDayOffset",
       "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
+    "journeyDuration" : {
+      "@id" : "https://w3id.org/transmodel/journeys#journeyDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "stopUse" : {
       "@id" : "https://w3id.org/transmodel/journeys#stopUse",
+      "@type" : "@id"
+    },
+    "composedOfLink" : {
+      "@id" : "https://w3id.org/transmodel/journeys#composedOfLink",
       "@type" : "@id"
     },
     "MonitoredVehicleJourney" : {
@@ -46,6 +61,10 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
+    "dynamic" : {
+      "@id" : "https://w3id.org/transmodel/journeys#dynamic",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
     "AccessMode" : {
       "@id" : "https://w3id.org/transmodel/journeys#AccessMode"
     },
@@ -57,6 +76,9 @@
     },
     "OrganisationDayType" : {
       "@id" : "https://w3id.org/transmodel/journeys#OrganisationDayType"
+    },
+    "Direction" : {
+      "@id" : "https://w3id.org/transmodel/commons#Direction"
     },
     "timingLink" : {
       "@id" : "https://w3id.org/transmodel/journeys#timingLink",
@@ -83,6 +105,13 @@
     "holidayType-old" : {
       "@id" : "https://w3id.org/transmodel/journeys#holidayType-old"
     },
+    "Link" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Link"
+    },
+    "url" : {
+      "@id" : "http://schema.org/url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "DeadRunPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#DeadRunPattern"
     },
@@ -95,6 +124,9 @@
     "HeadwayInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#HeadwayInterval"
     },
+    "ImpossibleManoeuvre" : {
+      "@id" : "https://w3id.org/transmodel/core#ImpossibleManoeuvre"
+    },
     "distanceFromStart" : {
       "@id" : "https://w3id.org/transmodel/journeys#distanceFromStart",
       "@type" : "http://www.w3.org/2001/XMLSchema#float"
@@ -105,6 +137,13 @@
     "DatedBlock" : {
       "@id" : "https://w3id.org/transmodel/journeys#DatedBlock"
     },
+    "transportType" : {
+      "@id" : "https://w3id.org/transmodel/commons#transportType",
+      "@type" : "@id"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
     "season" : {
       "@id" : "https://w3id.org/transmodel/journeys#season",
       "@type" : "@id"
@@ -112,8 +151,14 @@
     "VehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#VehicleJourney"
     },
+    "Interchange" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Interchange"
+    },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "TrainStopAssignment" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TrainStopAssignment"
     },
     "JourneyPatternRunTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternRunTime"
@@ -124,6 +169,9 @@
     "describedBy" : {
       "@id" : "https://w3id.org/transmodel/journeys#describedBy",
       "@type" : "@id"
+    },
+    "TrainComponet" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TrainComponet"
     },
     "StopAssignment" : {
       "@id" : "https://w3id.org/transmodel/journeys#StopAssignment"
@@ -139,6 +187,9 @@
     "operatingPeriod" : {
       "@id" : "https://w3id.org/transmodel/journeys#operatingPeriod",
       "@type" : "@id"
+    },
+    "TrainNumber" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TrainNumber"
     },
     "PointInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#PointInJourneyPattern"
@@ -165,6 +216,15 @@
     "FareDayType" : {
       "@id" : "https://w3id.org/transmodel/journeys#FareDayType"
     },
+    "ComplexFeature" : {
+      "@id" : "https://w3id.org/transmodel/commons#ComplexFeature"
+    },
+    "specialClient" : {
+      "@id" : "https://w3id.org/transmodel/journeys#specialClient"
+    },
+    "SimpleFeature" : {
+      "@id" : "https://w3id.org/transmodel/commons#SimpleFeature"
+    },
     "CourseOfJourneys" : {
       "@id" : "https://w3id.org/transmodel/journeys#CourseOfJourneys"
     },
@@ -174,8 +234,19 @@
     "DayTypeAssignment" : {
       "@id" : "https://w3id.org/transmodel/journeys#DayTypeAssignment"
     },
+    "ServiceJourneyInterchange" : {
+      "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyInterchange"
+    },
     "InfrastructurePoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#InfrastructurePoint"
+    },
+    "lowFloor" : {
+      "@id" : "https://w3id.org/transmodel/journeys#lowFloor",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "specialPlaceCapacity" : {
+      "@id" : "https://w3id.org/transmodel/journeys#specialPlaceCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "DatedVehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#DatedVehicleJourney"
@@ -198,8 +269,13 @@
       "@id" : "https://w3id.org/transmodel/journeys#runtime",
       "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
     },
+    "aClasificationFor" : {
+      "@id" : "https://w3id.org/transmodel/commons#aClasificationFor",
+      "@type" : "@id"
+    },
     "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "monitored" : {
       "@id" : "https://w3id.org/transmodel/journeys#monitored",
@@ -215,6 +291,9 @@
     },
     "author" : {
       "@id" : "https://w3id.org/transmodel/journeys#author"
+    },
+    "ServiceLink" : {
+      "@id" : "https://w3id.org/transmodel/journeys#ServiceLink"
     },
     "OperatingDay" : {
       "@id" : "https://w3id.org/transmodel/journeys#OperatingDay"
@@ -247,6 +326,9 @@
     "TimingPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingPoint"
     },
+    "VehicleEquipmentProfile" : {
+      "@id" : "https://w3id.org/transmodel/facilities#VehicleEquipmentProfile"
+    },
     "endsConnection" : {
       "@id" : "https://w3id.org/transmodel/journeys#endsConnection",
       "@type" : "@id"
@@ -266,6 +348,9 @@
       "@id" : "https://w3id.org/transmodel/journeys#passengerConnection",
       "@type" : "@id"
     },
+    "VehicleTypeAtPoint" : {
+      "@id" : "https://w3id.org/transmodel/core#VehicleTypeAtPoint"
+    },
     "firstDepartureTime" : {
       "@id" : "https://w3id.org/transmodel/journeys#firstDepartureTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#time"
@@ -273,6 +358,16 @@
     "lineNumber" : {
       "@id" : "https://w3id.org/transmodel/journeys#lineNumber",
       "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "GroupOfLinkSequences" : {
+      "@id" : "https://w3id.org/transmodel/journeys#GroupOfLinkSequences"
+    },
+    "vehicleMode" : {
+      "@id" : "https://w3id.org/transmodel/journeys#vehicleMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "VehicleModel" : {
+      "@id" : "https://w3id.org/transmodel/commons#VehicleModel"
     },
     "JourneyPatternLayover" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyPatternLayover"
@@ -291,6 +386,9 @@
     "RailwayJunction" : {
       "@id" : "https://w3id.org/transmodel/journeys#RailwayJunction"
     },
+    "GroupOfLines" : {
+      "@id" : "https://w3id.org/transmodel/commons#GroupOfLines"
+    },
     "operatedBy" : {
       "@id" : "https://w3id.org/transmodel/journeys#operatedBy",
       "@type" : "@id"
@@ -301,12 +399,26 @@
     "ServiceJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPattern"
     },
+    "standingCapacity" : {
+      "@id" : "https://w3id.org/transmodel/journeys#standingCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "for" : {
       "@id" : "https://w3id.org/transmodel/journeys#for",
       "@type" : "@id"
     },
+    "Mode" : {
+      "@id" : "https://w3id.org/transmodel/commons#Mode"
+    },
     "TimingLinkInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimingLinkInJourneyPattern"
+    },
+    "hasLiftOrRamp" : {
+      "@id" : "https://w3id.org/transmodel/journeys#hasLiftOrRamp",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Via" : {
+      "@id" : "https://w3id.org/transmodel/commons#Via"
     },
     "RhythmicalJourneyGroup" : {
       "@id" : "https://w3id.org/transmodel/journeys#RhythmicalJourneyGroup"
@@ -343,6 +455,10 @@
     },
     "TemplateVehicleJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#TemplateVehicleJourney"
+    },
+    "defining" : {
+      "@id" : "https://w3id.org/transmodel/facilities#defining",
+      "@type" : "@id"
     },
     "maximumHeadwayInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#maximumHeadwayInterval",
@@ -399,8 +515,15 @@
       "@id" : "https://w3id.org/transmodel/journeys#journeyPatternRunTime",
       "@type" : "@id"
     },
+    "SubMode" : {
+      "@id" : "https://w3id.org/transmodel/commons#SubMode"
+    },
     "directionType" : {
       "@id" : "https://w3id.org/transmodel/journeys#directionType",
+      "@type" : "@id"
+    },
+    "clasifiedAs" : {
+      "@id" : "https://w3id.org/transmodel/commons#clasifiedAs",
       "@type" : "@id"
     },
     "vehiclePassingTime" : {
@@ -413,6 +536,15 @@
     },
     "MeanOfTransport" : {
       "@id" : "https://w3id.org/transmodel/journeys#MeanOfTransport"
+    },
+    "MeetingRestriction" : {
+      "@id" : "https://w3id.org/transmodel/core#MeetingRestriction"
+    },
+    "TrainElement" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TrainElement"
+    },
+    "RouteLink" : {
+      "@id" : "https://w3id.org/transmodel/journeys#RouteLink"
     },
     "runBy" : {
       "@id" : "https://w3id.org/transmodel/journeys#runBy",
@@ -436,12 +568,19 @@
     "FlexibleRoute" : {
       "@id" : "https://w3id.org/transmodel/journeys#FlexibleRoute"
     },
+    "Zone" : {
+      "@id" : "https://w3id.org/transmodel/commons#Zone"
+    },
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
     "routeOnLine" : {
       "@id" : "https://w3id.org/transmodel/journeys#routeOnLine",
       "@type" : "@id"
+    },
+    "wheelchairPlaceCapacity" : {
+      "@id" : "https://w3id.org/transmodel/journeys#wheelchairPlaceCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
     },
     "FlexibleLine" : {
       "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine"
@@ -454,11 +593,18 @@
       "@id" : "https://w3id.org/transmodel/journeys#changeOfDestinationDisplay",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
+    "WireElement" : {
+      "@id" : "https://w3id.org/transmodel/commons#WireElement"
+    },
     "AllowedLineDirections" : {
       "@id" : "https://w3id.org/transmodel/journeys#AllowedLineDirections"
     },
     "ParkingPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#ParkingPoint"
+    },
+    "timedFrom" : {
+      "@id" : "https://w3id.org/transmodel/journeys#timedFrom",
+      "@type" : "@id"
     },
     "typeOfFlexibleService" : {
       "@id" : "https://w3id.org/transmodel/journeys#typeOfFlexibleService",
@@ -475,7 +621,8 @@
       "@type" : "@id"
     },
     "identifier" : {
-      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+      "@id" : "http://purl.org/dc/terms/identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "passingTimeTimingPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#passingTimeTimingPoint",
@@ -484,6 +631,9 @@
     "onLine" : {
       "@id" : "https://w3id.org/transmodel/journeys#onLine",
       "@type" : "@id"
+    },
+    "Network" : {
+      "@id" : "https://w3id.org/transmodel/commons#Network"
     },
     "Journey" : {
       "@id" : "https://w3id.org/transmodel/journeys#Journey"
@@ -497,6 +647,10 @@
     "madeUpOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#madeUpOf",
       "@type" : "@id"
+    },
+    "distance" : {
+      "@id" : "https://w3id.org/transmodel/journeys#distance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "on" : {
       "@id" : "https://w3id.org/transmodel/journeys#on",
@@ -518,9 +672,24 @@
       "@id" : "https://w3id.org/transmodel/journeys#composedOf",
       "@type" : "@id"
     },
+    "atCentre" : {
+      "@id" : "https://w3id.org/transmodel/journeys#atCentre",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "units" : {
+      "@id" : "https://w3id.org/transmodel/facilities#units",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "suitable" : {
+      "@id" : "https://w3id.org/transmodel/facilities#suitable",
+      "@type" : "@id"
+    },
     "passesAt" : {
       "@id" : "https://w3id.org/transmodel/journeys#passesAt",
       "@type" : "@id"
+    },
+    "OvertakingPossibility" : {
+      "@id" : "https://w3id.org/transmodel/core#OvertakingPossibility"
     },
     "time" : {
       "@id" : "https://w3id.org/transmodel/journeys#time",
@@ -541,7 +710,7 @@
       "@type" : "@id"
     },
     "Point" : {
-      "@id" : "https://w3id.org/transmodel/journeys#Point"
+      "@id" : "https://w3id.org/transmodel/commons#Point"
     },
     "lineName" : {
       "@id" : "https://w3id.org/transmodel/journeys#lineName",
@@ -550,8 +719,26 @@
     "DynamicStopAssignment" : {
       "@id" : "https://w3id.org/transmodel/journeys#DynamicStopAssignment"
     },
+    "positionOfTrainElement" : {
+      "@id" : "https://w3id.org/transmodel/journeys#positionOfTrainElement",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "GaragePoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#GaragePoint"
+    },
+    "InfrastructureLink" : {
+      "@id" : "https://w3id.org/transmodel/commons#InfrastructureLink"
+    },
+    "selfPropelled" : {
+      "@id" : "https://w3id.org/transmodel/journeys#selfPropelled",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "turnaroundDistance" : {
+      "@id" : "https://w3id.org/transmodel/commons#turnaroundDistance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "TrainInCompoundTrain" : {
+      "@id" : "https://w3id.org/transmodel/journeys#TrainInCompoundTrain"
     },
     "borderCrossing" : {
       "@id" : "https://w3id.org/transmodel/commons#borderCrossing"
@@ -570,24 +757,45 @@
       "@id" : "https://w3id.org/transmodel/journeys#endingAt",
       "@type" : "@id"
     },
-    "accessMode" : {
-      "@id" : "https://w3id.org/transmodel/journeys#accessMode",
+    "representedBy" : {
+      "@id" : "https://w3id.org/transmodel/commons#representedBy",
       "@type" : "@id"
+    },
+    "accessMode" : {
+      "@id" : "https://w3id.org/transmodel/commons#accessMode",
+      "@type" : "@id"
+    },
+    "Train" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Train"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
+    "startOf" : {
+      "@id" : "https://w3id.org/transmodel/journeys#startOf",
+      "@type" : "@id"
+    },
+    "sideText" : {
+      "@id" : "https://w3id.org/transmodel/commons#sideText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "ServiceJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#ServiceJourney"
     },
+    "NetworkRestrictions" : {
+      "@id" : "https://w3id.org/transmodel/core#NetworkRestrictions"
+    },
     "DestinationDisplay" : {
-      "@id" : "https://w3id.org/transmodel/journeys#DestinationDisplay"
+      "@id" : "https://w3id.org/transmodel/commons#DestinationDisplay"
     },
     "TOREVIEWCLASSES" : {
       "@id" : "https://w3id.org/transmodel/journeys#TOREVIEWCLASSES"
     },
     "DefaultInterchange" : {
       "@id" : "https://w3id.org/transmodel/journeys#DefaultInterchange"
+    },
+    "ValidityCondition" : {
+      "@id" : "https://w3id.org/transmodel/commons#ValidityCondition"
     },
     "endsConnectionDefault" : {
       "@id" : "https://w3id.org/transmodel/journeys#endsConnectionDefault",
@@ -598,6 +806,13 @@
     },
     "CoupledJourney" : {
       "@id" : "https://w3id.org/transmodel/journeys#CoupledJourney"
+    },
+    "BorderCrossingPoint" : {
+      "@id" : "https://w3id.org/transmodel/journeys#BorderCrossingPoint",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "TurnStation" : {
+      "@id" : "https://w3id.org/transmodel/commons#TurnStation"
     },
     "runsOn" : {
       "@id" : "https://w3id.org/transmodel/journeys#runsOn",
@@ -625,6 +840,13 @@
     "JourneyFrequencyGroup" : {
       "@id" : "https://w3id.org/transmodel/journeys#JourneyFrequencyGroup"
     },
+    "CompoundTrain" : {
+      "@id" : "https://w3id.org/transmodel/journeys#CompoundTrain"
+    },
+    "composedOfVehicle" : {
+      "@id" : "https://w3id.org/transmodel/journeys#composedOfVehicle",
+      "@type" : "@id"
+    },
     "aViewOf" : {
       "@id" : "https://w3id.org/transmodel/journeys#aViewOf",
       "@type" : "@id"
@@ -649,6 +871,9 @@
     "StopArea" : {
       "@id" : "https://w3id.org/transmodel/journeys#StopArea"
     },
+    "AllowedLineDirection" : {
+      "@id" : "https://w3id.org/transmodel/commons#AllowedLineDirection"
+    },
     "date" : {
       "@id" : "https://w3id.org/transmodel/journeys#date",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
@@ -672,11 +897,17 @@
       "@type" : "@id"
     },
     "viewedAs" : {
-      "@id" : "https://w3id.org/transmodel/journeys#viewedAs",
-      "@type" : "@id"
+      "@id" : "https://w3id.org/transmodel/commons#viewedAs"
+    },
+    "ServiceJourneyPatternInterchange" : {
+      "@id" : "https://w3id.org/transmodel/journeys#ServiceJourneyPatternInterchange"
     },
     "TimeBand" : {
       "@id" : "https://w3id.org/transmodel/journeys#TimeBand"
+    },
+    "publicCode" : {
+      "@id" : "https://w3id.org/transmodel/journeys#publicCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "canAlight" : {
       "@id" : "https://w3id.org/transmodel/journeys#canAlight",
@@ -685,15 +916,26 @@
     "DATA-PROPERTIES-TO-REVIEW" : {
       "@id" : "https://w3id.org/transmodel/journeys#DATA-PROPERTIES-TO-REVIEW"
     },
+    "LinkInLinkSequence" : {
+      "@id" : "https://w3id.org/transmodel/journeys#LinkInLinkSequence"
+    },
     "modeOfTransport" : {
       "@id" : "https://w3id.org/transmodel/journeys#modeOfTransport",
       "@type" : "@id"
+    },
+    "reversingDirection" : {
+      "@id" : "https://w3id.org/transmodel/journeys#reversingDirection",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "Presentation" : {
       "@id" : "https://w3id.org/transmodel/commons#Presentation"
     },
     "GroupOfTimingLinks" : {
       "@id" : "https://w3id.org/transmodel/journeys#GroupOfTimingLinks"
+    },
+    "driverDisplayText" : {
+      "@id" : "https://w3id.org/transmodel/commons#driverDisplayText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "scheduledStopPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#scheduledStopPoint",
@@ -711,15 +953,26 @@
       "@id" : "https://w3id.org/transmodel/journeys#journeyPatternPoint",
       "@type" : "@id"
     },
+    "ActualVehilceEquipment" : {
+      "@id" : "https://w3id.org/transmodel/facilities#ActualVehilceEquipment"
+    },
     "scheduledHeadwayInterval" : {
       "@id" : "https://w3id.org/transmodel/journeys#scheduledHeadwayInterval",
       "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "equippedWith" : {
+      "@id" : "https://w3id.org/transmodel/facilities#equippedWith",
+      "@type" : "@id"
+    },
+    "PurposeOfEquipmentProfile" : {
+      "@id" : "https://w3id.org/transmodel/facilities#PurposeOfEquipmentProfile"
     },
     "Trip" : {
       "@id" : "https://w3id.org/transmodel/journeys#Trip"
     },
     "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "timingLinkInJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#timingLinkInJourneyPattern"
@@ -746,6 +999,10 @@
     "AccessibilityAssessment" : {
       "@id" : "https://w3id.org/transmodel/facilities#AccessibilityAssessment"
     },
+    "overtakingWidth" : {
+      "@id" : "https://w3id.org/transmodel/core#overtakingWidth",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
     "VehicleMode" : {
       "@id" : "https://w3id.org/transmodel/journeys#VehicleMode"
     },
@@ -759,7 +1016,7 @@
     },
     "lastDayOffset" : {
       "@id" : "https://w3id.org/transmodel/journeys#lastDayOffset",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
     "PointInLinkSequence" : {
       "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
@@ -786,15 +1043,32 @@
       "@id" : "https://w3id.org/transmodel/journeys#characterisedBy",
       "@type" : "@id"
     },
+    "OperationalContext" : {
+      "@id" : "https://w3id.org/transmodel/journeys#OperationalContext"
+    },
     "FlexiblePoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#FlexiblePoint"
     },
+    "representationFor" : {
+      "@id" : "https://w3id.org/transmodel/commons#representationFor",
+      "@type" : "@id"
+    },
+    "seatingCapacity" : {
+      "@id" : "https://w3id.org/transmodel/journeys#seatingCapacity",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "Vehicle" : {
-      "@id" : "https://w3id.org/transmodel/journeys#Vehicle"
+      "@id" : "https://w3id.org/transmodel/commons#Vehicle"
     },
     "serviceJourneyUsingPattern" : {
       "@id" : "https://w3id.org/transmodel/journeys#serviceJourneyUsingPattern",
       "@type" : "@id"
+    },
+    "capacity" : {
+      "@id" : "https://w3id.org/transmodel/core#capacity"
+    },
+    "RoadElement" : {
+      "@id" : "https://w3id.org/transmodel/commons#RoadElement"
     },
     "canBoard" : {
       "@id" : "https://w3id.org/transmodel/journeys#canBoard",
@@ -811,9 +1085,15 @@
       "@id" : "https://w3id.org/transmodel/facilities#journeyPatternAdvertisedFor",
       "@type" : "@id"
     },
+    "SpecialService" : {
+      "@id" : "https://w3id.org/transmodel/journeys#SpecialService"
+    },
     "at" : {
       "@id" : "https://w3id.org/transmodel/commons#at",
       "@type" : "@id"
+    },
+    "RailwayElement" : {
+      "@id" : "https://w3id.org/transmodel/commons#RailwayElement"
     },
     "isFlexible" : {
       "@id" : "https://w3id.org/transmodel/journeys#isFlexible",
@@ -822,9 +1102,13 @@
     "DayType" : {
       "@id" : "https://w3id.org/transmodel/journeys#DayType"
     },
+    "frontText" : {
+      "@id" : "https://w3id.org/transmodel/commons#frontText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "isWaitPoint" : {
       "@id" : "https://w3id.org/transmodel/journeys#isWaitPoint",
-      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+      "@type" : "http://www.w3.org/2001/XMLSchema#time"
     },
     "inScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",

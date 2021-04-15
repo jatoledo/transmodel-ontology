@@ -1,0 +1,593 @@
+{
+  "@context" : {
+    "IncidenciaPlanificada" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada"
+    },
+    "PointOnRoute" : {
+      "@id" : "http://w3id.org/transmodel/journeys#PointOnRoute"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/elements/1.1/abstract"
+    },
+    "Address" : {
+      "@id" : "https://w3id.org/transmodel/core#Address"
+    },
+    "oddNumberRange" : {
+      "@id" : "https://w3id.org/transmodel/core#oddNumberRange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Route" : {
+      "@id" : "http://w3id.org/transmodel/journeys#Route"
+    },
+    "journeyDuration" : {
+      "@id" : "http://w3id.org/transmodel/journeys#journeyDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "stopUse" : {
+      "@id" : "http://w3id.org/transmodel/journeys#stopUse",
+      "@type" : "@id"
+    },
+    "colour" : {
+      "@id" : "http://w3id.org/transmodel/commons#colour",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ScheduledStopPoint" : {
+      "@id" : "http://w3id.org/transmodel/journeys#ScheduledStopPoint"
+    },
+    "Line" : {
+      "@id" : "http://w3id.org/transmodel/journeys#Line"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "RoutePoint" : {
+      "@id" : "http://w3id.org/transmodel/journeys#RoutePoint"
+    },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
+    "DispositivoMedicionTrafico" : {
+      "@id" : "https://w3id.org/transmodel/core#DispositivoMedicionTrafico"
+    },
+    "roadNumber" : {
+      "@id" : "https://w3id.org/transmodel/core#roadNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "madeUsing" : {
+      "@id" : "http://w3id.org/transmodel/journeys#madeUsing",
+      "@type" : "@id"
+    },
+    "minimumHeadwayInterval" : {
+      "@id" : "http://w3id.org/transmodel/journeys#minimumHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "url" : {
+      "@id" : "http://schema.org/url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "aFunctionalCentroidFor" : {
+      "@id" : "http://w3id.org/transmodel/journeys#aFunctionalCentroidFor",
+      "@type" : "@id"
+    },
+    "Country" : {
+      "@id" : "https://w3id.org/transmodel/core#Country"
+    },
+    "JourneyPattern" : {
+      "@id" : "http://w3id.org/transmodel/journeys#JourneyPattern"
+    },
+    "HeadwayInterval" : {
+      "@id" : "http://w3id.org/transmodel/journeys#HeadwayInterval"
+    },
+    "startDate" : {
+      "@id" : "http://schema.org/startDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Organisation" : {
+      "@id" : "http://w3id.org/transmodel/organisations#Organisation"
+    },
+    "Linea" : {
+      "@id" : "https://w3id.org/transmodel/core##Linea"
+    },
+    "distanceFromStart" : {
+      "@id" : "http://w3id.org/transmodel/journeys#distanceFromStart",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "cabeceraLinea" : {
+      "@id" : "https://w3id.org/transmodel/core##cabeceraLinea",
+      "@type" : "@id"
+    },
+    "VehicleJourney" : {
+      "@id" : "http://w3id.org/transmodel/journeys#VehicleJourney"
+    },
+    "Organization" : {
+      "@id" : "http://www.w3.org/ns/org#Organization"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "expectedArrivalTime" : {
+      "@id" : "https://w3id.org/transmodel/core##expectedArrivalTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "evenNumberRange" : {
+      "@id" : "https://w3id.org/transmodel/core#evenNumberRange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "prescribing" : {
+      "@id" : "http://w3id.org/transmodel/journeys#prescribing",
+      "@type" : "@id"
+    },
+    "finalLinea" : {
+      "@id" : "https://w3id.org/transmodel/core##finalLinea",
+      "@type" : "@id"
+    },
+    "PointInJourneyPattern" : {
+      "@id" : "http://w3id.org/transmodel/journeys#PointInJourneyPattern"
+    },
+    "forAlighting" : {
+      "@id" : "http://w3id.org/transmodel/journeys#forAlighting",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "forBoarding" : {
+      "@id" : "http://w3id.org/transmodel/journeys#forBoarding",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "presentedBy" : {
+      "@id" : "http://w3id.org/transmodel/journeys#presentedBy",
+      "@type" : "@id"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion"
+    },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+    },
+    "centre" : {
+      "@id" : "https://w3id.org/transmodel/core#centre",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "wifi" : {
+      "@id" : "https://w3id.org/transmodel/core##wifi",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "image" : {
+      "@id" : "http://schema.org/image"
+    },
+    "DayTypeAssignment" : {
+      "@id" : "http://w3id.org/transmodel/journeys#DayTypeAssignment"
+    },
+    "Authority" : {
+      "@id" : "http://w3id.org/transmodel/organisations#Authority"
+    },
+    "madeBySensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type" : "@id"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "buildingName" : {
+      "@id" : "https://w3id.org/transmodel/core#buildingName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "HeadwayJourneyGroup" : {
+      "@id" : "http://w3id.org/transmodel/journeys#HeadwayJourneyGroup"
+    },
+    "TopographicPlace" : {
+      "@id" : "https://w3id.org/transmodel/core#TopographicPlace"
+    },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "generadoPorIncidencia" : {
+      "@id" : "https://w3id.org/transmodel/core##generadoPorIncidencia",
+      "@type" : "@id"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "servingPTFor" : {
+      "@id" : "http://w3id.org/transmodel/organisations#servingPTFor",
+      "@type" : "@id"
+    },
+    "firstDepartureTime" : {
+      "@id" : "http://w3id.org/transmodel/journeys#firstDepartureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "email" : {
+      "@id" : "http://schema.org/email",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "esRecurrente" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#esRecurrente",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Province" : {
+      "@id" : "https://w3id.org/transmodel/core#Province",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "xETRS89" : {
+      "@id" : "https://datos.ign.es/def/geo_core#xETRS89",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "recurrencia" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "definedBy" : {
+      "@id" : "http://w3id.org/transmodel/journeys#definedBy",
+      "@type" : "@id"
+    },
+    "determinedBy" : {
+      "@id" : "http://w3id.org/transmodel/journeys#determinedBy",
+      "@type" : "@id"
+    },
+    "AddressablePlace" : {
+      "@id" : "https://w3id.org/transmodel/core#AddressablePlace"
+    },
+    "resultTime" : {
+      "@id" : "http://www.w3.org/ns/sosa/resultTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "maximumHeadwayInterval" : {
+      "@id" : "http://w3id.org/transmodel/journeys#maximumHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "ObservacionTrafico" : {
+      "@id" : "https://w3id.org/transmodel/core#ObservacionTrafico"
+    },
+    "ContactDetails" : {
+      "@id" : "http://w3id.org/transmodel/organisations#ContactDetails"
+    },
+    "town" : {
+      "@id" : "https://w3id.org/transmodel/core#town",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "specifying" : {
+      "@id" : "http://w3id.org/transmodel/journeys#specifying",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "ServiceCalendar" : {
+      "@id" : "http://w3id.org/transmodel/journeys#ServiceCalendar"
+    },
+    "ContactPoint" : {
+      "@id" : "http://schema.org/ContactPoint"
+    },
+    "RealTimePassingTime" : {
+      "@id" : "https://w3id.org/transmodel/core##RealTimePassingTime"
+    },
+    "directionType" : {
+      "@id" : "http://w3id.org/transmodel/journeys#directionType",
+      "@type" : "@id"
+    },
+    "operating" : {
+      "@id" : "http://w3id.org/transmodel/organisations#operating",
+      "@type" : "@id"
+    },
+    "datePosted" : {
+      "@id" : "http://schema.org/datePosted",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "postCodeExtension" : {
+      "@id" : "https://w3id.org/transmodel/core#postCodeExtension",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "bearingDegrees" : {
+      "@id" : "https://w3id.org/transmodel/core#bearingDegrees",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "address" : {
+      "@id" : "http://schema.org/address",
+      "@type" : "@id"
+    },
+    "Zone" : {
+      "@id" : "http://w3id.org/transmodel/commons#Zone"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "numSentidos" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "houseNumber" : {
+      "@id" : "https://w3id.org/transmodel/core#houseNumber",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "timedFrom" : {
+      "@id" : "http://w3id.org/transmodel/journeys#timedFrom",
+      "@type" : "@id"
+    },
+    "shortName" : {
+      "@id" : "http://w3id.org/transmodel/commons#shortName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PostalAddress" : {
+      "@id" : "https://w3id.org/transmodel/core#PostalAddress"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TimingPointInJourneyPattern" : {
+      "@id" : "http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern"
+    },
+    "madeUpOf" : {
+      "@id" : "http://w3id.org/transmodel/journeys#madeUpOf",
+      "@type" : "@id"
+    },
+    "distance" : {
+      "@id" : "http://w3id.org/transmodel/journeys#distance",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "on" : {
+      "@id" : "http://w3id.org/transmodel/journeys#on",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "qualifier" : {
+      "@id" : "https://w3id.org/transmodel/core#qualifier",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain"
+    },
+    "composedOf" : {
+      "@id" : "http://w3id.org/transmodel/journeys#composedOf",
+      "@type" : "@id"
+    },
+    "zona" : {
+      "@id" : "https://w3id.org/transmodel/core##zona",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Incidencia" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia"
+    },
+    "telephone" : {
+      "@id" : "http://schema.org/telephone",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Place" : {
+      "@id" : "http://w3id.org/transmodel/commons#Place"
+    },
+    "yETRS89" : {
+      "@id" : "https://datos.ign.es/def/geo_core#yETRS89",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "numCarriles" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Point" : {
+      "@id" : "http://w3id.org/transmodel/journeys#Point"
+    },
+    "definition" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#definition"
+    },
+    "observes" : {
+      "@id" : "http://www.w3.org/ns/sosa/observes",
+      "@type" : "@id"
+    },
+    "includedIn" : {
+      "@id" : "http://w3id.org/transmodel/journeys#includedIn",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "order" : {
+      "@id" : "http://w3id.org/transmodel/journeys#order",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "RoadAddress" : {
+      "@id" : "https://w3id.org/transmodel/core#RoadAddress"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "SpatialObject" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+    },
+    "DestinationDisplay" : {
+      "@id" : "http://w3id.org/transmodel/journeys#DestinationDisplay"
+    },
+    "textColour" : {
+      "@id" : "http://w3id.org/transmodel/commons#textColour",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type" : "@id"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Operator" : {
+      "@id" : "http://w3id.org/transmodel/organisations#Operator"
+    },
+    "addressLine1" : {
+      "@id" : "https://w3id.org/transmodel/core#addressLine1",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "panelElectronico" : {
+      "@id" : "https://w3id.org/transmodel/core##panelElectronico",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "from" : {
+      "@id" : "http://w3id.org/transmodel/journeys#from",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "afectadaPorIncidencia" : {
+      "@id" : "https://w3id.org/transmodel/core##afectadaPorIncidencia",
+      "@type" : "@id"
+    },
+    "observedProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+      "@type" : "@id"
+    },
+    "StopPointInJourneyPattern" : {
+      "@id" : "http://w3id.org/transmodel/journeys#StopPointInJourneyPattern"
+    },
+    "legalName" : {
+      "@id" : "http://schema.org/legalName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "StopArea" : {
+      "@id" : "http://w3id.org/transmodel/journeys#StopArea"
+    },
+    "date" : {
+      "@id" : "http://w3id.org/transmodel/journeys#date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "isAvailable" : {
+      "@id" : "http://w3id.org/transmodel/journeys#isAvailable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "viewedAs" : {
+      "@id" : "http://w3id.org/transmodel/journeys#viewedAs",
+      "@type" : "@id"
+    },
+    "PropiedadMedicionTrafico" : {
+      "@id" : "https://w3id.org/transmodel/core#PropiedadMedicionTrafico"
+    },
+    "contactPoint" : {
+      "@id" : "http://schema.org/contactPoint",
+      "@type" : "@id"
+    },
+    "Presentation" : {
+      "@id" : "http://w3id.org/transmodel/commons#Presentation"
+    },
+    "fechaFinPrevista" : {
+      "@id" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "postCode" : {
+      "@id" : "https://w3id.org/transmodel/core#postCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "earliestTime" : {
+      "@id" : "http://w3id.org/transmodel/journeys#earliestTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Parada" : {
+      "@id" : "https://w3id.org/transmodel/core#Parada"
+    },
+    "workedOn" : {
+      "@id" : "http://w3id.org/transmodel/journeys#workedOn",
+      "@type" : "@id"
+    },
+    "street" : {
+      "@id" : "https://w3id.org/transmodel/core#street"
+    },
+    "scheduledHeadwayInterval" : {
+      "@id" : "http://w3id.org/transmodel/journeys#scheduledHeadwayInterval",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ObservableProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    },
+    "lastDepartureTime" : {
+      "@id" : "http://w3id.org/transmodel/journeys#lastDepartureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/elements/1.1/contributor"
+    },
+    "to" : {
+      "@id" : "http://w3id.org/transmodel/journeys#to",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "departureTime" : {
+      "@id" : "http://w3id.org/transmodel/journeys#departureTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "lastDayOffset" : {
+      "@id" : "http://w3id.org/transmodel/journeys#lastDayOffset",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "PointInLinkSequence" : {
+      "@id" : "http://w3id.org/transmodel/journeys#PointInLinkSequence"
+    },
+    "characterisedBy" : {
+      "@id" : "http://w3id.org/transmodel/organisations#characterisedBy",
+      "@type" : "@id"
+    },
+    "endDate" : {
+      "@id" : "http://schema.org/endDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "alternateName" : {
+      "@id" : "http://schema.org/alternateName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "LinkSequence" : {
+      "@id" : "http://w3id.org/transmodel/journeys#LinkSequence"
+    },
+    "DayType" : {
+      "@id" : "http://w3id.org/transmodel/journeys#DayType"
+    },
+    "frontText" : {
+      "@id" : "http://w3id.org/transmodel/journeys#frontText",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "Observation" : {
+      "@id" : "http://www.w3.org/ns/sosa/Observation"
+    },
+    "Sensor" : {
+      "@id" : "http://www.w3.org/ns/sosa/Sensor"
+    }
+  }
+}

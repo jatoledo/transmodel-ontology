@@ -11,6 +11,9 @@
       "@id" : "https://w3id.org/transmodel/common#timingLink",
       "@type" : "@id"
     },
+    "lat_long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long"
+    },
     "license" : {
       "@id" : "http://creativecommons.org/ns#license"
     },
@@ -21,16 +24,27 @@
       "@id" : "https://w3id.org/transmodel/common#arrivalTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
+    "PurposeOfGrouping" : {
+      "@id" : "https://w3id.org/transmodel/commons#PurposeOfGrouping"
+    },
     "makesAServiceJourney" : {
       "@id" : "https://w3id.org/transmodel/common#makesAServiceJourney",
       "@type" : "@id"
+    },
+    "long" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
     },
     "runtime" : {
       "@id" : "https://w3id.org/transmodel/common#runtime",
       "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
     },
+    "aClasificationFor" : {
+      "@id" : "https://w3id.org/transmodel/commons#aClasificationFor",
+      "@type" : "@id"
+    },
     "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "followsJourneyPattern" : {
       "@id" : "https://w3id.org/transmodel/common#followsJourneyPattern",
@@ -45,6 +59,9 @@
     "VehicleJourneyLayover" : {
       "@id" : "https://w3id.org/transmodel/common#VehicleJourneyLayover"
     },
+    "Location" : {
+      "@id" : "https://w3id.org/transmodel/commons#Location"
+    },
     "TimingPoint" : {
       "@id" : "https://w3id.org/transmodel/common#TimingPoint"
     },
@@ -55,6 +72,9 @@
     "destinationStop" : {
       "@id" : "https://w3id.org/transmodel/common#destinationStop",
       "@type" : "@id"
+    },
+    "LocatingSystem" : {
+      "@id" : "https://w3id.org/transmodel/commons#LocatingSystem"
     },
     "JourneyPatternLayover" : {
       "@id" : "https://w3id.org/transmodel/common#JourneyPatternLayover"
@@ -88,6 +108,9 @@
       "@id" : "https://w3id.org/transmodel/common#headway",
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
+    "Layer" : {
+      "@id" : "https://w3id.org/transmodel/commons#Layer"
+    },
     "startTime" : {
       "@id" : "https://w3id.org/transmodel/common#startTime",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -105,8 +128,18 @@
     "rights" : {
       "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
+    "referenceFor" : {
+      "@id" : "https://w3id.org/transmodel/commons#referenceFor",
+      "@type" : "@id"
+    },
+    "alt" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    },
+    "ClassInRepository" : {
+      "@id" : "https://w3id.org/transmodel/commons#ClassInRepository"
+    },
     "identifier" : {
-      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+      "@id" : "http://purl.org/dc/terms/identifier"
     },
     "time" : {
       "@id" : "https://w3id.org/transmodel/common#time",
@@ -116,11 +149,15 @@
       "@id" : "https://w3id.org/transmodel/commons#Place"
     },
     "Point" : {
-      "@id" : "https://w3id.org/transmodel/common#Point"
+      "@id" : "https://w3id.org/transmodel/commons#Point"
     },
     "borderCrossing" : {
       "@id" : "https://w3id.org/transmodel/commons#borderCrossing",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "locatedBy" : {
+      "@id" : "https://w3id.org/transmodel/commons#locatedBy",
+      "@type" : "@id"
     },
     "ConceptScheme" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
@@ -131,12 +168,25 @@
     "ActivationLink" : {
       "@id" : "https://w3id.org/transmodel/common#ActivationLink"
     },
+    "VersionFrame" : {
+      "@id" : "https://w3id.org/transmodel/commons#VersionFrame"
+    },
     "textColour" : {
       "@id" : "https://w3id.org/transmodel/commons#textColour",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "ValidityCondition" : {
+      "@id" : "https://w3id.org/transmodel/commons#ValidityCondition"
+    },
+    "lat" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    },
     "originStop" : {
       "@id" : "https://w3id.org/transmodel/common#originStop",
+      "@type" : "@id"
+    },
+    "aViewOf" : {
+      "@id" : "https://w3id.org/transmodel/journeys#aViewOf",
       "@type" : "@id"
     },
     "date" : {
@@ -144,6 +194,12 @@
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "EntityInVersion" : {
+      "@id" : "https://w3id.org/transmodel/commons#EntityInVersion"
+    },
+    "Entity" : {
+      "@id" : "https://w3id.org/transmodel/commons#Entity"
     },
     "canAlight" : {
       "@id" : "https://w3id.org/transmodel/common#canAlight",
@@ -154,6 +210,9 @@
     },
     "Presentation" : {
       "@id" : "https://w3id.org/transmodel/commons#Presentation"
+    },
+    "Version" : {
+      "@id" : "https://w3id.org/transmodel/commons#Version"
     },
     "scheduledStopPoint" : {
       "@id" : "https://w3id.org/transmodel/common#scheduledStopPoint",
@@ -171,7 +230,8 @@
       "@id" : "https://w3id.org/transmodel/common#Trip"
     },
     "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Service" : {
       "@id" : "https://w3id.org/transmodel/common#Service"
@@ -182,6 +242,9 @@
     "vehicleJourneyDayType" : {
       "@id" : "https://w3id.org/transmodel/common#vehicleJourneyDayType",
       "@type" : "@id"
+    },
+    "PointInLinkSequence" : {
+      "@id" : "https://w3id.org/transmodel/journeys#PointInLinkSequence"
     },
     "stopsAt" : {
       "@id" : "https://w3id.org/transmodel/common#stopsAt",
