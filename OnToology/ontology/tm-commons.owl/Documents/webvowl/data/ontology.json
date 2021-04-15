@@ -1,0 +1,1693 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2003/01/geo/wgs84_pos", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/transmodel/common", "https://w3id.org/transmodel/commons", "https://w3id.org/transmodel/journeys", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Transmodel Ontology - Commons"
+    },
+    "iri" : "https://w3id.org/transmodel/commons#",
+    "version" : "This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+    "author" : [ "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)", "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" ],
+    "description" : {
+      "en" : "Module of the Transmodel Ontology focused on commons. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "labels" : {
+      "en" : "Transmodel Ontology - Commons"
+    },
+    "comments" : {
+      "en" : "Module of the Transmodel Ontology focused on commons. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2021-04-15",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "https://w3id.org/transmodel/commons",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/transmodel/facilities#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "This is the initial version of the module on Commons, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Transmodel Ontology - Commons",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "https://github.com/oeg-upm/transmodel-ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "69",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "82",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "43",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "74",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "84",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "4",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "37",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "78",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "126",
+    "type" : "owl:Class"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "114",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#HeadingInterval",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeadingInterval",
+      "en" : "HeadwayInterval"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "8",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Place",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "Place"
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#Point",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "Point"
+    },
+    "subClasses" : [ "31", "32" ],
+    "attributes" : [ "external" ],
+    "id" : "30",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/journeys#PointInLinkSequence",
+    "baseIri" : "https://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointInLinkSequence"
+    },
+    "attributes" : [ "external" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "21",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "dateTimeStamp"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#GroupOfEntities",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GroupOfEntities",
+      "en" : "Group of Entities"
+    },
+    "subClasses" : [ "44" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "23",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#TimingLink",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimingLink",
+      "en" : "A TimingLink is an ordered pair of TimingPoint for which run times\nmay be recorded."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#VehicleJourneyLayover",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VehicleJourneyLayover",
+      "en" : "VehicleJourneyLayover"
+    },
+    "attributes" : [ "external" ],
+    "id" : "56",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#Vehicle",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vehicle",
+      "en" : "Vehicle"
+    },
+    "attributes" : [ "external" ],
+    "id" : "59",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#ValidityCondition",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ValidityCondition"
+    },
+    "id" : "60"
+  }, {
+    "instances" : 0,
+    "union" : [ "52", "56", "31" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "69",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "70",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#ClassInRepository",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassInRepository"
+    },
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#TOREVIEW",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TOREVIEW"
+    },
+    "subClasses" : [ "50", "65", "30", "52", "38", "6", "59", "56", "77", "78", "79" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "82",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "43",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "74",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "84",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "4",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "37",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "86",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#EntityInVersion",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EntityInVersion"
+    },
+    "id" : "87"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#Passenger",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Passenger",
+      "en" : "Passenger"
+    },
+    "attributes" : [ "external" ],
+    "id" : "65",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Zone",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone",
+      "en" : "Zone"
+    },
+    "subClasses" : [ "10" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Location",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location"
+    },
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Point",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "Point"
+    },
+    "id" : "100"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/transmodel/kos/commons/sites-access-mode",
+      "baseIri" : "https://w3id.org/transmodel/kos/commons",
+      "labels" : {
+        "IRI-based" : "sites-access-mode"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/commons/continous-mode",
+      "baseIri" : "https://w3id.org/transmodel/kos/commons",
+      "labels" : {
+        "IRI-based" : "continous-mode"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/commons/vehicle-mode",
+      "baseIri" : "https://w3id.org/transmodel/kos/commons",
+      "labels" : {
+        "IRI-based" : "vehicle-mode"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/commons/road-vehicle-mode",
+      "baseIri" : "https://w3id.org/transmodel/kos/commons",
+      "labels" : {
+        "IRI-based" : "road-vehicle-mode",
+        "en" : "road-vehicle-mode"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/commons/all-modes",
+      "baseIri" : "https://w3id.org/transmodel/kos/commons",
+      "labels" : {
+        "IRI-based" : "all-modes"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "101"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#Trip",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Trip",
+      "en" : "Trip"
+    },
+    "attributes" : [ "external" ],
+    "id" : "77",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#ActivationLink",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActivationLink",
+      "en" : "ActivationLink"
+    },
+    "attributes" : [ "external" ],
+    "id" : "78",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#Service",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Service",
+      "en" : "ServiceJourney"
+    },
+    "attributes" : [ "external" ],
+    "id" : "79",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Layer",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Layer"
+    },
+    "id" : "44",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Presentation",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Presentation",
+      "en" : "Presentation"
+    },
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#TimingLinkInJourneyPattern",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimingLinkInJourneyPattern",
+      "en" : "TimingLinkInJourneyPattern"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#JourneyPatternLayover",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JourneyPatternLayover",
+      "en" : "JourneyPatternLayover"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#ActivationPoint",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActivationPoint",
+      "en" : "ActivationPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Entity",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "id" : "126"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#LocatingSystem",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LocatingSystem"
+    },
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#VersionFrame",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VersionFrame"
+    },
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#Version",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Version"
+    },
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#PurposeOfGrouping",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PurposeOfGrouping"
+    },
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#TimingPoint",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimingPoint",
+      "en" : "TimingPoint"
+    },
+    "attributes" : [ "external" ],
+    "id" : "31",
+    "superClasses" : [ "30" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "91",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "93",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "103",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "110",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "112",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "113",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "118",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "119",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "121",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "122",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "124",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "128",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/transmodel/commons#at",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "at",
+      "en" : "at"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#aClasificationFor",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "aClasificationFor"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#headway",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "headway",
+      "en" : "headway"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "comment",
+      "en" : "description"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#in",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "in",
+      "en" : "in"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#originStop",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "originStop",
+      "en" : "originStop"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#layover",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "layover",
+      "en" : "layover"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#time",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "time",
+      "en" : "time"
+    },
+    "domain" : "29",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#timingLinkPointSequence",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "timingLinkPointSequence"
+    },
+    "domain" : "31",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#timingLinkInJourneyPattern",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "timingLinkInJourneyPattern",
+      "en" : "timingLinkInJourneyPattern"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "37",
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "comment",
+      "en" : "description"
+    },
+    "domain" : "40",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#vehicleJourneyDayType",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "vehicleJourneyDayType",
+      "en" : "vehicleJourneyDayType"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "43",
+    "attributes" : [ "external", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "label",
+      "en" : "name"
+    },
+    "domain" : "40",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#aClasificationFor",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "aClasificationFor"
+    },
+    "domain" : "49",
+    "attributes" : [ "allValues", "object" ],
+    "id" : "48"
+  }, {
+    "range" : "7",
+    "domain" : "52",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#referenceFor",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "referenceFor"
+    },
+    "domain" : "43",
+    "attributes" : [ "object" ],
+    "id" : "53"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "7",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "long",
+      "en" : "longitude"
+    },
+    "maxCardinality" : "1",
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "57"
+  }, {
+    "range" : "7",
+    "domain" : "50",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "61"
+  }, {
+    "range" : "5",
+    "domain" : "44",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "7",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "7",
+    "domain" : "65",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "30",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "30",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "lat",
+      "en" : "latitude"
+    },
+    "maxCardinality" : "1",
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#canBoard",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "canBoard",
+      "en" : "canBoard"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "65",
+    "attributes" : [ "external", "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "alt",
+      "en" : "altitude"
+    },
+    "maxCardinality" : "1",
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#hasAServiceJourneyPattern",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasAServiceJourneyPattern",
+      "en" : "serviceJourneyPattern"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "79",
+    "attributes" : [ "external", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#route",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "route",
+      "en" : "route"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "43",
+    "attributes" : [ "external", "object" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#followsJourneyPattern",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "followsJourneyPattern",
+      "en" : "followsJourneyPattern"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "43",
+    "attributes" : [ "external", "object" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat_long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "lat_long",
+      "en" : "coordinates"
+    },
+    "maxCardinality" : "1",
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#timeLink",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "timeLink",
+      "en" : "timeLink"
+    },
+    "domain" : "31",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#scheduledStopPoint",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "scheduledStopPoint",
+      "en" : "scheduledStopPoint"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#timingLink",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "31",
+    "label" : {
+      "IRI-based" : "timingLink",
+      "en" : "timingLinkPoint"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "50",
+    "attributes" : [ "external", "object" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#vehicleJourneyRoute",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "vehicleJourneyRoute",
+      "en" : "vehicleJourneyRoute"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "91"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#vehicleJourney",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "vehicleJourney",
+      "en" : "vehicleJourney"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "59",
+    "attributes" : [ "external", "object" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#startTime",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "startTime",
+      "en" : "startTime"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#destinationStop",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "destinationStop",
+      "en" : "destinationStop"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "1",
+    "attributes" : [ "external", "object" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/transmodel/journeys#TOREVIEW",
+    "baseIri" : "https://w3id.org/transmodel/journeys",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "TOREVIEW"
+    },
+    "domain" : "1",
+    "subproperty" : [ "0", "89", "95", "73", "90", "24", "25", "91", "96", "92", "80", "81", "36", "94", "83", "42", "97", "98" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#makesAServiceJourney",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "makesAServiceJourney",
+      "en" : "serviceJourney"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "65",
+    "attributes" : [ "external", "object" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#pointSequence",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "pointSequence",
+      "en" : "stopSequence"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#colour",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "colour",
+      "en" : "colour"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "103"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#stopsAt",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "84",
+    "label" : {
+      "IRI-based" : "stopsAt",
+      "en" : "stopsAt"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "59",
+    "attributes" : [ "external", "object" ],
+    "id" : "96"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "105"
+  }, {
+    "range" : "7",
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#textColour",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "textColour",
+      "en" : "text colour"
+    },
+    "domain" : "43",
+    "attributes" : [ "datatype" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#journeyPatternPoint",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "journeyPatternPoint",
+      "en" : "journeyPatternPoint"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "82",
+    "attributes" : [ "external", "object" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#waitTime",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "waitTime",
+      "en" : "waitTime"
+    },
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "108"
+  }, {
+    "range" : "7",
+    "domain" : "56",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "7",
+    "domain" : "59",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "range" : "7",
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "111"
+  }, {
+    "range" : "7",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier"
+    },
+    "domain" : "114",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#canAlight",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "canAlight",
+      "en" : "canAlight"
+    },
+    "superproperty" : [ "2" ],
+    "domain" : "65",
+    "attributes" : [ "external", "object" ],
+    "id" : "95"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "identifier"
+    },
+    "domain" : "99",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/transmodel/journeys#aViewOf",
+    "baseIri" : "https://w3id.org/transmodel/journeys",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "aViewOf"
+    },
+    "domain" : "100",
+    "attributes" : [ "allValues", "external", "object" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#textColour",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "textColour",
+      "en" : "text colour"
+    },
+    "domain" : "104",
+    "attributes" : [ "datatype", "allValues" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#colour",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "colour",
+      "en" : "colour"
+    },
+    "domain" : "104",
+    "attributes" : [ "datatype", "allValues" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#arrivalTime",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "arrivalTime",
+      "en" : "arrivalTime"
+    },
+    "domain" : "31",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "122"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#borderCrossing",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "borderCrossing",
+      "en" : "This property determines whether the Point is on a border crossing"
+    },
+    "domain" : "43",
+    "attributes" : [ "datatype" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
+    "range" : "125",
+    "label" : {
+      "IRI-based" : "label",
+      "en" : "name"
+    },
+    "domain" : "114",
+    "attributes" : [ "datatype", "someValues", "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "https://w3id.org/transmodel/common#runtime",
+    "baseIri" : "https://w3id.org/transmodel/common",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "runtime",
+      "en" : "runtime"
+    },
+    "domain" : "43",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/transmodel/commons#locatedBy",
+    "baseIri" : "https://w3id.org/transmodel/commons",
+    "range" : "99",
+    "label" : {
+      "IRI-based" : "locatedBy"
+    },
+    "domain" : "100",
+    "attributes" : [ "object" ],
+    "id" : "128"
+  } ]
+}
