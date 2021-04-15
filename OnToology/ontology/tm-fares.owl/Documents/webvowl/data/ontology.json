@@ -1,0 +1,395 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "https://w3id.org/transmodel/fares", "http://schema.org", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/transmodel/organisations", "https://w3id.org/transmodel/journeys", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Transmodel Ontology - Fares"
+    },
+    "iri" : "https://w3id.org/transmodel/fares#",
+    "version" : "This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+    "author" : [ "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)" ],
+    "description" : {
+      "en" : "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "labels" : {
+      "en" : "Transmodel Ontology - Fares"
+    },
+    "comments" : {
+      "en" : "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "other" : {
+      "date" : [ {
+        "identifier" : "date",
+        "language" : "undefined",
+        "value" : "2019-10-21",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "https://w3id.org/transmodel/fares",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Adolfo Antón Bravo (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/transmodel/fares#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Transmodel Ontology - Fares",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "en",
+        "value" : "https://github.com/oeg-upm/transmodel-ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/transmodel/organisations#ContactDetails",
+    "baseIri" : "https://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContactDetails"
+    },
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#BookingArrangements",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BookingArrangements",
+      "en" : "BookingArrangements"
+    },
+    "comment" : {
+      "en" : "Booking arrangements for flexible line"
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/transmodel/kos/fares/distribution-rights",
+      "baseIri" : "https://w3id.org/transmodel/kos/fares",
+      "comment" : {
+        "en" : "Concept scheme where all the types of distribution rights"
+      },
+      "labels" : {
+        "IRI-based" : "distribution-rights"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/fares/distribution-channel-type",
+      "baseIri" : "https://w3id.org/transmodel/kos/fares",
+      "comment" : {
+        "en" : "Concept scheme where all the types of distribution\n      channels"
+      },
+      "labels" : {
+        "IRI-based" : "distribution-channel-type"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/fares/fulfilment-method-type",
+      "baseIri" : "https://w3id.org/transmodel/kos/fares",
+      "comment" : {
+        "en" : "Concept scheme where all the types of fulfilment methods"
+      },
+      "labels" : {
+        "IRI-based" : "fulfilment-method-type"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/fares/booking-method-type",
+      "baseIri" : "https://w3id.org/transmodel/kos/fares",
+      "comment" : {
+        "en" : "Concept scheme where all the types of booking methods"
+      },
+      "labels" : {
+        "IRI-based" : "booking-method-type"
+      }
+    }, {
+      "iri" : "https://w3id.org/transmodel/kos/fares/booking-access-type",
+      "baseIri" : "https://w3id.org/transmodel/kos/fares",
+      "comment" : {
+        "en" : "Concept scheme where all the types of booking access"
+      },
+      "labels" : {
+        "IRI-based" : "booking-access-type"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#DistributionChannel",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DistributionChannel",
+      "en" : "Distribution Channel"
+    },
+    "comment" : {
+      "en" : "A type of outlet for selling a Fare Product"
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "3",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "9",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/journeys#FlexibleLine",
+    "baseIri" : "https://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FlexibleLine"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/journeys#Line",
+    "baseIri" : "https://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Line"
+    },
+    "subClasses" : [ "11" ],
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/transmodel/organisations#Organisation",
+    "baseIri" : "https://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organisation"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#ClassOfUse",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ClassOfUse",
+      "en" : "ClassOfUse"
+    },
+    "comment" : {
+      "en" : "A classification of fare and other service classes by category of user entitled to use them"
+    },
+    "id" : "16"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "13",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "18",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "inScheme"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#governedBy",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "governedBy",
+      "en" : "governed by"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "This property relates a Distribution Channel to the Organisation that takes responsability over it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "4"
+  }, {
+    "range" : "12",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#distributionChannelType",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "distributionChannelType",
+      "en" : "distribution Channel Type"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels"
+    },
+    "attributes" : [ "object" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://schema.org/contactPoint",
+    "baseIri" : "http://schema.org",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "contactPoint"
+    },
+    "domain" : "3",
+    "subproperty" : [ "15" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#governedBy",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "governedBy",
+      "en" : "governed by"
+    },
+    "domain" : "5",
+    "comment" : {
+      "en" : "This property relates a Distribution Channel to the Organisation that takes responsability over it"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#describedThrough",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "describedThrough",
+      "en" : "described through"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "5",
+    "comment" : {
+      "en" : "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"
+    },
+    "attributes" : [ "object", "allValues" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/transmodel/fares#describedThrough",
+    "baseIri" : "https://w3id.org/transmodel/fares",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "describedThrough",
+      "en" : "described through"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "5",
+    "comment" : {
+      "en" : "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"
+    },
+    "attributes" : [ "object" ],
+    "id" : "15"
+  } ]
+}
