@@ -1,0 +1,4399 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://schema.org", "http://www.w3.org/2002/07/owl", "http://www.w3.org/ns/org", "http://w3id.org/transmodel/journeys", "http://vocab.ciudadesabiertas.es/def/transporte/trafico", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://www.opengis.net/ont/sf", "http://w3id.org/transmodel/commons", "http://w3id.org/transmodel/organisations", "http://www.w3.org/2003/01/geo/wgs84_pos", "http://www.w3.org/2000/01/rdf-schema", "https://w3id.org/transmodel/core", "https://datos.ign.es/def/geo_core", "http://purl.org/dc/terms", "http://www.opengis.net/ont/geosparql", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "Transmodel Ontology - Core"
+    },
+    "iri" : "https://w3id.org/transmodel/core#",
+    "version" : "Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+    "author" : [ "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)", "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)", "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" ],
+    "description" : {
+      "en" : "This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "comments" : {
+      "en" : "Module of the Transmodel Ontology focused on core. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid)",
+        "type" : "label"
+      } ],
+      "hasVersion" : [ {
+        "identifier" : "hasVersion",
+        "language" : "undefined",
+        "value" : "1.0.0",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "undefined",
+        "value" : "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+        "type" : "label"
+      } ],
+      "publisher" : [ {
+        "identifier" : "publisher",
+        "language" : "en",
+        "value" : "Ontology Engineering Group - Universidad Politécnica de Madrid",
+        "type" : "label"
+      }, {
+        "identifier" : "publisher",
+        "language" : "es",
+        "value" : "Ontology Engineering Group - Universidad Politécnica de Madrid",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/transmodel/core#",
+        "type" : "iri"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "Refined version of the module, after considering the UML models and XSD descriptions of Transmodel and NeTEx",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Transmodel Ontology - Core",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "68",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
+    "id" : "111",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "108",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "74",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "97",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "99",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "91",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "58",
+    "type" : "owl:Class"
+  }, {
+    "id" : "124",
+    "type" : "owl:Class"
+  }, {
+    "id" : "146",
+    "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "119",
+    "type" : "owl:Class"
+  }, {
+    "id" : "88",
+    "type" : "owl:Class"
+  }, {
+    "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "owl:Class"
+  }, {
+    "id" : "154",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "157",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "162",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "166",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "167",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "169",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "141",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "139",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "138",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "176",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "179",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "180",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "135",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "178",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "196",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "199",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "156",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "145",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "159",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "208",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "209",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "210",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "214",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "215",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "216",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "217",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "86",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "174",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "221",
+    "type" : "owl:Class"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "223",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "171",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "198",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "201",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "106",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "224",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "227",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "219",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "203",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "164",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "231",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "240",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "243",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "254",
+    "type" : "owl:Class"
+  }, {
+    "id" : "258",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "117",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "205",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "250",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "222",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "98",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "24",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Datatype"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/transmodel/journeys#DayTypeAssignment",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DayTypeAssignment",
+      "en" : "DayTypeAssignment",
+      "es" : "Asignación de Día Tipo"
+    },
+    "comment" : {
+      "en" : "The assignment of operational characteristics, expressed by DAY TYPEs, to particular OPERATING DAYs within a SERVICE CALENDAR.",
+      "es" : "La asignación de características operativas, expresadas por Día Tipo, a un Día Operativo de un Calendario de Servicio."
+    },
+    "attributes" : [ "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#Address",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Address"
+    },
+    "subClasses" : [ "16", "17" ],
+    "comment" : {
+      "en" : "The descriptive data associated with a PLACE that can be used to describe the unique geographical context of a PLACE for the purposes of identifying it. May be refined as either a ROAD ADDRESS, a POSTAL ADDRESS or both."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation"
+    },
+    "subClasses" : [ "19" ],
+    "comment" : {
+      "en" : "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with"
+    },
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#Zone",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone"
+    },
+    "attributes" : [ "external" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#PointInLinkSequence",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointInLinkSequence",
+      "en" : "Point in Link Sequence",
+      "es" : "Punto en secuencia de enlaces"
+    },
+    "subClasses" : [ "70", "71", "72" ],
+    "comment" : {
+      "en" : "A POINT in a LINK SEQUENCE indicating its order in that particular LINK SEQUENCE.",
+      "es" : "Un punto en una secuencia indica su orden en esa secuencia de enlaces"
+    },
+    "attributes" : [ "external" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#Country",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country"
+    },
+    "comment" : {
+      "en" : "A jurisdictional geographic boundary. A country normally has a two character IANA identifier."
+    },
+    "id" : "77"
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Feature",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Feature",
+      "en" : "Feature",
+      "es" : "Característica geográfica"
+    },
+    "subClasses" : [ "68", "97" ],
+    "comment" : {
+      "en" : "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156, and it is superclass of all feature types.",
+      "es" : "Esta clase representa una característica de alto nivel, equivalente a GFI_Feature definida en ISP 19156 y es una supercale para todos los tipos de características espaciales."
+    },
+    "attributes" : [ "external" ],
+    "id" : "64",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#RoadAddress",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoadAddress"
+    },
+    "comment" : {
+      "en" : "Specialization of ADDRESS refining it by using the characteristics such as road number, and name used for conventional identification of along  a road."
+    },
+    "id" : "17",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#AddressablePlace",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AddressablePlace"
+    },
+    "comment" : {
+      "en" : "A type of PLACE  to which passengers may refer to indicate the origin or a destination of a trip and that is so specific that it has an ADDRESS."
+    },
+    "id" : "52",
+    "superClasses" : [ "53" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23Parada",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23Parada",
+      "en" : "Stop Place",
+      "es" : "Parada"
+    },
+    "comment" : {
+      "en" : "A Stop of the public transport service of urban buses",
+      "es" : "Una parada del servicio público de transporte de autobuses urbanos."
+    },
+    "id" : "68",
+    "superClasses" : [ "64", "10" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#HeadwayJourneyGroup",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeadwayJourneyGroup",
+      "en" : "Headway Journey Group",
+      "es" : "Grupo de viajes con un horario"
+    },
+    "comment" : {
+      "en" : "A group of VEHICLE JOURNEYs following the same JOURNEY PATTERN having the same HEADWAY INTERVAL between a specified start and end time (for example, every 10 min). This is especially useful for passenger information.",
+      "es" : "Un grupo de viajes de vehículos que siguen el mismo intervalo fijado en cabecera entre el principio y el final (por ejemplo, cada 10 minutos). Esto es muy útil para los pasajeros."
+    },
+    "attributes" : [ "external" ],
+    "id" : "110"
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#ContactDetails",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContactDetails",
+      "en" : "Contact Details"
+    },
+    "comment" : {
+      "en" : "Contact Details for an Organisation. A subclass of schema:ContactPoint. As such, it can be the domain of properties like schema:url, schema:telephone, schema:email, etc.",
+      "es" : "Información de contacto de una organización. Una subclase de schema:ContactPoint. Como tal, puede ser el dominio de propiedades como schema:url, schema:telephone, schema:email, etc."
+    },
+    "attributes" : [ "external" ],
+    "id" : "111",
+    "superClasses" : [ "108" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#VehicleJourney",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VehicleJourney",
+      "en" : "VehicleJourney",
+      "es" : "Viaje de un vehículo"
+    },
+    "comment" : {
+      "en" : "The planned movement of a Public Transport Vehicle on a DayType from the start point to the end point of a JourneyPattern on a specified Route.",
+      "es" : "El movimiento planificado de un vehículo de transporte público en un día tipo DayType desde un punto inicial al punto final de un patrón de viaje JourneyPattern en una ruta especificada."
+    },
+    "attributes" : [ "external" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://schema.org/ContactPoint",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContactPoint",
+      "en" : "Contact Point",
+      "es" : "Punto de Información de Contacto"
+    },
+    "subClasses" : [ "111" ],
+    "comment" : {
+      "en" : "A contact point—for example, Contact section in a website of a Public Transport Organisation Network.",
+      "es" : "Un Punto de Información, por ejemplo, la sección de Contacto en la web de la entidad que participa de alguna manera en el Transporte Público de Autobuses."
+    },
+    "attributes" : [ "external" ],
+    "id" : "108"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#Route",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Route",
+      "en" : "Route",
+      "es" : "Ruta"
+    },
+    "comment" : {
+      "en" : "A Route is and ordered list of located Points defining one single path through the road (or rail) network.",
+      "es" : "Una ruta es una lista ordenada de Puntos que definen una sola ruta a través de una red de calles"
+    },
+    "attributes" : [ "external" ],
+    "id" : "55",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#StopArea",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StopArea",
+      "en" : "Stop Area",
+      "es" : "Paradas"
+    },
+    "comment" : {
+      "en" : "A group of Scheduled Stop Points close to each other",
+      "es" : "Un grupo de Paradas que están próximas entre sí."
+    },
+    "attributes" : [ "external" ],
+    "id" : "74",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#Authority",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Authority",
+      "en" : "Authority",
+      "es" : "Autoridad"
+    },
+    "comment" : {
+      "en" : "Public Transport Authority, the organization under which the responsability of organising the TransportService in a certain area (AdministrativeZone) is placed",
+      "es" : "Autoridad del Transporte Público, organización bajo la cual está la responsabilidad de organizar el servicio de transporte de una cierta área (por ejemplo, zona administrativa)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "60",
+    "superClasses" : [ "61" ]
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#Incidencia",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Incidencia",
+      "en" : "Incidence",
+      "es" : "Incidencia"
+    },
+    "subClasses" : [ "103" ],
+    "comment" : {
+      "en" : "Incidence in the traffic system of a city",
+      "es" : "Incidencia que ocurre en el sistema de tráfico de una ciudad"
+    },
+    "attributes" : [ "external" ],
+    "id" : "97",
+    "superClasses" : [ "64" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#Operator",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Operator",
+      "en" : "Operator",
+      "es" : "Operador"
+    },
+    "comment" : {
+      "en" : "A company providing Public Transport Services. In GTFS, this is represented as a TransitAgency",
+      "es" : "Una empresa que ofrece servicio de transporte público. En GTFS se representa como una TransitAgency."
+    },
+    "attributes" : [ "external" ],
+    "id" : "49",
+    "superClasses" : [ "61" ]
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#Line",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Line",
+      "en" : "Line",
+      "es" : "Línea"
+    },
+    "subClasses" : [ "93" ],
+    "comment" : {
+      "en" : "A Line is a group of Routes which is generally known to the public by a similar name or number.",
+      "es" : "Una Línea es un grupo de Rutas que normalente se conocen por un nombre o número."
+    },
+    "attributes" : [ "external" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#TimingPointInJourneyPattern",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimingPointInJourneyPattern",
+      "en" : "Timing Point In Journey Pattern",
+      "es" : "Punto de control en el patrón de viaje"
+    },
+    "comment" : {
+      "en" : "A Point in a JourneyPattern which is a TimingPoint",
+      "es" : "Un punto en un patrón de viaje que es un punto de control"
+    },
+    "attributes" : [ "external" ],
+    "id" : "70",
+    "superClasses" : [ "58", "69" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2004-02-xx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme",
+      "es" : "Esquema de conceptos"
+    },
+    "individuals" : [ {
+      "iri" : "http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico/tipo-incidencia",
+      "baseIri" : "http://vocab.linkeddata.es/datosabiertos/kos/transporte/trafico",
+      "labels" : {
+        "IRI-based" : "tipo-incidencia",
+        "en" : "type of incidence",
+        "es" : "tipo de incidencia"
+      }
+    }, {
+      "iri" : "http://w3id.org/transmodel/kos/journeys/direction-type/",
+      "baseIri" : "http://w3id.org/transmodel/kos/journeys",
+      "comment" : {
+        "en" : "Type of direction of a Vehicle Journey: inbound, outbound, clockwise or anticlockwise.",
+        "es" : "Tipo de dirección que toma un Viaje de un Vehículo: de entrada, de salida, en el sentido de las agujas del reloj, en el sentido contrario a las agujas del reloj."
+      },
+      "labels" : {
+        "en" : "type of direction",
+        "es" : "tipo de dirección"
+      }
+    }, {
+      "iri" : "http://w3id.org/transmodel/kos/journeys/day-type",
+      "baseIri" : "http://w3id.org/transmodel/kos/journeys",
+      "comment" : {
+        "en" : "Concept scheme where all the codelists for the types of datatype properties that are included in the Transmodel ontology"
+      },
+      "labels" : {
+        "IRI-based" : "day-type",
+        "en" : "day type"
+      }
+    }, {
+      "iri" : "http://w3id.org/transmodel/kos/journeys/stop-use-type/",
+      "baseIri" : "http://w3id.org/transmodel/kos/journeys",
+      "comment" : {
+        "en" : "Type of stop in a vehicle journey.",
+        "es" : "Tipo de parada en el viaje de un vehículo."
+      },
+      "labels" : {
+        "en" : "type of stop",
+        "es" : "tipo de parada"
+      }
+    } ],
+    "comment" : {
+      "en" : "A concept scheme may be defined to include concepts from different sources.",
+      "es" : "Un esquema de conceptos definido para incluir conceptos de distintas fuentes."
+    },
+    "attributes" : [ "external" ],
+    "id" : "99"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#StopPointInJourneyPattern",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StopPointInJourneyPattern",
+      "en" : "Stop Point In Journey Pattern",
+      "es" : "Parada en Patrón de Viaje"
+    },
+    "comment" : {
+      "en" : "A Point in Journey Pattern that is a Scheduled Stop Point",
+      "es" : "Un Punto en el Patrón de Viaje que se ve como una Parada Planificada"
+    },
+    "attributes" : [ "external" ],
+    "id" : "76",
+    "superClasses" : [ "72" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/sf#Point",
+    "baseIri" : "http://www.opengis.net/ont/sf",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/ont/geosparql#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "Geographic Point",
+      "es" : "Punto geográfico"
+    },
+    "comment" : {
+      "en" : "This class represents the top-level point type. This \tclass is equivalent to GFI_Point defined in ISO 19156, and it is superclass of all point types.",
+      "es" : "Se representa un tipo de punto de alto nivel. Esta clase es equivalente a GFI_Point definida en ISO 19156 y es superclase de todos los tipos de puntos."
+    },
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/org#Organization",
+    "equivalent" : [ "61" ],
+    "baseIri" : "http://www.w3.org/ns/org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organization",
+      "en" : "Organization",
+      "es" : "Organización"
+    },
+    "subClasses" : [ "61" ],
+    "comment" : {
+      "en" : "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_",
+      "es" : "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "91"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#Point",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Point",
+      "en" : "Point",
+      "es" : "Punto"
+    },
+    "subClasses" : [ "95", "70", "57" ],
+    "comment" : {
+      "en" : "A Point is a 0-dimensional Node of the Network used for the spatial description of the network. Point may be located by a Location",
+      "es" : "Un punto topológico tiene dimensión 0, es un nodo de la red de transporte usado para la descripción espacial de la red. Puede ser localizado por una Ubicación."
+    },
+    "attributes" : [ "external" ],
+    "id" : "58"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#HeadwayInterval",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HeadwayInterval",
+      "en" : "Headway Interval",
+      "es" : "Intervalo o frecuencia"
+    },
+    "comment" : {
+      "en" : "A time interval or a duration defining a headway period and characterizing HeadwayJourneyGroup",
+      "es" : "Un intervalo o duración determinada para una cabecera de línea que caracteriza el grupo de viajes desde cabecera de línea"
+    },
+    "attributes" : [ "external" ],
+    "id" : "124"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Sensor",
+      "en" : "Sensor"
+    },
+    "comment" : {
+      "en" : "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."
+    },
+    "attributes" : [ "external" ],
+    "id" : "146"
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#Organisation",
+    "equivalent" : [ "91" ],
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Organisation",
+      "en" : "Organisation",
+      "es" : "Organización"
+    },
+    "subClasses" : [ "60", "49" ],
+    "comment" : {
+      "en" : "A legally incorporated body associated with any aspect of the transport system",
+      "es" : "Una figura legal asociada con cualquier aspecto del sistema de transporte."
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "61",
+    "superClasses" : [ "91" ]
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#PropiedadMedicionTrafico",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PropiedadMedicionTrafico"
+    },
+    "id" : "8"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#ServiceCalendar",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ServiceCalendar",
+      "en" : "ServiceCalendar",
+      "es" : "Calendario de servicio"
+    },
+    "comment" : {
+      "en" : "A collection of DAY TYPE ASSIGNMENTs.",
+      "es" : "Un conjunto de tareas de un día tipo."
+    },
+    "attributes" : [ "external" ],
+    "id" : "119"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#DestinationDisplay",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DestinationDisplay",
+      "en" : "Destination Display",
+      "es" : "Anuncio del Destino"
+    },
+    "comment" : {
+      "en" : "An advertised destination of a specific Journey Pattern usually displayed on a headsign or other on-board locations",
+      "es" : "Un destino anunciado como un Patrón de Viaje específico normalmente mostrado en el frente del vehículo o en otros emplazamientos."
+    },
+    "attributes" : [ "external" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#DispositivoMedicionTrafico",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DispositivoMedicionTrafico"
+    },
+    "id" : "151"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#DayType",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DayType",
+      "en" : "DayType",
+      "es" : "Día Tipo"
+    },
+    "comment" : {
+      "en" : "A DayType is a type of day characterised by one or more properties which affect public transport operation",
+      "es" : "Un día tipo es un tipo de día caracterizado por una o más propiedades que afectan al transporte público"
+    },
+    "attributes" : [ "external" ],
+    "id" : "82"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#RoutePoint",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RoutePoint",
+      "en" : "Route Point",
+      "es" : "Punto de Ruta"
+    },
+    "comment" : {
+      "en" : "A Point used to define the shape of a Route through the network.",
+      "es" : "Un punto que se usa para definir la forma de una ruta por la red de transporte."
+    },
+    "attributes" : [ "external" ],
+    "id" : "95",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "154",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SpatialObject",
+      "en" : "Spatial Object",
+      "es" : "Objeto Espacial"
+    },
+    "subClasses" : [ "64", "5" ],
+    "comment" : {
+      "en" : "This class represents the top-level spatial object type. This class is equivalent to GFI_SpatialObject defined in ISO 19156, and it is superclass of all spatial object types.",
+      "es" : "Esta clase representa un tipo de objeto espacial de alto nivel. Es equivalente a GFI SpatialObject difinido en ISO 19156 y es una superclase de todos los tipos de objetos espaciales."
+    },
+    "attributes" : [ "external" ],
+    "id" : "65"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "es",
+        "value" : "Una idea o noción abstracta; una unidad de pensamiento.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An abstract idea or notion; a unit of thought.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2004-02-xx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept",
+      "es" : "Concepto"
+    },
+    "attributes" : [ "external" ],
+    "id" : "157"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "104",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "162",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "166",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "167",
+    "label" : {
+      "IRI-based" : "anyURI"
+    }
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#Place",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place",
+      "en" : "Place",
+      "es" : "Lugar"
+    },
+    "subClasses" : [ "68", "74" ],
+    "comment" : {
+      "en" : "A geographic Place of any type which may be specified as the origin or destination of a Trip. A Place may be represented as a Point (dimension 0), a Road section (dimension 1) or a Zone (dimension 2)",
+      "es" : "Un lugar geográfico de cualquier tipo que puede usarse como el origen o el destino de un Viaje. Debe representarse por un Punto (dimensión 0 en topología), una ruta (una dimensión en topología) o una zona (dos dimensiones en topología)."
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "68", "108", "55", "50" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "169",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "141",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "139",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "68", "119", "11", "82", "74", "2", "50" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#ObservacionTrafico",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObservacionTrafico"
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#PointInJourneyPattern",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointInJourneyPattern",
+      "en" : "Point In Journey Pattern",
+      "es" : "Punto en un Patrón de Viaje"
+    },
+    "subClasses" : [ "76" ],
+    "comment" : {
+      "en" : "A Scheduled Stop Point OR Timing Point in a Journey Pattern with its order in that Journey Pattern",
+      "es" : "Una Parada Programada o un Punto de Control en un patrón de viaje con su orden en ese patrón."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "176",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "179",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "68", "13", "55", "119", "11", "82" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "180"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "68", "13", "69", "11", "82", "74", "124", "81", "2" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "135"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#ScheduledStopPoint",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ScheduledStopPoint",
+      "en" : "Scheduled Stop Point",
+      "es" : "Parada Planificada"
+    },
+    "comment" : {
+      "en" : "A Scheduled Stop Point is a Point where a Passenger can board or alight from a Vehicle.",
+      "es" : "Una Parada Planificada es un Punto donde se puede tomar o dejar un vehículo."
+    },
+    "attributes" : [ "external" ],
+    "id" : "57",
+    "superClasses" : [ "58" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "132",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "178",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "184",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#Place",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "subClasses" : [ "21", "52" ],
+    "comment" : {
+      "en" : "A geographic place of any type which may be specified as the origin or destination of a trip. A PLACE may be represented as a POINT (dimension 0) , a road section (dimension 1) or a ZONE (dimension 2)."
+    },
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#PostalAddress",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PostalAddress",
+      "en" : "Postal Address",
+      "es" : "Dirección postal"
+    },
+    "comment" : {
+      "en" : "A postal address according to the esdir vocabulary.",
+      "es" : "Una dirección postal según el vocabulario esdir."
+    },
+    "id" : "16",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "196",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "199",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "161",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "156",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "145",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "159",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#PointOnRoute",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PointOnRoute",
+      "en" : "Point on Route",
+      "es" : "Punto en la ruta"
+    },
+    "comment" : {
+      "en" : "A Route Point used to define a Route with its order on that Route.",
+      "es" : "Un Punto de Ruta se usa para definir una Ruta con su orden en esa Ruta."
+    },
+    "attributes" : [ "external" ],
+    "id" : "71",
+    "superClasses" : [ "69" ]
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#IncidenciaPlanificada",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "IncidenciaPlanificada",
+      "en" : "Planned incidence",
+      "es" : "Incidencia planificada"
+    },
+    "comment" : {
+      "en" : "Planned traffic incidence",
+      "es" : "Incidencia planificada, puede ser recurrente o no"
+    },
+    "attributes" : [ "external" ],
+    "id" : "103",
+    "superClasses" : [ "97" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "208",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "209",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "210",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#JourneyPattern",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "JourneyPattern",
+      "en" : "JourneyPattern",
+      "es" : "Patrón de viaje"
+    },
+    "comment" : {
+      "en" : "Una lista ordenada de paradas planificadas y puntos de control en una ruta que describe el patrón de funcionamiento de los vehículos de transporte públicos. Un patrón de viaje puede pasar por el mismo punto más de una vez. El primer punto del patrón es el origen y el último punto el destino."
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "211",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "214",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "50" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "215"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "148",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "216",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#duration",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "150",
+    "label" : {
+      "IRI-based" : "duration"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "217",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#Presentation",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Presentation",
+      "en" : "Presentation",
+      "es" : "Presentación"
+    },
+    "comment" : {
+      "en" : "This class is used to represent a Line, or any other object, in a map",
+      "es" : "Se utiliza para representar una Línea o cualquier otro objeto en un mapa."
+    },
+    "attributes" : [ "external" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#TopographicPlace",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TopographicPlace"
+    },
+    "comment" : {
+      "en" : "A type of Place providing the topographical context when searching for or presenting travel information, for example as the origin or destination of a trip. It may be of any size (e.g. County,City, Town, Village) and of different specificity (e.g. Greater London, London, West End, Westminster, St James s)."
+    },
+    "id" : "21",
+    "superClasses" : [ "53" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "174",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#Parada",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Parada"
+    },
+    "id" : "221"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "223",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "113",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "171",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#LinkSequence",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LinkSequence",
+      "en" : "Link Sequence",
+      "es" : "Secuencia de enlaces"
+    },
+    "subClasses" : [ "55", "1" ],
+    "comment" : {
+      "en" : "An ordered sequence either of POINTs or of LINKs, defining a path through the network",
+      "es" : "Una secuencia ordenada de puntos o enlaces que definen una ruta a través de la red."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "198",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "213",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "201",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "106",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "224",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23Linea",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/autobus",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23Linea",
+      "en" : "Bus Line",
+      "es" : "Línea de autobús"
+    },
+    "comment" : {
+      "en" : "Line of the public transport service of urban buses",
+      "es" : "Línea del servicio público de transporte de autobuses urbanos"
+    },
+    "id" : "93",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "http://www.opengis.net/ont/geosparql#Geometry",
+    "baseIri" : "http://www.opengis.net/ont/geosparql",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.opengis.net/spec/geosparql",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Geometry",
+      "en" : "Geometry",
+      "es" : "Geometría"
+    },
+    "subClasses" : [ "4" ],
+    "comment" : {
+      "en" : "This class represents the top-level geometry type. This class is equivalent to GFI_Geometry defined in ISO 19156, and it is superclass of all geometry types.",
+      "es" : "Esta clase representa el tipo de geometría de alto nivel. Es equivalente a GFI_Geometry definida en ISO 19156 y es superclase de todos los tipos geométricos."
+    },
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "227",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "192",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "219",
+    "label" : {
+      "IRI-based" : "nonNegativeInteger"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "203",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "164",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/ObservableProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An observable quality (property, characteristic) of a FeatureOfInterest.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ObservableProperty",
+      "en" : "Observable Property"
+    },
+    "comment" : {
+      "en" : "An observable quality (property, characteristic) of a FeatureOfInterest."
+    },
+    "attributes" : [ "external" ],
+    "id" : "231"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#Zone",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone",
+      "en" : "Zone",
+      "es" : "Zona"
+    },
+    "subClasses" : [ "10" ],
+    "comment" : {
+      "en" : "A two-dimensional PLACE within the service area of a public transport operator (administrative zone, TARIFF ZONE, ACCESS ZONE, etc.).",
+      "es" : "La Zona es un Lugar (Place) de dos dimensiones que ese encuentra en el área que sirve un operador de transporte público. Puede ser una zona administrativa, una zona tarifaria, una zona de acceso o algo más concreto."
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "240",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "243",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23RealTimePassingTime",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23RealTimePassingTime",
+      "en" : "Waiting Time",
+      "es" : "Tiempo de Espera"
+    },
+    "comment" : {
+      "en" : "Waiting time up to date",
+      "es" : "Tiempo de espera actualizado"
+    },
+    "id" : "19",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "FeatureOfInterest",
+      "en" : "Feature Of Interest"
+    },
+    "comment" : {
+      "en" : "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."
+    },
+    "attributes" : [ "external" ],
+    "id" : "254"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "258",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "117",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "205",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "250",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "222",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "190",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "98",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "84",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "24",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "78",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "92",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "94",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "96",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "105",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "116",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "118",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "123",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "125",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "134",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "140",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "142",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "144",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "149",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "152",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "155",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "160",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "163",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "170",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "173",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "175",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "181",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "182",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "183",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "185",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "188",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "189",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "191",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "195",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "197",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "200",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "212",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "218",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "220",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "225",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "226",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "228",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "229",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "230",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "232",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "233",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "235",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "237",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "238",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "239",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "241",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "242",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "244",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "245",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "246",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "247",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "248",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "249",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "251",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "252",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "253",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "255",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "256",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "257",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "259",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "260",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "261",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "262",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "263",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "264",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "265",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "range" : "5",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observedProperty",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observedProperty",
+      "en" : "observed property",
+      "es" : "propiedad observada"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+      "es" : "Relación que enlaza la propiedad que se observa."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#date",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "date",
+      "en" : "Date",
+      "es" : "Fecha"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Date of a Day Type Assignment.",
+      "es" : "Fecha de una Asignación de Día Tipo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#qualifier",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "qualifier"
+    },
+    "maxCardinality" : "1",
+    "domain" : "21",
+    "comment" : {
+      "en" : "Name used to distinguish the topographic place from other similar named topographic places.  This should not be included in the Name but may be added by applications in context"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "24",
+    "subproperty" : [ "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#operating",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "operating",
+      "en" : "operating",
+      "es" : "operando"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "49",
+    "comment" : {
+      "en" : "This property points out what Lines are operated by what Operator",
+      "es" : "Esta propiedad señala qué Líneas están operadas por qué Operador."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "43"
+  }, {
+    "range" : "53",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "2",
+    "domain" : "55",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "range" : "61",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "range" : "61",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "65",
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "63"
+  }, {
+    "range" : "65",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "10",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "10",
+    "domain" : "74",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "72",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "53",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23panelElectronico",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "%23panelElectronico",
+      "en" : "Electronic Information Panel",
+      "es" : "Panel Electrónico Informativo"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "The Stop Place has an Electronic Information Panel to display information up to date of the waiting time and othe kind of information if necessary.",
+      "es" : "La Parada dispone de un Panel Electrónico Informativo que permite dar información actualizada de tiempos de llegada y otros."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#workedOn",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "workedOn",
+      "en" : "worked On",
+      "es" : "Opera en"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "81",
+    "comment" : {
+      "en" : "This property sets the relationship between Vehicle Journey and Day Type.",
+      "es" : "Relación entre el Viaje de un Vehículo y el Día Tipo."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://purl.org/dc/terms/created",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "84",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "created",
+      "en" : "Created",
+      "es" : "Creado"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "Date of creation of the resource.",
+      "es" : "Fecha de creación del recurso."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "83"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#presentedBy",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "presentedBy",
+      "en" : "presented by",
+      "es" : "Anunciada por"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "This property is used to connect a Line with its corresponding Presentation",
+      "es" : "Esta propiedad se utiliza para conectar una línea con su correspondiente forma de presentarse en Presentation, donde por ejemplo se indica eel color de línea o el color del texto."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#frontText",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "89",
+    "label" : {
+      "IRI-based" : "frontText",
+      "en" : "Front Text",
+      "es" : "Letrero de Cabecera"
+    },
+    "domain" : "88",
+    "comment" : {
+      "en" : "Displayed Text usually in the front of a Vehicle of the Public Transport Service.",
+      "es" : "Texto que se muestra normalmente en la parte frontal de un vehículo del servicio público de transporte."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "87"
+  }, {
+    "range" : "91",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "50",
+    "domain" : "93",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "58",
+    "domain" : "95",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "58",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#inScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "99",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a resource (for example a concept) to a concept scheme in which it is included.",
+        "type" : "label"
+      }, {
+        "identifier" : "definition",
+        "language" : "es",
+        "value" : "Relaciona un recurso, como por ejemplo un concepto, con un esquema de conceptos o taxonomía en el que se incluye.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "inScheme",
+      "en" : "It is in Scheme",
+      "es" : "En taxonomía"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "98",
+    "attributes" : [ "external", "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#departureTime",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "101",
+    "label" : {
+      "IRI-based" : "departureTime",
+      "en" : "Departure Time",
+      "es" : "Hora de salida"
+    },
+    "domain" : "81",
+    "comment" : {
+      "en" : "Departure time scheduled for a Vehicle Journey.",
+      "es" : "Hora de salida programada del viaje de un vehículo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "100"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#fechaFinPrevista",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "range" : "104",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fechaFinPrevista",
+      "en" : "(expected) end date",
+      "es" : "fecha de fin (prevista)"
+    },
+    "domain" : "103",
+    "comment" : {
+      "en" : "The end date and time of a planned\n\t    incidence (in ISO 8601 date format).",
+      "es" : "La fecha y hora prevista de\n\t    finalización de una incidencia planificada (en formato fecha ISO 8601)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://datos.ign.es/def/geo_core#yETRS89",
+    "baseIri" : "https://datos.ign.es/def/geo_core",
+    "range" : "106",
+    "annotations" : {
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "es",
+        "value" : "Catálogo de Objetos Geográficos BTN100.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "yETRS89",
+      "undefined" : "yETRS89"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Y-Coordinate in meters (ETRS89)",
+      "es" : "Coordenada Y en metros (ETRS89)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "105"
+  }, {
+    "iri" : "http://schema.org/alternateName",
+    "baseIri" : "http://schema.org",
+    "range" : "109",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "alternateName",
+      "en" : "Nombre alternativo",
+      "es" : "Alternate Name"
+    },
+    "domain" : "108",
+    "comment" : {
+      "en" : "Alternate name, alias or popular name of some Thing.",
+      "es" : "Nombre alternativo, popular o por el que se conoce a algo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#centre",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "113",
+    "label" : {
+      "IRI-based" : "centre"
+    },
+    "maxCardinality" : "1",
+    "domain" : "21",
+    "comment" : {
+      "en" : "whether topographic place lies at centre of settlement."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "112"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#on",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "on",
+      "en" : "on",
+      "es" : "en"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "This property connects the JourneyPattern with the Route where it works",
+      "es" : "Esta propiedad conecta el patrón de viaje con la ruta en la que trabaja."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#timedFrom",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "timedFrom",
+      "en" : "timedFrom",
+      "es" : "toma de tiempo"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "81",
+    "comment" : {
+      "en" : "The relationship between a sort of Journey and a sort of Timing Point",
+      "es" : "ToDo: Valorar si se trata de una medición SOSA para próxima versión"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "29"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#lastDayOffset",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "115",
+    "label" : {
+      "IRI-based" : "lastDayOffset",
+      "en" : "Last day offset",
+      "es" : "Ajuste de hora de la última salida"
+    },
+    "domain" : "110",
+    "comment" : {
+      "en" : "The offset time of ending of a Vehicle Journey.",
+      "es" : "La hora de ajuste del fin de un Viaje de un Vehículo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "114"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topDataProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "117",
+    "label" : {
+      "IRI-based" : "topDataProperty"
+    },
+    "domain" : "24",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "116"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#from",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "from",
+      "en" : "from",
+      "es" : "desde"
+    },
+    "domain" : "119",
+    "comment" : {
+      "en" : "This property allows describing the beginning of a Service Calendar",
+      "es" : "Esta propiedad permite describir el inicio de un calendario de servicio."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "118"
+  }, {
+    "iri" : "http://schema.org/address",
+    "baseIri" : "http://schema.org",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "address",
+      "en" : "Has Address",
+      "es" : "Dirección"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "68",
+    "comment" : {
+      "en" : "The address of a Stop Point",
+      "es" : "La dirección de una Parada."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#servingPTFor",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "servingPTFor",
+      "en" : "Serving Public Transport For",
+      "es" : "Sirve el Transporte Público para"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "49",
+    "comment" : {
+      "en" : "This property points out for with Authority is working for the Operator",
+      "es" : "Esta propiedad indica para qué Autoridad está trabajando la entidad operadora."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#addressLine1",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "122",
+    "label" : {
+      "IRI-based" : "addressLine1"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "121"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#determinedBy",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "124",
+    "label" : {
+      "IRI-based" : "determinedBy",
+      "en" : "determined By",
+      "es" : "determinado por"
+    },
+    "domain" : "110",
+    "comment" : {
+      "en" : "A Headway Journey Group determined by a Headway Interval",
+      "es" : "Un grupo de viajes de cabecera de línea con un intervalo desde cabecera de línea"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "123"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#viewedAs",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "58",
+    "label" : {
+      "IRI-based" : "viewedAs",
+      "en" : "viewed As",
+      "es" : "Se ve como"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "69",
+    "comment" : {
+      "en" : "This property allows connecting a Point in Link Sequence with the corresponding Point",
+      "es" : "Esta propiedad relaciona un Punto en una secuencia con un Punto ya que es una forma de verlo."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://schema.org/datePosted",
+    "baseIri" : "http://schema.org",
+    "range" : "126",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "datePosted",
+      "en" : "posted incidence date",
+      "es" : "fecha de publicación de incidencia"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "The end date and time of the incidence (in ISO 8601 date format).",
+      "es" : "La fecha y hora de publicación de una incidencia (en formato fecha ISO 8601)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "125"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasFeatureOfInterest",
+      "en" : "has Feature Of Interest",
+      "es" : "Aparece en"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "19",
+    "comment" : {
+      "en" : "The Observation esautob:RealTimePassingTime has a feature of Interest which is tmjourney:PointInLinkSequece",
+      "es" : "La observación esautob:RealTimePassingTime aparece en tmjourney:PointInLinkSequence."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#distanceFromStart",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "128",
+    "label" : {
+      "IRI-based" : "distanceFromStart",
+      "en" : "Distance from start",
+      "es" : "Distancia desde el inicio"
+    },
+    "cardinality" : "1",
+    "domain" : "69",
+    "comment" : {
+      "en" : "For a Point in a Link Sequence (or alike), this property represents the distance from the start of the corresponding Journey Pattern or alike.",
+      "es" : "Para un Punto en una Secuencia de enlaces (o similares), esta propiedad representa la distancia desde el comienzo del correspondiente Patrón de Viaje o similares."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#postCode",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "130",
+    "label" : {
+      "IRI-based" : "postCode"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "129"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#lastDepartureTime",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "132",
+    "label" : {
+      "IRI-based" : "lastDepartureTime",
+      "en" : "last departure time",
+      "es" : "última hora de salida"
+    },
+    "domain" : "110",
+    "comment" : {
+      "en" : "The time of ending of a Vehicle Journey.",
+      "es" : "La hora de fin de un Viaje de un Vehículo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "131"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#composedOf",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "110",
+    "label" : {
+      "IRI-based" : "composedOf",
+      "en" : "composed of",
+      "es" : "Se compone de"
+    },
+    "domain" : "81",
+    "comment" : {
+      "en" : "This property relates a Vehicle Journey with the Headway Journey Group which sets the first and last departure time.",
+      "es" : "Un Viaje de Vehículo compuesto de indicaciones de viaje en cabecera de línea donde se indican las salidas del primero y último viaje."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "133"
+  }, {
+    "iri" : "http://purl.org/dc/terms/identifier",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "136",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "identifier",
+      "en" : "Identifier",
+      "es" : "Identificador"
+    },
+    "domain" : "135",
+    "comment" : {
+      "en" : "An unambiguous reference to the resource within a given context.",
+      "es" : "Referencia inequívoca al recurso dentro de un contexto dado."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "134"
+  }, {
+    "iri" : "http://schema.org/name",
+    "baseIri" : "http://schema.org",
+    "range" : "139",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "Nombre",
+      "es" : "Name"
+    },
+    "maxCardinality" : "1",
+    "domain" : "138",
+    "comment" : {
+      "en" : "Name",
+      "es" : "Nombre"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "137"
+  }, {
+    "iri" : "http://schema.org/endDate",
+    "baseIri" : "http://schema.org",
+    "range" : "141",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "endDate",
+      "en" : "end date",
+      "es" : "fecha de fin"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "The end date and time of an incidence (in ISO 8601 date format).",
+      "es" : "La fecha y hora de finalización de\n\t    una incidencia (en formato fecha ISO 8601)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#aFunctionalCentroidFor",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "aFunctionalCentroidFor",
+      "en" : "aFunctionalCentroidFor",
+      "es" : "Un centroide funcional para"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "58",
+    "comment" : {
+      "en" : "This property allows connecting a Point with a Zone.",
+      "es" : "Esta propiedad permite la conexión de un Punto con una Zona."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#scheduledHeadwayInterval",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "143",
+    "label" : {
+      "IRI-based" : "scheduledHeadwayInterval",
+      "en" : "Scheduled Headway Interval",
+      "es" : "Frecuencia programada"
+    },
+    "domain" : "124",
+    "comment" : {
+      "en" : "The scheduled interval from Headway.",
+      "es" : "Intervalo/frecuencia programada desde cabecera."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#forBoarding",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "145",
+    "label" : {
+      "IRI-based" : "forBoarding",
+      "en" : "for Boarding",
+      "es" : "para subirse"
+    },
+    "domain" : "57",
+    "comment" : {
+      "en" : "This property allows describing whether the stop may be used for boarding",
+      "es" : "Esta propiedad indica si se puede montar en la parada."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "144"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#colour",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "range" : "148",
+    "label" : {
+      "IRI-based" : "colour",
+      "en" : "colour",
+      "es" : "color"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "The colour used to represent something with a Presentation (e.g., a Line)",
+      "es" : "Esta propiedad permite describir el color de algo que va en Presentación de información, como por ejemplo el color identificativo de una lína."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "147"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23expectedArrivalTime",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "150",
+    "label" : {
+      "IRI-based" : "%23expectedArrivalTime",
+      "en" : "Expected Arrival Time",
+      "es" : "Tiempo de llegada previsto"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Expecected arrival time of a Bus at a Stop Place, esautob:RealTimePassingTime.",
+      "es" : "Tiempo de llegada prevista para un autobús en una parada, duración de esautob:RealTimePassingTime"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "149"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#prescribing",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "prescribing",
+      "en" : "Prescribing",
+      "es" : "Prescribe"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "Un patrón de viaje que anuncia su destino de alguna forma"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23zona",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "153",
+    "annotations" : {
+      "domain" : [ {
+        "identifier" : "domain",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23zona",
+      "en" : "Zone",
+      "es" : "Zona"
+    },
+    "domain" : "24",
+    "comment" : {
+      "en" : "The Stop Place is part of a Zone.",
+      "es" : "Zona a la que pertenece la Parada."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "152"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23cabeceraLinea",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/autobus",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23cabeceraLinea",
+      "en" : "Line Head Stop Point",
+      "es" : "Cabecera de Línea"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "93",
+    "comment" : {
+      "en" : "Points out which stop point is the heading of the line.",
+      "es" : "Indica cuál es la parada de cabecera de la línea."
+    },
+    "attributes" : [ "object" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#firstDepartureTime",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "156",
+    "label" : {
+      "IRI-based" : "firstDepartureTime",
+      "en" : "First departure time",
+      "es" : "Primera hora de salida"
+    },
+    "domain" : "110",
+    "comment" : {
+      "en" : "The time of beginning of a Vehicle Journey.",
+      "es" : "La hora de inicio de un Viaje de un Vehículo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23finalLinea",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "68",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/autobus",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23finalLinea",
+      "en" : "Line End Stop Point",
+      "es" : "Final de Línea"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "93",
+    "comment" : {
+      "en" : "Points out which stop point is the end of the line.",
+      "es" : "Indica cuál es la parada de final de la línea."
+    },
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#earliestTime",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "159",
+    "label" : {
+      "IRI-based" : "earliestTime",
+      "en" : "Earliest Time",
+      "es" : "Hora más temprana"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Earliest time for the beginning of a service a certain Day Type.",
+      "es" : "Hora más temprana para el inicio de un servicio un cierto día tipo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "158"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#forAlighting",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "161",
+    "label" : {
+      "IRI-based" : "forAlighting",
+      "en" : "for Alighting",
+      "es" : "Para bajarse"
+    },
+    "domain" : "57",
+    "comment" : {
+      "en" : "This property allows describing whether the stop may be used for alighting.",
+      "es" : "Esta propiedad indica si la parada se puede usar para bajarse o no."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "160"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#to",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "164",
+    "label" : {
+      "IRI-based" : "to",
+      "en" : "to",
+      "es" : "hasta"
+    },
+    "domain" : "119",
+    "comment" : {
+      "en" : "This property allows describing the end of a Service Calendar",
+      "es" : "Esta propiedad permite describir el fin de un calendario de servicio."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "163"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#buildingName",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "buildingName"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Building name of POSTAL ADDRESS."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "170"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#definedBy",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "definedBy",
+      "en" : "defined By",
+      "es" : "definición por"
+    },
+    "domain" : "119",
+    "comment" : {
+      "en" : "This property sets the relationship between Service Calendar and Day Type Assignment",
+      "es" : "Establece la relación entre un Calendario de Servicio y la Asignación de Día Tipo."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "172"
+  }, {
+    "iri" : "http://w3id.org/transmodel/organisations#characterisedBy",
+    "baseIri" : "http://w3id.org/transmodel/organisations",
+    "range" : "111",
+    "label" : {
+      "IRI-based" : "characterisedBy",
+      "en" : "characterised by",
+      "es" : "caracterizada por"
+    },
+    "superproperty" : [ "33", "23" ],
+    "domain" : "61",
+    "comment" : {
+      "en" : "This property relates an Organisation with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint",
+      "es" : "Una organización tiene información de contacto. Es una subpropiedad de schema:contacPoint que aporta información de contacto para una persona u organización a través de la clase schema:ContactPoint."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#postCodeExtension",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "174",
+    "label" : {
+      "IRI-based" : "postCodeExtension"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "Post code extension"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "173"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#esRecurrente",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "range" : "162",
+    "label" : {
+      "IRI-based" : "esRecurrente",
+      "en" : "Recurrent incidence",
+      "es" : "Incidencia recurrente"
+    },
+    "domain" : "103",
+    "comment" : {
+      "en" : "This property allows describing whether there is a recurrence in the\n\t    incidence or not",
+      "es" : "Esta propiedad permite describir si la incidencia es recurrente o no."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "175"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#minimumHeadwayInterval",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "178",
+    "label" : {
+      "IRI-based" : "minimumHeadwayInterval",
+      "en" : "Minimum Headway Interval",
+      "es" : "Frecuencia mínima"
+    },
+    "domain" : "124",
+    "comment" : {
+      "en" : "The minimum interval from Headway.",
+      "es" : "Mínimo intervalo/frecuencia fijada desde cabecera."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "177"
+  }, {
+    "range" : "49",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
+    "range" : "99",
+    "domain" : "157",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "182"
+  }, {
+    "range" : "61",
+    "domain" : "60",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "183"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23wifi",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "186",
+    "label" : {
+      "IRI-based" : "%23wifi",
+      "en" : "WiFi",
+      "es" : "Wifi"
+    },
+    "domain" : "68",
+    "comment" : {
+      "en" : "The Stop Place has a public WiFi network.",
+      "es" : "La parada dispone de conexión Wifi pública."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "185"
+  }, {
+    "iri" : "http://schema.org/url",
+    "baseIri" : "http://schema.org",
+    "range" : "167",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "url",
+      "en" : "URL",
+      "es" : "URL"
+    },
+    "domain" : "168",
+    "comment" : {
+      "en" : "Dirección URL pública donde puedes obtener información de la entidad",
+      "es" : "Public URL where you can get some information from the entity"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "187"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/observes",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "observes",
+      "en" : "observes",
+      "es" : "Observa"
+    },
+    "domain" : "151",
+    "comment" : {
+      "en" : "Relation between a Sensor and an ObservableProperty that it is capable of sensing.",
+      "es" : "Relación entre un Sensor y una Propiedad Observada que es capaz de obtener observaciones."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "188"
+  }, {
+    "iri" : "http://schema.org/image",
+    "baseIri" : "http://schema.org",
+    "range" : "190",
+    "label" : {
+      "IRI-based" : "image",
+      "en" : "image"
+    },
+    "maxCardinality" : "1",
+    "domain" : "24",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "189"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "192",
+    "label" : {
+      "IRI-based" : "long",
+      "undefined" : "longitude"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Longitude in WGS84",
+      "es" : "Longitud en WGS84"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "191"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#numCarriles",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "range" : "154",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numCarriles",
+      "en" : "Traffic lanes",
+      "es" : "Carriles de circulación"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "Number of lanes of traffic",
+      "es" : "Número de carriles de circulación"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "193"
+  }, {
+    "iri" : "http://schema.org/email",
+    "baseIri" : "http://schema.org",
+    "range" : "176",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "email",
+      "en" : "E-mail",
+      "es" : "Correo electrónico"
+    },
+    "domain" : "108",
+    "comment" : {
+      "en" : "E-mail from Contact Point",
+      "es" : "Correo electrónico de información."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "194"
+  }, {
+    "iri" : "http://schema.org/contactPoint",
+    "baseIri" : "http://schema.org",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "contactPoint",
+      "en" : "Contact Point",
+      "es" : "Punto de Información"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "61",
+    "subproperty" : [ "25" ],
+    "comment" : {
+      "en" : "A contact point for a person or organization.",
+      "es" : "Un Punto de Información de Contacto para una persona u organización."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://schema.org/telephone",
+    "baseIri" : "http://schema.org",
+    "range" : "165",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "telephone",
+      "en" : "Telephone",
+      "es" : "Teléfono"
+    },
+    "domain" : "108",
+    "comment" : {
+      "en" : "Telephone to contact and get some information from the entity ",
+      "es" : "Teléfono de información y contacto con la entidad"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#houseNumber",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "198",
+    "label" : {
+      "IRI-based" : "houseNumber"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "attributes" : [ "datatype" ],
+    "id" : "197"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#Province",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "201",
+    "label" : {
+      "IRI-based" : "Province"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "Post code"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "200"
+  }, {
+    "iri" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
+    "baseIri" : "http://www.w3.org/2003/01/geo/wgs84_pos",
+    "range" : "203",
+    "label" : {
+      "IRI-based" : "lat",
+      "undefined" : "latitude"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Latitude in WGS84",
+      "es" : "Latitud en WGS84"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "202"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#maximumHeadwayInterval",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "184",
+    "label" : {
+      "IRI-based" : "maximumHeadwayInterval",
+      "en" : "Maximum Headway Interval",
+      "es" : "Frecuencia máxima"
+    },
+    "domain" : "124",
+    "comment" : {
+      "en" : "The maximum interval from Headway.",
+      "es" : "Máximo intervalo/frecuencia fijada desde cabecera."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "204"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#stopUse",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "205",
+    "label" : {
+      "IRI-based" : "stopUse",
+      "en" : "stop Use",
+      "es" : "función de la parada"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "76",
+    "comment" : {
+      "en" : "This property allows describing the type of use of a stop (e.g., access, interchange only, pass through)",
+      "es" : "Permite la descripción del tipo de uso de una parada: acceso, intercambio, de paso, etc."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "https://datos.ign.es/def/geo_core#xETRS89",
+    "baseIri" : "https://datos.ign.es/def/geo_core",
+    "range" : "207",
+    "annotations" : {
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "es",
+        "value" : "Catálogo de Objetos Geográficos BTN100.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "xETRS89",
+      "undefined" : "xETRS89"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "X-Coordinate in meters (ETRS89)",
+      "es" : "Coordenada X en metros (ETRS89)"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "206"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#evenNumberRange",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "213",
+    "label" : {
+      "IRI-based" : "evenNumberRange"
+    },
+    "maxCardinality" : "1",
+    "domain" : "17",
+    "comment" : {
+      "en" : "Even number range of ADDRESS on road."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "212"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#order",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "219",
+    "label" : {
+      "IRI-based" : "order",
+      "en" : "Order",
+      "es" : "Orden"
+    },
+    "cardinality" : "1",
+    "domain" : "69",
+    "comment" : {
+      "en" : "Order of a Point in Link Sequence, or in a Point on Route within sequence, or in any other type of situation where the order or points are relevant",
+      "es" : "Orden de un Punto en una Secuencia de Enlaces (Link Sequence) y por tanto de un Punto en una Ruta o en cualquier otra estructura similar."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "218"
+  }, {
+    "iri" : "http://schema.org/startDate",
+    "baseIri" : "http://schema.org",
+    "range" : "166",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "startDate",
+      "en" : "(expected) start date",
+      "es" : "fecha de inicio (prevista)"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "The start date and time of an incidence (in ISO 8601 date format).",
+      "es" : "La fecha y hora de inicio de una incidencia (en formato fecha ISO 8601)."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "220"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#directionType",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "222",
+    "label" : {
+      "IRI-based" : "directionType",
+      "en" : "Direction Type",
+      "es" : "Tipo de Dirección"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "55",
+    "comment" : {
+      "en" : "This property allows describing the type of direction for a Route",
+      "es" : "Esta propiedad permite describir el tipo de dirección para una Ruta."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#specifying",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "specifying",
+      "en" : "specifying",
+      "es" : "especifica"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "13",
+    "comment" : {
+      "en" : "La asignación de características operativas expresadas en Día Tipo a un Día Operativo particular dentro de un Calendario de Servicio."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#oddNumberRange",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "223",
+    "label" : {
+      "IRI-based" : "oddNumberRange"
+    },
+    "maxCardinality" : "1",
+    "domain" : "17",
+    "comment" : {
+      "en" : "Odd number range of ADDRESS."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "225"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#town",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "217",
+    "label" : {
+      "IRI-based" : "town"
+    },
+    "maxCardinality" : "1",
+    "domain" : "16",
+    "comment" : {
+      "en" : "Town of postal address."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "226"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#madeUsing",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "madeUsing",
+      "en" : "made Using",
+      "es" : "se hace con"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "This property connects some classes to other classes that makes its behaviour possible",
+      "es" : "Esta propiedad conecta algunas clases con otras que hacen posible su funcionamiento."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://purl.org/dc/terms/description",
+    "baseIri" : "http://purl.org/dc/terms",
+    "range" : "179",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/dc/terms/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "description",
+      "en" : "Description",
+      "es" : "Descripción"
+    },
+    "domain" : "180",
+    "comment" : {
+      "en" : "A description of the resource within a given context.",
+      "es" : "Una descripción del recurso dentro de un contexto dado."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "228"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#includedIn",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "74",
+    "label" : {
+      "IRI-based" : "includedIn",
+      "en" : "Included In",
+      "es" : "Incluida en"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "57",
+    "comment" : {
+      "en" : "A Scheduled Stop Point can be next to other Stop Points so they can be included in a Stop Area.",
+      "es" : "Una Parada Programada (Scheduled Stop Point) puede estar próxima a otras por lo que pueden todas ellas formas parte de una zona de Paradas."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#distance",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "208",
+    "label" : {
+      "IRI-based" : "distance",
+      "en" : "Distance",
+      "es" : "Distancia"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Total distance for a Line or a Route like.",
+      "es" : "Distancia total para una Línea o una Ruta o similares."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "229"
+  }, {
+    "range" : "64",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "230"
+  }, {
+    "range" : "64",
+    "domain" : "68",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "97",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "108",
+    "domain" : "111",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "69",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "235"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#isAvailable",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "196",
+    "label" : {
+      "IRI-based" : "isAvailable",
+      "en" : "Is Available",
+      "es" : "Disponibilidad"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Property to state whether the Day Type Assignment is available or not.",
+      "es" : "Propiedad que determina si una Asignación de Día Tipo está disponible o no.."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "236"
+  }, {
+    "range" : "69",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
+    "range" : "69",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "238"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#colour",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "range" : "240",
+    "label" : {
+      "IRI-based" : "colour",
+      "en" : "colour",
+      "es" : "color"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "The colour used to represent something with a Presentation (e.g., a Line)",
+      "es" : "Esta propiedad permite describir el color de algo que va en Presentación de información, como por ejemplo el color identificativo de una lína."
+    },
+    "attributes" : [ "datatype", "external", "allValues" ],
+    "id" : "239"
+  }, {
+    "iri" : "http://schema.org/legalName",
+    "baseIri" : "http://schema.org",
+    "range" : "169",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "legalName",
+      "en" : "Nombre legal",
+      "es" : "Legal Name"
+    },
+    "domain" : "108",
+    "comment" : {
+      "en" : "Legal Name",
+      "es" : "Nombre legal"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "241"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#textColour",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "range" : "243",
+    "label" : {
+      "IRI-based" : "textColour",
+      "en" : "text colour",
+      "es" : "color de texto"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "The colour used to represent the text associated to something with a Presentation (e.g., a Line)",
+      "es" : "El color que se usa para representar el texto asociado con una Presentación, por ejemplo de una línea."
+    },
+    "attributes" : [ "datatype", "external", "allValues" ],
+    "id" : "242"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#journeyDuration",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "199",
+    "label" : {
+      "IRI-based" : "journeyDuration",
+      "en" : "Journey Duration",
+      "es" : "Duración del viaje"
+    },
+    "domain" : "81",
+    "comment" : {
+      "en" : "Journey duration scheduled for a Vehicle Journey.",
+      "es" : "Duración programada del viaje de un vehículo."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "244"
+  }, {
+    "range" : "93",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "245"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#presentedBy",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "86",
+    "label" : {
+      "IRI-based" : "presentedBy",
+      "en" : "presented by",
+      "es" : "Anunciada por"
+    },
+    "domain" : "50",
+    "comment" : {
+      "en" : "This property is used to connect a Line with its corresponding Presentation",
+      "es" : "Esta propiedad se utiliza para conectar una línea con su correspondiente forma de presentarse en Presentation, donde por ejemplo se indica eel color de línea o el color del texto."
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "246"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#madeUpOf",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "madeUpOf",
+      "en" : "made Up Of",
+      "es" : "compuesto por"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "Relationship between entities made up of other entities",
+      "es" : "Relación entre entidades hechas de otras entidades."
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "247"
+  }, {
+    "iri" : "http://w3id.org/transmodel/journeys#prescribing",
+    "baseIri" : "http://w3id.org/transmodel/journeys",
+    "range" : "88",
+    "label" : {
+      "IRI-based" : "prescribing",
+      "en" : "Prescribing",
+      "es" : "Prescribe"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "72",
+    "comment" : {
+      "en" : "Un patrón de viaje que anuncia su destino de alguna forma"
+    },
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "248"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#street",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "250",
+    "label" : {
+      "IRI-based" : "street"
+    },
+    "maxCardinality" : "1",
+    "domain" : "24",
+    "comment" : {
+      "en" : "Street name of postal address."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "249"
+  }, {
+    "range" : "221",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "251"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#recurrencia",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "range" : "211",
+    "label" : {
+      "IRI-based" : "recurrencia",
+      "en" : "Recurrence",
+      "es" : "Recurrencia"
+    },
+    "domain" : "103",
+    "comment" : {
+      "en" : "This property allows describing the recurrence",
+      "es" : "Esta propiedad permite describir la recurrencia."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "252"
+  }, {
+    "range" : "68",
+    "domain" : "97",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
+  }, {
+    "range" : "15",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "255"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/resultTime",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "227",
+    "label" : {
+      "IRI-based" : "resultTime",
+      "en" : "Phenomenon Time",
+      "es" : "Hora Observación"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "This property sets the dateTime of the observation",
+      "es" : "Esta propiedad establece la fecha/hora de la observación."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "256"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#shortName",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "range" : "210",
+    "label" : {
+      "IRI-based" : "shortName",
+      "en" : "Short Name",
+      "es" : "Nombre corto"
+    },
+    "domain" : "215",
+    "comment" : {
+      "en" : "Short name for an entity",
+      "es" : "Nombre corto para algo que lo necesite"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "257"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23afectadaPorIncidencia",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/autobus",
+        "type" : "iri"
+      } ],
+      "domain" : [ {
+        "identifier" : "domain",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23afectadaPorIncidencia",
+      "en" : "line affected by an incidence",
+      "es" : "línea afectada por incidencia"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "258",
+    "comment" : {
+      "en" : "Relationship of a line affected by an incidence.",
+      "es" : "Relación de una línea que está afectada por una incidencia."
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#%23generadoPorIncidencia",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "97",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/autobus",
+        "type" : "iri"
+      } ],
+      "domain" : [ {
+        "identifier" : "domain",
+        "language" : "undefined",
+        "value" : "",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "%23generadoPorIncidencia",
+      "en" : "JourneyPattern generated by an Incidenceline affected by an incidence",
+      "es" : "patrón de ruta generado por Incidencia"
+    },
+    "superproperty" : [ "23" ],
+    "domain" : "258",
+    "comment" : {
+      "en" : "Relationship of a JourneyPattern of a Route which has been created by an Incidence.",
+      "es" : "Relación de un patrón de viaje de una ruta que se ha creado por una incidencia."
+    },
+    "attributes" : [ "object" ],
+    "id" : "45"
+  }, {
+    "range" : "18",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "259"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#bearingDegrees",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "224",
+    "label" : {
+      "IRI-based" : "bearingDegrees"
+    },
+    "maxCardinality" : "1",
+    "domain" : "17",
+    "comment" : {
+      "en" : "bearing in degrees at point of address."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "261"
+  }, {
+    "iri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico#numSentidos",
+    "baseIri" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+    "range" : "214",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://vocab.ciudadesabiertas.es/def/transporte/trafico",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numSentidos",
+      "en" : "Street directions",
+      "es" : "Sentidos de circulación"
+    },
+    "domain" : "97",
+    "comment" : {
+      "en" : "Number of directions of traffic",
+      "es" : "Número de sentidos de circulación"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "262"
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/madeBySensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "range" : "151",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/sosa/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "madeBySensor",
+      "en" : "made by sensor",
+      "es" : "realizada por sensor"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Relación entre una Observación y un Sensor que realiza la Observación.",
+      "es" : "Relation between an Observation and the Sensor which made the Observation."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "263"
+  }, {
+    "iri" : "https://w3id.org/transmodel/core#roadNumber",
+    "baseIri" : "https://w3id.org/transmodel/core",
+    "range" : "216",
+    "label" : {
+      "IRI-based" : "roadNumber"
+    },
+    "maxCardinality" : "1",
+    "domain" : "17",
+    "attributes" : [ "datatype" ],
+    "id" : "264"
+  }, {
+    "iri" : "http://w3id.org/transmodel/commons#textColour",
+    "baseIri" : "http://w3id.org/transmodel/commons",
+    "range" : "209",
+    "label" : {
+      "IRI-based" : "textColour",
+      "en" : "text colour",
+      "es" : "color de texto"
+    },
+    "domain" : "86",
+    "comment" : {
+      "en" : "The colour used to represent the text associated to something with a Presentation (e.g., a Line)",
+      "es" : "El color que se usa para representar el texto asociado con una Presentación, por ejemplo de una línea."
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "265"
+  } ]
+}
