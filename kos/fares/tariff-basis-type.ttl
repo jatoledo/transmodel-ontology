@@ -5,7 +5,6 @@
 
 <https://w3id.org/transmodel/kos/fares/tariff-basis-type> a skos:ConceptScheme;
   dcterms:creator "Jhon Toledo Barreto (OEG - Universidad Politécnica de Madrid)"@es ;
-  determs:date "2021-04-20"@en ;
   dct:description "Tariff basis to be used for the element."@en;
   dct:title "Tariff Basis"@en;
   skos:definition "Tariff Basis Type"@en ;
