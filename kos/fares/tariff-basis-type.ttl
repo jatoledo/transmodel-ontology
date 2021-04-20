@@ -1,0 +1,90 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> a skos:ConceptScheme;
+  dcterms:creator "Jhon Toledo Barreto (OEG - Universidad Politécnica de Madrid)"@es ;
+  determs:date "2021-04-20"@en ;
+  dct:description "Tariff basis to be used for the element."@en;
+  dct:title "Tariff Basis"@en;
+  skos:definition "Tariff Basis Type"@en ;
+  skos:hasTopConcept <https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance>, <https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/free>, <https://w3id.org/transmodel/kos/fares/tariff-basis-type/group>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/other>, <https://w3id.org/transmodel/kos/fares/tariff-basis-type/period>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint>, <https://w3id.org/transmodel/kos/fares/tariff-basis-type/route>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour>, <https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone>,
+    <https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> a skos:Concept;
+  skos:definition "Tariff is flat i.e. not based on spatial elements."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "flat"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> a skos:Concept;
+  skos:definition "Tariff is based on spatial distance."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "distance"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> a skos:Concept;
+  skos:definition "Tariff is based on use of specified zones."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "zone"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> a skos:Concept;
+  skos:definition "Tariff is based on specified zone to zone transitions."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "zoneToZone"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> a skos:Concept;
+  skos:definition "Tariff is based on specified point to point transitions."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "pointToPoint"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> a skos:Concept;
+  skos:definition "Tariff is based on specific routes, eg. for SERIES CONSTRAINTs."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "route"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> a skos:Concept;
+  skos:definition "Tariff is based on a specific tour."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "tour"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> a skos:Concept;
+  skos:definition "Tariff is based on size of group."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "group"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> a skos:Concept;
+  skos:definition "Tariff is for discount rates."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "discount"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> a skos:Concept;
+  skos:definition "Tariff is based on temporal durtaions, e.g minutes or days of travel."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "period"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> a skos:Concept;
+  skos:definition "Tariff is free to user."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "free"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> a skos:Concept;
+  skos:definition "Other Tariff Basis."@en;
+  skos:inScheme <https://w3id.org/transmodel/kos/fares/tariff-basis-type>;
+  skos:prefLabel "other"@en;
+  skos:topConceptOf <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
