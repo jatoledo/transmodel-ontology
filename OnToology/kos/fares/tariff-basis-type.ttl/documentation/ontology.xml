@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:creator xml:lang="es">Jhon Toledo Barreto (OEG - Universidad Politécnica de Madrid)</terms:creator>
+        <terms:description xml:lang="en">Tariff basis to be used for the element.</terms:description>
+        <terms:title xml:lang="en">Tariff Basis</terms:title>
+        <skos:definition xml:lang="en">Tariff Basis Type</skos:definition>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/free"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/group"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/other"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/period"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/route"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone"/>
+        <skos:hasTopConcept rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is for discount rates.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">discount</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on spatial distance.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">distance</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is flat i.e. not based on spatial elements.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">flat</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/free -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/free">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is free to user.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">free</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/group -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/group">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on size of group.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">group</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/other -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/other">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Other Tariff Basis.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">other</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/period -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/period">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on temporal durtaions, e.g minutes or days of travel.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">period</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on specified point to point transitions.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">pointToPoint</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/route -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/route">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on specific routes, eg. for SERIES CONSTRAINTs.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">route</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on a specific tour.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">tour</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on use of specified zones.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">zone</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Tariff is based on specified zone to zone transitions.</skos:definition>
+        <skos:inScheme rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+        <skos:prefLabel xml:lang="en">zoneToZone</skos:prefLabel>
+        <skos:topConceptOf rdf:resource="https://w3id.org/transmodel/kos/fares/tariff-basis-type"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

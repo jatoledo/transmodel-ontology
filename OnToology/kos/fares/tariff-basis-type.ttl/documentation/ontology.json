@@ -1,0 +1,282 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@language" : "es",
+    "@value" : "Jhon Toledo Barreto (OEG - Universidad Politécnica de Madrid)"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Tariff basis to be used for the element."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Tariff Basis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff Basis Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/free"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/group"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/other"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/period"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/route"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone"
+  }, {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is for discount rates."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "discount"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on spatial distance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "distance"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is flat i.e. not based on spatial elements."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "flat"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/free",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is free to user."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "free"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on size of group."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "group"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/other",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Other Tariff Basis."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "other"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/period",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on temporal durtaions, e.g minutes or days of travel."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "period"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on specified point to point transitions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "pointToPoint"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/route",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on specific routes, eg. for SERIES CONSTRAINTs."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "route"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on a specific tour."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "tour"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on use of specified zones."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "zone"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+}, {
+  "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tariff is based on specified zone to zone transitions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "zoneToZone"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+  } ]
+} ]

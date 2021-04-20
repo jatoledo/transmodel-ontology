@@ -1,0 +1,175 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://purl.org/dc/terms/creator> "Jhon Toledo Barreto (OEG - Universidad Politécnica de Madrid)"@es .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://purl.org/dc/terms/description> "Tariff basis to be used for the element."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://purl.org/dc/terms/title> "Tariff Basis"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#definition> "Tariff Basis Type"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is for discount rates."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/2004/02/skos/core#prefLabel> "discount"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/discount> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on spatial distance."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/2004/02/skos/core#prefLabel> "distance"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/distance> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is flat i.e. not based on spatial elements."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/2004/02/skos/core#prefLabel> "flat"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/flat> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/free
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is free to user."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/2004/02/skos/core#prefLabel> "free"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/free> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/group
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on size of group."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/2004/02/skos/core#prefLabel> "group"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/group> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/other
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/2004/02/skos/core#definition> "Other Tariff Basis."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/2004/02/skos/core#prefLabel> "other"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/other> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/period
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on temporal durtaions, e.g minutes or days of travel."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/2004/02/skos/core#prefLabel> "period"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/period> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on specified point to point transitions."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "pointToPoint"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/pointToPoint> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/route
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on specific routes, eg. for SERIES CONSTRAINTs."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/2004/02/skos/core#prefLabel> "route"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/route> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on a specific tour."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/2004/02/skos/core#prefLabel> "tour"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/tour> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on use of specified zones."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/2004/02/skos/core#prefLabel> "zone"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zone> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/2004/02/skos/core#definition> "Tariff is based on specified zone to zone transitions."@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/2004/02/skos/core#prefLabel> "zoneToZone"@en .
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type/zoneToZone> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
