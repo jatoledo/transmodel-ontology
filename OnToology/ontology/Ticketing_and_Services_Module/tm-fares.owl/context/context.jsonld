@@ -1,0 +1,118 @@
+{
+  "@context" : {
+    "fareType" : {
+      "@id" : "https://w3id.org/transmodel/fares#fareType",
+      "@type" : "@id"
+    },
+    "describedThrough" : {
+      "@id" : "https://w3id.org/transmodel/fares#describedThrough",
+      "@type" : "@id"
+    },
+    "governedBy" : {
+      "@id" : "https://w3id.org/transmodel/fares#governedBy",
+      "@type" : "@id"
+    },
+    "Line" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Line"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "privateCode" : {
+      "@id" : "https://w3id.org/transmodel/fares#privateCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "returnFareTwiceSingle" : {
+      "@id" : "https://w3id.org/transmodel/fares#returnFareTwiceSingle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "FarePrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#FarePrice"
+    },
+    "Organisation" : {
+      "@id" : "https://w3id.org/transmodel/organisations#Organisation"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/transmodel/fares#author"
+    },
+    "mbox" : {
+      "@id" : "https://w3id.org/transmodel/fares#mbox"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "ContactDetails" : {
+      "@id" : "https://w3id.org/transmodel/organisations#ContactDetails"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/transmodel/fares#name"
+    },
+    "BookingArrangements" : {
+      "@id" : "https://w3id.org/transmodel/fares#BookingArrangements"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "FlexibleLine" : {
+      "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "ClassOfUse" : {
+      "@id" : "https://w3id.org/transmodel/fares#ClassOfUse"
+    },
+    "DistributionChannel" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistributionChannel"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "contactPoint" : {
+      "@id" : "http://schema.org/contactPoint",
+      "@type" : "@id"
+    },
+    "tariffBasis" : {
+      "@id" : "https://w3id.org/transmodel/fares#tariffBasis",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "distributionChannelType" : {
+      "@id" : "https://w3id.org/transmodel/fares#distributionChannelType",
+      "@type" : "@id"
+    },
+    "FareStructureElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareStructureElement"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    }
+  }
+}
