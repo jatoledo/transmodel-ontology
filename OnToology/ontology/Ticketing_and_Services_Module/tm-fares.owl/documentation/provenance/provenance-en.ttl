@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/transmodel/fares/0.3> a prov:Entity;
+	 dc:title "Transmodel Ontology - Fares";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
+:agent0 a prov:Agent; foaf:name "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)".
+:agent1 a prov:Agent; foaf:name "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid".
+:agent2 a prov:Agent; foaf:name "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)".
