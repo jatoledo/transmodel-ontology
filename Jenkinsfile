@@ -159,5 +159,14 @@ pipeline {
         }
       }
     }
+
+    stage('loadData') {
+       steps {
+          script{
+            sh"/home/jtoledo/load_ontology_data_oeg4.sh"
+
+          }
+       }
+    }
   }
 }
