@@ -23,7 +23,7 @@
     <owl:Ontology rdf:about="https://w3id.org/transmodel/fares#">
         <owl:versionIRI rdf:resource="https://w3id.org/transmodel/fares/0.3"/>
         <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:creator>Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
+        <dc:creator>Jhon Toledo Barreto (Ontology Engienering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:creator>Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid</dc:creator>
         <dc:creator>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dc:creator>
         <dc:date>2021-04-20</dc:date>
