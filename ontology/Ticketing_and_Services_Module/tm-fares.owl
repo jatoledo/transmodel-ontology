@@ -593,8 +593,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
     <rdf:Description>
-        <mbox xml:lang="en">adolfo.anton.bravo@upm.es</mbox>
-        <name xml:lang="en">Adolfo Anton-Bravo</name>
+        <mbox xml:lang="en">ja.toledo@upm.es</mbox>
+        <name xml:lang="en">Jhon Toledo Barreto</name>
     </rdf:Description>
     
 
