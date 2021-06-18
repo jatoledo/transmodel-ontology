@@ -1,0 +1,1222 @@
+@prefix : <https://w3id.org/transmodel/fares#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/transmodel/fares#> .
+
+<https://w3id.org/transmodel/fares#> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/transmodel/fares/0.3> ;
+                                      <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+                                      <http://purl.org/dc/elements/1.1/creator> "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" ,
+                                                                                "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid" ,
+                                                                                "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" ;
+                                      <http://purl.org/dc/elements/1.1/date> "2021-04-20" ;
+                                      <http://purl.org/dc/elements/1.1/description> "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                      <http://purl.org/dc/elements/1.1/identifier> "https://w3id.org/transmodel/fares" ;
+                                      <http://purl.org/dc/elements/1.1/rights> "Creative Commons Attribution 4.0 International (CC BY 4.0)" ;
+                                      <http://purl.org/dc/elements/1.1/title> "Transmodel Ontology - Fares"@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/transmodel/fares#> ;
+                                      rdfs:comment "Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                      rdfs:label "Transmodel Ontology - Fares"@en ;
+                                      rdfs:seeAlso "https://github.com/oeg-upm/transmodel-ontology"@en ;
+                                      owl:versionInfo "This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/fares#author
+:author rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/fares#creator
+:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/fares#description
+:description rdf:type owl:AnnotationProperty ;
+             rdfs:range rdfs:Literal .
+
+
+###  https://w3id.org/transmodel/fares#mbox
+:mbox rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/transmodel/fares#name
+:name rdf:type owl:AnnotationProperty ;
+      rdfs:range rdfs:Literal .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/contactPoint
+<http://schema.org/contactPoint> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/fares#aChainOf
+:aChainOf rdf:type owl:ObjectProperty ;
+          rdfs:label "aChainOf"@en .
+
+
+###  https://w3id.org/transmodel/fares#composedOf
+:composedOf rdf:type owl:ObjectProperty ;
+            rdfs:label "composedOf"@en .
+
+
+###  https://w3id.org/transmodel/fares#definedBy
+:definedBy rdf:type owl:ObjectProperty ;
+           rdfs:label "definedBy"@en .
+
+
+###  https://w3id.org/transmodel/fares#describedThrough
+:describedThrough rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://schema.org/contactPoint> ;
+                  rdfs:domain :DistributionChannel .
+
+
+###  https://w3id.org/transmodel/fares#distributionChannelType
+:distributionChannelType rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DistributionChannel ;
+                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                             owl:hasValue <https://w3id.org/transmodel/kos/fares/distribution-channel-type>
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] .
+
+
+###  https://w3id.org/transmodel/fares#endOf
+:endOf rdf:type owl:ObjectProperty ;
+       rdfs:label "endOf"@en .
+
+
+###  https://w3id.org/transmodel/fares#fareType
+:fareType rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/transmodel/fares#governedBy
+:governedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :DistributionChannel ;
+            rdfs:range <https://w3id.org/transmodel/organisations#Organisation> .
+
+
+###  https://w3id.org/transmodel/fares#relatedTo
+:relatedTo rdf:type owl:ObjectProperty ;
+           rdfs:label "relatedTo"@en .
+
+
+###  https://w3id.org/transmodel/fares#startOf
+:startOf rdf:type owl:ObjectProperty ;
+         rdfs:label "startOf"@en .
+
+
+###  https://w3id.org/transmodel/fares#tariffBasis
+:tariffBasis rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :fareType ;
+             rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                 owl:hasValue <https://w3id.org/transmodel/kos/fares/tariff-basis-type>
+                                               ]
+                                             ) ;
+                          rdf:type owl:Class
+                        ] .
+
+
+###  https://w3id.org/transmodel/fares#viewedAs
+:viewedAs rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/transmodel/fares#accessNumber
+:accessNumber rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Access number in sequence."@en ;
+              rdfs:label "accessNumber"@en .
+
+
+###  https://w3id.org/transmodel/fares#amount
+:amount rdf:type owl:DatatypeProperty ;
+        rdfs:domain :FarePrice ;
+        rdfs:range xsd:float ;
+        rdfs:comment "Price in a specified currency."@en ;
+        rdfs:label "amount"@en .
+
+
+###  https://w3id.org/transmodel/fares#discountAmount
+:discountAmount rdf:type owl:DatatypeProperty ;
+                rdfs:domain :FarePrice ;
+                rdfs:range xsd:float ;
+                rdfs:comment "Discount given, if any, in a specified currency."@en ;
+                rdfs:label "discountAmount"@en .
+
+
+###  https://w3id.org/transmodel/fares#discountPercentageUsed
+:discountPercentageUsed rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :FarePrice ;
+                        rdfs:range xsd:float ;
+                        rdfs:comment "Discount percentage  used, if any when deriving price."@en ;
+                        rdfs:label "discountPercentageUsed"@en .
+
+
+###  https://w3id.org/transmodel/fares#embargoUntilDate
+:embargoUntilDate rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Data is to be kept private until the stated date."@en ;
+                  rdfs:label "embargoUntilDate"@en .
+
+
+###  https://w3id.org/transmodel/fares#endDate
+:endDate rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "End date for price validity."@en ;
+         rdfs:label "endDate"@en .
+
+
+###  https://w3id.org/transmodel/fares#endGeographicalValue
+:endGeographicalValue rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "End value for Geographical Interval."@en ;
+                      rdfs:label "endGeographicalValue"@en .
+
+
+###  https://w3id.org/transmodel/fares#infoUrl
+:infoUrl rdf:type owl:DatatypeProperty ;
+         rdfs:comment "Link for product information."@en ;
+         rdfs:label "InfoUrl"@en .
+
+
+###  https://w3id.org/transmodel/fares#isAllowed
+:isAllowed rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "Whether the fare price is allowed. default is true."@en ;
+           rdfs:label "isAllowed"@en .
+
+
+###  https://w3id.org/transmodel/fares#isFirstInSequence
+:isFirstInSequence rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "Whether element is the first in the sequence."@en ;
+                   rdfs:label "isFirstInSequence"@en .
+
+
+###  https://w3id.org/transmodel/fares#isLastInSequence
+:isLastInSequence rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Whether element is the last in the sequence."@en ;
+                  rdfs:label "isLastInSequence"@en .
+
+
+###  https://w3id.org/transmodel/fares#limitedAccessNumber
+:limitedAccessNumber rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "Flag indicating whether this rights gives an unlimited number of accesses or not."@en ;
+                     rdfs:label "limitedAccessNumber"@en .
+
+
+###  https://w3id.org/transmodel/fares#numberOfUnits
+:numberOfUnits rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:integer .
+
+
+###  https://w3id.org/transmodel/fares#privateCode
+:privateCode rdf:type owl:DatatypeProperty ;
+             rdfs:domain :FareStructureElement ;
+             rdfs:range xsd:string .
+
+
+###  https://w3id.org/transmodel/fares#ranking
+:ranking rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:integer ;
+         rdfs:comment "Relative ranking to be given to discount  to use to favour it over other discounts available."@en ;
+         rdfs:label "ranking"@en .
+
+
+###  https://w3id.org/transmodel/fares#returnFareTwiceSingle
+:returnFareTwiceSingle rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :FareStructureElement ;
+                       rdfs:range xsd:boolean .
+
+
+###  https://w3id.org/transmodel/fares#startDate
+:startDate rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "start date for price validity."@en ;
+           rdfs:label "startDate"@en .
+
+
+###  https://w3id.org/transmodel/fares#startGeographicalValue
+:startGeographicalValue rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "start value for geographical interval."@en ;
+                        rdfs:label "startGeographicalValue"@en .
+
+
+###  https://w3id.org/transmodel/fares#url
+:url rdf:type owl:DatatypeProperty ;
+     rdfs:domain :UsageParameter ;
+     rdfs:range xsd:string ;
+     rdfs:comment "A parameter used to specify the use of a sales package or a fare product."@en ;
+     rdfs:label "url"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/commons#Point
+<https://w3id.org/transmodel/commons#Point> rdf:type owl:Class ;
+                                            rdfs:label "Point"@en .
+
+
+###  https://w3id.org/transmodel/commons#ScheduledStopPoint
+<https://w3id.org/transmodel/commons#ScheduledStopPoint> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/transmodel/commons#Point> ;
+                                                         rdfs:comment "A specialisation of scheduled stop point describing a stop with fare accounting and routing characteristics."@en ;
+                                                         rdfs:label "ScheduledStopPoint"@en .
+
+
+###  https://w3id.org/transmodel/commons#TariffZone
+<https://w3id.org/transmodel/commons#TariffZone> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/transmodel/commons#Zone> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :composedOf ;
+                                                                   owl:someValuesFrom <https://w3id.org/transmodel/commons#ScheduledStopPoint>
+                                                                 ] ;
+                                                 rdfs:comment "A Zone used to define a zonal fare structure in a zone-counting or zone-matrix system."@en ;
+                                                 rdfs:label "TariffZone"@en .
+
+
+###  https://w3id.org/transmodel/commons#Zone
+<https://w3id.org/transmodel/commons#Zone> rdf:type owl:Class ;
+                                           rdfs:label "Zone"@en .
+
+
+###  https://w3id.org/transmodel/fares#AccessRightInProduct
+:AccessRightInProduct rdf:type owl:Class ;
+                      rdfs:subClassOf :FareElementInSequence ;
+                      rdfs:comment "A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product."@en ;
+                      rdfs:label "AccessRightInProduct"@en .
+
+
+###  https://w3id.org/transmodel/fares#AccessRightParameterAssignment
+:AccessRightParameterAssignment rdf:type owl:Class ;
+                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :isAllowed ;
+                                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                  owl:onDataRange xsd:boolean
+                                                ] ;
+                                rdfs:comment "The assignment of a fare collection parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.)."@en ;
+                                rdfs:label "AccessRightParameterAssignment"@en .
+
+
+###  https://w3id.org/transmodel/fares#CappingRulePrice
+:CappingRulePrice rdf:type owl:Class ;
+                  rdfs:subClassOf :FarePrice ;
+                  rdfs:comment "A set of all possible price features of a capping rule: default total price, discount in value or percentage etc."@en ;
+                  rdfs:label "CappingRulePrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#CommercialProfile
+:CommercialProfile rdf:type owl:Class ;
+                   rdfs:subClassOf :UsageParameter ;
+                   rdfs:comment "A category of users depending on their commercial relations with the operator (frequency of use, amount of purchase etc.), often used for allowing discounts."@en ;
+                   rdfs:label "CommercialProfile"@en .
+
+
+###  https://w3id.org/transmodel/fares#CompanionProfile
+:CompanionProfile rdf:type owl:Class ;
+                  rdfs:subClassOf :UsageParameter ;
+                  rdfs:comment "The number and characteristics of the persons entitled to travel in a group or as companions to another User Profile."@en ;
+                  rdfs:label "CompanionProfile"@en .
+
+
+###  https://w3id.org/transmodel/fares#ControllableElement
+:ControllableElement rdf:type owl:Class ;
+                     rdfs:subClassOf :PriceableObject ;
+                     rdfs:comment "The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid."@en .
+
+
+###  https://w3id.org/transmodel/fares#ControllableElementInSequence
+:ControllableElementInSequence rdf:type owl:Class ;
+                               rdfs:subClassOf :FareElementInSequence ;
+                               rdfs:comment "A controllable element as a part of a fare structure element, including its possible order in the sequence of controllable elements grouped together to form that fare structure element, and its possible quantitative limitation."@en ;
+                               rdfs:label "ControllableElementInSequence"@en .
+
+
+###  https://w3id.org/transmodel/fares#ControllableElementPrice
+:ControllableElementPrice rdf:type owl:Class ;
+                          rdfs:subClassOf :FarePrice ;
+                          rdfs:comment "A set of all possible price features of a Controllable Element: default total price, discount in value or percentage etc."@en ;
+                          rdfs:label "ControllableElementPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#DiscountingRule
+:DiscountingRule rdf:type owl:Class ;
+                 rdfs:subClassOf :PricingRule ;
+                 rdfs:comment "A price calculation rule determined by a set of discounts, depending upon a usage parameter, to be applied to a fare price."@en ;
+                 rdfs:label "DiscountingRule"@en .
+
+
+###  https://w3id.org/transmodel/fares#DistanceMatrixElement
+:DistanceMatrixElement rdf:type owl:Class ;
+                       rdfs:subClassOf :PriceableObject ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :relatedTo ;
+                                         owl:someValuesFrom :DistanceMatrixElementPrice
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :endOf ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass <https://w3id.org/transmodel/commons#TariffZone>
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :startOf ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass <https://w3id.org/transmodel/commons#TariffZone>
+                                       ] ;
+                       rdfs:comment "A cell of an origin-destination matrix for Tariff zones or stop points, expressing a fare distance for the corresponding trip: value in km, number of fare units etc."@en ;
+                       rdfs:label "DistanceMatrixElement"@en .
+
+
+###  https://w3id.org/transmodel/fares#DistanceMatrixElementPrice
+:DistanceMatrixElementPrice rdf:type owl:Class ;
+                            rdfs:subClassOf :FarePrice ;
+                            rdfs:comment "A set of all possible price features of a Distance Matrix Element: default total price etc."@en ;
+                            rdfs:label "DistanceMatrixElementPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#DistributionAssignment
+:DistributionAssignment rdf:type owl:Class ;
+                        rdfs:comment "An assignment of the country and/or  distribution channel through which a product may or may not be distributed."@en ;
+                        rdfs:label "DistributionAssignment"@en .
+
+
+###  https://w3id.org/transmodel/fares#DistributionChannel
+:DistributionChannel rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :distributionChannelType ;
+                                       owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                  owl:hasValue <https://w3id.org/transmodel/kos/fares/DistributionChannelType>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ]
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :governedBy ;
+                                       owl:allValuesFrom <https://w3id.org/transmodel/organisations#Organisation>
+                                     ] .
+
+
+###  https://w3id.org/transmodel/fares#EntitlementGiven
+:EntitlementGiven rdf:type owl:Class ;
+                  rdfs:subClassOf :UsageParameter ;
+                  rdfs:comment "Parameter indicating whether a particular fare product provides an entitlement to buy or use an access right."@en ;
+                  rdfs:label "EntitlementGiven"@en .
+
+
+###  https://w3id.org/transmodel/fares#EntitlementProduct
+:EntitlementProduct rdf:type owl:Class ;
+                    rdfs:subClassOf :ServiceAccessRight ;
+                    rdfs:comment "A precondition to access a service or to purchase a Fare Product issued by an organisation that may not be a pt operator (e.g. military card)."@en ;
+                    rdfs:label "EntitlementProduct"@en .
+
+
+###  https://w3id.org/transmodel/fares#EntitlementRequired
+:EntitlementRequired rdf:type owl:Class ;
+                     rdfs:subClassOf :UsageParameter ;
+                     rdfs:comment "Parameter indicating whether a particular fare product requires an entitlement to by or use an access right."@en ;
+                     rdfs:label "EntitlementRequired"@en .
+
+
+###  https://w3id.org/transmodel/fares#Exchanging
+:Exchanging rdf:type owl:Class ;
+            rdfs:subClassOf :Reselling ;
+            rdfs:comment "Whether and how the access right may be exchanged for another access right."@en ;
+            rdfs:label "Exchanging"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareElementInSequence
+:FareElementInSequence rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :accessNumber ;
+                                         owl:someValuesFrom xsd:integer
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :isFirstInSequence ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:boolean
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :isLastInSequence ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:boolean
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :limitedAccessNumber ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:boolean
+                                       ] ;
+                       rdfs:comment "A fare element as a part of an element, including its possible order in the sequence of fare  elements."@en ;
+                       rdfs:label "FareElementInSequence"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareInterval
+:FareInterval rdf:type owl:Class ;
+              rdfs:subClassOf :PriceableObject ;
+              rdfs:comment "An interval based aspect of the fare structure."@en ;
+              rdfs:label "FareInterval"@en .
+
+
+###  https://w3id.org/transmodel/fares#FarePrice
+:FarePrice rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :amount ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :discountAmount ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :discountPercentageUsed ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :endDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :isAllowed ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :ranking ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:integer
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :startDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] .
+
+
+###  https://w3id.org/transmodel/fares#FareProduct
+:FareProduct rdf:type owl:Class ;
+             rdfs:subClassOf :ServiceAccessRight ;
+             rdfs:comment "An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment."@en ;
+             rdfs:label "FareProduct"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareProductPrice
+:FareProductPrice rdf:type owl:Class ;
+                  rdfs:subClassOf :FarePrice ;
+                  rdfs:comment "A set of all possible price features of a fare product: default total price, discount in value or percentage etc."@en .
+
+
+###  https://w3id.org/transmodel/fares#FareStructureElement
+:FareStructureElement rdf:type owl:Class ;
+                      rdfs:subClassOf :PriceableObject ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :definedBy ;
+                                        owl:someValuesFrom :DistanceMatrixElement
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :relatedTo ;
+                                        owl:someValuesFrom :FareStructureElementPrice
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :fareType ;
+                                        owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                   owl:hasValue <https://w3id.org/transmodel/kos/fares/tariff-basis-type>
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty rdfs:label ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :privateCode ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :returnFareTwiceSingle ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:boolean
+                                      ] .
+
+
+###  https://w3id.org/transmodel/fares#FareStructureElementInSequence
+:FareStructureElementInSequence rdf:type owl:Class ;
+                                rdfs:subClassOf :FareElementInSequence ;
+                                rdfs:comment "A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation."@en ;
+                                rdfs:label "FareStructureElementInSequence"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareStructureElementPrice
+:FareStructureElementPrice rdf:type owl:Class ;
+                           rdfs:subClassOf :FarePrice ;
+                           rdfs:comment "A set of all possible price features of a Fare Structure Element: default total price, discount in value or percentage etc."@en ;
+                           rdfs:label "FareStructureElementPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareStructureFactor
+:FareStructureFactor rdf:type owl:Class ;
+                     rdfs:subClassOf :PriceableObject ;
+                     rdfs:comment "A factor influencing access rights definition or calculation of prices."@en ;
+                     rdfs:label "FareStructureFactor"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareTable
+:FareTable rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :embargoUntilDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :endDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :startDate ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ;
+           rdfs:comment "A grouping of prices (specialization of price group) that may be associated with all or any of  distance matrix element, fare structure element geographical interval, group of access right parameter, class of use, operator, vehicle mode, fare product."@en ;
+           rdfs:label "FareTable"@en .
+
+
+###  https://w3id.org/transmodel/fares#FareUnit
+:FareUnit rdf:type owl:Class ;
+          rdfs:subClassOf :PriceableObject ;
+          rdfs:comment "A unit associated with a Fare Structure Factor."@en ;
+          rdfs:label "FareUnit"@en .
+
+
+###  https://w3id.org/transmodel/fares#FrequencyOfUse
+:FrequencyOfUse rdf:type owl:Class ;
+                rdfs:subClassOf :UsageParameter ;
+                rdfs:comment "The limits of usage frequency for a fare product (or one of its components) or a sales package during a specific validity period. there may be different tariffs depending on how often the right is consumed during the period."@en ;
+                rdfs:label "FrequencyOfUse"@en .
+
+
+###  https://w3id.org/transmodel/fares#FulfilmentMethodPrice
+:FulfilmentMethodPrice rdf:type owl:Class ;
+                       rdfs:subClassOf :FarePrice ;
+                       rdfs:comment "A set of all possible price features of a fulfilment method default total price etc."@en ;
+                       rdfs:label "FulfilmentMethodPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#GenericParameterAssignment
+:GenericParameterAssignment rdf:type owl:Class ;
+                            rdfs:subClassOf :ValidityParameterAssignment .
+
+
+###  https://w3id.org/transmodel/fares#GeographicalInterval
+:GeographicalInterval rdf:type owl:Class ;
+                      rdfs:subClassOf :FareInterval ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :relatedTo ;
+                                        owl:someValuesFrom :GeographicalIntervalPrice
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :endGeographicalValue ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :startGeographicalValue ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :numberOfUnits ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:integer
+                                      ] ;
+                      rdfs:comment "A geographical interval specifying access rights for the Fare Structure Elements within the range of this interval: 0-5 km, 4-6 zones etc."@en ;
+                      rdfs:label "GeographicalInterval"@en .
+
+
+###  https://w3id.org/transmodel/fares#GeographicalIntervalPrice
+:GeographicalIntervalPrice rdf:type owl:Class ;
+                           rdfs:subClassOf :FarePrice ;
+                           rdfs:comment "A set of all possible price features of a Geographical Interval: default total price etc."@en ;
+                           rdfs:label "GeographicalIntervalPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#GeographicalUnit
+:GeographicalUnit rdf:type owl:Class ;
+                  rdfs:subClassOf :FareUnit ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :relatedTo ;
+                                    owl:someValuesFrom :GeographicalUnitPrice
+                                  ] ;
+                  rdfs:comment "A unit for calculating geographical graduated fares."@en .
+
+
+###  https://w3id.org/transmodel/fares#GeographicalUnitPrice
+:GeographicalUnitPrice rdf:type owl:Class ;
+                       rdfs:subClassOf :FarePrice ;
+                       rdfs:comment "A set of all possible price features of a Geographical Unit: default total price etc."@en ;
+                       rdfs:label "GeographicalUnitPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#GroupTicket
+:GroupTicket rdf:type owl:Class ;
+             rdfs:subClassOf :UsageParameter ;
+             rdfs:comment "The number and characteristics of persons entitled to travel in addition to the holder of an access right."@en ;
+             rdfs:label "GroupTicket"@en .
+
+
+###  https://w3id.org/transmodel/fares#Interchanging
+:Interchanging rdf:type owl:Class ;
+               rdfs:subClassOf :UsageParameter ;
+               rdfs:comment "Limitations on making changes within a trip."@en ;
+               rdfs:label "Interchanging"@en .
+
+
+###  https://w3id.org/transmodel/fares#LimitingRule
+:LimitingRule rdf:type owl:Class ;
+              rdfs:subClassOf :DiscountingRule ;
+              rdfs:comment "Rule for limiting the results of a price calculation."@en ;
+              rdfs:label "LimitingRule"@en .
+
+
+###  https://w3id.org/transmodel/fares#LuggageAllowance
+:LuggageAllowance rdf:type owl:Class ;
+                  rdfs:subClassOf :UsageParameter ;
+                  rdfs:comment "The number and characteristics (weight, volume) of luggage that a holder of an access right is entitled to carry."@en ;
+                  rdfs:label "LuggageAllowance"@en .
+
+
+###  https://w3id.org/transmodel/fares#MinimumStay
+:MinimumStay rdf:type owl:Class ;
+             rdfs:subClassOf :UsageParameter ;
+             rdfs:comment "Details of any minimum stay at the destination required to use the product."@en ;
+             rdfs:label "MinimumStay"@en .
+
+
+###  https://w3id.org/transmodel/fares#NetworkValidityParameter
+:NetworkValidityParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ScopingValidityParameter ;
+                          rdfs:comment "A type of validity parameter related to the network structure."@en ;
+                          rdfs:label "NetworkValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#OrganisationalValidityParameter
+:OrganisationalValidityParameter rdf:type owl:Class ;
+                                 rdfs:subClassOf :ScopingValidityParameter ;
+                                 rdfs:comment "A type of validity parameter related to organisational issues."@en ;
+                                 rdfs:label "OrganisationalValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#ParkingPrice
+:ParkingPrice rdf:type owl:Class ;
+              rdfs:subClassOf :FarePrice ;
+              rdfs:comment "A specialisation of fare price that defines the price of a parking charge band."@en ;
+              rdfs:label "ParkingPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#PenaltyPolicy
+:PenaltyPolicy rdf:type owl:Class ;
+               rdfs:subClassOf :UsageParameter ;
+               rdfs:comment "Policy regarding different aspects of penalty charges, for example  repeated entry at the same station, not having a ticket etc."@en ;
+               rdfs:label "PenaltyPolicy"@en .
+
+
+###  https://w3id.org/transmodel/fares#PreAssignedFareProduct
+:PreAssignedFareProduct rdf:type owl:Class ;
+                        rdfs:subClassOf :FareProduct ;
+                        rdfs:comment "A fare product consisting of one or several validable elements, specific to a charging method."@en ;
+                        rdfs:label "PreAssignedFareProduct"@en .
+
+
+###  https://w3id.org/transmodel/fares#PriceUnit
+:PriceUnit rdf:type owl:Class ;
+           rdfs:comment "A unit to express prices: amount of currency, abstract fare unit, ticket unit or token etc."@en ;
+           rdfs:label "PriceUnit"@en .
+
+
+###  https://w3id.org/transmodel/fares#PriceableObject
+:PriceableObject rdf:type owl:Class ;
+                 rdfs:comment "An element which may have a fare price."@en ;
+                 rdfs:label "PriceableObject"@en .
+
+
+###  https://w3id.org/transmodel/fares#PricingRule
+:PricingRule rdf:type owl:Class ;
+             rdfs:comment "A rule used for the calculation of fare price, determined either by a set of parameters to be applied to a reference price or by a more complex algorithm."@en ;
+             rdfs:label "PricingRule"@en .
+
+
+###  https://w3id.org/transmodel/fares#ProductValidityParameter
+:ProductValidityParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ScopingValidityParameter ;
+                          rdfs:comment "A type of validity parameter linked to fare products and/or their distribution."@en ;
+                          rdfs:label "ProductValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#PurchaseWindow
+:PurchaseWindow rdf:type owl:Class ;
+                rdfs:subClassOf :UsageParameter ;
+                rdfs:comment "Period in which the product must be purchased."@en ;
+                rdfs:label "PurchaseWindow"@en .
+
+
+###  https://w3id.org/transmodel/fares#QualityStructureFactorPrice
+:QualityStructureFactorPrice rdf:type owl:Class ;
+                             rdfs:subClassOf :FarePrice ;
+                             rdfs:comment "A set of all possible price features of a quality structure factor , e.g. default total price etc."@en ;
+                             rdfs:label "QualityStructureFactorPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#Refunding
+:Refunding rdf:type owl:Class ;
+           rdfs:subClassOf :Reselling ;
+           rdfs:comment "Whether and how the product may be refunded."@en ;
+           rdfs:label "Refunding"@en .
+
+
+###  https://w3id.org/transmodel/fares#Replacing
+:Replacing rdf:type owl:Class ;
+           rdfs:subClassOf :Reselling ;
+           rdfs:comment "Whether and how the access right may be replaced."@en ;
+           rdfs:label "Replacing"@en .
+
+
+###  https://w3id.org/transmodel/fares#Reselling
+:Reselling rdf:type owl:Class ;
+           rdfs:subClassOf :UsageParameter ;
+           rdfs:comment "Common resale conditions (i.e. for exchange or refund)  attached to the product"@en ;
+           rdfs:label "Reselling"@en .
+
+
+###  https://w3id.org/transmodel/fares#ResidentialQualification
+:ResidentialQualification rdf:type owl:Class ;
+                          rdfs:subClassOf :UsageParameter ;
+                          rdfs:comment "A parameter providing an authorisation to consider a user as being characterised by a User Profile."@en ;
+                          rdfs:label "ResidentialQualification"@en .
+
+
+###  https://w3id.org/transmodel/fares#RoundTrip
+:RoundTrip rdf:type owl:Class ;
+           rdfs:subClassOf :UsageParameter ;
+           rdfs:comment "Properties relating to single or return trip use of an access right."@en ;
+           rdfs:label "RoundTrip"@en .
+
+
+###  https://w3id.org/transmodel/fares#Rounding
+:Rounding rdf:type owl:Class ;
+          rdfs:comment "Parameters directing the rounding of values that are the result of calculations."@en ;
+          rdfs:label "Rounding"@en .
+
+
+###  https://w3id.org/transmodel/fares#Routing
+:Routing rdf:type owl:Class ;
+         rdfs:subClassOf :UsageParameter ;
+         rdfs:comment "Limitations on routing of an access right."@en ;
+         rdfs:label "Routing"@en .
+
+
+###  https://w3id.org/transmodel/fares#RoutingValidityParameter
+:RoutingValidityParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ScopingValidityParameter ;
+                          rdfs:comment "A type of validity parameter linked to specific routing."@en ;
+                          rdfs:label "RoutingValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#SalesPackage
+:SalesPackage rdf:type owl:Class ;
+              rdfs:subClassOf :PriceableObject ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty rdfs:comment ;
+                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:string
+                              ] ;
+              rdfs:comment "A package to be sold as a whole, consisting of one or several fare products materialised thanks to one or several travel documents. the fare products may be either directly attached to the travel documents, or may be reloadable on the travel documents."@en ;
+              rdfs:label "SalesPackage"@en .
+
+
+###  https://w3id.org/transmodel/fares#SalesPackageElement
+:SalesPackageElement rdf:type owl:Class ;
+                     rdfs:subClassOf :PriceableObject ;
+                     rdfs:comment "The assignment of a fare product to a type of travel document in order to define a sales package, realised as a fixed assignment (printing, magnetic storage etc.) or by the possibility for the fare product to be reloaded on the type of travel document."@en ;
+                     rdfs:label "SalesPackageElement"@en .
+
+
+###  https://w3id.org/transmodel/fares#SalesPackagePrice
+:SalesPackagePrice rdf:type owl:Class ;
+                   rdfs:subClassOf :FarePrice ;
+                   rdfs:comment "A set of all possible price features of a sales package: default total price etc."@en ;
+                   rdfs:label "SalesPackagePrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#SalesPackageSubstitution
+:SalesPackageSubstitution rdf:type owl:Class ;
+                          rdfs:subClassOf :SalesPackage ;
+                          rdfs:comment "Information on the preferred substitution of packages with other packages if a quota restricted product is no longer available."@en ;
+                          rdfs:label "SalesPackageSubstitution"@en .
+
+
+###  https://w3id.org/transmodel/fares#ScopingValidityParameter
+:ScopingValidityParameter rdf:type owl:Class ;
+                          rdfs:comment "Grouping of assignments to elements."@en ;
+                          rdfs:label "ScopingValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#SeriesConstraintPrice
+:SeriesConstraintPrice rdf:type owl:Class ;
+                       rdfs:subClassOf :FarePrice ;
+                       rdfs:comment "A set of all possible price features of a series constraint: default total price etc."@en ;
+                       rdfs:label "SeriesConstraintPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#ServiceAccessRight
+:ServiceAccessRight rdf:type owl:Class ;
+                    rdfs:subClassOf :PriceableObject ;
+                    rdfs:comment "An immaterial marketable element dedicated to accessing some services."@en .
+
+
+###  https://w3id.org/transmodel/fares#ServiceValidityParameter
+:ServiceValidityParameter rdf:type owl:Class ;
+                          rdfs:subClassOf :ScopingValidityParameter ;
+                          rdfs:comment "A type of validity parameter related to service characteristics (e.g. class)."@en ;
+                          rdfs:label "ServiceValidityParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#StepLimit
+:StepLimit rdf:type owl:Class ;
+           rdfs:subClassOf :UsageParameter ;
+           rdfs:comment "Geographical parameter limiting the access rights by counts of stops, sections or zones."@en ;
+           rdfs:label "StepLimit"@en .
+
+
+###  https://w3id.org/transmodel/fares#Tariff
+:Tariff rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :definedBy ;
+                          owl:someValuesFrom :DistanceMatrixElement
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :definedBy ;
+                          owl:someValuesFrom :GeographicalInterval
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :definedBy ;
+                          owl:someValuesFrom :GeographicalUnit
+                        ] ;
+        rdfs:comment "A Tariff describes all parameters composing a particular fare structure."@en .
+
+
+###  https://w3id.org/transmodel/fares#TimeIntervalPrice
+:TimeIntervalPrice rdf:type owl:Class ;
+                   rdfs:subClassOf :FarePrice ;
+                   rdfs:comment "A set of all possible price features of a time interval, e.g. default total price etc."@en ;
+                   rdfs:label "TimeIntervalPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#TimeUnitPrice
+:TimeUnitPrice rdf:type owl:Class ;
+               rdfs:subClassOf :FarePrice ;
+               rdfs:comment "A set of all possible price features of a time unit: default total price etc."@en ;
+               rdfs:label "TimeUnitPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#Transferability
+:Transferability rdf:type owl:Class ;
+                 rdfs:subClassOf :UsageParameter ;
+                 rdfs:comment "The number and characteristics of persons entitled to use the public transport service instead of the original customer."@en ;
+                 rdfs:label "Transferability"@en .
+
+
+###  https://w3id.org/transmodel/fares#UsageParameter
+:UsageParameter rdf:type owl:Class ;
+                rdfs:subClassOf :PriceableObject ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :url ;
+                                  owl:someValuesFrom xsd:string
+                                ] ;
+                rdfs:comment "A parameter used to specify the use of a sales package or a Fare Product."@en ;
+                rdfs:label "UsageParameter"@en .
+
+
+###  https://w3id.org/transmodel/fares#UsageParameterPrice
+:UsageParameterPrice rdf:type owl:Class ;
+                     rdfs:subClassOf :FarePrice ;
+                     rdfs:comment "A set of all possible price features of a usage parameter: discount in value or percentage etc."@en ;
+                     rdfs:label "UsageParameterPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#UsageValidityPeriod
+:UsageValidityPeriod rdf:type owl:Class ;
+                     rdfs:subClassOf :UsageParameter ;
+                     rdfs:comment "A time limitation for validity of a fare product or a sales package. it may be composed of a standard duration (e.g. 3 days, 1 month) and/or fixed start/end dates and times."@en ;
+                     rdfs:label "UsageValidityPeriod"@en .
+
+
+###  https://w3id.org/transmodel/fares#UserProfile
+:UserProfile rdf:type owl:Class ;
+             rdfs:subClassOf :UsageParameter ;
+             rdfs:comment "The social profile of a passenger, based on age group, education, profession, social status, sex etc., often used for allowing discounts: 18-40 years old, graduates, drivers, unemployed, women etc."@en ;
+             rdfs:label "UserProfile"@en .
+
+
+###  https://w3id.org/transmodel/fares#ValidableElement
+:ValidableElement rdf:type owl:Class ;
+                  rdfs:subClassOf :PriceableObject ;
+                  rdfs:comment "An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go."@en ;
+                  rdfs:label "ValidableElement"@en .
+
+
+###  https://w3id.org/transmodel/fares#ValidableElementPrice
+:ValidableElementPrice rdf:type owl:Class ;
+                       rdfs:subClassOf :FarePrice ;
+                       rdfs:comment "A set of all possible price features of a Validable Element: default total price, discount in value or percentage etc."@en ;
+                       rdfs:label "ValidableElementPrice"@en .
+
+
+###  https://w3id.org/transmodel/fares#ValidityParameterAssignment
+:ValidityParameterAssignment rdf:type owl:Class ;
+                             rdfs:subClassOf :AccessRightParameterAssignment .
+
+
+###  https://w3id.org/transmodel/fares#chargingPolicy
+:chargingPolicy rdf:type owl:Class ;
+                rdfs:subClassOf :UsageParameter ;
+                rdfs:comment "Parameter governing minimum amount and credit allowed when consuming a fare product."@en ;
+                rdfs:label "chargingPolicy"@en .
+
+
+###  https://w3id.org/transmodel/journeys#FlexibleLine
+<https://w3id.org/transmodel/journeys#FlexibleLine> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/transmodel/journeys#Line> .
+
+
+###  https://w3id.org/transmodel/journeys#Line
+<https://w3id.org/transmodel/journeys#Line> rdf:type owl:Class .
+
+
+###  https://w3id.org/transmodel/organisations#Organisation
+<https://w3id.org/transmodel/organisations#Organisation> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:NamedIndividual .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#BookingArrangements
+:BookingArrangements rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#ClassOfUse
+:ClassOfUse rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#DistributionChannel
+:DistributionChannel rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#FarePrice
+:FarePrice rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#FareStructureElement
+:FareStructureElement rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#describedThrough
+:describedThrough rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#distributionChannelType
+:distributionChannelType rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#fareType
+:fareType rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#governedBy
+:governedBy rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#privateCode
+:privateCode rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/fares#returnFareTwiceSingle
+:returnFareTwiceSingle rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/kos/fares/DistributionChannelType
+<https://w3id.org/transmodel/kos/fares/DistributionChannelType> rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/transmodel/kos/fares/booking-access-type
+<https://w3id.org/transmodel/kos/fares/booking-access-type> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:comment "Concept scheme where all the types of booking access"@en .
+
+
+###  https://w3id.org/transmodel/kos/fares/booking-method-type
+<https://w3id.org/transmodel/kos/fares/booking-method-type> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:comment "Concept scheme where all the types of booking methods"@en .
+
+
+###  https://w3id.org/transmodel/kos/fares/distribution-channel-type
+<https://w3id.org/transmodel/kos/fares/distribution-channel-type> rdf:type owl:NamedIndividual ,
+                                                                           <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  rdfs:comment """Concept scheme where all the types of distribution
+      channels"""@en .
+
+
+###  https://w3id.org/transmodel/kos/fares/distribution-rights
+<https://w3id.org/transmodel/kos/fares/distribution-rights> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                            rdfs:comment "Concept scheme where all the types of distribution rights"@en .
+
+
+###  https://w3id.org/transmodel/kos/fares/fulfilment-method-type
+<https://w3id.org/transmodel/kos/fares/fulfilment-method-type> rdf:type owl:NamedIndividual ,
+                                                                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                               rdfs:comment "Concept scheme where all the types of fulfilment methods"@en .
+
+
+###  https://w3id.org/transmodel/kos/fares/tariff-basis-type
+<https://w3id.org/transmodel/kos/fares/tariff-basis-type> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+_:genid54 :mbox "ja.toledo@upm.es"@en ;
+          :name "Jhon Toledo Barreto"@en .
+
+#################################################################
+#    Annotations
+#################################################################
+
+rdfs:comment rdfs:label "description"@en .
+
+
+rdfs:label rdfs:label "name"@en .
+
+
+:DistributionChannel rdfs:comment "A type of outlet for selling a Fare Product"@en ;
+                     rdfs:label "Distribution Channel"@en .
+
+
+:FarePrice rdfs:comment "Price features defined by default characterizing different price groups."@en ;
+           rdfs:label "FarePrice"@en .
+
+
+:FareStructureElement rdfs:comment "A Fare Structure Element is a service consumption right determined by a set of quantitative (spatial,temporal) rules (i.e. determined by are structure parameters, such as zones, sections, hours, etc);"@en ,
+                                   "A sequence or set of controllable elements to which rules for limitation of access rights and calculation of prices (fare structure) are applied."@en ,
+                                   "In some cases, a Fare Structure Element may involve several access rights that must be consumed in a particular order. This may be captured by a Fare Structure Element In Sequence"@en ;
+                      rdfs:label "Fare Structure Element"@en ,
+                                 "FareStructureElement"@en .
+
+
+:describedThrough rdfs:comment "This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint"@en ;
+                  rdfs:label "described through"@en .
+
+
+:distributionChannelType rdfs:comment "This property assigns to a Distribution Channel one or several SKOS Concepts from the codelist on types of distribution channels"@en ;
+                         rdfs:label "distribution Channel Type"@en .
+
+
+:fareType rdfs:comment "This property is used to link a fare with the types of fares available in the SKOS concept scheme of types of fares"@en ,
+                       "fare type"@en .
+
+
+:governedBy rdfs:comment "This property relates a Distribution Channel to the Organisation that takes responsability over it"@en ;
+            rdfs:label "governed by"@en .
+
+
+:privateCode rdfs:comment "Alternative identifier of an entity. can be used to associate with legacy systems."@en .
+
+
+:returnFareTwiceSingle rdfs:comment "Whether the return ticket is the double as the fare for a single ticket."@en .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

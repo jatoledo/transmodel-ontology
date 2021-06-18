@@ -1,0 +1,69 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent0
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent0> <http://xmlns.com/foaf/0.1/name> "Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)" .
+# 
+# file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent1
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent1> <http://xmlns.com/foaf/0.1/name> "Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid" .
+# 
+# file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent2
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent2> <http://xmlns.com/foaf/0.1/name> "Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)" .
+# 
+# https://w3id.org/transmodel/fares/0.3
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/transmodel/fares/0.3> <http://purl.org/dc/terms/title> "Transmodel Ontology - Fares" .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/ns/prov#wasAttributedTo> <file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent0> .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/ns/prov#wasAttributedTo> <file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent1> .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/ns/prov#wasAttributedTo> <file:/home/ahmad/repos/jhontb7@gmail.com/ontology/Ticketing_and_Services_Module/Documents/provenance/provenance-es.ttlagent2> .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.essepuntato.it/lode/> .
+<https://w3id.org/transmodel/fares/0.3> <http://www.w3.org/ns/prov#wasAttributedTo> <https://github.com/dgarijo/Widoco/> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
