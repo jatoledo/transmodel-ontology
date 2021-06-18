@@ -159,6 +159,7 @@
     <!-- https://w3id.org/transmodel/fares#aChainOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#aChainOf">
+        <rdfs:comment xml:lang="en">This property represents a chain or sequence of another class</rdfs:comment>
         <rdfs:label xml:lang="en">aChainOf</rdfs:label>
     </owl:ObjectProperty>
     
@@ -239,6 +240,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/fares#representing -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#representing">
+        <rdfs:label xml:lang="en">representing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/fares#startOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#startOf">
@@ -268,7 +277,9 @@
 
     <!-- https://w3id.org/transmodel/fares#viewedAs -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#viewedAs"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#viewedAs">
+        <rdfs:label xml:lang="en">viewedAs</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -548,6 +559,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#AccessRightInProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareElementInSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#ValidableElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product.</rdfs:comment>
         <rdfs:label xml:lang="en">AccessRightInProduct</rdfs:label>
     </owl:Class>
@@ -604,6 +621,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#ControllableElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#PriceableObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#ControllableElementInSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid.</rdfs:comment>
     </owl:Class>
     
@@ -912,6 +935,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#aChainOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#ControllableElementInSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -939,6 +969,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#FareStructureElementInSequence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareElementInSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareStructureElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation.</rdfs:comment>
         <rdfs:label xml:lang="en">FareStructureElementInSequence</rdfs:label>
     </owl:Class>
@@ -1197,6 +1233,13 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#PreAssignedFareProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareProduct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#composedOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#AccessRightInProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fare product consisting of one or several validable elements, specific to a charging method.</rdfs:comment>
         <rdfs:label xml:lang="en">PreAssignedFareProduct</rdfs:label>
     </owl:Class>
@@ -1540,6 +1583,19 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#ValidableElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#PriceableObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#aChainOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareStructureElementInSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#representing"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#FareStructureElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go.</rdfs:comment>
         <rdfs:label xml:lang="en">ValidableElement</rdfs:label>
     </owl:Class>
@@ -1773,8 +1829,8 @@
         <rdfs:comment xml:lang="en">A Fare Structure Element is a service consumption right determined by a set of quantitative (spatial,temporal) rules (i.e. determined by are structure parameters, such as zones, sections, hours, etc);</rdfs:comment>
         <rdfs:label xml:lang="en">FareStructureElement</rdfs:label>
         <rdfs:label xml:lang="en">Fare Structure Element</rdfs:label>
-        <rdfs:comment xml:lang="en">A sequence or set of controllable elements to which rules for limitation of access rights and calculation of prices (fare structure) are applied.</rdfs:comment>
         <rdfs:comment xml:lang="en">In some cases, a Fare Structure Element may involve several access rights that must be consumed in a particular order. This may be captured by a Fare Structure Element In Sequence</rdfs:comment>
+        <rdfs:comment xml:lang="en">A sequence or set of controllable elements to which rules for limitation of access rights and calculation of prices (fare structure) are applied.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/fares#describedThrough">
         <rdfs:comment xml:lang="en">This property relates a Distribution Channel with its corresponding Contact Details. It is a subproperty of schema:contactPoint, which relates anything to a ContactPoint</rdfs:comment>
@@ -1789,8 +1845,8 @@
         <rdfs:comment xml:lang="en">This property is used to link a fare with the types of fares available in the SKOS concept scheme of types of fares</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/fares#governedBy">
-        <rdfs:comment xml:lang="en">This property relates a Distribution Channel to the Organisation that takes responsability over it</rdfs:comment>
         <rdfs:label xml:lang="en">governed by</rdfs:label>
+        <rdfs:comment xml:lang="en">This property relates a Distribution Channel to the Organisation that takes responsability over it</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/transmodel/fares#privateCode">
         <rdfs:comment xml:lang="en">Alternative identifier of an entity. can be used to associate with legacy systems.</rdfs:comment>
