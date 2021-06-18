@@ -248,6 +248,14 @@
     
 
 
+    <!-- https://w3id.org/transmodel/fares#specifiedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#specifiedBy">
+        <rdfs:label xml:lang="en">specifiedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/fares#startOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#startOf">
@@ -886,6 +894,18 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#FareProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#ServiceAccessRight"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#relatedTo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareProductPrice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#specifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GenericParameterAssignment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment.</rdfs:comment>
         <rdfs:label xml:lang="en">FareProduct</rdfs:label>
     </owl:Class>
@@ -909,6 +929,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#definedBy"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#DistanceMatrixElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#definedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GeographicalInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#definedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GeographicalStructureFactor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1110,6 +1142,16 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FarePrice"/>
         <rdfs:comment xml:lang="en">A set of all possible price features of a Geographical Interval: default total price etc.</rdfs:comment>
         <rdfs:label xml:lang="en">GeographicalIntervalPrice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/transmodel/fares#GeographicalStructureFactor -->
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/fares#GeographicalStructureFactor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareStructureFactor"/>
+        <rdfs:comment xml:lang="en">The value of a geographical interval or a distance matrix element expressed by a geographical unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeographicalStructureFactor</rdfs:label>
     </owl:Class>
     
 
