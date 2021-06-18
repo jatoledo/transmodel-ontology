@@ -1,0 +1,3485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Transmodel Ontology - Fares</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/transmodel/fares#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/transmodel/fares#","name":"Transmodel Ontology - Fares", "headline":"Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology", "datePublished":"Fri Jun 18 10:17:44 CEST 2021", "version":"This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx", "author":[{"@type":"Person","name":"Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Tabla de contenidos</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<h1>Transmodel Ontology - Fares</h1>
+
+
+<dl>
+<dt>Versi&oacute;n:</dt>
+<dd><a href="https://w3id.org/transmodel/fares/0.3">https://w3id.org/transmodel/fares/0.3</a></dd>
+<dt>Revisi&oacute;n n&uacute;mero:</dt>
+<dd>This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx</dd>
+<dt>Autores:</dt>
+<dd>Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)</dd><dd>Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid</dd><dd>Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)</dd>
+
+<dt>Descargar serializaci&oacute;n:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licencia:  </dt><dd><a href="http://tituloLicenciaSeleccionado.org" target="_blank"><img src="https://img.shields.io/badge/License-Creative%20Commons%20Attribution%204.0%20International%20(CC%20BY%204.0)-blue.svg" alt="http://tituloLicenciaSeleccionado.org" /></a>
+</dd><dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Citar como:</dt>
+<dd>Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid),Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid,Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid). Transmodel Ontology - Fares. Revision: This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx. Retrieved from: https://w3id.org/transmodel/fares/0.3</dd>
+</dl>
+
+<a href="provenance/provenance-es.html" target="_blank">Provenance de esta p&aacute;gina</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>S&iacute;ntesis</h2><span class="markdown">
+Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introducci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">Este p&aacute;rrafo deber&iacute;a hablar sobre la ontolog&iacute;a, motivaci&oacute;n estado del arte y objetivos</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Declaraci&oacute;n de namespaces</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Tabla 1</a>: Namespaces utilizados en el documento </caption>
+<tbody>
+<tr><td><b>[Ontology NS Prefix]</b></td><td>&lt;https://w3id.org/transmodel/fares#&gt;</td></tr>
+<tr><td><b>namespace por defecto</b></td><td>&lt;https://w3id.org/transmodel/fares&gt;</td></tr>
+<tr><td><b>journeys</b></td><td>&lt;https://w3id.org/transmodel/journeys&gt;</td></tr>
+<tr><td><b>ns</b></td><td>&lt;http://creativecommons.org/ns&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>schema-org</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>commons</b></td><td>&lt;https://w3id.org/transmodel/commons&gt;</td></tr>
+<tr><td><b>core</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>organisations</b></td><td>&lt;https://w3id.org/transmodel/organisations&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Transmodel Ontology - Fares: Resumen <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La ontolog&iacute;a se compone de las siguientes clases y propiedades:</span>
+<h4>Clases</h4>
+<ul class="hlist">
+   <li>
+      <a href="#AccessRightInProduct"
+         title="https://w3id.org/transmodel/fares#AccessRightInProduct">AccessRightInProduct</a>
+   </li>
+   <li>
+      <a href="#AccessRightParameterAssignment"
+         title="https://w3id.org/transmodel/fares#AccessRightParameterAssignment">AccessRightParameterAssignment</a>
+   </li>
+   <li>
+      <a href="#CappingRulePrice"
+         title="https://w3id.org/transmodel/fares#CappingRulePrice">CappingRulePrice</a>
+   </li>
+   <li>
+      <a href="#chargingPolicy"
+         title="https://w3id.org/transmodel/fares#chargingPolicy">chargingPolicy</a>
+   </li>
+   <li>
+      <a href="#CommercialProfile"
+         title="https://w3id.org/transmodel/fares#CommercialProfile">CommercialProfile</a>
+   </li>
+   <li>
+      <a href="#CompanionProfile"
+         title="https://w3id.org/transmodel/fares#CompanionProfile">CompanionProfile</a>
+   </li>
+   <li>
+      <a href="#ControllableElement"
+         title="https://w3id.org/transmodel/fares#ControllableElement">
+         <span>controllable element</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ControllableElementInSequence"
+         title="https://w3id.org/transmodel/fares#ControllableElementInSequence">ControllableElementInSequence</a>
+   </li>
+   <li>
+      <a href="#ControllableElementPrice"
+         title="https://w3id.org/transmodel/fares#ControllableElementPrice">ControllableElementPrice</a>
+   </li>
+   <li>
+      <a href="#DiscountingRule"
+         title="https://w3id.org/transmodel/fares#DiscountingRule">DiscountingRule</a>
+   </li>
+   <li>
+      <a href="#DistanceMatrixElement"
+         title="https://w3id.org/transmodel/fares#DistanceMatrixElement">DistanceMatrixElement</a>
+   </li>
+   <li>
+      <a href="#DistanceMatrixElementPrice"
+         title="https://w3id.org/transmodel/fares#DistanceMatrixElementPrice">DistanceMatrixElementPrice</a>
+   </li>
+   <li>
+      <a href="#DistributionChannel"
+         title="https://w3id.org/transmodel/fares#DistributionChannel">
+         <span>Distribution Channel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DistributionAssignment"
+         title="https://w3id.org/transmodel/fares#DistributionAssignment">DistributionAssignment</a>
+   </li>
+   <li>
+      <a href="#EntitlementGiven"
+         title="https://w3id.org/transmodel/fares#EntitlementGiven">EntitlementGiven</a>
+   </li>
+   <li>
+      <a href="#EntitlementProduct"
+         title="https://w3id.org/transmodel/fares#EntitlementProduct">EntitlementProduct</a>
+   </li>
+   <li>
+      <a href="#EntitlementRequired"
+         title="https://w3id.org/transmodel/fares#EntitlementRequired">EntitlementRequired</a>
+   </li>
+   <li>
+      <a href="#Exchanging" title="https://w3id.org/transmodel/fares#Exchanging">Exchanging</a>
+   </li>
+   <li>
+      <a href="#FareProductPrice"
+         title="https://w3id.org/transmodel/fares#FareProductPrice">
+         <span>fare product price</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FareStructureElement"
+         title="https://w3id.org/transmodel/fares#FareStructureElement">
+         <span>Fare Structure Element</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FareElementInSequence"
+         title="https://w3id.org/transmodel/fares#FareElementInSequence">FareElementInSequence</a>
+   </li>
+   <li>
+      <a href="#FareInterval" title="https://w3id.org/transmodel/fares#FareInterval">FareInterval</a>
+   </li>
+   <li>
+      <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">
+         <span>FarePrice</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FareProduct" title="https://w3id.org/transmodel/fares#FareProduct">FareProduct</a>
+   </li>
+   <li>
+      <a href="#FareStructureElementInSequence"
+         title="https://w3id.org/transmodel/fares#FareStructureElementInSequence">FareStructureElementInSequence</a>
+   </li>
+   <li>
+      <a href="#FareStructureElementPrice"
+         title="https://w3id.org/transmodel/fares#FareStructureElementPrice">FareStructureElementPrice</a>
+   </li>
+   <li>
+      <a href="#FareStructureFactor"
+         title="https://w3id.org/transmodel/fares#FareStructureFactor">FareStructureFactor</a>
+   </li>
+   <li>
+      <a href="#FareTable" title="https://w3id.org/transmodel/fares#FareTable">FareTable</a>
+   </li>
+   <li>
+      <a href="#FareUnit" title="https://w3id.org/transmodel/fares#FareUnit">FareUnit</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/journeys#FlexibleLine"
+         title="https://w3id.org/transmodel/journeys#FlexibleLine">
+         <span>flexible line</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FrequencyOfUse"
+         title="https://w3id.org/transmodel/fares#FrequencyOfUse">FrequencyOfUse</a>
+   </li>
+   <li>
+      <a href="#FulfilmentMethodPrice"
+         title="https://w3id.org/transmodel/fares#FulfilmentMethodPrice">FulfilmentMethodPrice</a>
+   </li>
+   <li>
+      <a href="#GenericParameterAssignment"
+         title="https://w3id.org/transmodel/fares#GenericParameterAssignment">
+         <span>generic parameter assignment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GeographicalUnit"
+         title="https://w3id.org/transmodel/fares#GeographicalUnit">
+         <span>geographical unit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GeographicalInterval"
+         title="https://w3id.org/transmodel/fares#GeographicalInterval">GeographicalInterval</a>
+   </li>
+   <li>
+      <a href="#GeographicalIntervalPrice"
+         title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
+   </li>
+   <li>
+      <a href="#GeographicalUnitPrice"
+         title="https://w3id.org/transmodel/fares#GeographicalUnitPrice">GeographicalUnitPrice</a>
+   </li>
+   <li>
+      <a href="#GroupTicket" title="https://w3id.org/transmodel/fares#GroupTicket">GroupTicket</a>
+   </li>
+   <li>
+      <a href="#Interchanging" title="https://w3id.org/transmodel/fares#Interchanging">Interchanging</a>
+   </li>
+   <li>
+      <a href="#LimitingRule" title="https://w3id.org/transmodel/fares#LimitingRule">LimitingRule</a>
+   </li>
+   <li>
+      <a href="#LuggageAllowance"
+         title="https://w3id.org/transmodel/fares#LuggageAllowance">LuggageAllowance</a>
+   </li>
+   <li>
+      <a href="#MinimumStay" title="https://w3id.org/transmodel/fares#MinimumStay">MinimumStay</a>
+   </li>
+   <li>
+      <a href="#NetworkValidityParameter"
+         title="https://w3id.org/transmodel/fares#NetworkValidityParameter">NetworkValidityParameter</a>
+   </li>
+   <li>
+      <a href="#OrganisationalValidityParameter"
+         title="https://w3id.org/transmodel/fares#OrganisationalValidityParameter">OrganisationalValidityParameter</a>
+   </li>
+   <li>
+      <a href="#ParkingPrice" title="https://w3id.org/transmodel/fares#ParkingPrice">ParkingPrice</a>
+   </li>
+   <li>
+      <a href="#PenaltyPolicy" title="https://w3id.org/transmodel/fares#PenaltyPolicy">PenaltyPolicy</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/commons#Point" title="https://w3id.org/transmodel/commons#Point">Point</a>
+   </li>
+   <li>
+      <a href="#PreAssignedFareProduct"
+         title="https://w3id.org/transmodel/fares#PreAssignedFareProduct">PreAssignedFareProduct</a>
+   </li>
+   <li>
+      <a href="#PriceableObject"
+         title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+   </li>
+   <li>
+      <a href="#PriceUnit" title="https://w3id.org/transmodel/fares#PriceUnit">PriceUnit</a>
+   </li>
+   <li>
+      <a href="#PricingRule" title="https://w3id.org/transmodel/fares#PricingRule">PricingRule</a>
+   </li>
+   <li>
+      <a href="#ProductValidityParameter"
+         title="https://w3id.org/transmodel/fares#ProductValidityParameter">ProductValidityParameter</a>
+   </li>
+   <li>
+      <a href="#PurchaseWindow"
+         title="https://w3id.org/transmodel/fares#PurchaseWindow">PurchaseWindow</a>
+   </li>
+   <li>
+      <a href="#QualityStructureFactorPrice"
+         title="https://w3id.org/transmodel/fares#QualityStructureFactorPrice">QualityStructureFactorPrice</a>
+   </li>
+   <li>
+      <a href="#Refunding" title="https://w3id.org/transmodel/fares#Refunding">Refunding</a>
+   </li>
+   <li>
+      <a href="#Replacing" title="https://w3id.org/transmodel/fares#Replacing">Replacing</a>
+   </li>
+   <li>
+      <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+   </li>
+   <li>
+      <a href="#ResidentialQualification"
+         title="https://w3id.org/transmodel/fares#ResidentialQualification">ResidentialQualification</a>
+   </li>
+   <li>
+      <a href="#Rounding" title="https://w3id.org/transmodel/fares#Rounding">Rounding</a>
+   </li>
+   <li>
+      <a href="#RoundTrip" title="https://w3id.org/transmodel/fares#RoundTrip">RoundTrip</a>
+   </li>
+   <li>
+      <a href="#Routing" title="https://w3id.org/transmodel/fares#Routing">Routing</a>
+   </li>
+   <li>
+      <a href="#RoutingValidityParameter"
+         title="https://w3id.org/transmodel/fares#RoutingValidityParameter">RoutingValidityParameter</a>
+   </li>
+   <li>
+      <a href="#SalesPackage" title="https://w3id.org/transmodel/fares#SalesPackage">SalesPackage</a>
+   </li>
+   <li>
+      <a href="#SalesPackageElement"
+         title="https://w3id.org/transmodel/fares#SalesPackageElement">SalesPackageElement</a>
+   </li>
+   <li>
+      <a href="#SalesPackagePrice"
+         title="https://w3id.org/transmodel/fares#SalesPackagePrice">SalesPackagePrice</a>
+   </li>
+   <li>
+      <a href="#SalesPackageSubstitution"
+         title="https://w3id.org/transmodel/fares#SalesPackageSubstitution">SalesPackageSubstitution</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/commons#ScheduledStopPoint"
+         title="https://w3id.org/transmodel/commons#ScheduledStopPoint">ScheduledStopPoint</a>
+   </li>
+   <li>
+      <a href="#ScopingValidityParameter"
+         title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+   </li>
+   <li>
+      <a href="#SeriesConstraintPrice"
+         title="https://w3id.org/transmodel/fares#SeriesConstraintPrice">SeriesConstraintPrice</a>
+   </li>
+   <li>
+      <a href="#ServiceAccessRight"
+         title="https://w3id.org/transmodel/fares#ServiceAccessRight">
+         <span>service access right</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ServiceValidityParameter"
+         title="https://w3id.org/transmodel/fares#ServiceValidityParameter">ServiceValidityParameter</a>
+   </li>
+   <li>
+      <a href="#StepLimit" title="https://w3id.org/transmodel/fares#StepLimit">StepLimit</a>
+   </li>
+   <li>
+      <a href="#Tariff" title="https://w3id.org/transmodel/fares#Tariff">
+         <span>tariff</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/commons#TariffZone" title="https://w3id.org/transmodel/commons#TariffZone">TariffZone</a>
+   </li>
+   <li>
+      <a href="#TimeIntervalPrice"
+         title="https://w3id.org/transmodel/fares#TimeIntervalPrice">TimeIntervalPrice</a>
+   </li>
+   <li>
+      <a href="#TimeUnitPrice" title="https://w3id.org/transmodel/fares#TimeUnitPrice">TimeUnitPrice</a>
+   </li>
+   <li>
+      <a href="#Transferability"
+         title="https://w3id.org/transmodel/fares#Transferability">Transferability</a>
+   </li>
+   <li>
+      <a href="#UsageParameter"
+         title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+   </li>
+   <li>
+      <a href="#UsageParameterPrice"
+         title="https://w3id.org/transmodel/fares#UsageParameterPrice">UsageParameterPrice</a>
+   </li>
+   <li>
+      <a href="#UsageValidityPeriod"
+         title="https://w3id.org/transmodel/fares#UsageValidityPeriod">UsageValidityPeriod</a>
+   </li>
+   <li>
+      <a href="#UserProfile" title="https://w3id.org/transmodel/fares#UserProfile">UserProfile</a>
+   </li>
+   <li>
+      <a href="#ValidableElement"
+         title="https://w3id.org/transmodel/fares#ValidableElement">ValidableElement</a>
+   </li>
+   <li>
+      <a href="#ValidableElementPrice"
+         title="https://w3id.org/transmodel/fares#ValidableElementPrice">ValidableElementPrice</a>
+   </li>
+   <li>
+      <a href="#ValidityParameterAssignment"
+         title="https://w3id.org/transmodel/fares#ValidityParameterAssignment">
+         <span>validity parameter assignment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/commons#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
+   </li>
+</ul><h4>Propiedades de objeto</h4><ul class="hlist">
+   <li>
+      <a href="#aChainOf" title="https://w3id.org/transmodel/fares#aChainOf">aChainOf</a>
+   </li>
+   <li>
+      <a href="#composedOf" title="https://w3id.org/transmodel/fares#composedOf">composedOf</a>
+   </li>
+   <li>
+      <a href="#definedBy" title="https://w3id.org/transmodel/fares#definedBy">definedBy</a>
+   </li>
+   <li>
+      <a href="#describedThrough"
+         title="https://w3id.org/transmodel/fares#describedThrough">
+         <span>described through</span>
+      </a>
+   </li>
+   <li>
+      <a href="#distributionChannelType"
+         title="https://w3id.org/transmodel/fares#distributionChannelType">
+         <span>distribution Channel Type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#endOf" title="https://w3id.org/transmodel/fares#endOf">endOf</a>
+   </li>
+   <li>
+      <a href="#governedBy" title="https://w3id.org/transmodel/fares#governedBy">
+         <span>governed by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
+   </li>
+   <li>
+      <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
+   </li>
+   <li>
+      <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
+         <span>tariff basis</span>
+      </a>
+   </li>
+</ul><h4>Propiedades de datos</h4><ul class="hlist">
+   <li>
+      <a href="#accessNumber" title="https://w3id.org/transmodel/fares#accessNumber">accessNumber</a>
+   </li>
+   <li>
+      <a href="#amount" title="https://w3id.org/transmodel/fares#amount">amount</a>
+   </li>
+   <li>
+      <a href="#discountAmount" title="https://w3id.org/transmodel/fares#discountAmount">discountAmount</a>
+   </li>
+   <li>
+      <a href="#discountPercentageUsed"
+         title="https://w3id.org/transmodel/fares#discountPercentageUsed">discountPercentageUsed</a>
+   </li>
+   <li>
+      <a href="#embargoUntilDate"
+         title="https://w3id.org/transmodel/fares#embargoUntilDate">embargoUntilDate</a>
+   </li>
+   <li>
+      <a href="#endDate" title="https://w3id.org/transmodel/fares#endDate">endDate</a>
+   </li>
+   <li>
+      <a href="#endGeographicalValue"
+         title="https://w3id.org/transmodel/fares#endGeographicalValue">endGeographicalValue</a>
+   </li>
+   <li>
+      <a href="#infoUrl" title="https://w3id.org/transmodel/fares#infoUrl">InfoUrl</a>
+   </li>
+   <li>
+      <a href="#isAllowed" title="https://w3id.org/transmodel/fares#isAllowed">isAllowed</a>
+   </li>
+   <li>
+      <a href="#isFirstInSequence"
+         title="https://w3id.org/transmodel/fares#isFirstInSequence">isFirstInSequence</a>
+   </li>
+   <li>
+      <a href="#isLastInSequence"
+         title="https://w3id.org/transmodel/fares#isLastInSequence">isLastInSequence</a>
+   </li>
+   <li>
+      <a href="#limitedAccessNumber"
+         title="https://w3id.org/transmodel/fares#limitedAccessNumber">limitedAccessNumber</a>
+   </li>
+   <li>
+      <a href="#numberOfUnits" title="https://w3id.org/transmodel/fares#numberOfUnits">
+         <span>number of units</span>
+      </a>
+   </li>
+   <li>
+      <a href="#privateCode" title="https://w3id.org/transmodel/fares#privateCode">
+         <span>private code</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ranking" title="https://w3id.org/transmodel/fares#ranking">ranking</a>
+   </li>
+   <li>
+      <a href="#returnFareTwiceSingle"
+         title="https://w3id.org/transmodel/fares#returnFareTwiceSingle">
+         <span>return fare twice single</span>
+      </a>
+   </li>
+   <li>
+      <a href="#startDate" title="https://w3id.org/transmodel/fares#startDate">startDate</a>
+   </li>
+   <li>
+      <a href="#startGeographicalValue"
+         title="https://w3id.org/transmodel/fares#startGeographicalValue">startGeographicalValue</a>
+   </li>
+   <li>
+      <a href="#url" title="https://w3id.org/transmodel/fares#url">url</a>
+   </li>
+</ul><h4>Individuos</h4><ul class="hlist">
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/booking-access-type"
+         title="https://w3id.org/transmodel/kos/fares/booking-access-type">
+         <span>booking access type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/booking-method-type"
+         title="https://w3id.org/transmodel/kos/fares/booking-method-type">
+         <span>booking method type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/distribution-channel-type"
+         title="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+         <span>distribution channel type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/distribution-rights"
+         title="https://w3id.org/transmodel/kos/fares/distribution-rights">
+         <span>distribution rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/fulfilment-method-type"
+         title="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+         <span>fulfilment method type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+         title="https://w3id.org/transmodel/kos/fares/tariff-basis-type">
+         <span>tariff basis type</span>
+      </a>
+   </li>
+</ul>
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Transmodel Ontology - Fares: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">Descripci&oacute;n completa de la ontolog&iacute;a: en caso de ser posible, a&ntilde;adir un diagrama explicando c&oacute;omo las clases est&aacute;n relacionadas, ejemplos de uso, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">T&eacute;rminos de Transmodel Ontology - Fares para clases, propiedades y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Transmodel Ontology - Fares.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Clases</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AccessRightInProduct"
+            title="https://w3id.org/transmodel/fares#AccessRightInProduct">AccessRightInProduct</a>
+      </li>
+      <li>
+         <a href="#AccessRightParameterAssignment"
+            title="https://w3id.org/transmodel/fares#AccessRightParameterAssignment">AccessRightParameterAssignment</a>
+      </li>
+      <li>
+         <a href="#CappingRulePrice"
+            title="https://w3id.org/transmodel/fares#CappingRulePrice">CappingRulePrice</a>
+      </li>
+      <li>
+         <a href="#chargingPolicy"
+            title="https://w3id.org/transmodel/fares#chargingPolicy">chargingPolicy</a>
+      </li>
+      <li>
+         <a href="#CommercialProfile"
+            title="https://w3id.org/transmodel/fares#CommercialProfile">CommercialProfile</a>
+      </li>
+      <li>
+         <a href="#CompanionProfile"
+            title="https://w3id.org/transmodel/fares#CompanionProfile">CompanionProfile</a>
+      </li>
+      <li>
+         <a href="#ControllableElement"
+            title="https://w3id.org/transmodel/fares#ControllableElement">
+            <span>controllable element</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ControllableElementInSequence"
+            title="https://w3id.org/transmodel/fares#ControllableElementInSequence">ControllableElementInSequence</a>
+      </li>
+      <li>
+         <a href="#ControllableElementPrice"
+            title="https://w3id.org/transmodel/fares#ControllableElementPrice">ControllableElementPrice</a>
+      </li>
+      <li>
+         <a href="#DiscountingRule"
+            title="https://w3id.org/transmodel/fares#DiscountingRule">DiscountingRule</a>
+      </li>
+      <li>
+         <a href="#DistanceMatrixElement"
+            title="https://w3id.org/transmodel/fares#DistanceMatrixElement">DistanceMatrixElement</a>
+      </li>
+      <li>
+         <a href="#DistanceMatrixElementPrice"
+            title="https://w3id.org/transmodel/fares#DistanceMatrixElementPrice">DistanceMatrixElementPrice</a>
+      </li>
+      <li>
+         <a href="#DistributionChannel"
+            title="https://w3id.org/transmodel/fares#DistributionChannel">
+            <span>Distribution Channel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DistributionAssignment"
+            title="https://w3id.org/transmodel/fares#DistributionAssignment">DistributionAssignment</a>
+      </li>
+      <li>
+         <a href="#EntitlementGiven"
+            title="https://w3id.org/transmodel/fares#EntitlementGiven">EntitlementGiven</a>
+      </li>
+      <li>
+         <a href="#EntitlementProduct"
+            title="https://w3id.org/transmodel/fares#EntitlementProduct">EntitlementProduct</a>
+      </li>
+      <li>
+         <a href="#EntitlementRequired"
+            title="https://w3id.org/transmodel/fares#EntitlementRequired">EntitlementRequired</a>
+      </li>
+      <li>
+         <a href="#Exchanging" title="https://w3id.org/transmodel/fares#Exchanging">Exchanging</a>
+      </li>
+      <li>
+         <a href="#FareProductPrice"
+            title="https://w3id.org/transmodel/fares#FareProductPrice">
+            <span>fare product price</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FareStructureElement"
+            title="https://w3id.org/transmodel/fares#FareStructureElement">
+            <span>Fare Structure Element</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FareElementInSequence"
+            title="https://w3id.org/transmodel/fares#FareElementInSequence">FareElementInSequence</a>
+      </li>
+      <li>
+         <a href="#FareInterval" title="https://w3id.org/transmodel/fares#FareInterval">FareInterval</a>
+      </li>
+      <li>
+         <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">
+            <span>FarePrice</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FareProduct" title="https://w3id.org/transmodel/fares#FareProduct">FareProduct</a>
+      </li>
+      <li>
+         <a href="#FareStructureElementInSequence"
+            title="https://w3id.org/transmodel/fares#FareStructureElementInSequence">FareStructureElementInSequence</a>
+      </li>
+      <li>
+         <a href="#FareStructureElementPrice"
+            title="https://w3id.org/transmodel/fares#FareStructureElementPrice">FareStructureElementPrice</a>
+      </li>
+      <li>
+         <a href="#FareStructureFactor"
+            title="https://w3id.org/transmodel/fares#FareStructureFactor">FareStructureFactor</a>
+      </li>
+      <li>
+         <a href="#FareTable" title="https://w3id.org/transmodel/fares#FareTable">FareTable</a>
+      </li>
+      <li>
+         <a href="#FareUnit" title="https://w3id.org/transmodel/fares#FareUnit">FareUnit</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/journeys#FlexibleLine"
+            title="https://w3id.org/transmodel/journeys#FlexibleLine">
+            <span>flexible line</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FrequencyOfUse"
+            title="https://w3id.org/transmodel/fares#FrequencyOfUse">FrequencyOfUse</a>
+      </li>
+      <li>
+         <a href="#FulfilmentMethodPrice"
+            title="https://w3id.org/transmodel/fares#FulfilmentMethodPrice">FulfilmentMethodPrice</a>
+      </li>
+      <li>
+         <a href="#GenericParameterAssignment"
+            title="https://w3id.org/transmodel/fares#GenericParameterAssignment">
+            <span>generic parameter assignment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#GeographicalUnit"
+            title="https://w3id.org/transmodel/fares#GeographicalUnit">
+            <span>geographical unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#GeographicalInterval"
+            title="https://w3id.org/transmodel/fares#GeographicalInterval">GeographicalInterval</a>
+      </li>
+      <li>
+         <a href="#GeographicalIntervalPrice"
+            title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
+      </li>
+      <li>
+         <a href="#GeographicalUnitPrice"
+            title="https://w3id.org/transmodel/fares#GeographicalUnitPrice">GeographicalUnitPrice</a>
+      </li>
+      <li>
+         <a href="#GroupTicket" title="https://w3id.org/transmodel/fares#GroupTicket">GroupTicket</a>
+      </li>
+      <li>
+         <a href="#Interchanging" title="https://w3id.org/transmodel/fares#Interchanging">Interchanging</a>
+      </li>
+      <li>
+         <a href="#LimitingRule" title="https://w3id.org/transmodel/fares#LimitingRule">LimitingRule</a>
+      </li>
+      <li>
+         <a href="#LuggageAllowance"
+            title="https://w3id.org/transmodel/fares#LuggageAllowance">LuggageAllowance</a>
+      </li>
+      <li>
+         <a href="#MinimumStay" title="https://w3id.org/transmodel/fares#MinimumStay">MinimumStay</a>
+      </li>
+      <li>
+         <a href="#NetworkValidityParameter"
+            title="https://w3id.org/transmodel/fares#NetworkValidityParameter">NetworkValidityParameter</a>
+      </li>
+      <li>
+         <a href="#OrganisationalValidityParameter"
+            title="https://w3id.org/transmodel/fares#OrganisationalValidityParameter">OrganisationalValidityParameter</a>
+      </li>
+      <li>
+         <a href="#ParkingPrice" title="https://w3id.org/transmodel/fares#ParkingPrice">ParkingPrice</a>
+      </li>
+      <li>
+         <a href="#PenaltyPolicy" title="https://w3id.org/transmodel/fares#PenaltyPolicy">PenaltyPolicy</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/commons#Point" title="https://w3id.org/transmodel/commons#Point">Point</a>
+      </li>
+      <li>
+         <a href="#PreAssignedFareProduct"
+            title="https://w3id.org/transmodel/fares#PreAssignedFareProduct">PreAssignedFareProduct</a>
+      </li>
+      <li>
+         <a href="#PriceableObject"
+            title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+      </li>
+      <li>
+         <a href="#PriceUnit" title="https://w3id.org/transmodel/fares#PriceUnit">PriceUnit</a>
+      </li>
+      <li>
+         <a href="#PricingRule" title="https://w3id.org/transmodel/fares#PricingRule">PricingRule</a>
+      </li>
+      <li>
+         <a href="#ProductValidityParameter"
+            title="https://w3id.org/transmodel/fares#ProductValidityParameter">ProductValidityParameter</a>
+      </li>
+      <li>
+         <a href="#PurchaseWindow"
+            title="https://w3id.org/transmodel/fares#PurchaseWindow">PurchaseWindow</a>
+      </li>
+      <li>
+         <a href="#QualityStructureFactorPrice"
+            title="https://w3id.org/transmodel/fares#QualityStructureFactorPrice">QualityStructureFactorPrice</a>
+      </li>
+      <li>
+         <a href="#Refunding" title="https://w3id.org/transmodel/fares#Refunding">Refunding</a>
+      </li>
+      <li>
+         <a href="#Replacing" title="https://w3id.org/transmodel/fares#Replacing">Replacing</a>
+      </li>
+      <li>
+         <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+      </li>
+      <li>
+         <a href="#ResidentialQualification"
+            title="https://w3id.org/transmodel/fares#ResidentialQualification">ResidentialQualification</a>
+      </li>
+      <li>
+         <a href="#Rounding" title="https://w3id.org/transmodel/fares#Rounding">Rounding</a>
+      </li>
+      <li>
+         <a href="#RoundTrip" title="https://w3id.org/transmodel/fares#RoundTrip">RoundTrip</a>
+      </li>
+      <li>
+         <a href="#Routing" title="https://w3id.org/transmodel/fares#Routing">Routing</a>
+      </li>
+      <li>
+         <a href="#RoutingValidityParameter"
+            title="https://w3id.org/transmodel/fares#RoutingValidityParameter">RoutingValidityParameter</a>
+      </li>
+      <li>
+         <a href="#SalesPackage" title="https://w3id.org/transmodel/fares#SalesPackage">SalesPackage</a>
+      </li>
+      <li>
+         <a href="#SalesPackageElement"
+            title="https://w3id.org/transmodel/fares#SalesPackageElement">SalesPackageElement</a>
+      </li>
+      <li>
+         <a href="#SalesPackagePrice"
+            title="https://w3id.org/transmodel/fares#SalesPackagePrice">SalesPackagePrice</a>
+      </li>
+      <li>
+         <a href="#SalesPackageSubstitution"
+            title="https://w3id.org/transmodel/fares#SalesPackageSubstitution">SalesPackageSubstitution</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/commons#ScheduledStopPoint"
+            title="https://w3id.org/transmodel/commons#ScheduledStopPoint">ScheduledStopPoint</a>
+      </li>
+      <li>
+         <a href="#ScopingValidityParameter"
+            title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+      </li>
+      <li>
+         <a href="#SeriesConstraintPrice"
+            title="https://w3id.org/transmodel/fares#SeriesConstraintPrice">SeriesConstraintPrice</a>
+      </li>
+      <li>
+         <a href="#ServiceAccessRight"
+            title="https://w3id.org/transmodel/fares#ServiceAccessRight">
+            <span>service access right</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ServiceValidityParameter"
+            title="https://w3id.org/transmodel/fares#ServiceValidityParameter">ServiceValidityParameter</a>
+      </li>
+      <li>
+         <a href="#StepLimit" title="https://w3id.org/transmodel/fares#StepLimit">StepLimit</a>
+      </li>
+      <li>
+         <a href="#Tariff" title="https://w3id.org/transmodel/fares#Tariff">
+            <span>tariff</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/commons#TariffZone" title="https://w3id.org/transmodel/commons#TariffZone">TariffZone</a>
+      </li>
+      <li>
+         <a href="#TimeIntervalPrice"
+            title="https://w3id.org/transmodel/fares#TimeIntervalPrice">TimeIntervalPrice</a>
+      </li>
+      <li>
+         <a href="#TimeUnitPrice" title="https://w3id.org/transmodel/fares#TimeUnitPrice">TimeUnitPrice</a>
+      </li>
+      <li>
+         <a href="#Transferability"
+            title="https://w3id.org/transmodel/fares#Transferability">Transferability</a>
+      </li>
+      <li>
+         <a href="#UsageParameter"
+            title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+      </li>
+      <li>
+         <a href="#UsageParameterPrice"
+            title="https://w3id.org/transmodel/fares#UsageParameterPrice">UsageParameterPrice</a>
+      </li>
+      <li>
+         <a href="#UsageValidityPeriod"
+            title="https://w3id.org/transmodel/fares#UsageValidityPeriod">UsageValidityPeriod</a>
+      </li>
+      <li>
+         <a href="#UserProfile" title="https://w3id.org/transmodel/fares#UserProfile">UserProfile</a>
+      </li>
+      <li>
+         <a href="#ValidableElement"
+            title="https://w3id.org/transmodel/fares#ValidableElement">ValidableElement</a>
+      </li>
+      <li>
+         <a href="#ValidableElementPrice"
+            title="https://w3id.org/transmodel/fares#ValidableElementPrice">ValidableElementPrice</a>
+      </li>
+      <li>
+         <a href="#ValidityParameterAssignment"
+            title="https://w3id.org/transmodel/fares#ValidityParameterAssignment">
+            <span>validity parameter assignment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/commons#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
+      </li>
+   </ul>
+   <div class="entity" id="AccessRightInProduct">
+      <h3>AccessRightInProduct<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#AccessRightInProduct</p>
+      <div class="comment">
+         <span class="markdown">A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareElementInSequence"
+               title="https://w3id.org/transmodel/fares#FareElementInSequence">FareElementInSequence</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AccessRightParameterAssignment">
+      <h3>AccessRightParameterAssignment<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#AccessRightParameterAssignment</p>
+      <div class="comment">
+         <span class="markdown">The assignment of a fare collection parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.).</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#ValidityParameterAssignment"
+               title="https://w3id.org/transmodel/fares#ValidityParameterAssignment">validity parameter assignment</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CappingRulePrice">
+      <h3>CappingRulePrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#CappingRulePrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a capping rule: default total price, discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="chargingPolicy">
+      <h3>chargingPolicy<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#chargingPolicy</p>
+      <div class="comment">
+         <span class="markdown">Parameter governing minimum amount and credit allowed when consuming a fare product.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CommercialProfile">
+      <h3>CommercialProfile<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#CommercialProfile</p>
+      <div class="comment">
+         <span class="markdown">A category of users depending on their commercial relations with the operator (frequency of use, amount of purchase etc.), often used for allowing discounts.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CompanionProfile">
+      <h3>CompanionProfile<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#CompanionProfile</p>
+      <div class="comment">
+         <span class="markdown">The number and characteristics of the persons entitled to travel in a group or as companions to another User Profile.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControllableElement">
+      <h3>controllable element<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ControllableElement</p>
+      <div class="comment">
+         <span class="markdown">The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControllableElementInSequence">
+      <h3>ControllableElementInSequence<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ControllableElementInSequence</p>
+      <div class="comment">
+         <span class="markdown">A controllable element as a part of a fare structure element, including its possible order in the sequence of controllable elements grouped together to form that fare structure element, and its possible quantitative limitation.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareElementInSequence"
+               title="https://w3id.org/transmodel/fares#FareElementInSequence">FareElementInSequence</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControllableElementPrice">
+      <h3>ControllableElementPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ControllableElementPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Controllable Element: default total price, discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DiscountingRule">
+      <h3>DiscountingRule<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DiscountingRule</p>
+      <div class="comment">
+         <span class="markdown">A price calculation rule determined by a set of discounts, depending upon a usage parameter, to be applied to a fare price.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PricingRule" title="https://w3id.org/transmodel/fares#PricingRule">PricingRule</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#LimitingRule" title="https://w3id.org/transmodel/fares#LimitingRule">LimitingRule</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistanceMatrixElement">
+      <h3>DistanceMatrixElement<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DistanceMatrixElement</p>
+      <div class="comment">
+         <span class="markdown">A cell of an origin-destination matrix for Tariff zones or stop points, expressing a fare distance for the corresponding trip: value in km, number of fare units etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistanceMatrixElementPrice">
+      <h3>DistanceMatrixElementPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DistanceMatrixElementPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Distance Matrix Element: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistributionChannel">
+      <h3>Distribution Channel<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DistributionChannel</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#describedThrough"
+               title="https://w3id.org/transmodel/fares#describedThrough">described through</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#distributionChannelType"
+               title="https://w3id.org/transmodel/fares#distributionChannelType">distribution Channel Type</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>, <a href="#governedBy" title="https://w3id.org/transmodel/fares#governedBy">governed by</a>
+            <sup class="type-op" title="Propiedad entre objetos">op</sup>
+         </dd>
+         <dt>también definida por</dt>
+         <dd>Individuo</dd>
+      </dl>
+   </div>
+   <div class="entity" id="DistributionAssignment">
+      <h3>DistributionAssignment<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#DistributionAssignment</p>
+      <div class="comment">
+         <span class="markdown">An assignment of the country and/or  distribution channel through which a product may or may not be distributed.</span>
+      </div>
+   </div>
+   <div class="entity" id="EntitlementGiven">
+      <h3>EntitlementGiven<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#EntitlementGiven</p>
+      <div class="comment">
+         <span class="markdown">Parameter indicating whether a particular fare product provides an entitlement to buy or use an access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EntitlementProduct">
+      <h3>EntitlementProduct<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#EntitlementProduct</p>
+      <div class="comment">
+         <span class="markdown">A precondition to access a service or to purchase a Fare Product issued by an organisation that may not be a pt operator (e.g. military card).</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ServiceAccessRight"
+               title="https://w3id.org/transmodel/fares#ServiceAccessRight">service access right</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EntitlementRequired">
+      <h3>EntitlementRequired<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#EntitlementRequired</p>
+      <div class="comment">
+         <span class="markdown">Parameter indicating whether a particular fare product requires an entitlement to by or use an access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Exchanging">
+      <h3>Exchanging<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Exchanging</p>
+      <div class="comment">
+         <span class="markdown">Whether and how the access right may be exchanged for another access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareProductPrice">
+      <h3>fare product price<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareProductPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a fare product: default total price, discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareStructureElement">
+      <h3>Fare Structure Element<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareStructureElement</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#privateCode" title="https://w3id.org/transmodel/fares#privateCode">private code</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#returnFareTwiceSingle"
+               title="https://w3id.org/transmodel/fares#returnFareTwiceSingle">return fare twice single</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+         <dt>también definida por</dt>
+         <dd>Individuo</dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareElementInSequence">
+      <h3>FareElementInSequence<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareElementInSequence</p>
+      <div class="comment">
+         <span class="markdown">A fare element as a part of an element, including its possible order in the sequence of fare  elements.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#AccessRightInProduct"
+               title="https://w3id.org/transmodel/fares#AccessRightInProduct">AccessRightInProduct</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ControllableElementInSequence"
+               title="https://w3id.org/transmodel/fares#ControllableElementInSequence">ControllableElementInSequence</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareStructureElementInSequence"
+               title="https://w3id.org/transmodel/fares#FareStructureElementInSequence">FareStructureElementInSequence</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareInterval">
+      <h3>FareInterval<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareInterval</p>
+      <div class="comment">
+         <span class="markdown">An interval based aspect of the fare structure.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#GeographicalInterval"
+               title="https://w3id.org/transmodel/fares#GeographicalInterval">GeographicalInterval</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarePrice">
+      <h3>FarePrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FarePrice</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#CappingRulePrice"
+               title="https://w3id.org/transmodel/fares#CappingRulePrice">CappingRulePrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ControllableElementPrice"
+               title="https://w3id.org/transmodel/fares#ControllableElementPrice">ControllableElementPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#DistanceMatrixElementPrice"
+               title="https://w3id.org/transmodel/fares#DistanceMatrixElementPrice">DistanceMatrixElementPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareStructureElementPrice"
+               title="https://w3id.org/transmodel/fares#FareStructureElementPrice">FareStructureElementPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FulfilmentMethodPrice"
+               title="https://w3id.org/transmodel/fares#FulfilmentMethodPrice">FulfilmentMethodPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#GeographicalIntervalPrice"
+               title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#GeographicalUnitPrice"
+               title="https://w3id.org/transmodel/fares#GeographicalUnitPrice">GeographicalUnitPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ParkingPrice" title="https://w3id.org/transmodel/fares#ParkingPrice">ParkingPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#QualityStructureFactorPrice"
+               title="https://w3id.org/transmodel/fares#QualityStructureFactorPrice">QualityStructureFactorPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#SalesPackagePrice"
+               title="https://w3id.org/transmodel/fares#SalesPackagePrice">SalesPackagePrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#SeriesConstraintPrice"
+               title="https://w3id.org/transmodel/fares#SeriesConstraintPrice">SeriesConstraintPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#TimeIntervalPrice"
+               title="https://w3id.org/transmodel/fares#TimeIntervalPrice">TimeIntervalPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#TimeUnitPrice" title="https://w3id.org/transmodel/fares#TimeUnitPrice">TimeUnitPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#UsageParameterPrice"
+               title="https://w3id.org/transmodel/fares#UsageParameterPrice">UsageParameterPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ValidableElementPrice"
+               title="https://w3id.org/transmodel/fares#ValidableElementPrice">ValidableElementPrice</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareProductPrice"
+               title="https://w3id.org/transmodel/fares#FareProductPrice">fare product price</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#amount" title="https://w3id.org/transmodel/fares#amount">amount</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#discountAmount" title="https://w3id.org/transmodel/fares#discountAmount">discountAmount</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>, <a href="#discountPercentageUsed"
+               title="https://w3id.org/transmodel/fares#discountPercentageUsed">discountPercentageUsed</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+         <dt>también definida por</dt>
+         <dd>Individuo</dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareProduct">
+      <h3>FareProduct<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareProduct</p>
+      <div class="comment">
+         <span class="markdown">An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ServiceAccessRight"
+               title="https://w3id.org/transmodel/fares#ServiceAccessRight">service access right</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#PreAssignedFareProduct"
+               title="https://w3id.org/transmodel/fares#PreAssignedFareProduct">PreAssignedFareProduct</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareStructureElementInSequence">
+      <h3>FareStructureElementInSequence<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareStructureElementInSequence</p>
+      <div class="comment">
+         <span class="markdown">A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareElementInSequence"
+               title="https://w3id.org/transmodel/fares#FareElementInSequence">FareElementInSequence</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareStructureElementPrice">
+      <h3>FareStructureElementPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareStructureElementPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Fare Structure Element: default total price, discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareStructureFactor">
+      <h3>FareStructureFactor<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareStructureFactor</p>
+      <div class="comment">
+         <span class="markdown">A factor influencing access rights definition or calculation of prices.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FareTable">
+      <h3>FareTable<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareTable</p>
+      <div class="comment">
+         <span class="markdown">A grouping of prices (specialization of price group) that may be associated with all or any of  distance matrix element, fare structure element geographical interval, group of access right parameter, class of use, operator, vehicle mode, fare product.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="FareUnit">
+      <h3>FareUnit<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FareUnit</p>
+      <div class="comment">
+         <span class="markdown">A unit associated with a Fare Structure Factor.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#GeographicalUnit"
+               title="https://w3id.org/transmodel/fares#GeographicalUnit">geographical unit</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/journeys#FlexibleLine">
+      <h3>flexible line<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/journeys#FlexibleLine</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/transmodel/journeys#Line">line</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FrequencyOfUse">
+      <h3>FrequencyOfUse<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FrequencyOfUse</p>
+      <div class="comment">
+         <span class="markdown">The limits of usage frequency for a fare product (or one of its components) or a sales package during a specific validity period. there may be different tariffs depending on how often the right is consumed during the period.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FulfilmentMethodPrice">
+      <h3>FulfilmentMethodPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#FulfilmentMethodPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a fulfilment method default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GenericParameterAssignment">
+      <h3>generic parameter assignment<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GenericParameterAssignment</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ValidityParameterAssignment"
+               title="https://w3id.org/transmodel/fares#ValidityParameterAssignment">validity parameter assignment</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalUnit">
+      <h3>geographical unit<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalUnit</p>
+      <div class="comment">
+         <span class="markdown">A unit for calculating geographical graduated fares.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareUnit" title="https://w3id.org/transmodel/fares#FareUnit">FareUnit</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalInterval">
+      <h3>GeographicalInterval<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalInterval</p>
+      <div class="comment">
+         <span class="markdown">A geographical interval specifying access rights for the Fare Structure Elements within the range of this interval: 0-5 km, 4-6 zones etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareInterval" title="https://w3id.org/transmodel/fares#FareInterval">FareInterval</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalIntervalPrice">
+      <h3>GeographicalIntervalPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalIntervalPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Geographical Interval: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalUnitPrice">
+      <h3>GeographicalUnitPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalUnitPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Geographical Unit: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GroupTicket">
+      <h3>GroupTicket<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GroupTicket</p>
+      <div class="comment">
+         <span class="markdown">The number and characteristics of persons entitled to travel in addition to the holder of an access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Interchanging">
+      <h3>Interchanging<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Interchanging</p>
+      <div class="comment">
+         <span class="markdown">Limitations on making changes within a trip.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LimitingRule">
+      <h3>LimitingRule<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#LimitingRule</p>
+      <div class="comment">
+         <span class="markdown">Rule for limiting the results of a price calculation.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#DiscountingRule"
+               title="https://w3id.org/transmodel/fares#DiscountingRule">DiscountingRule</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LuggageAllowance">
+      <h3>LuggageAllowance<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#LuggageAllowance</p>
+      <div class="comment">
+         <span class="markdown">The number and characteristics (weight, volume) of luggage that a holder of an access right is entitled to carry.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MinimumStay">
+      <h3>MinimumStay<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#MinimumStay</p>
+      <div class="comment">
+         <span class="markdown">Details of any minimum stay at the destination required to use the product.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NetworkValidityParameter">
+      <h3>NetworkValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#NetworkValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">A type of validity parameter related to the network structure.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ScopingValidityParameter"
+               title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OrganisationalValidityParameter">
+      <h3>OrganisationalValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#OrganisationalValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">A type of validity parameter related to organisational issues.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ScopingValidityParameter"
+               title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ParkingPrice">
+      <h3>ParkingPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ParkingPrice</p>
+      <div class="comment">
+         <span class="markdown">A specialisation of fare price that defines the price of a parking charge band.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PenaltyPolicy">
+      <h3>PenaltyPolicy<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PenaltyPolicy</p>
+      <div class="comment">
+         <span class="markdown">Policy regarding different aspects of penalty charges, for example  repeated entry at the same station, not having a ticket etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/commons#Point">
+      <h3>Point<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Point</p>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#https://w3id.org/transmodel/commons#ScheduledStopPoint"
+               title="https://w3id.org/transmodel/commons#ScheduledStopPoint">ScheduledStopPoint</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PreAssignedFareProduct">
+      <h3>PreAssignedFareProduct<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PreAssignedFareProduct</p>
+      <div class="comment">
+         <span class="markdown">A fare product consisting of one or several validable elements, specific to a charging method.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareProduct" title="https://w3id.org/transmodel/fares#FareProduct">FareProduct</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceableObject">
+      <h3>PriceableObject<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PriceableObject</p>
+      <div class="comment">
+         <span class="markdown">An element which may have a fare price.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#DistanceMatrixElement"
+               title="https://w3id.org/transmodel/fares#DistanceMatrixElement">DistanceMatrixElement</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareStructureElement"
+               title="https://w3id.org/transmodel/fares#FareStructureElement">Fare Structure Element</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareInterval" title="https://w3id.org/transmodel/fares#FareInterval">FareInterval</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareStructureFactor"
+               title="https://w3id.org/transmodel/fares#FareStructureFactor">FareStructureFactor</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareUnit" title="https://w3id.org/transmodel/fares#FareUnit">FareUnit</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#SalesPackage" title="https://w3id.org/transmodel/fares#SalesPackage">SalesPackage</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#SalesPackageElement"
+               title="https://w3id.org/transmodel/fares#SalesPackageElement">SalesPackageElement</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ValidableElement"
+               title="https://w3id.org/transmodel/fares#ValidableElement">ValidableElement</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ControllableElement"
+               title="https://w3id.org/transmodel/fares#ControllableElement">controllable element</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ServiceAccessRight"
+               title="https://w3id.org/transmodel/fares#ServiceAccessRight">service access right</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceUnit">
+      <h3>PriceUnit<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PriceUnit</p>
+      <div class="comment">
+         <span class="markdown">A unit to express prices: amount of currency, abstract fare unit, ticket unit or token etc.</span>
+      </div>
+   </div>
+   <div class="entity" id="PricingRule">
+      <h3>PricingRule<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PricingRule</p>
+      <div class="comment">
+         <span class="markdown">A rule used for the calculation of fare price, determined either by a set of parameters to be applied to a reference price or by a more complex algorithm.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#DiscountingRule"
+               title="https://w3id.org/transmodel/fares#DiscountingRule">DiscountingRule</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProductValidityParameter">
+      <h3>ProductValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ProductValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">A type of validity parameter linked to fare products and/or their distribution.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ScopingValidityParameter"
+               title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PurchaseWindow">
+      <h3>PurchaseWindow<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#PurchaseWindow</p>
+      <div class="comment">
+         <span class="markdown">Period in which the product must be purchased.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QualityStructureFactorPrice">
+      <h3>QualityStructureFactorPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#QualityStructureFactorPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a quality structure factor , e.g. default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Refunding">
+      <h3>Refunding<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Refunding</p>
+      <div class="comment">
+         <span class="markdown">Whether and how the product may be refunded.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Replacing">
+      <h3>Replacing<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Replacing</p>
+      <div class="comment">
+         <span class="markdown">Whether and how the access right may be replaced.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Reselling">
+      <h3>Reselling<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Reselling</p>
+      <div class="comment">
+         <span class="markdown">Common resale conditions (i.e. for exchange or refund)  attached to the product</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#Exchanging" title="https://w3id.org/transmodel/fares#Exchanging">Exchanging</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Refunding" title="https://w3id.org/transmodel/fares#Refunding">Refunding</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Replacing" title="https://w3id.org/transmodel/fares#Replacing">Replacing</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ResidentialQualification">
+      <h3>ResidentialQualification<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ResidentialQualification</p>
+      <div class="comment">
+         <span class="markdown">A parameter providing an authorisation to consider a user as being characterised by a User Profile.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Rounding">
+      <h3>Rounding<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Rounding</p>
+      <div class="comment">
+         <span class="markdown">Parameters directing the rounding of values that are the result of calculations.</span>
+      </div>
+   </div>
+   <div class="entity" id="RoundTrip">
+      <h3>RoundTrip<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#RoundTrip</p>
+      <div class="comment">
+         <span class="markdown">Properties relating to single or return trip use of an access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Routing">
+      <h3>Routing<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Routing</p>
+      <div class="comment">
+         <span class="markdown">Limitations on routing of an access right.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RoutingValidityParameter">
+      <h3>RoutingValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#RoutingValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">A type of validity parameter linked to specific routing.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ScopingValidityParameter"
+               title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SalesPackage">
+      <h3>SalesPackage<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#SalesPackage</p>
+      <div class="comment">
+         <span class="markdown">A package to be sold as a whole, consisting of one or several fare products materialised thanks to one or several travel documents. the fare products may be either directly attached to the travel documents, or may be reloadable on the travel documents.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#SalesPackageSubstitution"
+               title="https://w3id.org/transmodel/fares#SalesPackageSubstitution">SalesPackageSubstitution</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SalesPackageElement">
+      <h3>SalesPackageElement<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#SalesPackageElement</p>
+      <div class="comment">
+         <span class="markdown">The assignment of a fare product to a type of travel document in order to define a sales package, realised as a fixed assignment (printing, magnetic storage etc.) or by the possibility for the fare product to be reloaded on the type of travel document.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SalesPackagePrice">
+      <h3>SalesPackagePrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#SalesPackagePrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a sales package: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SalesPackageSubstitution">
+      <h3>SalesPackageSubstitution<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#SalesPackageSubstitution</p>
+      <div class="comment">
+         <span class="markdown">Information on the preferred substitution of packages with other packages if a quota restricted product is no longer available.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#SalesPackage" title="https://w3id.org/transmodel/fares#SalesPackage">SalesPackage</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/commons#ScheduledStopPoint">
+      <h3>ScheduledStopPoint<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#ScheduledStopPoint</p>
+      <div class="comment">
+         <span class="markdown">A specialisation of scheduled stop point describing a stop with fare accounting and routing characteristics.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#https://w3id.org/transmodel/commons#Point" title="https://w3id.org/transmodel/commons#Point">Point</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ScopingValidityParameter">
+      <h3>ScopingValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ScopingValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">Grouping of assignments to elements.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#NetworkValidityParameter"
+               title="https://w3id.org/transmodel/fares#NetworkValidityParameter">NetworkValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#OrganisationalValidityParameter"
+               title="https://w3id.org/transmodel/fares#OrganisationalValidityParameter">OrganisationalValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ProductValidityParameter"
+               title="https://w3id.org/transmodel/fares#ProductValidityParameter">ProductValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#RoutingValidityParameter"
+               title="https://w3id.org/transmodel/fares#RoutingValidityParameter">RoutingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ServiceValidityParameter"
+               title="https://w3id.org/transmodel/fares#ServiceValidityParameter">ServiceValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SeriesConstraintPrice">
+      <h3>SeriesConstraintPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#SeriesConstraintPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a series constraint: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceAccessRight">
+      <h3>service access right<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ServiceAccessRight</p>
+      <div class="comment">
+         <span class="markdown">An immaterial marketable element dedicated to accessing some services.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#EntitlementProduct"
+               title="https://w3id.org/transmodel/fares#EntitlementProduct">EntitlementProduct</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FareProduct" title="https://w3id.org/transmodel/fares#FareProduct">FareProduct</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ServiceValidityParameter">
+      <h3>ServiceValidityParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ServiceValidityParameter</p>
+      <div class="comment">
+         <span class="markdown">A type of validity parameter related to service characteristics (e.g. class).</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#ScopingValidityParameter"
+               title="https://w3id.org/transmodel/fares#ScopingValidityParameter">ScopingValidityParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StepLimit">
+      <h3>StepLimit<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#StepLimit</p>
+      <div class="comment">
+         <span class="markdown">Geographical parameter limiting the access rights by counts of stops, sections or zones.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tariff">
+      <h3>tariff<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Tariff</p>
+      <div class="comment">
+         <span class="markdown">A Tariff describes all parameters composing a particular fare structure.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd/>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/commons#TariffZone">
+      <h3>TariffZone<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#TariffZone</p>
+      <div class="comment">
+         <span class="markdown">A Zone used to define a zonal fare structure in a zone-counting or zone-matrix system.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#https://w3id.org/transmodel/commons#Zone" title="https://w3id.org/transmodel/commons#Zone">Zone</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeIntervalPrice">
+      <h3>TimeIntervalPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#TimeIntervalPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a time interval, e.g. default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TimeUnitPrice">
+      <h3>TimeUnitPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#TimeUnitPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a time unit: default total price etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Transferability">
+      <h3>Transferability<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#Transferability</p>
+      <div class="comment">
+         <span class="markdown">The number and characteristics of persons entitled to use the public transport service instead of the original customer.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UsageParameter">
+      <h3>UsageParameter<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#UsageParameter</p>
+      <div class="comment">
+         <span class="markdown">A parameter used to specify the use of a sales package or a Fare Product.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#CommercialProfile"
+               title="https://w3id.org/transmodel/fares#CommercialProfile">CommercialProfile</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#CompanionProfile"
+               title="https://w3id.org/transmodel/fares#CompanionProfile">CompanionProfile</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#EntitlementGiven"
+               title="https://w3id.org/transmodel/fares#EntitlementGiven">EntitlementGiven</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#EntitlementRequired"
+               title="https://w3id.org/transmodel/fares#EntitlementRequired">EntitlementRequired</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#FrequencyOfUse"
+               title="https://w3id.org/transmodel/fares#FrequencyOfUse">FrequencyOfUse</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#GroupTicket" title="https://w3id.org/transmodel/fares#GroupTicket">GroupTicket</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Interchanging" title="https://w3id.org/transmodel/fares#Interchanging">Interchanging</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#LuggageAllowance"
+               title="https://w3id.org/transmodel/fares#LuggageAllowance">LuggageAllowance</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#MinimumStay" title="https://w3id.org/transmodel/fares#MinimumStay">MinimumStay</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#PenaltyPolicy" title="https://w3id.org/transmodel/fares#PenaltyPolicy">PenaltyPolicy</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#PurchaseWindow"
+               title="https://w3id.org/transmodel/fares#PurchaseWindow">PurchaseWindow</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Reselling" title="https://w3id.org/transmodel/fares#Reselling">Reselling</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#ResidentialQualification"
+               title="https://w3id.org/transmodel/fares#ResidentialQualification">ResidentialQualification</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#RoundTrip" title="https://w3id.org/transmodel/fares#RoundTrip">RoundTrip</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Routing" title="https://w3id.org/transmodel/fares#Routing">Routing</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#StepLimit" title="https://w3id.org/transmodel/fares#StepLimit">StepLimit</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#Transferability"
+               title="https://w3id.org/transmodel/fares#Transferability">Transferability</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#UsageValidityPeriod"
+               title="https://w3id.org/transmodel/fares#UsageValidityPeriod">UsageValidityPeriod</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#UserProfile" title="https://w3id.org/transmodel/fares#UserProfile">UserProfile</a>
+            <sup class="type-c" title="clase">c</sup>, <a href="#chargingPolicy"
+               title="https://w3id.org/transmodel/fares#chargingPolicy">chargingPolicy</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>en dominio de</dt>
+         <dd>
+            <a href="#url" title="https://w3id.org/transmodel/fares#url">url</a>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UsageParameterPrice">
+      <h3>UsageParameterPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#UsageParameterPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a usage parameter: discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UsageValidityPeriod">
+      <h3>UsageValidityPeriod<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#UsageValidityPeriod</p>
+      <div class="comment">
+         <span class="markdown">A time limitation for validity of a fare product or a sales package. it may be composed of a standard duration (e.g. 3 days, 1 month) and/or fixed start/end dates and times.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UserProfile">
+      <h3>UserProfile<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#UserProfile</p>
+      <div class="comment">
+         <span class="markdown">The social profile of a passenger, based on age group, education, profession, social status, sex etc., often used for allowing discounts: 18-40 years old, graduates, drivers, unemployed, women etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#UsageParameter"
+               title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ValidableElement">
+      <h3>ValidableElement<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ValidableElement</p>
+      <div class="comment">
+         <span class="markdown">An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#PriceableObject"
+               title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ValidableElementPrice">
+      <h3>ValidableElementPrice<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ValidableElementPrice</p>
+      <div class="comment">
+         <span class="markdown">A set of all possible price features of a Validable Element: default total price, discount in value or percentage etc.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ValidityParameterAssignment">
+      <h3>validity parameter assignment<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ValidityParameterAssignment</p>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#AccessRightParameterAssignment"
+               title="https://w3id.org/transmodel/fares#AccessRightParameterAssignment">AccessRightParameterAssignment</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#GenericParameterAssignment"
+               title="https://w3id.org/transmodel/fares#GenericParameterAssignment">generic parameter assignment</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/commons#Zone">
+      <h3>Zone<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/commons#Zone</p>
+      <dl class="description">
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#https://w3id.org/transmodel/commons#TariffZone" title="https://w3id.org/transmodel/commons#TariffZone">TariffZone</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h2>Propiedades entre objetos</h2>
+   <ul class="hlist">
+      <li>
+         <a href="#aChainOf" title="https://w3id.org/transmodel/fares#aChainOf">aChainOf</a>
+      </li>
+      <li>
+         <a href="#composedOf" title="https://w3id.org/transmodel/fares#composedOf">composedOf</a>
+      </li>
+      <li>
+         <a href="#definedBy" title="https://w3id.org/transmodel/fares#definedBy">definedBy</a>
+      </li>
+      <li>
+         <a href="#describedThrough"
+            title="https://w3id.org/transmodel/fares#describedThrough">
+            <span>described through</span>
+         </a>
+      </li>
+      <li>
+         <a href="#distributionChannelType"
+            title="https://w3id.org/transmodel/fares#distributionChannelType">
+            <span>distribution Channel Type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#endOf" title="https://w3id.org/transmodel/fares#endOf">endOf</a>
+      </li>
+      <li>
+         <a href="#governedBy" title="https://w3id.org/transmodel/fares#governedBy">
+            <span>governed by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
+      </li>
+      <li>
+         <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
+      </li>
+      <li>
+         <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
+            <span>tariff basis</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="aChainOf">
+      <h3>aChainOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#aChainOf</p>
+   </div>
+   <div class="entity" id="composedOf">
+      <h3>composedOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#composedOf</p>
+   </div>
+   <div class="entity" id="definedBy">
+      <h3>definedBy<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#definedBy</p>
+   </div>
+   <div class="entity" id="describedThrough">
+      <h3>described through<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#describedThrough</p>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/contactPoint">contact point</span>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>también definida por</dt>
+            <dd>Individuo</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="distributionChannelType">
+      <h3>distribution Channel Type<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#distributionChannelType</p>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/fares/distribution-channel-type"
+                  title="https://w3id.org/transmodel/kos/fares/distribution-channel-type">distribution channel type</a>)</dd>
+            <dt>también definida por</dt>
+            <dd>Individuo</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endOf">
+      <h3>endOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#endOf</p>
+   </div>
+   <div class="entity" id="governedBy">
+      <h3>governed by<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#governedBy</p>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#DistributionChannel"
+                  title="https://w3id.org/transmodel/fares#DistributionChannel">Distribution Channel</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/transmodel/organisations#Organisation">organisation</span>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>también definida por</dt>
+            <dd>Individuo</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relatedTo">
+      <h3>relatedTo<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#relatedTo</p>
+   </div>
+   <div class="entity" id="startOf">
+      <h3>startOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#startOf</p>
+   </div>
+   <div class="entity" id="tariffBasis">
+      <h3>tariff basis<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#tariffBasis</p>
+      <div class="description">
+         <dl>
+            <dt>tiene superpropiedades</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/transmodel/fares#fareType">fare type</span>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+               <sup class="type-c" title="clase">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span>
+               <sup class="type-op" title="Propiedad entre objetos">op</sup> 
+               <span class="logic">value</span> 
+               <a href="#https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+                  title="https://w3id.org/transmodel/kos/fares/tariff-basis-type">tariff basis type</a>)</dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#accessNumber" title="https://w3id.org/transmodel/fares#accessNumber">accessNumber</a>
+      </li>
+      <li>
+         <a href="#amount" title="https://w3id.org/transmodel/fares#amount">amount</a>
+      </li>
+      <li>
+         <a href="#discountAmount" title="https://w3id.org/transmodel/fares#discountAmount">discountAmount</a>
+      </li>
+      <li>
+         <a href="#discountPercentageUsed"
+            title="https://w3id.org/transmodel/fares#discountPercentageUsed">discountPercentageUsed</a>
+      </li>
+      <li>
+         <a href="#embargoUntilDate"
+            title="https://w3id.org/transmodel/fares#embargoUntilDate">embargoUntilDate</a>
+      </li>
+      <li>
+         <a href="#endDate" title="https://w3id.org/transmodel/fares#endDate">endDate</a>
+      </li>
+      <li>
+         <a href="#endGeographicalValue"
+            title="https://w3id.org/transmodel/fares#endGeographicalValue">endGeographicalValue</a>
+      </li>
+      <li>
+         <a href="#infoUrl" title="https://w3id.org/transmodel/fares#infoUrl">InfoUrl</a>
+      </li>
+      <li>
+         <a href="#isAllowed" title="https://w3id.org/transmodel/fares#isAllowed">isAllowed</a>
+      </li>
+      <li>
+         <a href="#isFirstInSequence"
+            title="https://w3id.org/transmodel/fares#isFirstInSequence">isFirstInSequence</a>
+      </li>
+      <li>
+         <a href="#isLastInSequence"
+            title="https://w3id.org/transmodel/fares#isLastInSequence">isLastInSequence</a>
+      </li>
+      <li>
+         <a href="#limitedAccessNumber"
+            title="https://w3id.org/transmodel/fares#limitedAccessNumber">limitedAccessNumber</a>
+      </li>
+      <li>
+         <a href="#numberOfUnits" title="https://w3id.org/transmodel/fares#numberOfUnits">
+            <span>number of units</span>
+         </a>
+      </li>
+      <li>
+         <a href="#privateCode" title="https://w3id.org/transmodel/fares#privateCode">
+            <span>private code</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ranking" title="https://w3id.org/transmodel/fares#ranking">ranking</a>
+      </li>
+      <li>
+         <a href="#returnFareTwiceSingle"
+            title="https://w3id.org/transmodel/fares#returnFareTwiceSingle">
+            <span>return fare twice single</span>
+         </a>
+      </li>
+      <li>
+         <a href="#startDate" title="https://w3id.org/transmodel/fares#startDate">startDate</a>
+      </li>
+      <li>
+         <a href="#startGeographicalValue"
+            title="https://w3id.org/transmodel/fares#startGeographicalValue">startGeographicalValue</a>
+      </li>
+      <li>
+         <a href="#url" title="https://w3id.org/transmodel/fares#url">url</a>
+      </li>
+   </ul>
+   <div class="entity" id="accessNumber">
+      <h3>accessNumber<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#accessNumber</p>
+      <div class="comment">
+         <span class="markdown">Access number in sequence.</span>
+      </div>
+   </div>
+   <div class="entity" id="amount">
+      <h3>amount<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#amount</p>
+      <div class="comment">
+         <span class="markdown">Price in a specified currency.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="discountAmount">
+      <h3>discountAmount<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#discountAmount</p>
+      <div class="comment">
+         <span class="markdown">Discount given, if any, in a specified currency.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="discountPercentageUsed">
+      <h3>discountPercentageUsed<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#discountPercentageUsed</p>
+      <div class="comment">
+         <span class="markdown">Discount percentage  used, if any when deriving price.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="embargoUntilDate">
+      <h3>embargoUntilDate<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#embargoUntilDate</p>
+      <div class="comment">
+         <span class="markdown">Data is to be kept private until the stated date.</span>
+      </div>
+   </div>
+   <div class="entity" id="endDate">
+      <h3>endDate<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#endDate</p>
+      <div class="comment">
+         <span class="markdown">End date for price validity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endGeographicalValue">
+      <h3>endGeographicalValue<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#endGeographicalValue</p>
+      <div class="comment">
+         <span class="markdown">End value for Geographical Interval.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="infoUrl">
+      <h3>InfoUrl<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#infoUrl</p>
+      <div class="comment">
+         <span class="markdown">Link for product information.</span>
+      </div>
+   </div>
+   <div class="entity" id="isAllowed">
+      <h3>isAllowed<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#isAllowed</p>
+      <div class="comment">
+         <span class="markdown">Whether the fare price is allowed. default is true.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isFirstInSequence">
+      <h3>isFirstInSequence<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#isFirstInSequence</p>
+      <div class="comment">
+         <span class="markdown">Whether element is the first in the sequence.</span>
+      </div>
+   </div>
+   <div class="entity" id="isLastInSequence">
+      <h3>isLastInSequence<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#isLastInSequence</p>
+      <div class="comment">
+         <span class="markdown">Whether element is the last in the sequence.</span>
+      </div>
+   </div>
+   <div class="entity" id="limitedAccessNumber">
+      <h3>limitedAccessNumber<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#limitedAccessNumber</p>
+      <div class="comment">
+         <span class="markdown">Flag indicating whether this rights gives an unlimited number of accesses or not.</span>
+      </div>
+   </div>
+   <div class="entity" id="numberOfUnits">
+      <h3>number of units<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#numberOfUnits</p>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="privateCode">
+      <h3>private code<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#privateCode</p>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#FareStructureElement"
+                  title="https://w3id.org/transmodel/fares#FareStructureElement">Fare Structure Element</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+            <dt>también definida por</dt>
+            <dd>Individuo</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="ranking">
+      <h3>ranking<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#ranking</p>
+      <div class="comment">
+         <span class="markdown">Relative ranking to be given to discount  to use to favour it over other discounts available.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="returnFareTwiceSingle">
+      <h3>return fare twice single<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#returnFareTwiceSingle</p>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#FareStructureElement"
+                  title="https://w3id.org/transmodel/fares#FareStructureElement">Fare Structure Element</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
+            </dd>
+            <dt>también definida por</dt>
+            <dd>Individuo</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startDate">
+      <h3>startDate<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#startDate</p>
+      <div class="comment">
+         <span class="markdown">start date for price validity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startGeographicalValue">
+      <h3>startGeographicalValue<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#startGeographicalValue</p>
+      <div class="comment">
+         <span class="markdown">start value for geographical interval.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="url">
+      <h3>url<sup class="type-dp" title="Propiedad de datos">dp</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#dataproperties">Índice de propiedades de datos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#url</p>
+      <div class="comment">
+         <span class="markdown">A parameter used to specify the use of a sales package or a fare product.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>dominio</dt>
+            <dd>
+               <a href="#UsageParameter"
+                  title="https://w3id.org/transmodel/fares#UsageParameter">UsageParameter</a>
+               <sup class="type-c" title="clase">c</sup>
+            </dd>
+            <dt>rango</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Individuos</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/booking-access-type"
+            title="https://w3id.org/transmodel/kos/fares/booking-access-type">
+            <span>booking access type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/booking-method-type"
+            title="https://w3id.org/transmodel/kos/fares/booking-method-type">
+            <span>booking method type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/distribution-channel-type"
+            title="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+            <span>distribution channel type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/distribution-rights"
+            title="https://w3id.org/transmodel/kos/fares/distribution-rights">
+            <span>distribution rights</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/fulfilment-method-type"
+            title="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+            <span>fulfilment method type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/transmodel/kos/fares/tariff-basis-type"
+            title="https://w3id.org/transmodel/kos/fares/tariff-basis-type">
+            <span>tariff basis type</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/booking-access-type">
+      <h3>booking access type<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/booking-access-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of booking access</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>hechos</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#comment">description</span>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup> 
+            <span class="literal">"Concept scheme where all the types of booking access"@en</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/booking-method-type">
+      <h3>booking method type<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/booking-method-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of booking methods</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>hechos</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#comment">description</span>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup> 
+            <span class="literal">"Concept scheme where all the types of booking methods"@en</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/distribution-channel-type">
+      <h3>distribution channel type<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/distribution-channel-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of distribution
+      channels</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>hechos</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#comment">description</span>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup> 
+            <span class="literal">"Concept scheme where all the types of distribution
+      channels"@en</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/distribution-rights">
+      <h3>distribution rights<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/distribution-rights</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of distribution rights</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>hechos</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#comment">description</span>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup> 
+            <span class="literal">"Concept scheme where all the types of distribution rights"@en</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/fulfilment-method-type">
+      <h3>fulfilment method type<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/fulfilment-method-type</p>
+      <div class="comment">
+         <span class="markdown">Concept scheme where all the types of fulfilment methods</span>
+      </div>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+         <dt>hechos</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#comment">description</span>
+            <sup class="type-dp" title="Propiedad de datos">dp</sup> 
+            <span class="literal">"Concept scheme where all the types of fulfilment methods"@en</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/transmodel/kos/fares/tariff-basis-type">
+      <h3>tariff basis type<sup class="type-ni" title="Individuo">ni</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#namedindividuals">Índice de individuos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/kos/fares/tariff-basis-type</p>
+      <dl class="description">
+         <dt>pertenece a</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Clases">c</sup>: Clases <br/>
+<sup class="type-op" title="Propiedades de objeto">op</sup>: Propiedades de objeto <br/>
+<sup class="type-dp" title="Propiedades de datos">dp</sup>: Propiedades de datos <br/>
+<sup class="type-ni" title="Individuos">ni</sup>: Individuos
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">Referencias <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">A&ntilde;ade aqu&iacute; tus referencias, a ser posible en una lista.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Agradecimientos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>Los autores agradecen a <a href="http://www.essepuntato.it/">Silvio Peroni</a> el desarrollo de <a href="http://www.essepuntato.it/lode">LODE</a>, un entorno de documentaci&oacute;n para OWL que es usado para generar la descripci&oacute;n de t&eacute;rminos de la ontolog&iacute;a de este documento; y a  <a href="http://purl.org/net/dgarijo">Daniel Garijo</a> por desarrollar <a href="https://github.com/dgarijo/Widoco">Widoco</a>, el programa utilizado para producir la plantilla en la que se basa este documento.</p>
+</div>
+
+
+</div>
+</body>
+</html>
