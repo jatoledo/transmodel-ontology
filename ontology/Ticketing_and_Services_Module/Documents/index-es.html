@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/transmodel/fares#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/transmodel/fares#","name":"Transmodel Ontology - Fares", "headline":"Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology", "datePublished":"Fri Jun 18 10:17:44 CEST 2021", "version":"This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx", "author":[{"@type":"Person","name":"Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/transmodel/fares#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/transmodel/fares#","name":"Transmodel Ontology - Fares", "headline":"Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology", "datePublished":"Fri Jun 18 11:40:27 CEST 2021", "version":"This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx", "author":[{"@type":"Person","name":"Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -269,6 +269,10 @@ Module of the Transmodel Ontology focused on fares. This ontology provides suppo
          title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
    </li>
    <li>
+      <a href="#GeographicalStructureFactor"
+         title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
+   </li>
+   <li>
       <a href="#GeographicalUnitPrice"
          title="https://w3id.org/transmodel/fares#GeographicalUnitPrice">GeographicalUnitPrice</a>
    </li>
@@ -482,12 +486,21 @@ Module of the Transmodel Ontology focused on fares. This ontology provides suppo
       <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
    </li>
    <li>
+      <a href="#representing" title="https://w3id.org/transmodel/fares#representing">representing</a>
+   </li>
+   <li>
+      <a href="#specifiedBy" title="https://w3id.org/transmodel/fares#specifiedBy">specifiedBy</a>
+   </li>
+   <li>
       <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
    </li>
    <li>
       <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
          <span>tariff basis</span>
       </a>
+   </li>
+   <li>
+      <a href="#viewedAs" title="https://w3id.org/transmodel/fares#viewedAs">viewedAs</a>
    </li>
 </ul><h4>Propiedades de datos</h4><ul class="hlist">
    <li>
@@ -768,6 +781,10 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <li>
          <a href="#GeographicalIntervalPrice"
             title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
+      </li>
+      <li>
+         <a href="#GeographicalStructureFactor"
+            title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
       </li>
       <li>
          <a href="#GeographicalUnitPrice"
@@ -1518,6 +1535,12 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
                title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
+         <dt>tiene subclases</dt>
+         <dd>
+            <a href="#GeographicalStructureFactor"
+               title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="FareTable">
@@ -1678,6 +1701,25 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <dt>tiene superclases</dt>
          <dd>
             <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="clase">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalStructureFactor">
+      <h3>GeographicalStructureFactor<sup class="type-c" title="clase">c</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalStructureFactor</p>
+      <div class="comment">
+         <span class="markdown">The value of a geographical interval or a distance matrix element expressed by a geographical unit.</span>
+      </div>
+      <dl class="description">
+         <dt>tiene superclases</dt>
+         <dd>
+            <a href="#FareStructureFactor"
+               title="https://w3id.org/transmodel/fares#FareStructureFactor">FareStructureFactor</a>
             <sup class="type-c" title="clase">c</sup>
          </dd>
       </dl>
@@ -2695,12 +2737,21 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
          <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
       </li>
       <li>
+         <a href="#representing" title="https://w3id.org/transmodel/fares#representing">representing</a>
+      </li>
+      <li>
+         <a href="#specifiedBy" title="https://w3id.org/transmodel/fares#specifiedBy">specifiedBy</a>
+      </li>
+      <li>
          <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
       </li>
       <li>
          <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
             <span>tariff basis</span>
          </a>
+      </li>
+      <li>
+         <a href="#viewedAs" title="https://w3id.org/transmodel/fares#viewedAs">viewedAs</a>
       </li>
    </ul>
    <div class="entity" id="aChainOf">
@@ -2710,6 +2761,9 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/fares#aChainOf</p>
+      <div class="comment">
+         <span class="markdown">This property represents a chain or sequence of another class</span>
+      </div>
    </div>
    <div class="entity" id="composedOf">
       <h3>composedOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
@@ -2823,6 +2877,22 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/fares#relatedTo</p>
    </div>
+   <div class="entity" id="representing">
+      <h3>representing<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#representing</p>
+   </div>
+   <div class="entity" id="specifiedBy">
+      <h3>specifiedBy<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#specifiedBy</p>
+   </div>
    <div class="entity" id="startOf">
       <h3>startOf<sup class="type-op" title="Propiedad entre objetos">op</sup>
          <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
@@ -2856,6 +2926,14 @@ Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad d
                   title="https://w3id.org/transmodel/kos/fares/tariff-basis-type">tariff basis type</a>)</dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="viewedAs">
+      <h3>viewedAs<sup class="type-op" title="Propiedad entre objetos">op</sup>
+         <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#objectproperties">Índice de propiedades de objetos</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#viewedAs</p>
    </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Propiedades de datos</h3>

@@ -167,6 +167,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#aChainOf">
+        <rdfs:comment xml:lang="en">This property represents a chain or sequence of another class</rdfs:comment>
         <rdfs:label xml:lang="en">aChainOf</rdfs:label>
     </owl:ObjectProperty>
     
@@ -255,6 +256,24 @@
     
 
 
+    <!-- https://w3id.org/transmodel/fares#representing -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#representing">
+        <rdfs:label xml:lang="en">representing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/transmodel/fares#specifiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#specifiedBy">
+        <rdfs:label xml:lang="en">specifiedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/transmodel/fares#startOf -->
 
 
@@ -287,7 +306,9 @@
     <!-- https://w3id.org/transmodel/fares#viewedAs -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#viewedAs"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/transmodel/fares#viewedAs">
+        <rdfs:label xml:lang="en">viewedAs</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -597,6 +618,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#AccessRightInProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareElementInSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#ValidableElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product.</rdfs:comment>
         <rdfs:label xml:lang="en">AccessRightInProduct</rdfs:label>
     </owl:Class>
@@ -658,6 +685,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#ControllableElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#PriceableObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#ControllableElementInSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid.</rdfs:comment>
     </owl:Class>
     
@@ -932,6 +965,18 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#FareProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#ServiceAccessRight"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#relatedTo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareProductPrice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#specifiedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GenericParameterAssignment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment.</rdfs:comment>
         <rdfs:label xml:lang="en">FareProduct</rdfs:label>
     </owl:Class>
@@ -961,6 +1006,18 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#definedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GeographicalInterval"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#definedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#GeographicalStructureFactor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#relatedTo"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareStructureElementPrice"/>
             </owl:Restriction>
@@ -979,6 +1036,13 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#aChainOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#ControllableElementInSequence"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1011,6 +1075,12 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#FareStructureElementInSequence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareElementInSequence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#viewedAs"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareStructureElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation.</rdfs:comment>
         <rdfs:label xml:lang="en">FareStructureElementInSequence</rdfs:label>
     </owl:Class>
@@ -1159,6 +1229,17 @@
     
 
 
+    <!-- https://w3id.org/transmodel/fares#GeographicalStructureFactor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/transmodel/fares#GeographicalStructureFactor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareStructureFactor"/>
+        <rdfs:comment xml:lang="en">The value of a geographical interval or a distance matrix element expressed by a geographical unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">GeographicalStructureFactor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/transmodel/fares#GeographicalUnit -->
 
 
@@ -1290,6 +1371,13 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#PreAssignedFareProduct">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#FareProduct"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#composedOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#AccessRightInProduct"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A fare product consisting of one or several validable elements, specific to a charging method.</rdfs:comment>
         <rdfs:label xml:lang="en">PreAssignedFareProduct</rdfs:label>
     </owl:Class>
@@ -1665,6 +1753,19 @@
 
     <owl:Class rdf:about="https://w3id.org/transmodel/fares#ValidableElement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/transmodel/fares#PriceableObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#aChainOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/transmodel/fares#FareStructureElementInSequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/transmodel/fares#representing"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/transmodel/fares#FareStructureElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go.</rdfs:comment>
         <rdfs:label xml:lang="en">ValidableElement</rdfs:label>
     </owl:Class>
@@ -1892,7 +1993,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/transmodel/kos/fares/tariff-basis-type">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     </owl:NamedIndividual>
-    <rdf:Description rdf:nodeID="genid54">
+    <rdf:Description rdf:nodeID="genid65">
         <mbox xml:lang="en">ja.toledo@upm.es</mbox>
         <name xml:lang="en">Jhon Toledo Barreto</name>
     </rdf:Description>

@@ -95,6 +95,7 @@
 
 ###  https://w3id.org/transmodel/fares#aChainOf
 :aChainOf rdf:type owl:ObjectProperty ;
+          rdfs:comment "This property represents a chain or sequence of another class"@en ;
           rdfs:label "aChainOf"@en .
 
 
@@ -147,6 +148,16 @@
            rdfs:label "relatedTo"@en .
 
 
+###  https://w3id.org/transmodel/fares#representing
+:representing rdf:type owl:ObjectProperty ;
+              rdfs:label "representing"@en .
+
+
+###  https://w3id.org/transmodel/fares#specifiedBy
+:specifiedBy rdf:type owl:ObjectProperty ;
+             rdfs:label "specifiedBy"@en .
+
+
 ###  https://w3id.org/transmodel/fares#startOf
 :startOf rdf:type owl:ObjectProperty ;
          rdfs:label "startOf"@en .
@@ -166,7 +177,8 @@
 
 
 ###  https://w3id.org/transmodel/fares#viewedAs
-:viewedAs rdf:type owl:ObjectProperty .
+:viewedAs rdf:type owl:ObjectProperty ;
+          rdfs:label "viewedAs"@en .
 
 
 #################################################################
@@ -350,7 +362,11 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#AccessRightInProduct
 :AccessRightInProduct rdf:type owl:Class ;
-                      rdfs:subClassOf :FareElementInSequence ;
+                      rdfs:subClassOf :FareElementInSequence ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :viewedAs ;
+                                        owl:someValuesFrom :ValidableElement
+                                      ] ;
                       rdfs:comment "A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product."@en ;
                       rdfs:label "AccessRightInProduct"@en .
 
@@ -389,7 +405,11 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#ControllableElement
 :ControllableElement rdf:type owl:Class ;
-                     rdfs:subClassOf :PriceableObject ;
+                     rdfs:subClassOf :PriceableObject ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :viewedAs ;
+                                       owl:someValuesFrom :ControllableElementInSequence
+                                     ] ;
                      rdfs:comment "The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid."@en .
 
 
@@ -568,7 +588,15 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#FareProduct
 :FareProduct rdf:type owl:Class ;
-             rdfs:subClassOf :ServiceAccessRight ;
+             rdfs:subClassOf :ServiceAccessRight ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :relatedTo ;
+                               owl:someValuesFrom :FareProductPrice
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :specifiedBy ;
+                               owl:someValuesFrom :GenericParameterAssignment
+                             ] ;
              rdfs:comment "An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment."@en ;
              rdfs:label "FareProduct"@en .
 
@@ -587,6 +615,14 @@ rdfs:label rdf:type owl:DatatypeProperty .
                                         owl:someValuesFrom :DistanceMatrixElement
                                       ] ,
                                       [ rdf:type owl:Restriction ;
+                                        owl:onProperty :definedBy ;
+                                        owl:someValuesFrom :GeographicalInterval
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :definedBy ;
+                                        owl:someValuesFrom :GeographicalStructureFactor
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty :relatedTo ;
                                         owl:someValuesFrom :FareStructureElementPrice
                                       ] ,
@@ -600,6 +636,11 @@ rdfs:label rdf:type owl:DatatypeProperty .
                                                                                ) ;
                                                             rdf:type owl:Class
                                                           ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :aChainOf ;
+                                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass :ControllableElementInSequence
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty rdfs:label ;
@@ -620,7 +661,11 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#FareStructureElementInSequence
 :FareStructureElementInSequence rdf:type owl:Class ;
-                                rdfs:subClassOf :FareElementInSequence ;
+                                rdfs:subClassOf :FareElementInSequence ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :viewedAs ;
+                                                  owl:someValuesFrom :FareStructureElement
+                                                ] ;
                                 rdfs:comment "A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation."@en ;
                                 rdfs:label "FareStructureElementInSequence"@en .
 
@@ -717,6 +762,13 @@ rdfs:label rdf:type owl:DatatypeProperty .
                            rdfs:label "GeographicalIntervalPrice"@en .
 
 
+###  https://w3id.org/transmodel/fares#GeographicalStructureFactor
+:GeographicalStructureFactor rdf:type owl:Class ;
+                             rdfs:subClassOf :FareStructureFactor ;
+                             rdfs:comment "The value of a geographical interval or a distance matrix element expressed by a geographical unit."@en ;
+                             rdfs:label "GeographicalStructureFactor"@en .
+
+
 ###  https://w3id.org/transmodel/fares#GeographicalUnit
 :GeographicalUnit rdf:type owl:Class ;
                   rdfs:subClassOf :FareUnit ,
@@ -799,7 +851,12 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#PreAssignedFareProduct
 :PreAssignedFareProduct rdf:type owl:Class ;
-                        rdfs:subClassOf :FareProduct ;
+                        rdfs:subClassOf :FareProduct ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :composedOf ;
+                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :AccessRightInProduct
+                                        ] ;
                         rdfs:comment "A fare product consisting of one or several validable elements, specific to a charging method."@en ;
                         rdfs:label "PreAssignedFareProduct"@en .
 
@@ -1036,7 +1093,16 @@ rdfs:label rdf:type owl:DatatypeProperty .
 
 ###  https://w3id.org/transmodel/fares#ValidableElement
 :ValidableElement rdf:type owl:Class ;
-                  rdfs:subClassOf :PriceableObject ;
+                  rdfs:subClassOf :PriceableObject ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :aChainOf ;
+                                    owl:someValuesFrom :FareStructureElementInSequence
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :representing ;
+                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :FareStructureElement
+                                  ] ;
                   rdfs:comment "An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go."@en ;
                   rdfs:label "ValidableElement"@en .
 
@@ -1169,7 +1235,7 @@ rdfs:label rdf:type owl:NamedIndividual .
                                                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 
 
-_:genid54 :mbox "ja.toledo@upm.es"@en ;
+_:genid65 :mbox "ja.toledo@upm.es"@en ;
           :name "Jhon Toledo Barreto"@en .
 
 #################################################################

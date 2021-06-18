@@ -81,6 +81,7 @@
 # 
 # https://w3id.org/transmodel/fares#aChainOf
 <https://w3id.org/transmodel/fares#aChainOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#aChainOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents a chain or sequence of another class"@en .
 <https://w3id.org/transmodel/fares#aChainOf> <http://www.w3.org/2000/01/rdf-schema#label> "aChainOf"@en .
 # 
 # https://w3id.org/transmodel/fares#composedOf
@@ -128,6 +129,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/transmodel/fares#relatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/fares#relatedTo> <http://www.w3.org/2000/01/rdf-schema#label> "relatedTo"@en .
 # 
+# https://w3id.org/transmodel/fares#representing
+<https://w3id.org/transmodel/fares#representing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#representing> <http://www.w3.org/2000/01/rdf-schema#label> "representing"@en .
+# 
+# https://w3id.org/transmodel/fares#specifiedBy
+<https://w3id.org/transmodel/fares#specifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#specifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "specifiedBy"@en .
+# 
 # https://w3id.org/transmodel/fares#startOf
 <https://w3id.org/transmodel/fares#startOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/transmodel/fares#startOf> <http://www.w3.org/2000/01/rdf-schema#label> "startOf"@en .
@@ -150,6 +159,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/transmodel/fares#viewedAs
 <https://w3id.org/transmodel/fares#viewedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/transmodel/fares#viewedAs> <http://www.w3.org/2000/01/rdf-schema#label> "viewedAs"@en .
 # 
 # 
 # 
@@ -316,16 +326,20 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transm
 # https://w3id.org/transmodel/fares#AccessRightInProduct
 <https://w3id.org/transmodel/fares#AccessRightInProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#AccessRightInProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareElementInSequence> .
+<https://w3id.org/transmodel/fares#AccessRightInProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#viewedAs> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#ValidableElement> .
 <https://w3id.org/transmodel/fares#AccessRightInProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "A validable element as a part of a pre-assigned fare product, including its possible order in the set of all validable elements grouped together to define the access right assigned to that pre-assigned fare product."@en .
 <https://w3id.org/transmodel/fares#AccessRightInProduct> <http://www.w3.org/2000/01/rdf-schema#label> "AccessRightInProduct"@en .
 # 
 # https://w3id.org/transmodel/fares#AccessRightParameterAssignment
 <https://w3id.org/transmodel/fares#AccessRightParameterAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#AccessRightParameterAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isAllowed> .
-_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/fares#AccessRightParameterAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isAllowed> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/fares#AccessRightParameterAssignment> <http://www.w3.org/2000/01/rdf-schema#comment> "The assignment of a fare collection parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.)."@en .
 <https://w3id.org/transmodel/fares#AccessRightParameterAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "AccessRightParameterAssignment"@en .
 # 
@@ -350,6 +364,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/fares#ControllableElement
 <https://w3id.org/transmodel/fares#ControllableElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#ControllableElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
+<https://w3id.org/transmodel/fares#ControllableElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#viewedAs> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#ControllableElementInSequence> .
 <https://w3id.org/transmodel/fares#ControllableElement> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest controllable element of public transport consumption, all along which any validity parameter assignment remains valid."@en .
 # 
 # https://w3id.org/transmodel/fares#ControllableElementInSequence
@@ -373,20 +391,20 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/fares#DistanceMatrixElement
 <https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
-<https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
-_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElementPrice> .
-<https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endOf> .
-_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/commons#TariffZone> .
 <https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startOf> .
-_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/commons#TariffZone> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElementPrice> .
+<https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endOf> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/commons#TariffZone> .
+<https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startOf> .
+_:genid15 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/commons#TariffZone> .
 <https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A cell of an origin-destination matrix for Tariff zones or stop points, expressing a fare distance for the corresponding trip: value in km, number of fare units etc."@en .
 <https://w3id.org/transmodel/fares#DistanceMatrixElement> <http://www.w3.org/2000/01/rdf-schema#label> "DistanceMatrixElement"@en .
 # 
@@ -403,25 +421,25 @@ _:genid13 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/c
 # 
 # https://w3id.org/transmodel/fares#DistributionChannel
 <https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#distributionChannelType> .
-_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#distributionChannelType> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid17 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/DistributionChannelType> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#governedBy> .
-_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/organisations#Organisation> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/DistributionChannelType> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#DistributionChannel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#governedBy> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transmodel/organisations#Organisation> .
 # 
 # https://w3id.org/transmodel/fares#EntitlementGiven
 <https://w3id.org/transmodel/fares#EntitlementGiven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -449,25 +467,25 @@ _:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/transm
 # 
 # https://w3id.org/transmodel/fares#FareElementInSequence
 <https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#accessNumber> .
-_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isFirstInSequence> .
-_:genid21 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
 _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isLastInSequence> .
-_:genid22 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#accessNumber> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#limitedAccessNumber> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isFirstInSequence> .
 _:genid23 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isLastInSequence> .
+_:genid24 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#limitedAccessNumber> .
+_:genid25 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 <https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fare element as a part of an element, including its possible order in the sequence of fare  elements."@en .
 <https://w3id.org/transmodel/fares#FareElementInSequence> <http://www.w3.org/2000/01/rdf-schema#label> "FareElementInSequence"@en .
 # 
@@ -479,45 +497,53 @@ _:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/transmodel/fares#FarePrice
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#amount> .
-_:genid24 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#discountAmount> .
-_:genid25 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid25 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#discountPercentageUsed> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#amount> .
 _:genid26 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid26 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endDate> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#discountAmount> .
 _:genid27 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isAllowed> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#discountPercentageUsed> .
 _:genid28 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#ranking> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endDate> .
 _:genid29 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid29 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid29 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startDate> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#isAllowed> .
 _:genid30 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#ranking> .
+_:genid31 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/transmodel/fares#FarePrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startDate> .
+_:genid32 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
 # https://w3id.org/transmodel/fares#FareProduct
 <https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#ServiceAccessRight> .
+<https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#FareProductPrice> .
+<https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#specifiedBy> .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GenericParameterAssignment> .
 <https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "An immaterial marketable element (access rights, discount rights, etc.), specific to a charging moment."@en .
 <https://w3id.org/transmodel/fares#FareProduct> <http://www.w3.org/2000/01/rdf-schema#label> "FareProduct"@en .
 # 
@@ -529,48 +555,65 @@ _:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/fares#FareStructureElement
 <https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
-<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElement> .
-<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
-_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#FareStructureElementPrice> .
-<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#fareType> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid34 .
-_:genid34 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElement> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid36 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalInterval> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalStructureFactor> .
 <https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
-_:genid38 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#FareStructureElementPrice> .
 <https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#privateCode> .
-_:genid39 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid39 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#returnFareTwiceSingle> .
-_:genid40 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#fareType> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid42 <http://www.w3.org/2002/07/owl#hasValue> <https://w3id.org/transmodel/kos/fares/tariff-basis-type> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#aChainOf> .
+_:genid44 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/fares#ControllableElementInSequence> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:genid45 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#privateCode> .
+_:genid46 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid46 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#FareStructureElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#returnFareTwiceSingle> .
+_:genid47 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # https://w3id.org/transmodel/fares#FareStructureElementInSequence
 <https://w3id.org/transmodel/fares#FareStructureElementInSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#FareStructureElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareElementInSequence> .
+<https://w3id.org/transmodel/fares#FareStructureElementInSequence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#viewedAs> .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#FareStructureElement> .
 <https://w3id.org/transmodel/fares#FareStructureElementInSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "A fare structure element as a part of a validable element, including its possible order in the sequence of fare structure elements forming that validable element, and its possible quantitative limitation."@en .
 <https://w3id.org/transmodel/fares#FareStructureElementInSequence> <http://www.w3.org/2000/01/rdf-schema#label> "FareStructureElementInSequence"@en .
 # 
@@ -588,21 +631,21 @@ _:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/transmodel/fares#FareTable
 <https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#embargoUntilDate> .
-_:genid41 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid41 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endDate> .
-_:genid42 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid42 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startDate> .
-_:genid43 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid43 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#embargoUntilDate> .
+_:genid49 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endDate> .
+_:genid50 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startDate> .
+_:genid51 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of prices (specialization of price group) that may be associated with all or any of  distance matrix element, fare structure element geographical interval, group of access right parameter, class of use, operator, vehicle mode, fare product."@en .
 <https://w3id.org/transmodel/fares#FareTable> <http://www.w3.org/2000/01/rdf-schema#label> "FareTable"@en .
 # 
@@ -631,23 +674,23 @@ _:genid43 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://w3id.org/transmodel/fares#GeographicalInterval
 <https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareInterval> .
-<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
-_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalIntervalPrice> .
-<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endGeographicalValue> .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startGeographicalValue> .
-_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#numberOfUnits> .
-_:genid47 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalIntervalPrice> .
+<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#endGeographicalValue> .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#startGeographicalValue> .
+_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#numberOfUnits> .
+_:genid55 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
 <https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical interval specifying access rights for the Fare Structure Elements within the range of this interval: 0-5 km, 4-6 zones etc."@en .
 <https://w3id.org/transmodel/fares#GeographicalInterval> <http://www.w3.org/2000/01/rdf-schema#label> "GeographicalInterval"@en .
 # 
@@ -657,13 +700,19 @@ _:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://w3id.org/transmodel/fares#GeographicalIntervalPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of all possible price features of a Geographical Interval: default total price etc."@en .
 <https://w3id.org/transmodel/fares#GeographicalIntervalPrice> <http://www.w3.org/2000/01/rdf-schema#label> "GeographicalIntervalPrice"@en .
 # 
+# https://w3id.org/transmodel/fares#GeographicalStructureFactor
+<https://w3id.org/transmodel/fares#GeographicalStructureFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/transmodel/fares#GeographicalStructureFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareStructureFactor> .
+<https://w3id.org/transmodel/fares#GeographicalStructureFactor> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of a geographical interval or a distance matrix element expressed by a geographical unit."@en .
+<https://w3id.org/transmodel/fares#GeographicalStructureFactor> <http://www.w3.org/2000/01/rdf-schema#label> "GeographicalStructureFactor"@en .
+# 
 # https://w3id.org/transmodel/fares#GeographicalUnit
 <https://w3id.org/transmodel/fares#GeographicalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#GeographicalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareUnit> .
-<https://w3id.org/transmodel/fares#GeographicalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
-_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalUnitPrice> .
+<https://w3id.org/transmodel/fares#GeographicalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#relatedTo> .
+_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalUnitPrice> .
 <https://w3id.org/transmodel/fares#GeographicalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit for calculating geographical graduated fares."@en .
 # 
 # https://w3id.org/transmodel/fares#GeographicalUnitPrice
@@ -729,6 +778,11 @@ _:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/trans
 # https://w3id.org/transmodel/fares#PreAssignedFareProduct
 <https://w3id.org/transmodel/fares#PreAssignedFareProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#PreAssignedFareProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#FareProduct> .
+<https://w3id.org/transmodel/fares#PreAssignedFareProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#composedOf> .
+_:genid57 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/fares#AccessRightInProduct> .
 <https://w3id.org/transmodel/fares#PreAssignedFareProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "A fare product consisting of one or several validable elements, specific to a charging method."@en .
 <https://w3id.org/transmodel/fares#PreAssignedFareProduct> <http://www.w3.org/2000/01/rdf-schema#label> "PreAssignedFareProduct"@en .
 # 
@@ -815,11 +869,11 @@ _:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/trans
 # https://w3id.org/transmodel/fares#SalesPackage
 <https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
-<https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
-_:genid49 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:genid58 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A package to be sold as a whole, consisting of one or several fare products materialised thanks to one or several travel documents. the fare products may be either directly attached to the travel documents, or may be reloadable on the travel documents."@en .
 <https://w3id.org/transmodel/fares#SalesPackage> <http://www.w3.org/2000/01/rdf-schema#label> "SalesPackage"@en .
 # 
@@ -871,18 +925,18 @@ _:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/transmodel/fares#Tariff
 <https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElement> .
-<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalInterval> .
-<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
-_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalUnit> .
+<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#DistanceMatrixElement> .
+<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalInterval> .
+<https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#definedBy> .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#GeographicalUnit> .
 <https://w3id.org/transmodel/fares#Tariff> <http://www.w3.org/2000/01/rdf-schema#comment> "A Tariff describes all parameters composing a particular fare structure."@en .
 # 
 # https://w3id.org/transmodel/fares#TimeIntervalPrice
@@ -906,10 +960,10 @@ _:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/trans
 # https://w3id.org/transmodel/fares#UsageParameter
 <https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
-<https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#url> .
-_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#url> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter used to specify the use of a sales package or a Fare Product."@en .
 <https://w3id.org/transmodel/fares#UsageParameter> <http://www.w3.org/2000/01/rdf-schema#label> "UsageParameter"@en .
 # 
@@ -934,6 +988,15 @@ _:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # https://w3id.org/transmodel/fares#ValidableElement
 <https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/transmodel/fares#PriceableObject> .
+<https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#aChainOf> .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/transmodel/fares#FareStructureElementInSequence> .
+<https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/transmodel/fares#representing> .
+_:genid64 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/transmodel/fares#FareStructureElement> .
 <https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/2000/01/rdf-schema#comment> "An element which may have a fare price.a sequence or set of fare structure elements, grouped together to be validated in one go."@en .
 <https://w3id.org/transmodel/fares#ValidableElement> <http://www.w3.org/2000/01/rdf-schema#label> "ValidableElement"@en .
 # 
@@ -1043,8 +1106,8 @@ _:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 <https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/transmodel/kos/fares/tariff-basis-type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 # 
-_:genid54 <https://w3id.org/transmodel/fares#mbox> "ja.toledo@upm.es"@en .
-_:genid54 <https://w3id.org/transmodel/fares#name> "Jhon Toledo Barreto"@en .
+_:genid65 <https://w3id.org/transmodel/fares#mbox> "ja.toledo@upm.es"@en .
+_:genid65 <https://w3id.org/transmodel/fares#name> "Jhon Toledo Barreto"@en .
 # 
 # 
 # #################################################################

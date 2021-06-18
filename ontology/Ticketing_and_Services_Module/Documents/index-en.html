@@ -4,9 +4,11 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
  <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Transmodel Ontology - Fares</title>
 
-
+ <link rel="stylesheet" href="../resources/css/custom.css" media="screen" />
+ <script src="../resources/js/custom.js"></script> 
+ <link rel="icon" type="image/png" href="../resources/images/fare.png"/>
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/transmodel/fares#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/transmodel/fares#","name":"Transmodel Ontology - Fares", "headline":"Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology", "datePublished":"Fri Jun 18 10:17:43 CEST 2021", "version":"This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx", "author":[{"@type":"Person","name":"Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/transmodel/fares#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/transmodel/fares#","name":"Transmodel Ontology - Fares", "headline":"Module of the Transmodel Ontology focused on fares. This ontology provides support to the NeTEx model. Visit https://github.com/oeg-upm/transmodel-ontology", "datePublished":"Fri Jun 18 11:40:26 CEST 2021", "version":"This is the initial version of the module on Fares, after considering the UML models and XSD descriptions of Transmodel and NeTEx", "author":[{"@type":"Person","name":"Jhon Toledo (Ontology Engienering Group - Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Miguel Angel García (Ontology Engienering Group - Universidad Politécnica de Madrid"},{"@type":"Person","name":"Oscar Corcho (Ontology Engineering Group - Universidad Politécnica de Madrid)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -271,6 +273,10 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
    </li>
    <li>
+      <a href="#GeographicalStructureFactor"
+         title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
+   </li>
+   <li>
       <a href="#GeographicalUnitPrice"
          title="https://w3id.org/transmodel/fares#GeographicalUnitPrice">GeographicalUnitPrice</a>
    </li>
@@ -484,12 +490,21 @@ This ontology has the following classes and properties.</span>
       <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
    </li>
    <li>
+      <a href="#representing" title="https://w3id.org/transmodel/fares#representing">representing</a>
+   </li>
+   <li>
+      <a href="#specifiedBy" title="https://w3id.org/transmodel/fares#specifiedBy">specifiedBy</a>
+   </li>
+   <li>
       <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
    </li>
    <li>
       <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
          <span>tariff basis</span>
       </a>
+   </li>
+   <li>
+      <a href="#viewedAs" title="https://w3id.org/transmodel/fares#viewedAs">viewedAs</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
@@ -607,10 +622,106 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Transmodel Ontology - Fares: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+   <p>This vocabulary represents fare service information including transport authorities and operators.</p>
+   <p>The scope of this vocabulary is defined with the following information:<br /><br /></p>
+   <ul>
+   <li>Fare components</li>
+   <li>Controllable elements</li>
+   <li>Fare product</li>
+   <li>Sales</li>
+   <li>Ticketing equipment</li>
+   </ul>
+    
 
 </div>
-   
+<div>
+	<center>
+		<img src="../resources/images/1- AccessRights_and_FareStructure2.png" alt="">
+			<figcaption>Figura 1. AccessRights and FareStructure.</figcaption>
+	</center>
+</div>
+<h2>Examples</h2>
+<p>This example represents an adult zone to zone single trip, where the access right is only one ride(single ride). for this reason, the ticket is first and last in the sequence.</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="example(event, 'RDF')">RDF/XML</button>
+  <button class="tablinks" onclick="example(event, 'Turtle')">Turtle</button>
+  <button class="tablinks" onclick="example(event, 'NTriples')">N-Triples</button>
+</div>
+
+<div id="RDF" class="tabcontent">
+  
+   <pre id="result" class="prettyprint p-2"><code><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span> <span class="pun">?&gt;</span>
+      <span class="tag">&lt;rdf:RDF</span> <span class="atn">xmlns:rdf</span><span class="pun">=</span><span class="atv">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+               <span class="atn">xmlns:rdfs</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2000/01/rdf-schema#"</span>
+               <span class="atn">xmlns:tmfare</span><span class="pun">=</span><span class="atv">"https://w3id.org/transmodel/fares#"</span><span class="tag">&gt;</span>
+      
+        <span class="tag">&lt;rdf:Description</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/SingleTrip/8754"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdf:type</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"https://w3id.org/transmodel/fares#PreassignedFareProduct"</span><span class="tag">/&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Adult Zone to zone  Trip</span><span class="tag">&lt;/rdfs:label&gt;</span>
+          <span class="tag">&lt;tmfare:composedOf&gt;</span>
+            <span class="tag">&lt;tmfare:AccessRightInProduct</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/access_right/99"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">First ride</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;tmfare:isFirstInSequence</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#boolean"</span><span class="tag">&gt;</span><span class="pln">true</span><span class="tag">&lt;/tmfare:isFirstInSequence&gt;</span>
+              <span class="tag">&lt;tmfare:isLastInSequence</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#boolean"</span><span class="tag">&gt;</span><span class="pln">true</span><span class="tag">&lt;/tmfare:isLastInSequence&gt;</span>
+              <span class="tag">&lt;tmfare:viewedAs&gt;</span>
+                <span class="tag">&lt;tmfare:ValidableElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/SingleTrip/travel/123"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Single  ride</span><span class="tag">&lt;/rdfs:label&gt;</span>
+                  <span class="tag">&lt;tmfare:representing&gt;</span>
+                    <span class="tag">&lt;tmfare:FareStructureElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/access/1"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;/tmfare:FareStructureElement&gt;</span>
+                  <span class="tag">&lt;/tmfare:representing&gt;</span>
+      
+                  <span class="tag">&lt;tmfare:representing&gt;</span>
+                    <span class="tag">&lt;tmfare:FareStructureElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/eligibility/2"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;/tmfare:FareStructureElement&gt;</span>
+                  <span class="tag">&lt;/tmfare:representing&gt;</span>
+      
+                  <span class="tag">&lt;tmfare:representing&gt;</span>
+                    <span class="tag">&lt;tmfare:FareStructureElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/conditions_of_travel/3"</span><span class="tag">&gt;</span>
+                    <span class="tag">&lt;/tmfare:FareStructureElement&gt;</span>
+                  <span class="tag">&lt;/tmfare:representing&gt;</span>
+      
+                <span class="tag">&lt;/tmfare:ValidableElement&gt;</span>
+              <span class="tag">&lt;/tmfare:viewedAs&gt;</span>
+      
+            <span class="tag">&lt;/tmfare:AccessRightInProduct&gt;</span>
+          <span class="tag">&lt;/tmfare:composedOf&gt;</span>
+      
+        <span class="tag">&lt;/rdf:Description&gt;</span>
+      
+      <span class="tag">&lt;/rdf:RDF&gt;</span></code></pre>
+</div>
+
+<div id="Turtle" class="tabcontent">
+  
+   <pre>	
+      <p>@prefix tmfare: &lt;https://w3id.org/transmodel/fares#&gt; .<br />@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.<br />@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/SingleTrip/8754&gt; a tmfare:PreassignedFareProduct;<br />rdfs:label "Adult Zone to zone Trip"^^xsd:string ;<br />tmfare:composedOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/access_right/99&gt;.<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/access_right/99&gt; a tmfare:AccessRightInProduct;<br />rdfs:label "First ride"^^xsd:string;<br />tmfare:isFirstInSequence "true"^^xsd:boolean;<br />tmfare:isLastInSequence "true"^^xsd:boolean;<br />tmfare:viewedAs &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/SingleTrip/travel/123&gt;. <br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/SingleTrip/travel/123&gt; a tmfare:ValidableElement;<br />rdfs:label "Single ride"^^xsd:string;<br />tmfare:representing &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/access/1&gt;;<br />tmfare:representing &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/eligibility/2&gt;;<br />tmfare:representing &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/conditions_of_travel/3&gt;.<br /><br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/access/1&gt; a tmfare:FareStructureElement.<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/eligibility/2&gt; a tmfare:FareStructureElement.<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/product/tz2z/conditions_of_travel/3&gt; a tmfare:FareStructureElement.</p>
+         </pre>
+</div>
+
+<div id="NTriples" class="tabcontent">
+  
+   <pre id="result" class="prettyprint p-1">
+<code><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="pln">8754</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">PreassignedFareProduct</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="pln">8754</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2000</span><span class="pun">/</span><span class="pln">01</span><span class="pun">/</span><span class="atn">rdf-schema</span><span class="pln">#</span><span class="atn">label</span><span class="tag">&gt;</span><span class="pln"> "Adult Zone to zone  Trip"^^</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2001</span><span class="pun">/</span><span class="atn">XMLSchema</span><span class="pln">#</span><span class="atn">string</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="pln">8754</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">composedOf</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">AccessRightInProduct</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2000</span><span class="pun">/</span><span class="pln">01</span><span class="pun">/</span><span class="atn">rdf-schema</span><span class="pln">#</span><span class="atn">label</span><span class="tag">&gt;</span><span class="pln"> "First ride"^^</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2001</span><span class="pun">/</span><span class="atn">XMLSchema</span><span class="pln">#</span><span class="atn">string</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">isFirstInSequence</span><span class="tag">&gt;</span><span class="pln"> "true"^^</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2001</span><span class="pun">/</span><span class="atn">XMLSchema</span><span class="pln">#</span><span class="atn">boolean</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">isLastInSequence</span><span class="tag">&gt;</span><span class="pln"> "true"^^</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2001</span><span class="pun">/</span><span class="atn">XMLSchema</span><span class="pln">#</span><span class="atn">boolean</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">access_right</span><span class="pun">/</span><span class="pln">99</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">viewedAs</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">ValidableElement</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2000</span><span class="pun">/</span><span class="pln">01</span><span class="pun">/</span><span class="atn">rdf-schema</span><span class="pln">#</span><span class="atn">label</span><span class="tag">&gt;</span><span class="pln"> "Single  ride"^^</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">2001</span><span class="pun">/</span><span class="atn">XMLSchema</span><span class="pln">#</span><span class="atn">string</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">representing</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">access</span><span class="pun">/</span><span class="pln">1</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">representing</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">eligibility</span><span class="pun">/</span><span class="pln">2</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">SingleTrip</span><span class="pun">/</span><span class="atn">travel</span><span class="pun">/</span><span class="pln">123</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">representing</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">conditions_of_travel</span><span class="pun">/</span><span class="pln">3</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">access</span><span class="pun">/</span><span class="pln">1</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">FareStructureElement</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">eligibility</span><span class="pun">/</span><span class="pln">2</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">FareStructureElement</span><span class="tag">&gt;</span><span class="pln"> .
+</span><span class="tag">&lt;http</spa>n><span class="pln">:</span><span class="pun">//</span><span class="atn">vocab</span><span class="pln">.</span><span class="atn">transport</span><span class="pln">.</span><span class="atn">es</span><span class="pun">/</span><span class="atn">resource</span><span class="pun">/</span><span class="atn">transport</span><span class="pun">/</span><span class="atn">madrid</span><span class="pun">/</span><span class="atn">crtm</span><span class="pun">/</span><span class="atn">metro</span><span class="pun">/</span><span class="atn">fares</span><span class="pun">/</span><span class="atn">product</span><span class="pun">/</span><span class="atn">tz2z</span><span class="pun">/</span><span class="atn">conditions_of_travel</span><span class="pun">/</span><span class="pln">3</span><span class="tag">&gt;</span> <span class="tag">&lt;http</span><span class="pln">:</span><span class="pun">//</span><span class="atn">www</span><span class="pln">.</span><span class="atn">w3</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="pln">1999</span><span class="pun">/</span><span class="pln">02</span><span class="pun">/</span><span class="pln">22-</span><span class="atn">rdf-syntax-ns</span><span class="pln">#</span><span class="atn">type</span><span class="tag">&gt;</span> <span class="tag">&lt;https</span><span class="pln">:</span><span class="pun">//</span><span class="atn">w3id</span><span class="pln">.</span><span class="atn">org</span><span class="pun">/</span><span class="atn">transmodel</span><span class="pun">/</span><span class="atn">fares</span><span class="pln">#</span><span class="atn">FareStructureElement</span><span class="tag">&gt;</span><span class="pln"> .</span></code>
+</pre>
+</div>
 
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Transmodel Ontology - Fares classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -771,6 +882,10 @@ This section provides details for each class and property defined by Transmodel 
       <li>
          <a href="#GeographicalIntervalPrice"
             title="https://w3id.org/transmodel/fares#GeographicalIntervalPrice">GeographicalIntervalPrice</a>
+      </li>
+      <li>
+         <a href="#GeographicalStructureFactor"
+            title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
       </li>
       <li>
          <a href="#GeographicalUnitPrice"
@@ -1521,6 +1636,12 @@ This section provides details for each class and property defined by Transmodel 
                title="https://w3id.org/transmodel/fares#PriceableObject">PriceableObject</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#GeographicalStructureFactor"
+               title="https://w3id.org/transmodel/fares#GeographicalStructureFactor">GeographicalStructureFactor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="FareTable">
@@ -1681,6 +1802,25 @@ This section provides details for each class and property defined by Transmodel 
          <dt>has super-classes</dt>
          <dd>
             <a href="#FarePrice" title="https://w3id.org/transmodel/fares#FarePrice">FarePrice</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeographicalStructureFactor">
+      <h3>GeographicalStructureFactor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#GeographicalStructureFactor</p>
+      <div class="comment">
+         <span class="markdown">The value of a geographical interval or a distance matrix element expressed by a geographical unit.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#FareStructureFactor"
+               title="https://w3id.org/transmodel/fares#FareStructureFactor">FareStructureFactor</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2698,12 +2838,21 @@ This section provides details for each class and property defined by Transmodel 
          <a href="#relatedTo" title="https://w3id.org/transmodel/fares#relatedTo">relatedTo</a>
       </li>
       <li>
+         <a href="#representing" title="https://w3id.org/transmodel/fares#representing">representing</a>
+      </li>
+      <li>
+         <a href="#specifiedBy" title="https://w3id.org/transmodel/fares#specifiedBy">specifiedBy</a>
+      </li>
+      <li>
          <a href="#startOf" title="https://w3id.org/transmodel/fares#startOf">startOf</a>
       </li>
       <li>
          <a href="#tariffBasis" title="https://w3id.org/transmodel/fares#tariffBasis">
             <span>tariff basis</span>
          </a>
+      </li>
+      <li>
+         <a href="#viewedAs" title="https://w3id.org/transmodel/fares#viewedAs">viewedAs</a>
       </li>
    </ul>
    <div class="entity" id="aChainOf">
@@ -2713,6 +2862,9 @@ This section provides details for each class and property defined by Transmodel 
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/fares#aChainOf</p>
+      <div class="comment">
+         <span class="markdown">This property represents a chain or sequence of another class</span>
+      </div>
    </div>
    <div class="entity" id="composedOf">
       <h3>composedOf<sup class="type-op" title="object property">op</sup>
@@ -2826,6 +2978,22 @@ This section provides details for each class and property defined by Transmodel 
       <p>
          <strong>IRI:</strong> https://w3id.org/transmodel/fares#relatedTo</p>
    </div>
+   <div class="entity" id="representing">
+      <h3>representing<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#representing</p>
+   </div>
+   <div class="entity" id="specifiedBy">
+      <h3>specifiedBy<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#specifiedBy</p>
+   </div>
    <div class="entity" id="startOf">
       <h3>startOf<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2859,6 +3027,14 @@ This section provides details for each class and property defined by Transmodel 
                   title="https://w3id.org/transmodel/kos/fares/tariff-basis-type">tariff basis type</a>)</dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="viewedAs">
+      <h3>viewedAs<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/transmodel/fares#viewedAs</p>
    </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
