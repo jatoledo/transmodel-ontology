@@ -728,7 +728,7 @@ This ontology has the following classes and properties.</span>
       <figcaption>Figura 2. Distance-based FareStructure.</figcaption>
 </center>
 <h2>Examples</h2>
-<!--<p>This example represents an adult zone to zone single trip, where the access right is only one ride(single ride). for this reason, the ticket is first and last in the sequence.</p>
+<p>Example where 3 tariff zones are defined.</p>
 
 <div class="tab">
   <button class="tablinks" onclick="example(event, 'RDF2')">RDF/XML</button>
@@ -738,23 +738,206 @@ This ontology has the following classes and properties.</span>
 
 <div id="RDF2" class="tabcontent">
   
-   <pre id="result" class="prettyprint p-2">
-
-
-   </pre>
+   <pre id="result" class="prettyprint p-2"><code><span class="pun">&lt;?</span><span class="pln">xml version</span><span class="pun">=</span><span class="str">"1.0"</span><span class="pln"> encoding</span><span class="pun">=</span><span class="str">"utf-8"</span> <span class="pun">?&gt;</span>
+      <span class="tag">&lt;rdf:RDF</span> <span class="atn">xmlns:rdf</span><span class="pun">=</span><span class="atv">"http://www.w3.org/1999/02/22-rdf-syntax-ns#"</span>
+               <span class="atn">xmlns:rdfs</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2000/01/rdf-schema#"</span>
+               <span class="atn">xmlns:ns0</span><span class="pun">=</span><span class="atv">"http://w3id.org/transmodel/organisations#"</span>
+               <span class="atn">xmlns:ns1</span><span class="pun">=</span><span class="atv">"https://w3id.org/transmodel/fares#"</span><span class="tag">&gt;</span>
+      
+        <span class="tag">&lt;rdf:Description</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/845"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdf:type</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"https://w3id.org/transmodel/fares#Tariff"</span><span class="tag">/&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone tozone tariff</span><span class="tag">&lt;/rdfs:label&gt;</span>
+          <span class="tag">&lt;ns0:Operator</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/recurso/transporte/madrid/crtm/metro/operator/crtm"</span><span class="tag">/&gt;</span>
+          <span class="tag">&lt;ns1:definedBy&gt;</span>
+            <span class="tag">&lt;ns1:DistanceMatrixElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z1"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 1  to  Zone 1</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;ns1:startOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:endOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:relatedTo&gt;</span>
+                <span class="tag">&lt;ns1:DistanceMatrixElementPrice</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z1"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 1  to  Zone 1</span><span class="tag">&lt;/rdfs:label&gt;</span>
+                  <span class="tag">&lt;ns1:amount</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#float"</span><span class="tag">&gt;</span><span class="pln">1,50</span><span class="tag">&lt;/ns1:amount&gt;</span>
+                <span class="tag">&lt;/ns1:DistanceMatrixElementPrice&gt;</span>
+              <span class="tag">&lt;/ns1:relatedTo&gt;</span>
+      
+            <span class="tag">&lt;/ns1:DistanceMatrixElement&gt;</span>
+          <span class="tag">&lt;/ns1:definedBy&gt;</span>
+      
+          <span class="tag">&lt;ns1:definedBy&gt;</span>
+            <span class="tag">&lt;ns1:DistanceMatrixElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z2"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 1  to  Zone 2</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;ns1:startOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:endOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:relatedTo&gt;</span>
+                <span class="tag">&lt;ns1:DistanceMatrixElementPrice</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z2"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 1  to  Zone 2</span><span class="tag">&lt;/rdfs:label&gt;</span>
+                  <span class="tag">&lt;ns1:amount</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#float"</span><span class="tag">&gt;</span><span class="pln">2,00</span><span class="tag">&lt;/ns1:amount&gt;</span>
+                <span class="tag">&lt;/ns1:DistanceMatrixElementPrice&gt;</span>
+              <span class="tag">&lt;/ns1:relatedTo&gt;</span>
+      
+            <span class="tag">&lt;/ns1:DistanceMatrixElement&gt;</span>
+          <span class="tag">&lt;/ns1:definedBy&gt;</span>
+      
+          <span class="tag">&lt;ns1:definedBy&gt;</span>
+            <span class="tag">&lt;ns1:DistanceMatrixElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z2"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 2  to  Zone 2</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;ns1:startOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:endOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:relatedTo&gt;</span>
+                <span class="tag">&lt;ns1:DistanceMatrixElementPrice</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z2"</span><span class="tag">&gt;</span>
+                  <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 2  to  Zone 2</span><span class="tag">&lt;/rdfs:label&gt;</span>
+                  <span class="tag">&lt;ns1:amount</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#float"</span><span class="tag">&gt;</span><span class="pln">2,00</span><span class="tag">&lt;/ns1:amount&gt;</span>
+                <span class="tag">&lt;/ns1:DistanceMatrixElementPrice&gt;</span>
+              <span class="tag">&lt;/ns1:relatedTo&gt;</span>
+      
+            <span class="tag">&lt;/ns1:DistanceMatrixElement&gt;</span>
+          <span class="tag">&lt;/ns1:definedBy&gt;</span>
+      
+          <span class="tag">&lt;ns1:definedBy&gt;</span>
+            <span class="tag">&lt;ns1:DistanceMatrixElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z3"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 2  to  Zone 3</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;ns1:startOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:endOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3"</span><span class="tag">/&gt;</span>
+            <span class="tag">&lt;/ns1:DistanceMatrixElement&gt;</span>
+          <span class="tag">&lt;/ns1:definedBy&gt;</span>
+      
+          <span class="tag">&lt;ns1:definedBy&gt;</span>
+            <span class="tag">&lt;ns1:DistanceMatrixElement</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z3_z3"</span><span class="tag">&gt;</span>
+              <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 3  to  Zone 3</span><span class="tag">&lt;/rdfs:label&gt;</span>
+              <span class="tag">&lt;ns1:startOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3"</span><span class="tag">/&gt;</span>
+              <span class="tag">&lt;ns1:endOf</span> <span class="atn">rdf:resource</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3"</span><span class="tag">/&gt;</span>
+            <span class="tag">&lt;/ns1:DistanceMatrixElement&gt;</span>
+          <span class="tag">&lt;/ns1:definedBy&gt;</span>
+      
+        <span class="tag">&lt;/rdf:Description&gt;</span>
+      
+        <span class="tag">&lt;ns1:TariffZone</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 1</span><span class="tag">&lt;/rdfs:label&gt;</span>
+        <span class="tag">&lt;/ns1:TariffZone&gt;</span>
+      
+        <span class="tag">&lt;ns1:TariffZone</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 2</span><span class="tag">&lt;/rdfs:label&gt;</span>
+        <span class="tag">&lt;/ns1:TariffZone&gt;</span>
+      
+        <span class="tag">&lt;ns1:TariffZone</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 3</span><span class="tag">&lt;/rdfs:label&gt;</span>
+        <span class="tag">&lt;/ns1:TariffZone&gt;</span>
+      
+        <span class="tag">&lt;ns1:DistanceMatrixElementPrice</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z3"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 2  to  Zone 3</span><span class="tag">&lt;/rdfs:label&gt;</span>
+          <span class="tag">&lt;ns1:amount</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#float"</span><span class="tag">&gt;</span><span class="pln">3,00</span><span class="tag">&lt;/ns1:amount&gt;</span>
+        <span class="tag">&lt;/ns1:DistanceMatrixElementPrice&gt;</span>
+      
+        <span class="tag">&lt;ns1:DistanceMatrixElementPrice</span> <span class="atn">rdf:about</span><span class="pun">=</span><span class="atv">"http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z3_z3"</span><span class="tag">&gt;</span>
+          <span class="tag">&lt;rdfs:label</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#string"</span><span class="tag">&gt;</span><span class="pln">Zone 3  to  Zone 3</span><span class="tag">&lt;/rdfs:label&gt;</span>
+          <span class="tag">&lt;ns1:amount</span> <span class="atn">rdf:datatype</span><span class="pun">=</span><span class="atv">"http://www.w3.org/2001/XMLSchema#float"</span><span class="tag">&gt;</span><span class="pln">3,00</span><span class="tag">&lt;/ns1:amount&gt;</span>
+        <span class="tag">&lt;/ns1:DistanceMatrixElementPrice&gt;</span>
+      
+      <span class="tag">&lt;/rdf:RDF&gt;</span></code></pre>
 </div>
 
 <div id="Turtle2" class="tabcontent">
   
    <pre>	
-         </pre>
+      <p>@prefix tmfare: &lt;https://w3id.org/transmodel/fares#&gt; .<br />@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.<br />@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;.<br />@prefix tmorg: &lt;http://w3id.org/transmodel/organisations#&gt; .</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/845&gt; a tmfare:Tariff;<br />rdfs:label "Zone tozone tariff"^^xsd:string ;<br />tmorg:Operator &lt;http://vocab.transport.es/recurso/transporte/madrid/crtm/metro/operator/crtm&gt;;<br />tmfare:definedBy &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z1&gt;;<br />tmfare:definedBy &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z2&gt;;<br />tmfare:definedBy &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z2&gt;;<br />tmfare:definedBy &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z3&gt;;<br />tmfare:definedBy &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z3_z3&gt;.</p>
+<p><br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z1&gt; a tmfare:DistanceMatrixElement;<br />rdfs:label "Zone 1 to Zone 1"^^xsd:string ;<br />tmfare:startOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt;;<br />tmfare:endOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt;;<br />tmfare:relatedTo &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z1&gt;.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z2&gt; a tmfare:DistanceMatrixElement;<br />rdfs:label "Zone 1 to Zone 2"^^xsd:string ;<br />tmfare:startOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt;;<br />tmfare:endOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt;;<br />tmfare:relatedTo &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z2&gt;.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z2&gt; a tmfare:DistanceMatrixElement;<br />rdfs:label "Zone 2 to Zone 2"^^xsd:string ;<br />tmfare:startOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt;;<br />tmfare:endOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt;;<br />tmfare:relatedTo &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z2&gt;.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z3&gt; a tmfare:DistanceMatrixElement;<br />rdfs:label "Zone 2 to Zone 3"^^xsd:string ;<br />tmfare:startOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt;;<br />tmfare:endOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt;.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z3_z3&gt; a tmfare:DistanceMatrixElement;<br />rdfs:label "Zone 3 to Zone 3"^^xsd:string ;<br />tmfare:startOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt;;<br />tmfare:endOf &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt;.</p>
+<p><br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt; a tmfare:TariffZone;<br />rdfs:label "Zone 1"^^xsd:string .<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt; a tmfare:TariffZone;<br />rdfs:label "Zone 2"^^xsd:string .<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt; a tmfare:TariffZone;<br />rdfs:label "Zone 3"^^xsd:string .</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z1&gt; a tmfare:DistanceMatrixElementPrice;<br />rdfs:label "Zone 1 to Zone 1"^^xsd:string ; <br />tmfare:amount "1,50"^^xsd:float .<br />&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z2&gt; a tmfare:DistanceMatrixElementPrice;<br />rdfs:label "Zone 1 to Zone 2"^^xsd:string ; <br />tmfare:amount "2,00"^^xsd:float.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z2&gt; a tmfare:DistanceMatrixElementPrice;<br />rdfs:label "Zone 2 to Zone 2"^^xsd:string ; <br />tmfare:amount "2,00"^^xsd:float.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z3&gt; a tmfare:DistanceMatrixElementPrice;<br />rdfs:label "Zone 2 to Zone 3"^^xsd:string ; <br />tmfare:amount "3,00"^^xsd:float.</p>
+<p>&lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z3_z3&gt; a tmfare:DistanceMatrixElementPrice;<br />rdfs:label "Zone 3 to Zone 3"^^xsd:string ; <br />tmfare:amount "3,00"^^xsd:float.</p>
+   </pre>
 </div>
 
 <div id="NTriples2" class="tabcontent">
   
-   <pre id="result" class="prettyprint p-1">
+   <pre id="result" class="prettyprint p-2"><code><span class="lit">@prefix</span><span class="pln"> rdfs</span><span class="pun">:</span> <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//www.w3.org/2000/01/rdf-schema#&gt; .</span>
+      <span class="lit">@prefix</span><span class="pln"> xsd</span><span class="pun">:</span> <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//www.w3.org/2001/XMLSchema#&gt; .</span>
+      <span class="lit">@prefix</span><span class="pln"> ns0</span><span class="pun">:</span> <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//w3id.org/transmodel/organisations#&gt; .</span>
+      <span class="lit">@prefix</span><span class="pln"> ns1</span><span class="pun">:</span> <span class="pun">&lt;</span><span class="pln">https</span><span class="pun">:</span><span class="com">//w3id.org/transmodel/fares#&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/845&gt;</span><span class="pln">
+        a </span><span class="pun">&lt;</span><span class="pln">https</span><span class="pun">:</span><span class="com">//w3id.org/transmodel/fares#Tariff&gt; ;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone tozone tariff"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns0</span><span class="pun">:</span><span class="typ">Operator</span> <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/recurso/transporte/madrid/crtm/metro/operator/crtm&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">definedBy </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z1&gt;, &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z2&gt;, &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z2&gt;, &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z3&gt;, &lt;http://vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z3_z3&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z1&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElement</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 1  to  Zone 1"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">startOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">endOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">relatedTo </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z1&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z1_z2&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElement</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 1  to  Zone 2"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">startOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">endOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">relatedTo </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z2&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z2&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElement</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 2  to  Zone 2"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">startOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">endOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">relatedTo </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z2&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z2_z3&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElement</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 2  to  Zone 3"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">startOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">endOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/distance_matrix/z3_z3&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElement</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 3  to  Zone 3"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">startOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt; ;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">endOf </span><span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt; .</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/1&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">TariffZone</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 1"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/2&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">TariffZone</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 2"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/tariff/zone/3&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">TariffZone</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 3"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z1&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElementPrice</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 1  to  Zone 1"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">amount </span><span class="str">"1,50"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">float</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z1_z2&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElementPrice</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 1  to  Zone 2"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">amount </span><span class="str">"2,00"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">float</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z2&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElementPrice</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 2  to  Zone 2"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">amount </span><span class="str">"2,00"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">float</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z2_z3&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElementPrice</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 2  to  Zone 3"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">amount </span><span class="str">"3,00"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">float</span> <span class="pun">.</span>
+      
+      <span class="pun">&lt;</span><span class="pln">http</span><span class="pun">:</span><span class="com">//vocab.transport.es/resource/transport/madrid/crtm/metro/fares/distance_matrix/price/z3_z3&gt;</span><span class="pln">
+        a ns1</span><span class="pun">:</span><span class="typ">DistanceMatrixElementPrice</span> <span class="pun">;</span><span class="pln">
+        rdfs</span><span class="pun">:</span><span class="pln">label </span><span class="str">"Zone 3  to  Zone 3"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">string</span> <span class="pun">;</span><span class="pln">
+        ns1</span><span class="pun">:</span><span class="pln">amount </span><span class="str">"3,00"</span><span class="pun">^^</span><span class="pln">xsd</span><span class="pun">:</span><span class="kwd">float</span> <span class="pun">.</span></code></pre>
 </pre>
-</div>-->
+</div>
 <!--CROSSREF SECTION-->
    <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Transmodel Ontology - Fares classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Transmodel Ontology - Fares.
