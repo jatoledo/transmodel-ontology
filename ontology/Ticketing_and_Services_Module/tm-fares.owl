@@ -1541,6 +1541,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A Tariff describes all parameters composing a particular fare structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Tariff</rdfs:label>
     </owl:Class>
     
 
