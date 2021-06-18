@@ -1,0 +1,453 @@
+{
+  "@context" : {
+    "PenaltyPolicy" : {
+      "@id" : "https://w3id.org/transmodel/fares#PenaltyPolicy"
+    },
+    "endOf" : {
+      "@id" : "https://w3id.org/transmodel/fares#endOf",
+      "@type" : "@id"
+    },
+    "GeographicalInterval" : {
+      "@id" : "https://w3id.org/transmodel/fares#GeographicalInterval"
+    },
+    "AccessRightInProduct" : {
+      "@id" : "https://w3id.org/transmodel/fares#AccessRightInProduct"
+    },
+    "fareType" : {
+      "@id" : "https://w3id.org/transmodel/fares#fareType",
+      "@type" : "@id"
+    },
+    "describedThrough" : {
+      "@id" : "https://w3id.org/transmodel/fares#describedThrough",
+      "@type" : "@id"
+    },
+    "governedBy" : {
+      "@id" : "https://w3id.org/transmodel/fares#governedBy",
+      "@type" : "@id"
+    },
+    "PreAssignedFareProduct" : {
+      "@id" : "https://w3id.org/transmodel/fares#PreAssignedFareProduct"
+    },
+    "ScheduledStopPoint" : {
+      "@id" : "https://w3id.org/transmodel/commons#ScheduledStopPoint"
+    },
+    "Line" : {
+      "@id" : "https://w3id.org/transmodel/journeys#Line"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "PriceUnit" : {
+      "@id" : "https://w3id.org/transmodel/fares#PriceUnit"
+    },
+    "privateCode" : {
+      "@id" : "https://w3id.org/transmodel/fares#privateCode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "CommercialProfile" : {
+      "@id" : "https://w3id.org/transmodel/fares#CommercialProfile"
+    },
+    "returnFareTwiceSingle" : {
+      "@id" : "https://w3id.org/transmodel/fares#returnFareTwiceSingle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "OrganisationalValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#OrganisationalValidityParameter"
+    },
+    "license" : {
+      "@id" : "http://creativecommons.org/ns#license"
+    },
+    "UserProfile" : {
+      "@id" : "https://w3id.org/transmodel/fares#UserProfile"
+    },
+    "url" : {
+      "@id" : "https://w3id.org/transmodel/fares#url",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PurchaseWindow" : {
+      "@id" : "https://w3id.org/transmodel/fares#PurchaseWindow"
+    },
+    "UsageParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#UsageParameter"
+    },
+    "FarePrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#FarePrice"
+    },
+    "specifiedBy" : {
+      "@id" : "https://w3id.org/transmodel/fares#specifiedBy",
+      "@type" : "@id"
+    },
+    "relatedTo" : {
+      "@id" : "https://w3id.org/transmodel/fares#relatedTo",
+      "@type" : "@id"
+    },
+    "isLastInSequence" : {
+      "@id" : "https://w3id.org/transmodel/fares#isLastInSequence"
+    },
+    "startDate" : {
+      "@id" : "https://w3id.org/transmodel/fares#startDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Organisation" : {
+      "@id" : "https://w3id.org/transmodel/organisations#Organisation"
+    },
+    "Refunding" : {
+      "@id" : "https://w3id.org/transmodel/fares#Refunding"
+    },
+    "ParkingPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#ParkingPrice"
+    },
+    "ControllableElementPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#ControllableElementPrice"
+    },
+    "startGeographicalValue" : {
+      "@id" : "https://w3id.org/transmodel/fares#startGeographicalValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Exchanging" : {
+      "@id" : "https://w3id.org/transmodel/fares#Exchanging"
+    },
+    "EntitlementRequired" : {
+      "@id" : "https://w3id.org/transmodel/fares#EntitlementRequired"
+    },
+    "UsageValidityPeriod" : {
+      "@id" : "https://w3id.org/transmodel/fares#UsageValidityPeriod"
+    },
+    "TariffZone" : {
+      "@id" : "https://w3id.org/transmodel/commons#TariffZone"
+    },
+    "representing" : {
+      "@id" : "https://w3id.org/transmodel/fares#representing",
+      "@type" : "@id"
+    },
+    "Interchanging" : {
+      "@id" : "https://w3id.org/transmodel/fares#Interchanging"
+    },
+    "Reselling" : {
+      "@id" : "https://w3id.org/transmodel/fares#Reselling"
+    },
+    "endGeographicalValue" : {
+      "@id" : "https://w3id.org/transmodel/fares#endGeographicalValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "ValidityParameterAssignment" : {
+      "@id" : "https://w3id.org/transmodel/fares#ValidityParameterAssignment"
+    },
+    "EntitlementProduct" : {
+      "@id" : "https://w3id.org/transmodel/fares#EntitlementProduct"
+    },
+    "author" : {
+      "@id" : "https://w3id.org/transmodel/fares#author"
+    },
+    "mbox" : {
+      "@id" : "https://w3id.org/transmodel/fares#mbox"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "TimeIntervalPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#TimeIntervalPrice"
+    },
+    "GeographicalUnit" : {
+      "@id" : "https://w3id.org/transmodel/fares#GeographicalUnit"
+    },
+    "GenericParameterAssignment" : {
+      "@id" : "https://w3id.org/transmodel/fares#GenericParameterAssignment"
+    },
+    "FareElementInSequence" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareElementInSequence"
+    },
+    "RoundTrip" : {
+      "@id" : "https://w3id.org/transmodel/fares#RoundTrip"
+    },
+    "LuggageAllowance" : {
+      "@id" : "https://w3id.org/transmodel/fares#LuggageAllowance"
+    },
+    "discountPercentageUsed" : {
+      "@id" : "https://w3id.org/transmodel/fares#discountPercentageUsed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "ScopingValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#ScopingValidityParameter"
+    },
+    "numberOfUnits" : {
+      "@id" : "https://w3id.org/transmodel/fares#numberOfUnits",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "EntitlementGiven" : {
+      "@id" : "https://w3id.org/transmodel/fares#EntitlementGiven"
+    },
+    "ControllableElementInSequence" : {
+      "@id" : "https://w3id.org/transmodel/fares#ControllableElementInSequence"
+    },
+    "definedBy" : {
+      "@id" : "https://w3id.org/transmodel/fares#definedBy",
+      "@type" : "@id"
+    },
+    "CompanionProfile" : {
+      "@id" : "https://w3id.org/transmodel/fares#CompanionProfile"
+    },
+    "discountAmount" : {
+      "@id" : "https://w3id.org/transmodel/fares#discountAmount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "GroupTicket" : {
+      "@id" : "https://w3id.org/transmodel/fares#GroupTicket"
+    },
+    "FareInterval" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareInterval"
+    },
+    "CappingRulePrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#CappingRulePrice"
+    },
+    "GeographicalUnitPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#GeographicalUnitPrice"
+    },
+    "RoutingValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#RoutingValidityParameter"
+    },
+    "FareProductPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareProductPrice"
+    },
+    "Rounding" : {
+      "@id" : "https://w3id.org/transmodel/fares#Rounding"
+    },
+    "accessNumber" : {
+      "@id" : "https://w3id.org/transmodel/fares#accessNumber"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
+    "DistributionAssignment" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistributionAssignment"
+    },
+    "name" : {
+      "@id" : "https://w3id.org/transmodel/fares#name"
+    },
+    "chargingPolicy" : {
+      "@id" : "https://w3id.org/transmodel/fares#chargingPolicy"
+    },
+    "LimitingRule" : {
+      "@id" : "https://w3id.org/transmodel/fares#LimitingRule"
+    },
+    "FrequencyOfUse" : {
+      "@id" : "https://w3id.org/transmodel/fares#FrequencyOfUse"
+    },
+    "UsageParameterPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#UsageParameterPrice"
+    },
+    "Zone" : {
+      "@id" : "https://w3id.org/transmodel/commons#Zone"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
+    },
+    "SalesPackagePrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#SalesPackagePrice"
+    },
+    "FlexibleLine" : {
+      "@id" : "https://w3id.org/transmodel/journeys#FlexibleLine"
+    },
+    "FareProduct" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareProduct"
+    },
+    "SalesPackage" : {
+      "@id" : "https://w3id.org/transmodel/fares#SalesPackage"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/elements/1.1/identifier"
+    },
+    "SeriesConstraintPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#SeriesConstraintPrice"
+    },
+    "FareTable" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareTable"
+    },
+    "DiscountingRule" : {
+      "@id" : "https://w3id.org/transmodel/fares#DiscountingRule"
+    },
+    "NetworkValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#NetworkValidityParameter"
+    },
+    "composedOf" : {
+      "@id" : "https://w3id.org/transmodel/fares#composedOf",
+      "@type" : "@id"
+    },
+    "Replacing" : {
+      "@id" : "https://w3id.org/transmodel/fares#Replacing"
+    },
+    "SalesPackageElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#SalesPackageElement"
+    },
+    "TimeUnitPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#TimeUnitPrice"
+    },
+    "Point" : {
+      "@id" : "https://w3id.org/transmodel/commons#Point"
+    },
+    "isFirstInSequence" : {
+      "@id" : "https://w3id.org/transmodel/fares#isFirstInSequence"
+    },
+    "Routing" : {
+      "@id" : "https://w3id.org/transmodel/fares#Routing"
+    },
+    "DistanceMatrixElementPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistanceMatrixElementPrice"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "startOf" : {
+      "@id" : "https://w3id.org/transmodel/fares#startOf",
+      "@type" : "@id"
+    },
+    "StepLimit" : {
+      "@id" : "https://w3id.org/transmodel/fares#StepLimit"
+    },
+    "QualityStructureFactorPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#QualityStructureFactorPrice"
+    },
+    "FareUnit" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareUnit"
+    },
+    "amount" : {
+      "@id" : "https://w3id.org/transmodel/fares#amount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "GeographicalIntervalPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#GeographicalIntervalPrice"
+    },
+    "ProductValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#ProductValidityParameter"
+    },
+    "ServiceAccessRight" : {
+      "@id" : "https://w3id.org/transmodel/fares#ServiceAccessRight"
+    },
+    "ValidableElementPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#ValidableElementPrice"
+    },
+    "FareStructureFactor" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareStructureFactor"
+    },
+    "DistributionChannel" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistributionChannel"
+    },
+    "PriceableObject" : {
+      "@id" : "https://w3id.org/transmodel/fares#PriceableObject"
+    },
+    "ServiceValidityParameter" : {
+      "@id" : "https://w3id.org/transmodel/fares#ServiceValidityParameter"
+    },
+    "ranking" : {
+      "@id" : "https://w3id.org/transmodel/fares#ranking",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/elements/1.1/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "viewedAs" : {
+      "@id" : "https://w3id.org/transmodel/fares#viewedAs",
+      "@type" : "@id"
+    },
+    "aChainOf" : {
+      "@id" : "https://w3id.org/transmodel/fares#aChainOf",
+      "@type" : "@id"
+    },
+    "contactPoint" : {
+      "@id" : "http://schema.org/contactPoint",
+      "@type" : "@id"
+    },
+    "tariffBasis" : {
+      "@id" : "https://w3id.org/transmodel/fares#tariffBasis",
+      "@type" : "@id"
+    },
+    "AccessRightParameterAssignment" : {
+      "@id" : "https://w3id.org/transmodel/fares#AccessRightParameterAssignment"
+    },
+    "SalesPackageSubstitution" : {
+      "@id" : "https://w3id.org/transmodel/fares#SalesPackageSubstitution"
+    },
+    "FareStructureElementPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareStructureElementPrice"
+    },
+    "limitedAccessNumber" : {
+      "@id" : "https://w3id.org/transmodel/fares#limitedAccessNumber"
+    },
+    "GeographicalStructureFactor" : {
+      "@id" : "https://w3id.org/transmodel/fares#GeographicalStructureFactor"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isAllowed" : {
+      "@id" : "https://w3id.org/transmodel/fares#isAllowed",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "distributionChannelType" : {
+      "@id" : "https://w3id.org/transmodel/fares#distributionChannelType",
+      "@type" : "@id"
+    },
+    "FareStructureElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareStructureElement"
+    },
+    "embargoUntilDate" : {
+      "@id" : "https://w3id.org/transmodel/fares#embargoUntilDate"
+    },
+    "Tariff" : {
+      "@id" : "https://w3id.org/transmodel/fares#Tariff"
+    },
+    "endDate" : {
+      "@id" : "https://w3id.org/transmodel/fares#endDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "FareStructureElementInSequence" : {
+      "@id" : "https://w3id.org/transmodel/fares#FareStructureElementInSequence"
+    },
+    "Transferability" : {
+      "@id" : "https://w3id.org/transmodel/fares#Transferability"
+    },
+    "ValidableElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#ValidableElement"
+    },
+    "PricingRule" : {
+      "@id" : "https://w3id.org/transmodel/fares#PricingRule"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "FulfilmentMethodPrice" : {
+      "@id" : "https://w3id.org/transmodel/fares#FulfilmentMethodPrice"
+    },
+    "MinimumStay" : {
+      "@id" : "https://w3id.org/transmodel/fares#MinimumStay"
+    },
+    "infoUrl" : {
+      "@id" : "https://w3id.org/transmodel/fares#infoUrl"
+    },
+    "DistanceMatrixElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#DistanceMatrixElement"
+    },
+    "ControllableElement" : {
+      "@id" : "https://w3id.org/transmodel/fares#ControllableElement"
+    },
+    "ResidentialQualification" : {
+      "@id" : "https://w3id.org/transmodel/fares#ResidentialQualification"
+    }
+  }
+}
